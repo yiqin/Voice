@@ -10,7 +10,7 @@ import UIKit
 
 class AssistantView: UIView {
     
-    let inclinedAngle = 10.0;
+    let inclinedAngle = 8.0;
     // Default values
     var assistantHeight = CGFloat(30.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth*1.4    // padding
@@ -20,7 +20,7 @@ class AssistantView: UIView {
     
     override init() {
         super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
-        self.backgroundColor = UIColor.yellowColor()
+        self.backgroundColor = UIColor.blackColor()
         
     }
 
@@ -50,8 +50,16 @@ class AssistantView: UIView {
         
         testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
         testButton.backgroundColor = UIColor.blackColor()
-        testButton.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0))
+        
+        // testButton.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0))
+        testButton.layer.transform = CATransform3DMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0), 0, 0, 1)
+        
+        
+        
         self.addSubview(testButton)
+        
+        testButton.layer.borderColor = UIColor.blueColor().CGColor
+        testButton.layer.borderWidth = 2.0
     }
     
     
