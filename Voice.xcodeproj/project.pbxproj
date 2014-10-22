@@ -28,6 +28,7 @@
 		8DD6B4C219F74C2A00B30EA9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4C119F74C2A00B30EA9 /* StoreKit.framework */; };
 		8DD6B4C419F74C3200B30EA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4C319F74C3200B30EA9 /* SystemConfiguration.framework */; };
 		8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */; };
+		8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8DD6B4C319F74C3200B30EA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8DD6B4CC19F74D2400B30EA9 /* Voice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Voice-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
+				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
@@ -283,6 +286,7 @@
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
+				8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */,
 				8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

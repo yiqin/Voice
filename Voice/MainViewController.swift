@@ -11,8 +11,7 @@ import Parse
 
 class MainViewController: UIViewController {
 
-    
-    
+    var assistantView = AssistantView()
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -30,6 +29,7 @@ class MainViewController: UIViewController {
         }
         
         
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,11 +37,14 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        // Device Size First.
         DeviceManager.sharedInstance.setDeviceSize()
-        
         println(DeviceManager.sharedInstance.screenWidth)
         println(DeviceManager.sharedInstance.screenHeight)
-
+        
+        assistantView.updateFrame()
+        //
+        self.view.addSubview(assistantView)
     }
 
     override func didReceiveMemoryWarning() {
