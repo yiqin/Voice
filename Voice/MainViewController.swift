@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate {
 
     var assistantView = AssistantView()
     
@@ -35,10 +35,34 @@ class MainViewController: UIViewController {
         println(DeviceManager.sharedInstance.screenHeight)
         
         assistantView.updateFrame()
+        
+        
+        // let recognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
+        // recognizer.delegate = self
+        // assistantView.addGestureRecognizer(recognizer)
+        assistantView.recognizer.delegate = self
+        
         //
         self.view.addSubview(assistantView)
     }
-
+    
+    func handleTap(recognizer:UITapGestureRecognizer){
+        println("MainViewController: Tap")
+        
+    }
+    
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        println("MainViewController: tap should begin")
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        println("MainViewController: tap should receive")
+        return true
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -11,7 +11,7 @@ import UIKit
 class AssistantView: UIView {
     
     let inclinedAngle = 8*M_PI/180;
-    var inclineHeight = CGFloat(0.0);
+    var inclineHeight = CGFloat(0.0)
     var assistantHeight = CGFloat(40.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
@@ -19,13 +19,26 @@ class AssistantView: UIView {
     var testButton = UIButton()
     var testView = UIView()
     
+    
+    
+    var recognizer = UIGestureRecognizer()
+    
+    
+    
     override init() {
         super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
         self.backgroundColor = UIColor.clearColor() // set to clear color later
-
+        
+        recognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
+        self.addGestureRecognizer(recognizer)
+    }
+    
+    
+    func handleTap(recognizer:UITapGestureRecognizer){
+        println("Tap")
         
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -116,6 +129,7 @@ class AssistantView: UIView {
         self.layer.addSublayer(shapeLayer)
         
     }
+    
     
 
 }
