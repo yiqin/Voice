@@ -10,9 +10,18 @@ import UIKit
 
 class UpView: UIView {
 
+    var newsTableVC = NewsTableViewController(style: UITableViewStyle.Plain)
+
     func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.brownColor()
         frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
+        self.addSubview(newsTableVC.view)
+        loadNewsTableVC()
+    }
+    
+    func loadNewsTableVC() {
+        newsTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
+        
     }
     
     /*
