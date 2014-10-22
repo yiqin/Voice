@@ -53,21 +53,19 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
-    
     func gestureRecognizerShouldBegin(gestureRecognizer: UITapGestureRecognizer) -> Bool {
         println("MainViewController: tap should begin")
         assistantView.backgroundColor = UIColor.yellowColor()
         return true
     }
-    */
-    
+
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
         println(gestureRecognizer)
         println("MainViewController: tap should receive")
         // assistantView.backgroundColor = UIColor.blueColor()
         return true
     }
-
+    */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

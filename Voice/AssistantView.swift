@@ -64,26 +64,21 @@ class AssistantView: UIView {
         
     }
     
-    // No user
+    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+        backgroundColor = UIColor.redColor()
+    }
+    /*
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         // It didn't work
         backgroundColor = UIColor.redColor()
         
     }
     
-    
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         backgroundColor = UIColor.yellowColor()
         
-        
     }
-    
-    // Highest priority
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        backgroundColor = UIColor.redColor()
-    }
-    
-    
+    */
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
+		8D9777D119F841FB006ABF30 /* Down.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* Down.swift */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
 		8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B519F1BC4E002ED90F /* Voice.xcdatamodeld */; };
 		8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
+		8D9777D019F841FB006ABF30 /* Down.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Down.swift; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3B219F1BC4E002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
+				8D9777CE19F841EE006ABF30 /* UpView.swift */,
+				8D9777D019F841FB006ABF30 /* Down.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
@@ -284,8 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
+				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
+				8D9777D119F841FB006ABF30 /* Down.swift in Sources */,
 				8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */,
 				8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */,
 			);
