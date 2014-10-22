@@ -20,24 +20,70 @@ class AssistantView: UIView {
     var testView = UIView()
     
     
+    var lastLocation:CGPoint?  // Why init here?
     
-    var recognizer = UIGestureRecognizer()
+    var tapRecognizer = UIGestureRecognizer()   // Update to tap later
+    var panRecognizer = UIPanGestureRecognizer()
+    
     
     
     
     override init() {
         super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
-        self.backgroundColor = UIColor.clearColor() // set to clear color later
+        backgroundColor = UIColor.clearColor() // set to clear color later
         
-        recognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
-        self.addGestureRecognizer(recognizer)
+        lastLocation = self.center
+        
+        tapRecognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
+        panRecognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        
+        self.addGestureRecognizer(tapRecognizer)
+        self.addGestureRecognizer(panRecognizer)
     }
     
     
     func handleTap(recognizer:UITapGestureRecognizer){
-        println("Tap")
+        println("Handle Tap")
         
     }
+    
+    func handlePan(recognizer:UIPanGestureRecognizer){
+        println("Handle Pan")
+        
+        var lastX = lastLocation?.x
+        var lastY = lastLocation?.y
+        var translation = recognizer.translationInView(self.superview!)
+        center = CGPointMake(lastX!, translation.y+lastY!)
+        
+    }
+    
+    /**************************/
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        lastLocation = center
+        backgroundColor = UIColor.yellowColor()
+        
+    }
+    
+    // No user
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        // It didn't work
+        backgroundColor = UIColor.redColor()
+        
+    }
+    
+    
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+        backgroundColor = UIColor.yellowColor()
+        
+        
+    }
+    
+    // Highest priority
+    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+        backgroundColor = UIColor.redColor()
+    }
+    
+    
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -40,28 +40,34 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         // let recognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
         // recognizer.delegate = self
         // assistantView.addGestureRecognizer(recognizer)
-        assistantView.recognizer.delegate = self
-        
+        assistantView.tapRecognizer.delegate = self
+        assistantView.panRecognizer.delegate = self
         //
         self.view.addSubview(assistantView)
     }
     
+    /*******************/
+    /*
     func handleTap(recognizer:UITapGestureRecognizer){
         println("MainViewController: Tap")
         
     }
     
-    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    
+    func gestureRecognizerShouldBegin(gestureRecognizer: UITapGestureRecognizer) -> Bool {
         println("MainViewController: tap should begin")
+        assistantView.backgroundColor = UIColor.yellowColor()
         return true
     }
+    */
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        println(gestureRecognizer)
         println("MainViewController: tap should receive")
+        // assistantView.backgroundColor = UIColor.blueColor()
         return true
     }
-    
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
