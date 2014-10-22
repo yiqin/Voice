@@ -16,7 +16,7 @@
 		8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */; };
 		8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */; };
 		8DB6F3CD19F1BC4F002ED90F /* VoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */; };
-		8DD1511919F8711400E9B4CC /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1511819F8711400E9B4CC /* NewsTableViewController.swift */; };
+		8DD1511B19F8722400E9B4CC /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1511A19F8722400E9B4CC /* NewsTableViewController.swift */; };
 		8DD6B4AE19F74BCC00B30EA9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */; };
 		8DD6B4AF19F74BCC00B30EA9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */; };
 		8DD6B4B019F74BCC00B30EA9 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */; };
@@ -58,7 +58,7 @@
 		8DB6F3C619F1BC4F002ED90F /* VoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3CB19F1BC4F002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTests.swift; sourceTree = "<group>"; };
-		8DD1511819F8711400E9B4CC /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		8DD1511A19F8722400E9B4CC /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
-				8DD1511819F8711400E9B4CC /* NewsTableViewController.swift */,
+				8DD1511A19F8722400E9B4CC /* NewsTableViewController.swift */,
 				8D9777CE19F841EE006ABF30 /* UpView.swift */,
 				8D9777D019F841FB006ABF30 /* DownView.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
@@ -296,7 +296,7 @@
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
-				8DD1511919F8711400E9B4CC /* NewsTableViewController.swift in Sources */,
+				8DD1511B19F8722400E9B4CC /* NewsTableViewController.swift in Sources */,
 				8D9777D119F841FB006ABF30 /* DownView.swift in Sources */,
 				8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */,
 				8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */,
