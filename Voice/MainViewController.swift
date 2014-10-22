@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UIGestureRecognizerDelegate {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate {
 
     var assistantView = AssistantView()
     
@@ -40,7 +40,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         assistantView.updateFrame()     // updateFrame method has be here
         assistantView.tapRecognizer.delegate = self
         assistantView.panRecognizer.delegate = self
-        
+        assistantView.delegate = self
         
         upView.updateFrame(CGRectGetMaxY(assistantView.frame))
         downView.updateFrame(CGRectGetMaxY(assistantView.frame))
@@ -77,6 +77,13 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func updateUpAnDownViewSize() {
+        println("Delegate works")
+        upView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        upView.setNeedsDisplay()
+        downView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        downView.setNeedsDisplay()
+    }
 
 }
 

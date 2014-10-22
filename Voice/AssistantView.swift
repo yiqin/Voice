@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AssistantViewDelegate {
+    func updateUpAnDownViewSize()
+}
+
 class AssistantView: UIView {
     
     let inclinedAngle = 8*M_PI/180;
@@ -26,6 +30,7 @@ class AssistantView: UIView {
     var panRecognizer = UIPanGestureRecognizer()
     
     
+    var delegate:AssistantViewDelegate?
     
     
     override init() {
@@ -56,7 +61,7 @@ class AssistantView: UIView {
         center = CGPointMake(lastX!, translation.y+lastY!)
         
         
-        
+        delegate?.updateUpAnDownViewSize()
     }
     
     /**************************/
@@ -67,7 +72,7 @@ class AssistantView: UIView {
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        backgroundColor = UIColor.redColor()
+        backgroundColor = UIColor.clearColor()
     }
     /*
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
