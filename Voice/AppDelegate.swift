@@ -20,7 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         parseSetup()
         
+        singleMethodSetup()
         return true
+    }
+    
+    func singleMethodSetup() {
+        let device = DeviceManager.sharedInstance;
+        
+        
+        
+        
+        device.screenWidth = 10
+        device.screenHeight = 10
+        
+        
     }
     
     func parseSetup(){

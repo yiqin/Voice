@@ -9,8 +9,12 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +25,9 @@ class ViewController: UIViewController {
                 println("Save Parse data successfully.")
             }
         }
+        
+        println(DeviceManager.sharedInstance.screenWidth)
+        println(DeviceManager.sharedInstance.screenHeight)
         
     }
 
