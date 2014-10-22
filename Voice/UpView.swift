@@ -10,6 +10,11 @@ import UIKit
 
 class UpView: UIView {
 
+    func updateFrame(maxY:CGFloat){
+        backgroundColor = UIColor.brownColor()
+        frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
+    }
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

@@ -13,6 +13,9 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
 
     var assistantView = AssistantView()
     
+    var upView = UpView()
+    var downView = DownView()
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -34,15 +37,17 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         println(DeviceManager.sharedInstance.screenWidth)
         println(DeviceManager.sharedInstance.screenHeight)
         
-        assistantView.updateFrame()
-        
-        
-        // let recognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
-        // recognizer.delegate = self
-        // assistantView.addGestureRecognizer(recognizer)
+        assistantView.updateFrame()     // updateFrame method has be here
         assistantView.tapRecognizer.delegate = self
         assistantView.panRecognizer.delegate = self
-        //
+        
+        
+        upView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        downView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        
+        
+        self.view.addSubview(upView)
+        self.view.addSubview(downView)
         self.view.addSubview(assistantView)
     }
     

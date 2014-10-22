@@ -8,8 +8,15 @@
 
 import UIKit
 
-class Down: UIView {
+class DownView: UIView {
 
+    func updateFrame(minY:CGFloat){
+        
+        
+        backgroundColor = UIColor.grayColor()
+        frame = CGRectMake(0, minY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
+    }
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

@@ -55,6 +55,8 @@ class AssistantView: UIView {
         var translation = recognizer.translationInView(self.superview!)
         center = CGPointMake(lastX!, translation.y+lastY!)
         
+        
+        
     }
     
     /**************************/
@@ -92,7 +94,7 @@ class AssistantView: UIView {
         inclineHeight = CGFloat(tan(inclinedAngle))*assistantWidth
         println(inclineHeight)
         
-        self.frame = CGRectMake(0, DeviceManager.sharedInstance.screenHeight*0.5, assistantWidth, assistantHeight*2)
+        self.frame = CGRectMake(0, DeviceManager.sharedInstance.screenHeight*0.5, assistantWidth, assistantHeight*2)    // Double assistant Height.
         
         /************************************/
         // The image quality is going down when rotating
