@@ -25,15 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func singleMethodSetup() {
-        let device = DeviceManager.sharedInstance;
-        
-        
-        
-        
-        device.screenWidth = 10
-        device.screenHeight = 10
-        
-        
+        DeviceManager.sharedInstance;
     }
     
     func parseSetup(){

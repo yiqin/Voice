@@ -22,17 +22,31 @@ class DeviceManager {
     var screenWidth : CGFloat = 0.0
     var screenHeight : CGFloat = 0.0
     
-    
+    func setDeviceSize() {
+        /****************************************/
+        // Not saving locally yet.
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let width = userDefaults.floatForKey("screenSizeWidth") as Float?
+        if (width != 0) {
+            screenWidth = CGFloat(width!)
+        } else {
+            screenWidth = UIScreen.mainScreen().bounds.width;
+        }
+        
+        let height = userDefaults.floatForKey("screenSizeHeight") as Float?
+        if (height != 0) {
+            screenHeight = CGFloat(height!)
+        } else {
+            screenHeight = UIScreen.mainScreen().bounds.height;
+        }
+        
+    }
     
     class var sharedInstance : DeviceManager {
         struct Static {
-            static var onceToken : dispatch_once_t = 0
-            static var instance : DeviceManager? = nil
+            static let instance = DeviceManager()
         }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = DeviceManager()
-        }
-        return Static.instance!
+        return Static.instance
     }
     
 }
