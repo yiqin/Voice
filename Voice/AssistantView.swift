@@ -16,6 +16,7 @@ class AssistantView: UIView {
     var assistantWidth = DeviceManager.sharedInstance.screenWidth*1.4    // padding
     
     var testString = UILabel()
+    var testButton = UIButton()
     
     override init() {
         super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
@@ -36,14 +37,21 @@ class AssistantView: UIView {
         
         /************************************/
         // The image quality is going down when rotating
-        self.testString = UILabel(frame: CGRectMake(100, 0, 100, 20))
-        self.testString.backgroundColor = UIColor.redColor()
-        self.testString.text = "testing"
+        testString = UILabel(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
+        // self.testString.center = self.center
+        testString.backgroundColor = UIColor.redColor()
+        testString.text = "testing"
         self.addSubview(testString)
 
         
         // must be after updating frame.
-        self.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0))
+        testString.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0))
+        
+        
+        testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
+        testButton.backgroundColor = UIColor.blackColor()
+        testButton.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle*M_PI/180.0))
+        self.addSubview(testButton)
     }
     
     
