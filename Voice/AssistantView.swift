@@ -17,10 +17,11 @@ class AssistantView: UIView {
     
     var testString = UILabel()
     var testButton = UIButton()
+    var testView = UIView()
     
     override init() {
         super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clearColor() // set to clear color later
 
         
     }
@@ -41,20 +42,34 @@ class AssistantView: UIView {
         
         /************************************/
         // The image quality is going down when rotating
-        testString = UILabel(frame: CGRectMake(0, 2*assistantHeight-inclineHeight, assistantWidth, assistantHeight))
+        testString = UILabel(frame: CGRectMake(-20, assistantHeight-inclineHeight+18, assistantWidth+40, assistantHeight))  // some number is here.
         // self.testString.center = self.center
-        testString.backgroundColor = UIColor.redColor()
+        // testString.backgroundColor = UIColor.redColor()
         testString.text = "testing"
         testString.textAlignment = NSTextAlignment.Center
         
-        
-        // testString.layer.anchorPoint = CGPointMake(0, 1)
-        
+        testString.layer.anchorPoint = CGPointMake(0.5, 0.5)
         testString.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle))
+        
+        
+        /************************************/
+        // This method doesn't work.
         // let pt = CGPointMake(0, assistantHeight-inclineHeight)
         // testString.transform = CGAffineTransformMakeRotationAt(CGFloat(-inclinedAngle), pt: pt)
         
         self.addSubview(testString)
+        
+        testView = UIView(frame: CGRectMake(-20, assistantHeight-inclineHeight+18, assistantWidth+40, assistantHeight))  // some number is here.
+        println(CGRectGetMaxY(self.testView.frame))
+        
+        
+        /************************************/
+        // testView.backgroundColor = UIColor.blueColor()
+        testView.transform = CGAffineTransformMakeRotation(CGFloat(-inclinedAngle))
+        self.addSubview(testView)
+        
+        println(CGRectGetMaxY(self.testView.frame))
+        
     }
     
     
@@ -84,6 +99,22 @@ class AssistantView: UIView {
         
         CGContextSetRGBFillColor(ctx, 1, 1, 0, 1)
         CGContextFillPath(ctx)
+        
+        drawTriangle(rect)
+    }
+    
+    func drawTriangle(rect: CGRect){
+        var path = CGPathCreateMutable()
+        CGPathMoveToPoint(path, nil, CGRectGetMinX(rect), CGRectGetMaxY(rect))
+        CGPathAddLineToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect)-inclineHeight+6)   // some number is here.
+        CGPathAddLineToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect))
+        CGPathAddLineToPoint(path, nil, CGRectGetMinX(rect), CGRectGetMaxY(rect))
+        
+        var shapeLayer = CAShapeLayer()
+        shapeLayer.path = path
+        shapeLayer.fillColor = UIColor.greenColor().CGColor
+        self.layer.addSublayer(shapeLayer)
+        
     }
     
 
