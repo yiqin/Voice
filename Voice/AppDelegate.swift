@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        parseSetup()
+        
         return true
     }
-
+    
+    func parseSetup(){
+        Parse.setApplicationId("67k8jnSI757kUzLNletpqjxMHdBWTbELiyJoMy52", clientKey: "qbjCzME8VwBHQURxPZQCSmdFeMcY5FlBlzvMzxc4")
+        
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            println("Login before.")
+        } else {
+            println("New user.")
+            PFAnonymousUtils.logInWithBlock {
+                (user: PFUser!, error: NSError!) -> Void in
+                if error != nil {
+                    println("Anonymous login failed.")
+                } else {
+                    println("Anonymous user logged in.")
+                }
+            }
+        }
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
