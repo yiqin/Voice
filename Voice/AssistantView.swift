@@ -53,7 +53,7 @@ class AssistantView: UIView {
     }
     
     func handlePan(recognizer:UIPanGestureRecognizer){
-        println("Handle Pan")
+        // println("Handle Pan")
         
         var lastX = lastLocation?.x
         var lastY = lastLocation?.y

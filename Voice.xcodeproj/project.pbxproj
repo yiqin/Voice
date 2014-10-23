@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
+		8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* VoiceImage.swift */; };
+		8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesManager.swift; sourceTree = "<group>"; };
+		8D4AB35219F9B7DC00222967 /* VoiceImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImage.swift; sourceTree = "<group>"; };
+		8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImagesManager.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,8 +145,10 @@
 				8D9777D019F841FB006ABF30 /* DownView.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
+				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
+				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
 				8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */,
@@ -300,6 +306,8 @@
 			files = (
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
+				8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,
@@ -437,7 +445,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";
@@ -456,7 +464,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";

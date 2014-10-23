@@ -78,7 +78,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
     }
 
     func updateUpAnDownViewSize() {
-        println("Delegate works")
+        // println("Delegate works")
         upView.updateFrame(CGRectGetMaxY(assistantView.frame))
         upView.setNeedsDisplay()
         downView.updateFrame(CGRectGetMaxY(assistantView.frame))

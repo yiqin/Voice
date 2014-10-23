@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DeviceManager.sharedInstance
         ArticlesManager.sharedInstance
         ArticlesManager.sharedInstance.startLoadingDataFromParse()
+        
+        VoiceImagesManager.sharedInstance
+        VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
     }
     
     func parseSetup(){
