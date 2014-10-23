@@ -10,7 +10,7 @@ import UIKit
 
 class UpView: UIView {
 
-    var newsTableVC = NewsTableViewController(style: UITableViewStyle.Plain)
+    var newsTableVC = ArticlesTableViewController(style: UITableViewStyle.Plain)
 
     func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.brownColor()

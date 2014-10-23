@@ -3,4 +3,4 @@
 //
 
 #import <Parse/Parse.h>
-#import "NewsToCoreDataManager.h"
+#import "ArticleToCoreDataManager.h"

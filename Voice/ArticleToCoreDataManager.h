@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewsToCoreDataManager : NSObject
+@interface ArticleToCoreDataManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *newsArray;        // Not sure which one to use now.
 @property (nonatomic, strong) NSMutableDictionary *newsDictionary;
 
-+ (NewsToCoreDataManager *)manager;
++ (ArticleToCoreDataManager *)manager;
 
 
 @end

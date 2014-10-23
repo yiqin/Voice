@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "NewsToCoreDataManager.h"
+#import "ArticleToCoreDataManager.h"
 #import <Parse/Parse.h>
-#import <News-Swift.h>
+// #import "Article-Swift.h"
 
-@implementation NewsToCoreDataManager
+@implementation ArticleToCoreDataManager
 
-static NewsToCoreDataManager *instance = nil;
+static ArticleToCoreDataManager *instance = nil;
 
-+(NewsToCoreDataManager*)manager{
++(ArticleToCoreDataManager*)manager{
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
-        instance = [[NewsToCoreDataManager alloc] init];
+        instance = [[ArticleToCoreDataManager alloc] init];
     });
     return instance;
 }
@@ -31,7 +31,11 @@ static NewsToCoreDataManager *instance = nil;
                 NSLog(@"success");
                 for(PFObject *object in objects) {
                     
-                    News *new = [[New alloc] init];
+                    
+                    
+                    
+                    
+                    
                 }
                 
                 
