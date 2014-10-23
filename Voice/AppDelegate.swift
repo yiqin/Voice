@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func singleMethodSetup() {
         DeviceManager.sharedInstance;
+        NewsToCoreDataManager()     // Objective C
     }
     
     func parseSetup(){

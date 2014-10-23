@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D01A7D019F89124001C2D78 /* NewsToCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7CF19F89124001C2D78 /* NewsToCoreDataManager.m */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */; };
 		8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */; };
 		8DDEDC2519F8768100550516 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2319F8768100550516 /* NewsTableViewController.swift */; };
+		8DDEDC2819F88E0500550516 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2719F88E0500550516 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D01A7CE19F89124001C2D78 /* NewsToCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsToCoreDataManager.h; sourceTree = "<group>"; };
+		8D01A7CF19F89124001C2D78 /* NewsToCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsToCoreDataManager.m; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,7 @@
 		8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		8DDEDC2319F8768100550516 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		8DDEDC2719F88E0500550516 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,9 @@
 				8D9777D019F841FB006ABF30 /* DownView.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8DDEDC2319F8768100550516 /* NewsTableViewController.swift */,
+				8DDEDC2719F88E0500550516 /* News.swift */,
+				8D01A7CE19F89124001C2D78 /* NewsToCoreDataManager.h */,
+				8D01A7CF19F89124001C2D78 /* NewsToCoreDataManager.m */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
 				8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */,
@@ -292,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D01A7D019F89124001C2D78 /* NewsToCoreDataManager.m in Sources */,
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
+				8DDEDC2819F88E0500550516 /* News.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
 				8DDEDC2519F8768100550516 /* NewsTableViewController.swift in Sources */,
 				8D9777D119F841FB006ABF30 /* DownView.swift in Sources */,
