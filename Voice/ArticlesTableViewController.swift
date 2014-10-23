@@ -92,7 +92,7 @@ class ArticlesTableViewController: UITableViewController {
         else {
             
             // Configure the cell...
-            cell.textLabel!.text = articles.objectAtIndex(indexPath.row).title
+            cell.textLabel.text = articles.objectAtIndex(indexPath.row).title
         }
         
         return cell
