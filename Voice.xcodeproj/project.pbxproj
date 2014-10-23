@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D01A7D019F89124001C2D78 /* ArticleToCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7CF19F89124001C2D78 /* ArticleToCoreDataManager.m */; };
+		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		8D01A7CE19F89124001C2D78 /* ArticleToCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleToCoreDataManager.h; sourceTree = "<group>"; };
 		8D01A7CF19F89124001C2D78 /* ArticleToCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleToCoreDataManager.m; sourceTree = "<group>"; };
+		8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesManager.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				8D9777CE19F841EE006ABF30 /* UpView.swift */,
 				8D9777D019F841FB006ABF30 /* DownView.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
+				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
 				8D01A7CE19F89124001C2D78 /* ArticleToCoreDataManager.h */,
@@ -302,6 +305,7 @@
 			files = (
 				8D01A7D019F89124001C2D78 /* ArticleToCoreDataManager.m in Sources */,
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
+				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,

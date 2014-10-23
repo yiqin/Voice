@@ -25,8 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func singleMethodSetup() {
-        DeviceManager.sharedInstance;
-        ArticleToCoreDataManager()     // Objective C
+        DeviceManager.sharedInstance
+        ArticlesManager.sharedInstance
+        ArticlesManager.sharedInstance.startLoadingDataFromParse()
     }
     
     func parseSetup(){

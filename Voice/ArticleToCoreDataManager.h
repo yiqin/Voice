@@ -10,8 +10,8 @@
 
 @interface ArticleToCoreDataManager : NSObject
 
-@property (nonatomic, strong) NSMutableArray *newsArray;        // Not sure which one to use now.
-@property (nonatomic, strong) NSMutableDictionary *newsDictionary;
+@property (nonatomic, strong) NSMutableArray *articlesArray;        // Not sure which one to use now.
+@property (nonatomic, strong) NSMutableDictionary *articlesDictionary;
 
 + (ArticleToCoreDataManager *)manager;
 

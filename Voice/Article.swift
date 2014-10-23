@@ -10,14 +10,22 @@ import UIKit
 
 class Article: NSObject {
     
-    var title: String = ""
-    var briefDescription: String = ""
+    var objectId: String
+    var createdAt: NSDate
+    var updateAt: NSDate
+    
+    var title: String
+    var briefDescription: String
     
     
-    
-    init(articlesPFObject:PFObject) {
-        title = articlesPFObject["title"] as String
-        briefDescription = articlesPFObject["briefDescription"] as String
+    init(articlePFObject:PFObject) {
+        objectId = articlePFObject.objectId
+        createdAt = articlePFObject.createdAt
+        updateAt = articlePFObject.updatedAt
+        
+        title = articlePFObject["title"] as String
+        briefDescription = articlePFObject["briefDescription"] as String    // How to check this value
+        
     };
     
 }
