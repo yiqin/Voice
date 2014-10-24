@@ -101,11 +101,9 @@ class ArticlesTableViewController: UITableViewController {
                 println()
                 
                 cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
-                cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
-                
                 println("Create new Cell")
             }
-            
+            cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
             return cell!
             // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }

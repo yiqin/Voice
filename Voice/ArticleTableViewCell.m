@@ -34,7 +34,7 @@
 {
     self.backgroundColor = [UIColor colorWithRed:150.0/255.0 green:29.0/255.0 blue:56.0/255.0 alpha:1.0];
     self.title = [[UILabel alloc] initWithFrame:CGRectMake(130, 10, self.tableWidth-140, 15)];
-    self.briefDescription = [[UILabel alloc] initWithFrame:CGRectMake(130, 55, self.tableWidth-140, 80)];
+    self.briefDescription = [[UILabel alloc] initWithFrame:CGRectMake(130, 30, self.tableWidth-140, 80)];
     self.briefDescription.numberOfLines = 0;
     
     [self addSubview:self.title];
