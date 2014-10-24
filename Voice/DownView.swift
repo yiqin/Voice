@@ -11,20 +11,18 @@ import UIKit
 class DownView: UIView {
 
     // For testing
-    var articlesTableVC = ArticlesTableViewController(style: UITableViewStyle.Plain)
+    var imagesRowsTableVC = ImagesRowsTableViewController(style: UITableViewStyle.Plain)
     
     func updateFrame(minY:CGFloat){
         backgroundColor = UIColor.grayColor()
         frame = CGRectMake(0, minY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
-        self.addSubview(articlesTableVC.view)
-        loadArticlesTableVC(minY)
+        self.addSubview(imagesRowsTableVC.view)
+        loadImagesRowsTableVC(minY)
     }
     
-    func loadArticlesTableVC(minY:CGFloat) {
-        articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
+    func loadImagesRowsTableVC(minY:CGFloat) {
+        imagesRowsTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
     }
-    
-    
     
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -34,5 +32,4 @@ class DownView: UIView {
         // Drawing code
     }
     */
-
 }

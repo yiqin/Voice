@@ -20,6 +20,7 @@
 		8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */; };
 		8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */; };
 		8DB6F3CD19F1BC4F002ED90F /* VoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */; };
+		8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */; };
 		8DD6B4AE19F74BCC00B30EA9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */; };
 		8DD6B4AF19F74BCC00B30EA9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */; };
 		8DD6B4B019F74BCC00B30EA9 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */; };
@@ -68,6 +69,7 @@
 		8DB6F3C619F1BC4F002ED90F /* VoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3CB19F1BC4F002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTests.swift; sourceTree = "<group>"; };
+		8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesRowsTableViewController.swift; sourceTree = "<group>"; };
 		8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
+				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
 				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
@@ -311,6 +314,7 @@
 			files = (
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
 				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
 				8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */,

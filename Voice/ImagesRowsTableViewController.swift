@@ -1,17 +1,17 @@
 //
-//  NewsTableViewController.swift
+//  ImagesRowsTableViewController.swift
 //  Voice
 //
-//  Created by yiqin on 10/22/14.
+//  Created by yiqin on 10/24/14.
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
 import UIKit
 
-class ArticlesTableViewController: UITableViewController {
-    
-    var messageLabel = UILabel()
+class ImagesRowsTableViewController: UITableViewController {
 
+    var messageLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -159,4 +159,5 @@ class ArticlesTableViewController: UITableViewController {
     }
     */
     
+
 }
