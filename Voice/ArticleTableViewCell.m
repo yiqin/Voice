@@ -37,14 +37,21 @@
     self.briefDescription = [[UILabel alloc] initWithFrame:CGRectMake(130, 30, self.tableWidth-140, 80)];
     self.briefDescription.numberOfLines = 0;
     
+    
+    self.briefImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+    // [[UIImage alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+    
     [self addSubview:self.title];
     [self addSubview:self.briefDescription];
+    [self addSubview:self.briefImage];
 }
 
 - (void) loadCellFromArticle:(Article *)article
 {
     self.title.text = article.title;
     self.briefDescription.text = article.briefDescription;
+    self.briefImage.image = article.briefImage.image;
+    
 }
 
 - (void)awakeFromNib {

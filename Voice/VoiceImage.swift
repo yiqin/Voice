@@ -38,7 +38,7 @@ class VoiceImage: NSObject {
         let thunmbnail = voiceImagePFObject["image"] as PFFile
         image.file = thunmbnail
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-            println("Load image succesfully.")
+            println("Load voice image succesfully.")
         }
         
 

@@ -16,7 +16,7 @@ class Article: NSObject {
     
     var title: String
     var briefDescription: String
-    
+    var briefImage : PFImageView
     
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
@@ -26,6 +26,14 @@ class Article: NSObject {
         title = articlePFObject["title"] as String
         briefDescription = articlePFObject["briefDescription"] as String    // How to check this value
         
+        
+        briefImage = PFImageView()
+        
+        let thunmbnail = articlePFObject["briefImage"] as PFFile
+        briefImage.file = thunmbnail
+        briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+            println("Load article image succesfully.")
+        }
     };
     
 }

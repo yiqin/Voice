@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 @class Article;
 
 @interface ArticleTableViewCell : UITableViewCell
 
 @property (nonatomic) CGFloat tableWidth;
 
+@property (nonatomic, strong) UIImageView *briefImage;
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UILabel *briefDescription;
 

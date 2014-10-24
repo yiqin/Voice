@@ -102,6 +102,7 @@ class ArticlesTableViewController: UITableViewController {
                 println("Create new Cell")
             }
             cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
+            
             return cell!
             // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
