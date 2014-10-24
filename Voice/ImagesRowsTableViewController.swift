@@ -19,7 +19,7 @@ class ImagesRowsTableViewController: UITableViewController {
         self.refreshControl?.backgroundColor = UIColor.purpleColor()
         self.refreshControl?.tintColor = UIColor.whiteColor()
         
-        self.refreshControl?.addTarget(self, action: "getLatestArticles", forControlEvents: .ValueChanged)
+        self.refreshControl?.addTarget(self, action: "getLatestImages", forControlEvents: .ValueChanged)
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -30,8 +30,8 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     
-    func getLatestArticles() {
-        ArticlesManager.sharedInstance.startLoadingDataFromParse()
+    func getLatestImages() {
+        VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
@@ -82,26 +82,25 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var articles = ArticlesManager.sharedInstance.articles
-        let articleIdentifier = "ArticleIdentifier"
-        var cell = tableView.dequeueReusableCellWithIdentifier(articleIdentifier) as? ArticleTableViewCell
+        var voiceImages = VoiceImagesManager.sharedInstance.voiceImages
+        let voiceImageIdentifier = "VoiceImageIdentifier"
+        var cell = tableView.dequeueReusableCellWithIdentifier(voiceImageIdentifier) as? ImagesRowTableViewCell
         
-        if articles.count == 0 {
+        if voiceImages.count == 0 {
             return UITableViewCell()
         }
         else {
             
             if cell != nil {
-                println("Cell exist")
+                // println("Cell exist")
                 
             }
             else {
-                println()
+                // println("Create new Cell")
+                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
                 
-                cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
-                println("Create new Cell")
             }
-            cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
+            // cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
             return cell!
             // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }

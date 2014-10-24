@@ -92,14 +92,12 @@ class ArticlesTableViewController: UITableViewController {
         else {
             
             if cell != nil {
-                println("Cell exist")
+                // println("Cell exist")
                 
             }
             else {
-                println()
-                
+                // println("Create new Cell")
                 cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
-                println("Create new Cell")
             }
             cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
             

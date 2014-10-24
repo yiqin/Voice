@@ -4,3 +4,4 @@
 
 #import <Parse/Parse.h>
 #import "ArticleTableViewCell.h"
+#import "ImagesRowTableViewCell.h"

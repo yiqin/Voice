@@ -64,7 +64,7 @@
     // Configure the view for the selected state
 }
 
-+(float) cellHeight
++ (float) cellHeight
 {
     return 130;
 }
