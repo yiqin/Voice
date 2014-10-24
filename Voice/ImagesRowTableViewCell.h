@@ -10,8 +10,11 @@
 
 @interface ImagesRowTableViewCell : UITableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath;
+
 @property (nonatomic) int rowNumber;
 
+- (void) loadCell;
 + (float) cellHeight;
 
 @end

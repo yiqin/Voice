@@ -20,6 +20,32 @@
     return self;
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath
+{
+    self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setSubViews];
+        self.rowNumber = indexPath.row;
+        
+        
+        
+    }
+    return self;
+}
+
+- (void) setSubViews
+{
+    
+    
+}
+
+- (void) loadCell
+{
+    NSLog(@"ImagesRowTableViewCell: %d", self.rowNumber);
+    
+    
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }

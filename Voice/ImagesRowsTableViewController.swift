@@ -55,7 +55,7 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if ArticlesManager.sharedInstance.articles.count == 0 {
+        if VoiceImagesManager.sharedInstance.voiceImages.count == 0 {
             messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))
             messageLabel.text = "No data is currently available. Please pull down to refresh."
             messageLabel.textColor = UIColor.blackColor()
@@ -71,8 +71,8 @@ class ImagesRowsTableViewController: UITableViewController {
         }
         else {
             messageLabel.removeFromSuperview()
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
-            return ArticlesManager.sharedInstance.articles.count
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+            return VoiceImagesManager.sharedInstance.voiceImages.count
         }
         
     }
@@ -97,10 +97,10 @@ class ImagesRowsTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
-                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
+                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier, indexPath: indexPath)
                 
             }
-            // cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
+            cell?.loadCell()
             return cell!
             // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
