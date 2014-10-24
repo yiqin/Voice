@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
+		8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */; };
 		8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* VoiceImage.swift */; };
 		8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
@@ -50,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesManager.swift; sourceTree = "<group>"; };
+		8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
+		8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* VoiceImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImagesManager.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
+				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
+				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
 				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
@@ -306,6 +311,7 @@
 			files = (
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
 				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
 				8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,

@@ -21,6 +21,8 @@ class ArticlesTableViewController: UITableViewController {
         
         self.refreshControl?.addTarget(self, action: "getLatestArticles", forControlEvents: .ValueChanged)
         
+                
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -71,7 +73,7 @@ class ArticlesTableViewController: UITableViewController {
         }
         else {
             messageLabel.removeFromSuperview()
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
             return ArticlesManager.sharedInstance.articles.count
         }
         
@@ -80,28 +82,41 @@ class ArticlesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 130
     }
-        
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // let cell = tableView.dequeueReusableCellWithIdentifier("NewViewCell", forIndexPath: indexPath) as UITableViewCell
-        let cell = UITableViewCell()
-        
         var articles = ArticlesManager.sharedInstance.articles
+        let articleIdentifier = "ArticleIdentifier"
+        var cell = tableView.dequeueReusableCellWithIdentifier(articleIdentifier) as? ArticleTableViewCell
+        
         if articles.count == 0 {
-            
+            return UITableViewCell()
         }
         else {
             
-            // Configure the cell...
-            cell.textLabel.text = articles.objectAtIndex(indexPath.row).title
+            if cell != nil {
+                println("Cell exist")
+                
+            }
+            else {
+                println()
+                
+                cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
+                cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
+                
+                println("Create new Cell")
+            }
+            
+            return cell!
+            // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
-        
-        return cell
     }
-    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
     }
+    
+    
+    
     
     /*
     // Override to support conditional editing of the table view.
