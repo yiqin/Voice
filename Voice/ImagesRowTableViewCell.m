@@ -25,7 +25,7 @@
     self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setSubViews];
-        self.rowNumber = indexPath.row;
+        self.rowIndex = indexPath.row;
         
         
         
@@ -41,8 +41,9 @@
 
 - (void) loadCell
 {
-    NSLog(@"ImagesRowTableViewCell: %d", self.rowNumber);
+    NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);
     
+    // Load images row scroll view here.
     
 }
 

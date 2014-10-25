@@ -55,7 +55,7 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if VoiceImagesManager.sharedInstance.voiceImages.count == 0 {
+        if (VoiceImagesManager.sharedInstance.numberOfRows == 0) {
             messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))
             messageLabel.text = "No data is currently available. Please pull down to refresh."
             messageLabel.textColor = UIColor.blackColor()
@@ -72,7 +72,7 @@ class ImagesRowsTableViewController: UITableViewController {
         else {
             messageLabel.removeFromSuperview()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-            return VoiceImagesManager.sharedInstance.voiceImages.count
+            return VoiceImagesManager.sharedInstance.numberOfRows
         }
         
     }

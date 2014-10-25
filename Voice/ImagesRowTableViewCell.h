@@ -12,7 +12,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath;
 
-@property (nonatomic) int rowNumber;
+@property (nonatomic) int rowIndex;
 
 - (void) loadCell;
 + (float) cellHeight;
