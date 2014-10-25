@@ -12,6 +12,7 @@ import Parse
 class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate {
 
     var assistantView = AssistantView()
+    var firstTimeLoad = true
     
     var upView = UpView()
     var downView = DownView()
@@ -32,23 +33,27 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
     }
     
     override func viewDidLayoutSubviews() {
-        // Device Size First.
-        DeviceManager.sharedInstance.setDeviceSize()
-        println(DeviceManager.sharedInstance.screenWidth)
-        println(DeviceManager.sharedInstance.screenHeight)
-        
-        assistantView.updateFrame()     // updateFrame method has be here
-        assistantView.tapRecognizer.delegate = self
-        assistantView.panRecognizer.delegate = self
-        assistantView.delegate = self
-        
-        upView.updateFrame(CGRectGetMaxY(assistantView.frame))
-        downView.updateFrame(CGRectGetMaxY(assistantView.frame))
-        
-        
-        self.view.addSubview(upView)
-        self.view.addSubview(downView)
-        self.view.addSubview(assistantView)
+        // Is called everytime we reload the table. A firstTimeLoad is necessary
+        if firstTimeLoad == true {
+            // Device Size First.
+            DeviceManager.sharedInstance.setDeviceSize()
+            println(DeviceManager.sharedInstance.screenWidth)
+            println(DeviceManager.sharedInstance.screenHeight)
+            
+            assistantView.updateFrame()     // updateFrame method has be here
+            assistantView.tapRecognizer.delegate = self
+            assistantView.panRecognizer.delegate = self
+            assistantView.delegate = self
+            
+            upView.updateFrame(CGRectGetMaxY(assistantView.frame))
+            downView.updateFrame(CGRectGetMaxY(assistantView.frame))
+            
+            
+            self.view.addSubview(upView)
+            self.view.addSubview(downView)
+            self.view.addSubview(assistantView)
+            firstTimeLoad = false
+        }
     }
     
     /*******************/

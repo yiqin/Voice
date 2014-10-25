@@ -13,15 +13,15 @@ class DownView: UIView {
     // For testing
     var imagesRowsTableVC = ImagesRowsTableViewController(style: UITableViewStyle.Plain)
     
-    func updateFrame(minY:CGFloat){
+    func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.grayColor()
-        frame = CGRectMake(0, minY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
+        frame = CGRectMake(0, maxY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-maxY)
         self.addSubview(imagesRowsTableVC.view)
-        loadImagesRowsTableVC(minY)
+        loadImagesRowsTableVC(maxY)
     }
     
-    func loadImagesRowsTableVC(minY:CGFloat) {
-        imagesRowsTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-minY)
+    func loadImagesRowsTableVC(maxY:CGFloat) {
+        imagesRowsTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-maxY)
     }
     
     /*

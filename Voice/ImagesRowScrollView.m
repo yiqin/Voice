@@ -29,6 +29,7 @@
         self.collectionView.dataSource = self;
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
+        self.collectionView.contentOffset = CGPointMake(60*(5%(rowIndex+1)),0);    // set contentOffset here
         
         UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
         [self.collectionView registerNib:nib
@@ -64,7 +65,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d x %d", self.rowNumber, indexPath.row);
+    NSLog(@"%d x %ld", self.rowNumber, (long)indexPath.row);
     
 }
 
