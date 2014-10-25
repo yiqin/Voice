@@ -23,6 +23,8 @@
 		8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */; };
 		8DCDD3CA19FB1382003C5746 /* ImagesRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */; };
 		8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */; };
+		8DCDD3D119FB3A81003C5746 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3CF19FB3A81003C5746 /* ImageCollectionViewCell.m */; };
+		8DCDD3D219FB3A81003C5746 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDD3D019FB3A81003C5746 /* ImageCollectionViewCell.xib */; };
 		8DD6B4AE19F74BCC00B30EA9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */; };
 		8DD6B4AF19F74BCC00B30EA9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */; };
 		8DD6B4B019F74BCC00B30EA9 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */; };
@@ -76,6 +78,9 @@
 		8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesRowTableViewCell.m; sourceTree = "<group>"; };
 		8DCDD3CB19FB227D003C5746 /* ImagesRowScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesRowScrollView.h; sourceTree = "<group>"; };
 		8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesRowScrollView.m; sourceTree = "<group>"; };
+		8DCDD3CE19FB3A81003C5746 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		8DCDD3CF19FB3A81003C5746 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		8DCDD3D019FB3A81003C5746 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DD6B4AB19F74BCC00B30EA9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8DD6B4AC19F74BCC00B30EA9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
 				8DCDD3CB19FB227D003C5746 /* ImagesRowScrollView.h */,
 				8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */,
+				8DCDD3CE19FB3A81003C5746 /* ImageCollectionViewCell.h */,
+				8DCDD3CF19FB3A81003C5746 /* ImageCollectionViewCell.m */,
+				8DCDD3D019FB3A81003C5746 /* ImageCollectionViewCell.xib */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
 				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
@@ -304,6 +312,7 @@
 			files = (
 				8DB6F3BC19F1BC4E002ED90F /* Main.storyboard in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
+				8DCDD3D219FB3A81003C5746 /* ImageCollectionViewCell.xib in Resources */,
 				8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +344,7 @@
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
 				8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */,
+				8DCDD3D119FB3A81003C5746 /* ImageCollectionViewCell.m in Sources */,
 				8D9777D119F841FB006ABF30 /* DownView.swift in Sources */,
 				8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */,
 				8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */,

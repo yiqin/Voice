@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DeviceManager {
+class DeviceManager: NSObject {
     
     var test:Int = 0{
         didSet{

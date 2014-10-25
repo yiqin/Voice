@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImagesRowScrollView.h"
+
+@class DeviceManager;
 
 @interface ImagesRowTableViewCell : UITableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic) int rowIndex;
+@property (nonatomic, strong) ImagesRowScrollView *imagesRowScrollView;
 
 - (void) loadCell;
 + (float) cellHeight;

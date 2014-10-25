@@ -7,6 +7,8 @@
 //
 
 #import "ImagesRowScrollView.h"
+#import "ImageCollectionViewCell.m"
+#import <Parse/Parse.h>
 #import <Voice-Swift.h>
 
 @implementation ImagesRowScrollView
@@ -22,18 +24,36 @@
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flowLayout.itemSize = CGSizeMake(130, 130);
         
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, 320) collectionViewLayout:flowLayout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) collectionViewLayout:flowLayout];
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
-        
+        [self addSubview:self.collectionView];
     }
     return self;
 }
 
+#pragma mark - UICollectionViewDataSource methods
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.imagesCollectionData count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    VoiceImage *voiceImage = [self.imagesCollectionData objectAtIndex:indexPath.row];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCollectionViewCell" forIndexPath:indexPath];
+    cell.image.image = voiceImage.image.image;
+    
+    return cell;
+}
 
 
 /*

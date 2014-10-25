@@ -44,7 +44,8 @@
     NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);
     
     // Load images row scroll view here.
-    
+    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:self.rowIndex];
+    [self addSubview:self.imagesRowScrollView];
 }
 
 - (void)awakeFromNib {
