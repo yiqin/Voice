@@ -18,7 +18,7 @@
 @property (nonatomic) int rowIndex;
 @property (nonatomic, strong) ImagesRowScrollView *imagesRowScrollView;
 
-- (void) loadCell;
+- (void) loadCell:(NSIndexPath *)indexPath;
 + (float) cellHeight;
 
 @end

@@ -27,8 +27,14 @@ class VoiceImagesManager: NSObject {
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("Load voice images from Parse.com.")
+                if objects.count%self.numberPerRow == 0 {
+                    self.numberOfRows = objects.count/self.numberPerRow      // Start from 1
+                }
+                else {
+                    self.numberOfRows = objects.count/self.numberPerRow+1     // Start from 1
+                }
                 
-                self.numberOfRows = objects.count/self.numberPerRow+1     // Start from 1
+                
                 println("The total number of rows is \(self.numberOfRows)")
                 
                 var recievedVoiceImages = NSMutableArray()

@@ -39,12 +39,12 @@
     
 }
 
-- (void) loadCell
+- (void) loadCell:(NSIndexPath *)indexPath
 {
     NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);
     
     // Load images row scroll view here.
-    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:self.rowIndex];
+    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:indexPath.row];
     [self addSubview:self.imagesRowScrollView];
 }
 

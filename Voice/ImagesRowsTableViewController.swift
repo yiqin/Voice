@@ -97,10 +97,10 @@ class ImagesRowsTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
-                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier, indexPath: indexPath)
+                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
                 
             }
-            cell?.loadCell()
+            cell?.loadCell(indexPath)
             return cell!
             // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
