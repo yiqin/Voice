@@ -45,6 +45,6 @@ class VoiceImage: NSObject {
         }
         
         // image = voiceImagePFObject["image"] as PFImageView
-        parseObject = articlePFObject
+        parseObject = voiceImagePFObject
     }
 }

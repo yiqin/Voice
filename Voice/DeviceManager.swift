@@ -22,6 +22,10 @@ class DeviceManager: NSObject {
     var screenWidth : CGFloat = 0.0
     var screenHeight : CGFloat = 0.0
     
+    var cityName = "all"
+    // If cityName is all, then load ads randomly
+    // If cityName is specified, then load the ads
+    
     func setDeviceSize() {
         /****************************************/
         // Not saving locally yet.
