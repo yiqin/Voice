@@ -7,7 +7,7 @@
 //
 
 #import "ImagesRowScrollView.h"
-#import "ImageCollectionViewCell.m"
+#import "ImageCollectionViewCell.h"
 #import <Parse/Parse.h>
 #import <Voice-Swift.h>
 
@@ -30,6 +30,10 @@
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
+        UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
+        [self.collectionView registerNib:nib
+              forCellWithReuseIdentifier:@"ImageCell"];
+        
         [self addSubview:self.collectionView];
     }
     return self;
@@ -48,13 +52,21 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *ImageCellIdentifier = @"ImageCell";
     VoiceImage *voiceImage = [self.imagesCollectionData objectAtIndex:indexPath.row];
-    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCollectionViewCell" forIndexPath:indexPath];
-    cell.image.image = voiceImage.image.image;
+    
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ImageCellIdentifier forIndexPath:indexPath];
+    
+    [cell.image setImage: voiceImage.image.image];
     
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d x %d", self.rowNumber, indexPath.row);
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

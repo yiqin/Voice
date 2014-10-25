@@ -23,6 +23,7 @@ class VoiceImagesManager: NSObject {
     
     func startLoadingDataFromParse() {
         var query  = PFQuery(className: "VoiceImage")
+        query.orderByAscending("updatedAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("Load voice images from Parse.com.")

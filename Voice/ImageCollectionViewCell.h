@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ImageCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *image;
-
-// @property (strong, nonatomic) IBOutlet UIImageView *voiceImage;
 
 @end
