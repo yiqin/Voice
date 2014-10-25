@@ -15,6 +15,8 @@ class ArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Leaftagger.tagLeafOnViewController(self)
+        
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.backgroundColor = UIColor.purpleColor()
         self.refreshControl?.tintColor = UIColor.whiteColor()

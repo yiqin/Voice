@@ -5,3 +5,4 @@
 #import <Parse/Parse.h>
 #import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"
+#import "Leaftagger.h"

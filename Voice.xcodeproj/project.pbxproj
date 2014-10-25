@@ -42,6 +42,148 @@
 		8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */; };
 		8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */; };
 		8DDEDC2819F88E0500550516 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2719F88E0500550516 /* Article.swift */; };
+		8DE49C3C19FC075500461150 /* Leaftagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B6B19FC075500461150 /* Leaftagger.m */; };
+		8DE49C3D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B6D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m */; };
+		8DE49C3E19FC075500461150 /* LeaftaggerAddCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B6F19FC075500461150 /* LeaftaggerAddCommentViewController.m */; };
+		8DE49C3F19FC075500461150 /* LeaftaggerApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7119FC075500461150 /* LeaftaggerApp.m */; };
+		8DE49C4019FC075500461150 /* LeaftaggerBetaUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7319FC075500461150 /* LeaftaggerBetaUser.m */; };
+		8DE49C4119FC075500461150 /* LeaftaggerComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7519FC075500461150 /* LeaftaggerComment.m */; };
+		8DE49C4219FC075500461150 /* LeaftaggerCommentOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7719FC075500461150 /* LeaftaggerCommentOptionsViewController.m */; };
+		8DE49C4319FC075500461150 /* LeaftaggerCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7919FC075500461150 /* LeaftaggerCommentsViewController.m */; };
+		8DE49C4419FC075500461150 /* LeaftaggerCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B7B19FC075500461150 /* LeaftaggerCommentTableViewCell.m */; };
+		8DE49C4519FC075500461150 /* LeaftaggerAddComment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49B7E19FC075500461150 /* LeaftaggerAddComment.png */; };
+		8DE49C4619FC075500461150 /* LeaftaggerAddComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49B7F19FC075500461150 /* LeaftaggerAddComment@2x.png */; };
+		8DE49C4719FC075500461150 /* LeaftaggerLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49B8019FC075500461150 /* LeaftaggerLogo.png */; };
+		8DE49C4819FC075500461150 /* LeaftaggerLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49B8119FC075500461150 /* LeaftaggerLogo@2x.png */; };
+		8DE49C4919FC075500461150 /* LeaftaggeriPadNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8319FC075500461150 /* LeaftaggeriPadNavigationViewController.m */; };
+		8DE49C4A19FC075500461150 /* LeaftaggerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8519FC075500461150 /* LeaftaggerObject.m */; };
+		8DE49C4B19FC075500461150 /* LeaftaggerPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8719FC075500461150 /* LeaftaggerPage.m */; };
+		8DE49C4C19FC075500461150 /* LeaftaggerPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8919FC075500461150 /* LeaftaggerPoint.m */; };
+		8DE49C4D19FC075500461150 /* LeaftaggerReordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8B19FC075500461150 /* LeaftaggerReordVideoViewController.m */; };
+		8DE49C4E19FC075500461150 /* LeaftaggerScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8D19FC075500461150 /* LeaftaggerScreenManager.m */; };
+		8DE49C4F19FC075500461150 /* LeaftaggerTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B8F19FC075500461150 /* LeaftaggerTapGestureRecognizer.m */; };
+		8DE49C5019FC075500461150 /* LeaftaggerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9119FC075500461150 /* LeaftaggerView.m */; };
+		8DE49C5119FC075500461150 /* YO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9419FC075500461150 /* YO.m */; };
+		8DE49C5219FC075500461150 /* YQActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9719FC075500461150 /* YQActivityIndicatorView.m */; };
+		8DE49C5319FC075500461150 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9A19FC075500461150 /* YQButton.m */; };
+		8DE49C5419FC075500461150 /* YQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9D19FC075500461150 /* YQLabel.m */; };
+		8DE49C5519FC075500461150 /* YQLeaftaggerPointButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49B9F19FC075500461150 /* YQLeaftaggerPointButton.m */; };
+		8DE49C5619FC075500461150 /* iPadYQNumbers-00.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA119FC075500461150 /* iPadYQNumbers-00.png */; };
+		8DE49C5719FC075500461150 /* iPadYQNumbers-00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA219FC075500461150 /* iPadYQNumbers-00@2x.png */; };
+		8DE49C5819FC075500461150 /* iPadYQNumbers-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA319FC075500461150 /* iPadYQNumbers-1.png */; };
+		8DE49C5919FC075500461150 /* iPadYQNumbers-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA419FC075500461150 /* iPadYQNumbers-10.png */; };
+		8DE49C5A19FC075500461150 /* iPadYQNumbers-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA519FC075500461150 /* iPadYQNumbers-10@2x.png */; };
+		8DE49C5B19FC075500461150 /* iPadYQNumbers-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA619FC075500461150 /* iPadYQNumbers-11.png */; };
+		8DE49C5C19FC075500461150 /* iPadYQNumbers-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA719FC075500461150 /* iPadYQNumbers-11@2x.png */; };
+		8DE49C5D19FC075500461150 /* iPadYQNumbers-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA819FC075500461150 /* iPadYQNumbers-12.png */; };
+		8DE49C5E19FC075500461150 /* iPadYQNumbers-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BA919FC075500461150 /* iPadYQNumbers-12@2x.png */; };
+		8DE49C5F19FC075500461150 /* iPadYQNumbers-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAA19FC075500461150 /* iPadYQNumbers-13.png */; };
+		8DE49C6019FC075500461150 /* iPadYQNumbers-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAB19FC075500461150 /* iPadYQNumbers-13@2x.png */; };
+		8DE49C6119FC075500461150 /* iPadYQNumbers-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAC19FC075500461150 /* iPadYQNumbers-14.png */; };
+		8DE49C6219FC075500461150 /* iPadYQNumbers-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAD19FC075500461150 /* iPadYQNumbers-14@2x.png */; };
+		8DE49C6319FC075500461150 /* iPadYQNumbers-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAE19FC075500461150 /* iPadYQNumbers-15.png */; };
+		8DE49C6419FC075500461150 /* iPadYQNumbers-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BAF19FC075500461150 /* iPadYQNumbers-15@2x.png */; };
+		8DE49C6519FC075500461150 /* iPadYQNumbers-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB019FC075500461150 /* iPadYQNumbers-16.png */; };
+		8DE49C6619FC075500461150 /* iPadYQNumbers-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB119FC075500461150 /* iPadYQNumbers-16@2x.png */; };
+		8DE49C6719FC075500461150 /* iPadYQNumbers-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB219FC075500461150 /* iPadYQNumbers-17.png */; };
+		8DE49C6819FC075500461150 /* iPadYQNumbers-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB319FC075500461150 /* iPadYQNumbers-17@2x.png */; };
+		8DE49C6919FC075500461150 /* iPadYQNumbers-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB419FC075500461150 /* iPadYQNumbers-18.png */; };
+		8DE49C6A19FC075500461150 /* iPadYQNumbers-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB519FC075500461150 /* iPadYQNumbers-18@2x.png */; };
+		8DE49C6B19FC075500461150 /* iPadYQNumbers-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB619FC075500461150 /* iPadYQNumbers-19.png */; };
+		8DE49C6C19FC075500461150 /* iPadYQNumbers-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB719FC075500461150 /* iPadYQNumbers-19@2x.png */; };
+		8DE49C6D19FC075500461150 /* iPadYQNumbers-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB819FC075500461150 /* iPadYQNumbers-1@2x.png */; };
+		8DE49C6E19FC075500461150 /* iPadYQNumbers-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BB919FC075500461150 /* iPadYQNumbers-2.png */; };
+		8DE49C6F19FC075500461150 /* iPadYQNumbers-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBA19FC075500461150 /* iPadYQNumbers-20.png */; };
+		8DE49C7019FC075500461150 /* iPadYQNumbers-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBB19FC075500461150 /* iPadYQNumbers-20@2x.png */; };
+		8DE49C7119FC075500461150 /* iPadYQNumbers-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBC19FC075500461150 /* iPadYQNumbers-2@2x.png */; };
+		8DE49C7219FC075500461150 /* iPadYQNumbers-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBD19FC075500461150 /* iPadYQNumbers-3.png */; };
+		8DE49C7319FC075500461150 /* iPadYQNumbers-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBE19FC075500461150 /* iPadYQNumbers-3@2x.png */; };
+		8DE49C7419FC075500461150 /* iPadYQNumbers-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BBF19FC075500461150 /* iPadYQNumbers-4.png */; };
+		8DE49C7519FC075500461150 /* iPadYQNumbers-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC019FC075500461150 /* iPadYQNumbers-4@2x.png */; };
+		8DE49C7619FC075500461150 /* iPadYQNumbers-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC119FC075500461150 /* iPadYQNumbers-5.png */; };
+		8DE49C7719FC075500461150 /* iPadYQNumbers-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC219FC075500461150 /* iPadYQNumbers-5@2x.png */; };
+		8DE49C7819FC075500461150 /* iPadYQNumbers-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC319FC075500461150 /* iPadYQNumbers-6.png */; };
+		8DE49C7919FC075500461150 /* iPadYQNumbers-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC419FC075500461150 /* iPadYQNumbers-6@2x.png */; };
+		8DE49C7A19FC075500461150 /* iPadYQNumbers-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC519FC075500461150 /* iPadYQNumbers-7.png */; };
+		8DE49C7B19FC075500461150 /* iPadYQNumbers-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC619FC075500461150 /* iPadYQNumbers-7@2x.png */; };
+		8DE49C7C19FC075500461150 /* iPadYQNumbers-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC719FC075500461150 /* iPadYQNumbers-8.png */; };
+		8DE49C7D19FC075500461150 /* iPadYQNumbers-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC819FC075500461150 /* iPadYQNumbers-8@2x.png */; };
+		8DE49C7E19FC075500461150 /* iPadYQNumbers-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BC919FC075500461150 /* iPadYQNumbers-9.png */; };
+		8DE49C7F19FC075500461150 /* iPadYQNumbers-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCA19FC075500461150 /* iPadYQNumbers-9@2x.png */; };
+		8DE49C8019FC075500461150 /* YQNumbers-00.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCB19FC075500461150 /* YQNumbers-00.png */; };
+		8DE49C8119FC075500461150 /* YQNumbers-00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCC19FC075500461150 /* YQNumbers-00@2x.png */; };
+		8DE49C8219FC075500461150 /* YQNumbers-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCD19FC075500461150 /* YQNumbers-1.png */; };
+		8DE49C8319FC075500461150 /* YQNumbers-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCE19FC075500461150 /* YQNumbers-10.png */; };
+		8DE49C8419FC075500461150 /* YQNumbers-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BCF19FC075500461150 /* YQNumbers-10@2x.png */; };
+		8DE49C8519FC075500461150 /* YQNumbers-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD019FC075500461150 /* YQNumbers-11.png */; };
+		8DE49C8619FC075500461150 /* YQNumbers-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD119FC075500461150 /* YQNumbers-11@2x.png */; };
+		8DE49C8719FC075500461150 /* YQNumbers-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD219FC075500461150 /* YQNumbers-12.png */; };
+		8DE49C8819FC075500461150 /* YQNumbers-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD319FC075500461150 /* YQNumbers-12@2x.png */; };
+		8DE49C8919FC075500461150 /* YQNumbers-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD419FC075500461150 /* YQNumbers-13.png */; };
+		8DE49C8A19FC075500461150 /* YQNumbers-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD519FC075500461150 /* YQNumbers-13@2x.png */; };
+		8DE49C8B19FC075500461150 /* YQNumbers-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD619FC075500461150 /* YQNumbers-14.png */; };
+		8DE49C8C19FC075500461150 /* YQNumbers-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD719FC075500461150 /* YQNumbers-14@2x.png */; };
+		8DE49C8D19FC075500461150 /* YQNumbers-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD819FC075500461150 /* YQNumbers-15.png */; };
+		8DE49C8E19FC075500461150 /* YQNumbers-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BD919FC075500461150 /* YQNumbers-15@2x.png */; };
+		8DE49C8F19FC075500461150 /* YQNumbers-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDA19FC075500461150 /* YQNumbers-16.png */; };
+		8DE49C9019FC075500461150 /* YQNumbers-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDB19FC075500461150 /* YQNumbers-16@2x.png */; };
+		8DE49C9119FC075500461150 /* YQNumbers-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDC19FC075500461150 /* YQNumbers-17.png */; };
+		8DE49C9219FC075500461150 /* YQNumbers-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDD19FC075500461150 /* YQNumbers-17@2x.png */; };
+		8DE49C9319FC075500461150 /* YQNumbers-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDE19FC075500461150 /* YQNumbers-18.png */; };
+		8DE49C9419FC075500461150 /* YQNumbers-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BDF19FC075500461150 /* YQNumbers-18@2x.png */; };
+		8DE49C9519FC075500461150 /* YQNumbers-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE019FC075500461150 /* YQNumbers-19.png */; };
+		8DE49C9619FC075500461150 /* YQNumbers-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE119FC075500461150 /* YQNumbers-19@2x.png */; };
+		8DE49C9719FC075500461150 /* YQNumbers-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE219FC075500461150 /* YQNumbers-1@2x.png */; };
+		8DE49C9819FC075500461150 /* YQNumbers-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE319FC075500461150 /* YQNumbers-2.png */; };
+		8DE49C9919FC075500461150 /* YQNumbers-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE419FC075500461150 /* YQNumbers-20.png */; };
+		8DE49C9A19FC075500461150 /* YQNumbers-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE519FC075500461150 /* YQNumbers-20@2x.png */; };
+		8DE49C9B19FC075500461150 /* YQNumbers-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE619FC075500461150 /* YQNumbers-2@2x.png */; };
+		8DE49C9C19FC075500461150 /* YQNumbers-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE719FC075500461150 /* YQNumbers-3.png */; };
+		8DE49C9D19FC075500461150 /* YQNumbers-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE819FC075500461150 /* YQNumbers-3@2x.png */; };
+		8DE49C9E19FC075500461150 /* YQNumbers-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BE919FC075500461150 /* YQNumbers-4.png */; };
+		8DE49C9F19FC075500461150 /* YQNumbers-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BEA19FC075500461150 /* YQNumbers-4@2x.png */; };
+		8DE49CA019FC075500461150 /* YQNumbers-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BEB19FC075500461150 /* YQNumbers-5.png */; };
+		8DE49CA119FC075500461150 /* YQNumbers-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BEC19FC075500461150 /* YQNumbers-5@2x.png */; };
+		8DE49CA219FC075500461150 /* YQNumbers-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BED19FC075500461150 /* YQNumbers-6.png */; };
+		8DE49CA319FC075500461150 /* YQNumbers-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BEE19FC075500461150 /* YQNumbers-6@2x.png */; };
+		8DE49CA419FC075500461150 /* YQNumbers-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BEF19FC075500461150 /* YQNumbers-7.png */; };
+		8DE49CA519FC075500461150 /* YQNumbers-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BF019FC075500461150 /* YQNumbers-7@2x.png */; };
+		8DE49CA619FC075500461150 /* YQNumbers-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BF119FC075500461150 /* YQNumbers-8.png */; };
+		8DE49CA719FC075500461150 /* YQNumbers-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BF219FC075500461150 /* YQNumbers-8@2x.png */; };
+		8DE49CA819FC075500461150 /* YQNumbers-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BF319FC075500461150 /* YQNumbers-9.png */; };
+		8DE49CA919FC075500461150 /* YQNumbers-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49BF419FC075500461150 /* YQNumbers-9@2x.png */; };
+		8DE49CAA19FC075500461150 /* YQHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49BF819FC075500461150 /* YQHTTPRequestOperation.m */; };
+		8DE49CAB19FC075500461150 /* YQHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49BFA19FC075500461150 /* YQHTTPRequestOperationManager.m */; };
+		8DE49CAC19FC075500461150 /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49BFC19FC075500461150 /* YQHTTPSessionManager.m */; };
+		8DE49CAD19FC075500461150 /* YQNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49BFF19FC075500461150 /* YQNetworkReachabilityManager.m */; };
+		8DE49CAE19FC075500461150 /* YQSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0119FC075500461150 /* YQSecurityPolicy.m */; };
+		8DE49CAF19FC075500461150 /* YQURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0319FC075500461150 /* YQURLConnectionOperation.m */; };
+		8DE49CB019FC075500461150 /* YQURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0519FC075500461150 /* YQURLRequestSerialization.m */; };
+		8DE49CB119FC075500461150 /* YQURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0719FC075500461150 /* YQURLResponseSerialization.m */; };
+		8DE49CB219FC075500461150 /* YQURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0919FC075500461150 /* YQURLSessionManager.m */; };
+		8DE49CB319FC075500461150 /* YQParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0B19FC075500461150 /* YQParse.m */; };
+		8DE49CB419FC075500461150 /* YQParseImgaeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C0E19FC075500461150 /* YQParseImgaeView.m */; };
+		8DE49CB519FC075500461150 /* YQParseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1019FC075500461150 /* YQParseObject.m */; };
+		8DE49CB619FC075500461150 /* YQParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1219FC075500461150 /* YQParseQuery.m */; };
+		8DE49CB719FC075500461150 /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1419FC075500461150 /* YQParseRequestOperationManager.m */; };
+		8DE49CB819FC075500461150 /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1619FC075500461150 /* YQParseUser.m */; };
+		8DE49CB919FC075500461150 /* YQPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1919FC075500461150 /* YQPopoverController.m */; };
+		8DE49CBA19FC075500461150 /* YQStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C1B19FC075500461150 /* YQStoryboardPopoverSegue.m */; };
+		8DE49CBB19FC075500461150 /* YQWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C1D19FC075500461150 /* YQWebViewController.strings */; };
+		8DE49CBC19FC075500461150 /* YQWebViewControllerActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C2819FC075500461150 /* YQWebViewControllerActivityChrome-iPad.png */; };
+		8DE49CBD19FC075500461150 /* YQWebViewControllerActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C2919FC075500461150 /* YQWebViewControllerActivityChrome-iPad@2x.png */; };
+		8DE49CBE19FC075500461150 /* YQWebViewControllerActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C2B19FC075500461150 /* YQWebViewControllerActivityChrome.m */; };
+		8DE49CBF19FC075500461150 /* YQWebViewControllerActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C2C19FC075500461150 /* YQWebViewControllerActivityChrome@2x.png */; };
+		8DE49CC019FC075500461150 /* YQWebViewControllerActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C2E19FC075500461150 /* YQWebViewControllerActivitySafari-iPad.png */; };
+		8DE49CC119FC075500461150 /* YQWebViewControllerActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C2F19FC075500461150 /* YQWebViewControllerActivitySafari-iPad@2x.png */; };
+		8DE49CC219FC075500461150 /* YQWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C3119FC075500461150 /* YQWebViewControllerActivitySafari.m */; };
+		8DE49CC319FC075500461150 /* YQWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C3219FC075500461150 /* YQWebViewControllerActivitySafari@2x.png */; };
+		8DE49CC419FC075500461150 /* YQWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C3419FC075500461150 /* YQWebViewControllerActivity.m */; };
+		8DE49CC519FC075500461150 /* YQModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C3619FC075500461150 /* YQModalWebViewController.m */; };
+		8DE49CC619FC075500461150 /* YQWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE49C3719FC075500461150 /* YQWebViewController.bundle */; };
+		8DE49CC719FC075500461150 /* YQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C3919FC075500461150 /* YQWebViewController.m */; };
+		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
+		8DE49CCB19FC10BA00461150 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +241,204 @@
 		8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		8DDEDC2719F88E0500550516 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		8DE49B6A19FC075500461150 /* Leaftagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leaftagger.h; sourceTree = "<group>"; };
+		8DE49B6B19FC075500461150 /* Leaftagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Leaftagger.m; sourceTree = "<group>"; };
+		8DE49B6C19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerAddCommentNavigationViewController.h; sourceTree = "<group>"; };
+		8DE49B6D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerAddCommentNavigationViewController.m; sourceTree = "<group>"; };
+		8DE49B6E19FC075500461150 /* LeaftaggerAddCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerAddCommentViewController.h; sourceTree = "<group>"; };
+		8DE49B6F19FC075500461150 /* LeaftaggerAddCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerAddCommentViewController.m; sourceTree = "<group>"; };
+		8DE49B7019FC075500461150 /* LeaftaggerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerApp.h; sourceTree = "<group>"; };
+		8DE49B7119FC075500461150 /* LeaftaggerApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerApp.m; sourceTree = "<group>"; };
+		8DE49B7219FC075500461150 /* LeaftaggerBetaUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerBetaUser.h; sourceTree = "<group>"; };
+		8DE49B7319FC075500461150 /* LeaftaggerBetaUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerBetaUser.m; sourceTree = "<group>"; };
+		8DE49B7419FC075500461150 /* LeaftaggerComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerComment.h; sourceTree = "<group>"; };
+		8DE49B7519FC075500461150 /* LeaftaggerComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerComment.m; sourceTree = "<group>"; };
+		8DE49B7619FC075500461150 /* LeaftaggerCommentOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerCommentOptionsViewController.h; sourceTree = "<group>"; };
+		8DE49B7719FC075500461150 /* LeaftaggerCommentOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerCommentOptionsViewController.m; sourceTree = "<group>"; };
+		8DE49B7819FC075500461150 /* LeaftaggerCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerCommentsViewController.h; sourceTree = "<group>"; };
+		8DE49B7919FC075500461150 /* LeaftaggerCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerCommentsViewController.m; sourceTree = "<group>"; };
+		8DE49B7A19FC075500461150 /* LeaftaggerCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerCommentTableViewCell.h; sourceTree = "<group>"; };
+		8DE49B7B19FC075500461150 /* LeaftaggerCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerCommentTableViewCell.m; sourceTree = "<group>"; };
+		8DE49B7C19FC075500461150 /* LeaftaggerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerConstants.h; sourceTree = "<group>"; };
+		8DE49B7E19FC075500461150 /* LeaftaggerAddComment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeaftaggerAddComment.png; sourceTree = "<group>"; };
+		8DE49B7F19FC075500461150 /* LeaftaggerAddComment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeaftaggerAddComment@2x.png"; sourceTree = "<group>"; };
+		8DE49B8019FC075500461150 /* LeaftaggerLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeaftaggerLogo.png; sourceTree = "<group>"; };
+		8DE49B8119FC075500461150 /* LeaftaggerLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeaftaggerLogo@2x.png"; sourceTree = "<group>"; };
+		8DE49B8219FC075500461150 /* LeaftaggeriPadNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggeriPadNavigationViewController.h; sourceTree = "<group>"; };
+		8DE49B8319FC075500461150 /* LeaftaggeriPadNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggeriPadNavigationViewController.m; sourceTree = "<group>"; };
+		8DE49B8419FC075500461150 /* LeaftaggerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerObject.h; sourceTree = "<group>"; };
+		8DE49B8519FC075500461150 /* LeaftaggerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerObject.m; sourceTree = "<group>"; };
+		8DE49B8619FC075500461150 /* LeaftaggerPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerPage.h; sourceTree = "<group>"; };
+		8DE49B8719FC075500461150 /* LeaftaggerPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerPage.m; sourceTree = "<group>"; };
+		8DE49B8819FC075500461150 /* LeaftaggerPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerPoint.h; sourceTree = "<group>"; };
+		8DE49B8919FC075500461150 /* LeaftaggerPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerPoint.m; sourceTree = "<group>"; };
+		8DE49B8A19FC075500461150 /* LeaftaggerReordVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerReordVideoViewController.h; sourceTree = "<group>"; };
+		8DE49B8B19FC075500461150 /* LeaftaggerReordVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerReordVideoViewController.m; sourceTree = "<group>"; };
+		8DE49B8C19FC075500461150 /* LeaftaggerScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerScreenManager.h; sourceTree = "<group>"; };
+		8DE49B8D19FC075500461150 /* LeaftaggerScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerScreenManager.m; sourceTree = "<group>"; };
+		8DE49B8E19FC075500461150 /* LeaftaggerTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerTapGestureRecognizer.h; sourceTree = "<group>"; };
+		8DE49B8F19FC075500461150 /* LeaftaggerTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerTapGestureRecognizer.m; sourceTree = "<group>"; };
+		8DE49B9019FC075500461150 /* LeaftaggerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaftaggerView.h; sourceTree = "<group>"; };
+		8DE49B9119FC075500461150 /* LeaftaggerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaftaggerView.m; sourceTree = "<group>"; };
+		8DE49B9319FC075500461150 /* YO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YO.h; sourceTree = "<group>"; };
+		8DE49B9419FC075500461150 /* YO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YO.m; sourceTree = "<group>"; };
+		8DE49B9619FC075500461150 /* YQActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQActivityIndicatorView.h; sourceTree = "<group>"; };
+		8DE49B9719FC075500461150 /* YQActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQActivityIndicatorView.m; sourceTree = "<group>"; };
+		8DE49B9919FC075500461150 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
+		8DE49B9A19FC075500461150 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
+		8DE49B9C19FC075500461150 /* YQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLabel.h; sourceTree = "<group>"; };
+		8DE49B9D19FC075500461150 /* YQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLabel.m; sourceTree = "<group>"; };
+		8DE49B9E19FC075500461150 /* YQLeaftaggerPointButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLeaftaggerPointButton.h; sourceTree = "<group>"; };
+		8DE49B9F19FC075500461150 /* YQLeaftaggerPointButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLeaftaggerPointButton.m; sourceTree = "<group>"; };
+		8DE49BA119FC075500461150 /* iPadYQNumbers-00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-00.png"; sourceTree = "<group>"; };
+		8DE49BA219FC075500461150 /* iPadYQNumbers-00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-00@2x.png"; sourceTree = "<group>"; };
+		8DE49BA319FC075500461150 /* iPadYQNumbers-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-1.png"; sourceTree = "<group>"; };
+		8DE49BA419FC075500461150 /* iPadYQNumbers-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-10.png"; sourceTree = "<group>"; };
+		8DE49BA519FC075500461150 /* iPadYQNumbers-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-10@2x.png"; sourceTree = "<group>"; };
+		8DE49BA619FC075500461150 /* iPadYQNumbers-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-11.png"; sourceTree = "<group>"; };
+		8DE49BA719FC075500461150 /* iPadYQNumbers-11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-11@2x.png"; sourceTree = "<group>"; };
+		8DE49BA819FC075500461150 /* iPadYQNumbers-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-12.png"; sourceTree = "<group>"; };
+		8DE49BA919FC075500461150 /* iPadYQNumbers-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-12@2x.png"; sourceTree = "<group>"; };
+		8DE49BAA19FC075500461150 /* iPadYQNumbers-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-13.png"; sourceTree = "<group>"; };
+		8DE49BAB19FC075500461150 /* iPadYQNumbers-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-13@2x.png"; sourceTree = "<group>"; };
+		8DE49BAC19FC075500461150 /* iPadYQNumbers-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-14.png"; sourceTree = "<group>"; };
+		8DE49BAD19FC075500461150 /* iPadYQNumbers-14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-14@2x.png"; sourceTree = "<group>"; };
+		8DE49BAE19FC075500461150 /* iPadYQNumbers-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-15.png"; sourceTree = "<group>"; };
+		8DE49BAF19FC075500461150 /* iPadYQNumbers-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-15@2x.png"; sourceTree = "<group>"; };
+		8DE49BB019FC075500461150 /* iPadYQNumbers-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-16.png"; sourceTree = "<group>"; };
+		8DE49BB119FC075500461150 /* iPadYQNumbers-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-16@2x.png"; sourceTree = "<group>"; };
+		8DE49BB219FC075500461150 /* iPadYQNumbers-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-17.png"; sourceTree = "<group>"; };
+		8DE49BB319FC075500461150 /* iPadYQNumbers-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-17@2x.png"; sourceTree = "<group>"; };
+		8DE49BB419FC075500461150 /* iPadYQNumbers-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-18.png"; sourceTree = "<group>"; };
+		8DE49BB519FC075500461150 /* iPadYQNumbers-18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-18@2x.png"; sourceTree = "<group>"; };
+		8DE49BB619FC075500461150 /* iPadYQNumbers-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-19.png"; sourceTree = "<group>"; };
+		8DE49BB719FC075500461150 /* iPadYQNumbers-19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-19@2x.png"; sourceTree = "<group>"; };
+		8DE49BB819FC075500461150 /* iPadYQNumbers-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-1@2x.png"; sourceTree = "<group>"; };
+		8DE49BB919FC075500461150 /* iPadYQNumbers-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-2.png"; sourceTree = "<group>"; };
+		8DE49BBA19FC075500461150 /* iPadYQNumbers-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-20.png"; sourceTree = "<group>"; };
+		8DE49BBB19FC075500461150 /* iPadYQNumbers-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-20@2x.png"; sourceTree = "<group>"; };
+		8DE49BBC19FC075500461150 /* iPadYQNumbers-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-2@2x.png"; sourceTree = "<group>"; };
+		8DE49BBD19FC075500461150 /* iPadYQNumbers-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-3.png"; sourceTree = "<group>"; };
+		8DE49BBE19FC075500461150 /* iPadYQNumbers-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-3@2x.png"; sourceTree = "<group>"; };
+		8DE49BBF19FC075500461150 /* iPadYQNumbers-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-4.png"; sourceTree = "<group>"; };
+		8DE49BC019FC075500461150 /* iPadYQNumbers-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-4@2x.png"; sourceTree = "<group>"; };
+		8DE49BC119FC075500461150 /* iPadYQNumbers-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-5.png"; sourceTree = "<group>"; };
+		8DE49BC219FC075500461150 /* iPadYQNumbers-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-5@2x.png"; sourceTree = "<group>"; };
+		8DE49BC319FC075500461150 /* iPadYQNumbers-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-6.png"; sourceTree = "<group>"; };
+		8DE49BC419FC075500461150 /* iPadYQNumbers-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-6@2x.png"; sourceTree = "<group>"; };
+		8DE49BC519FC075500461150 /* iPadYQNumbers-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-7.png"; sourceTree = "<group>"; };
+		8DE49BC619FC075500461150 /* iPadYQNumbers-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-7@2x.png"; sourceTree = "<group>"; };
+		8DE49BC719FC075500461150 /* iPadYQNumbers-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-8.png"; sourceTree = "<group>"; };
+		8DE49BC819FC075500461150 /* iPadYQNumbers-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-8@2x.png"; sourceTree = "<group>"; };
+		8DE49BC919FC075500461150 /* iPadYQNumbers-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-9.png"; sourceTree = "<group>"; };
+		8DE49BCA19FC075500461150 /* iPadYQNumbers-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadYQNumbers-9@2x.png"; sourceTree = "<group>"; };
+		8DE49BCB19FC075500461150 /* YQNumbers-00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-00.png"; sourceTree = "<group>"; };
+		8DE49BCC19FC075500461150 /* YQNumbers-00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-00@2x.png"; sourceTree = "<group>"; };
+		8DE49BCD19FC075500461150 /* YQNumbers-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-1.png"; sourceTree = "<group>"; };
+		8DE49BCE19FC075500461150 /* YQNumbers-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-10.png"; sourceTree = "<group>"; };
+		8DE49BCF19FC075500461150 /* YQNumbers-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-10@2x.png"; sourceTree = "<group>"; };
+		8DE49BD019FC075500461150 /* YQNumbers-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-11.png"; sourceTree = "<group>"; };
+		8DE49BD119FC075500461150 /* YQNumbers-11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-11@2x.png"; sourceTree = "<group>"; };
+		8DE49BD219FC075500461150 /* YQNumbers-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-12.png"; sourceTree = "<group>"; };
+		8DE49BD319FC075500461150 /* YQNumbers-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-12@2x.png"; sourceTree = "<group>"; };
+		8DE49BD419FC075500461150 /* YQNumbers-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-13.png"; sourceTree = "<group>"; };
+		8DE49BD519FC075500461150 /* YQNumbers-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-13@2x.png"; sourceTree = "<group>"; };
+		8DE49BD619FC075500461150 /* YQNumbers-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-14.png"; sourceTree = "<group>"; };
+		8DE49BD719FC075500461150 /* YQNumbers-14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-14@2x.png"; sourceTree = "<group>"; };
+		8DE49BD819FC075500461150 /* YQNumbers-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-15.png"; sourceTree = "<group>"; };
+		8DE49BD919FC075500461150 /* YQNumbers-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-15@2x.png"; sourceTree = "<group>"; };
+		8DE49BDA19FC075500461150 /* YQNumbers-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-16.png"; sourceTree = "<group>"; };
+		8DE49BDB19FC075500461150 /* YQNumbers-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-16@2x.png"; sourceTree = "<group>"; };
+		8DE49BDC19FC075500461150 /* YQNumbers-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-17.png"; sourceTree = "<group>"; };
+		8DE49BDD19FC075500461150 /* YQNumbers-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-17@2x.png"; sourceTree = "<group>"; };
+		8DE49BDE19FC075500461150 /* YQNumbers-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-18.png"; sourceTree = "<group>"; };
+		8DE49BDF19FC075500461150 /* YQNumbers-18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-18@2x.png"; sourceTree = "<group>"; };
+		8DE49BE019FC075500461150 /* YQNumbers-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-19.png"; sourceTree = "<group>"; };
+		8DE49BE119FC075500461150 /* YQNumbers-19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-19@2x.png"; sourceTree = "<group>"; };
+		8DE49BE219FC075500461150 /* YQNumbers-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-1@2x.png"; sourceTree = "<group>"; };
+		8DE49BE319FC075500461150 /* YQNumbers-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-2.png"; sourceTree = "<group>"; };
+		8DE49BE419FC075500461150 /* YQNumbers-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-20.png"; sourceTree = "<group>"; };
+		8DE49BE519FC075500461150 /* YQNumbers-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-20@2x.png"; sourceTree = "<group>"; };
+		8DE49BE619FC075500461150 /* YQNumbers-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-2@2x.png"; sourceTree = "<group>"; };
+		8DE49BE719FC075500461150 /* YQNumbers-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-3.png"; sourceTree = "<group>"; };
+		8DE49BE819FC075500461150 /* YQNumbers-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-3@2x.png"; sourceTree = "<group>"; };
+		8DE49BE919FC075500461150 /* YQNumbers-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-4.png"; sourceTree = "<group>"; };
+		8DE49BEA19FC075500461150 /* YQNumbers-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-4@2x.png"; sourceTree = "<group>"; };
+		8DE49BEB19FC075500461150 /* YQNumbers-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-5.png"; sourceTree = "<group>"; };
+		8DE49BEC19FC075500461150 /* YQNumbers-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-5@2x.png"; sourceTree = "<group>"; };
+		8DE49BED19FC075500461150 /* YQNumbers-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-6.png"; sourceTree = "<group>"; };
+		8DE49BEE19FC075500461150 /* YQNumbers-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-6@2x.png"; sourceTree = "<group>"; };
+		8DE49BEF19FC075500461150 /* YQNumbers-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-7.png"; sourceTree = "<group>"; };
+		8DE49BF019FC075500461150 /* YQNumbers-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-7@2x.png"; sourceTree = "<group>"; };
+		8DE49BF119FC075500461150 /* YQNumbers-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-8.png"; sourceTree = "<group>"; };
+		8DE49BF219FC075500461150 /* YQNumbers-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-8@2x.png"; sourceTree = "<group>"; };
+		8DE49BF319FC075500461150 /* YQNumbers-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-9.png"; sourceTree = "<group>"; };
+		8DE49BF419FC075500461150 /* YQNumbers-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQNumbers-9@2x.png"; sourceTree = "<group>"; };
+		8DE49BF719FC075500461150 /* YQHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8DE49BF819FC075500461150 /* YQHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8DE49BF919FC075500461150 /* YQHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8DE49BFA19FC075500461150 /* YQHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8DE49BFB19FC075500461150 /* YQHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPSessionManager.h; sourceTree = "<group>"; };
+		8DE49BFC19FC075500461150 /* YQHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPSessionManager.m; sourceTree = "<group>"; };
+		8DE49BFD19FC075500461150 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
+		8DE49BFE19FC075500461150 /* YQNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8DE49BFF19FC075500461150 /* YQNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		8DE49C0019FC075500461150 /* YQSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSecurityPolicy.h; sourceTree = "<group>"; };
+		8DE49C0119FC075500461150 /* YQSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQSecurityPolicy.m; sourceTree = "<group>"; };
+		8DE49C0219FC075500461150 /* YQURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLConnectionOperation.h; sourceTree = "<group>"; };
+		8DE49C0319FC075500461150 /* YQURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLConnectionOperation.m; sourceTree = "<group>"; };
+		8DE49C0419FC075500461150 /* YQURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLRequestSerialization.h; sourceTree = "<group>"; };
+		8DE49C0519FC075500461150 /* YQURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLRequestSerialization.m; sourceTree = "<group>"; };
+		8DE49C0619FC075500461150 /* YQURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLResponseSerialization.h; sourceTree = "<group>"; };
+		8DE49C0719FC075500461150 /* YQURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLResponseSerialization.m; sourceTree = "<group>"; };
+		8DE49C0819FC075500461150 /* YQURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLSessionManager.h; sourceTree = "<group>"; };
+		8DE49C0919FC075500461150 /* YQURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLSessionManager.m; sourceTree = "<group>"; };
+		8DE49C0A19FC075500461150 /* YQParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParse.h; sourceTree = "<group>"; };
+		8DE49C0B19FC075500461150 /* YQParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParse.m; sourceTree = "<group>"; };
+		8DE49C0C19FC075500461150 /* YQParseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseConstants.h; sourceTree = "<group>"; };
+		8DE49C0D19FC075500461150 /* YQParseImgaeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseImgaeView.h; sourceTree = "<group>"; };
+		8DE49C0E19FC075500461150 /* YQParseImgaeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseImgaeView.m; sourceTree = "<group>"; };
+		8DE49C0F19FC075500461150 /* YQParseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseObject.h; sourceTree = "<group>"; };
+		8DE49C1019FC075500461150 /* YQParseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseObject.m; sourceTree = "<group>"; };
+		8DE49C1119FC075500461150 /* YQParseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseQuery.h; sourceTree = "<group>"; };
+		8DE49C1219FC075500461150 /* YQParseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseQuery.m; sourceTree = "<group>"; };
+		8DE49C1319FC075500461150 /* YQParseRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseRequestOperationManager.h; sourceTree = "<group>"; };
+		8DE49C1419FC075500461150 /* YQParseRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseRequestOperationManager.m; sourceTree = "<group>"; };
+		8DE49C1519FC075500461150 /* YQParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseUser.h; sourceTree = "<group>"; };
+		8DE49C1619FC075500461150 /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
+		8DE49C1819FC075500461150 /* YQPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQPopoverController.h; sourceTree = "<group>"; };
+		8DE49C1919FC075500461150 /* YQPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQPopoverController.m; sourceTree = "<group>"; };
+		8DE49C1A19FC075500461150 /* YQStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		8DE49C1B19FC075500461150 /* YQStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		8DE49C1E19FC075500461150 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C1F19FC075500461150 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2019FC075500461150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2119FC075500461150 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/YQWebViewController.strings"; sourceTree = "<group>"; };
+		8DE49C2219FC075500461150 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2319FC075500461150 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2419FC075500461150 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2519FC075500461150 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/YQWebViewController.strings; sourceTree = "<group>"; };
+		8DE49C2819FC075500461150 /* YQWebViewControllerActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivityChrome-iPad.png"; sourceTree = "<group>"; };
+		8DE49C2919FC075500461150 /* YQWebViewControllerActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
+		8DE49C2A19FC075500461150 /* YQWebViewControllerActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQWebViewControllerActivityChrome.h; sourceTree = "<group>"; };
+		8DE49C2B19FC075500461150 /* YQWebViewControllerActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQWebViewControllerActivityChrome.m; sourceTree = "<group>"; };
+		8DE49C2C19FC075500461150 /* YQWebViewControllerActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivityChrome@2x.png"; sourceTree = "<group>"; };
+		8DE49C2E19FC075500461150 /* YQWebViewControllerActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivitySafari-iPad.png"; sourceTree = "<group>"; };
+		8DE49C2F19FC075500461150 /* YQWebViewControllerActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
+		8DE49C3019FC075500461150 /* YQWebViewControllerActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQWebViewControllerActivitySafari.h; sourceTree = "<group>"; };
+		8DE49C3119FC075500461150 /* YQWebViewControllerActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQWebViewControllerActivitySafari.m; sourceTree = "<group>"; };
+		8DE49C3219FC075500461150 /* YQWebViewControllerActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YQWebViewControllerActivitySafari@2x.png"; sourceTree = "<group>"; };
+		8DE49C3319FC075500461150 /* YQWebViewControllerActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQWebViewControllerActivity.h; sourceTree = "<group>"; };
+		8DE49C3419FC075500461150 /* YQWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQWebViewControllerActivity.m; sourceTree = "<group>"; };
+		8DE49C3519FC075500461150 /* YQModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQModalWebViewController.h; sourceTree = "<group>"; };
+		8DE49C3619FC075500461150 /* YQModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQModalWebViewController.m; sourceTree = "<group>"; };
+		8DE49C3719FC075500461150 /* YQWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YQWebViewController.bundle; sourceTree = "<group>"; };
+		8DE49C3819FC075500461150 /* YQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQWebViewController.h; sourceTree = "<group>"; };
+		8DE49C3919FC075500461150 /* YQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQWebViewController.m; sourceTree = "<group>"; };
+		8DE49C3A19FC075500461150 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/YQWebViewController.strings"; sourceTree = "<group>"; };
+		8DE49C3B19FC075500461150 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/YQWebViewController.strings"; sourceTree = "<group>"; };
+		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		8DE49CCA19FC10BA00461150 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +502,7 @@
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
+				8DE49CCA19FC10BA00461150 /* AdManager.swift */,
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
 				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
@@ -175,6 +516,7 @@
 				8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
 				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
+				8DE49CC819FC0F8400461150 /* Ad.swift */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
 				8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */,
@@ -213,6 +555,7 @@
 		8DD6B4AA19F74BCC00B30EA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DE49B6919FC075500461150 /* Leaftagger */,
 				8DD6B4C319F74C3200B30EA9 /* SystemConfiguration.framework */,
 				8DD6B4C119F74C2A00B30EA9 /* StoreKit.framework */,
 				8DD6B4BF19F74C2100B30EA9 /* Security.framework */,
@@ -228,6 +571,304 @@
 				8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DE49B6919FC075500461150 /* Leaftagger */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B6A19FC075500461150 /* Leaftagger.h */,
+				8DE49B6B19FC075500461150 /* Leaftagger.m */,
+				8DE49B6C19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.h */,
+				8DE49B6D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m */,
+				8DE49B6E19FC075500461150 /* LeaftaggerAddCommentViewController.h */,
+				8DE49B6F19FC075500461150 /* LeaftaggerAddCommentViewController.m */,
+				8DE49B7019FC075500461150 /* LeaftaggerApp.h */,
+				8DE49B7119FC075500461150 /* LeaftaggerApp.m */,
+				8DE49B7219FC075500461150 /* LeaftaggerBetaUser.h */,
+				8DE49B7319FC075500461150 /* LeaftaggerBetaUser.m */,
+				8DE49B7419FC075500461150 /* LeaftaggerComment.h */,
+				8DE49B7519FC075500461150 /* LeaftaggerComment.m */,
+				8DE49B7619FC075500461150 /* LeaftaggerCommentOptionsViewController.h */,
+				8DE49B7719FC075500461150 /* LeaftaggerCommentOptionsViewController.m */,
+				8DE49B7819FC075500461150 /* LeaftaggerCommentsViewController.h */,
+				8DE49B7919FC075500461150 /* LeaftaggerCommentsViewController.m */,
+				8DE49B7A19FC075500461150 /* LeaftaggerCommentTableViewCell.h */,
+				8DE49B7B19FC075500461150 /* LeaftaggerCommentTableViewCell.m */,
+				8DE49B7C19FC075500461150 /* LeaftaggerConstants.h */,
+				8DE49B7D19FC075500461150 /* LeaftaggerImages */,
+				8DE49B8219FC075500461150 /* LeaftaggeriPadNavigationViewController.h */,
+				8DE49B8319FC075500461150 /* LeaftaggeriPadNavigationViewController.m */,
+				8DE49B8419FC075500461150 /* LeaftaggerObject.h */,
+				8DE49B8519FC075500461150 /* LeaftaggerObject.m */,
+				8DE49B8619FC075500461150 /* LeaftaggerPage.h */,
+				8DE49B8719FC075500461150 /* LeaftaggerPage.m */,
+				8DE49B8819FC075500461150 /* LeaftaggerPoint.h */,
+				8DE49B8919FC075500461150 /* LeaftaggerPoint.m */,
+				8DE49B8A19FC075500461150 /* LeaftaggerReordVideoViewController.h */,
+				8DE49B8B19FC075500461150 /* LeaftaggerReordVideoViewController.m */,
+				8DE49B8C19FC075500461150 /* LeaftaggerScreenManager.h */,
+				8DE49B8D19FC075500461150 /* LeaftaggerScreenManager.m */,
+				8DE49B8E19FC075500461150 /* LeaftaggerTapGestureRecognizer.h */,
+				8DE49B8F19FC075500461150 /* LeaftaggerTapGestureRecognizer.m */,
+				8DE49B9019FC075500461150 /* LeaftaggerView.h */,
+				8DE49B9119FC075500461150 /* LeaftaggerView.m */,
+				8DE49B9219FC075500461150 /* YO */,
+				8DE49B9519FC075500461150 /* YQActivityIndicatorView */,
+				8DE49B9819FC075500461150 /* YQButton */,
+				8DE49B9B19FC075500461150 /* YQLabel */,
+				8DE49B9E19FC075500461150 /* YQLeaftaggerPointButton.h */,
+				8DE49B9F19FC075500461150 /* YQLeaftaggerPointButton.m */,
+				8DE49BA019FC075500461150 /* YQNumberIcons */,
+				8DE49BF519FC075500461150 /* YQParse */,
+				8DE49C1719FC075500461150 /* YQPopoverController */,
+				8DE49C1C19FC075500461150 /* YQWebViewController */,
+			);
+			path = Leaftagger;
+			sourceTree = "<group>";
+		};
+		8DE49B7D19FC075500461150 /* LeaftaggerImages */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B7E19FC075500461150 /* LeaftaggerAddComment.png */,
+				8DE49B7F19FC075500461150 /* LeaftaggerAddComment@2x.png */,
+				8DE49B8019FC075500461150 /* LeaftaggerLogo.png */,
+				8DE49B8119FC075500461150 /* LeaftaggerLogo@2x.png */,
+			);
+			path = LeaftaggerImages;
+			sourceTree = "<group>";
+		};
+		8DE49B9219FC075500461150 /* YO */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B9319FC075500461150 /* YO.h */,
+				8DE49B9419FC075500461150 /* YO.m */,
+			);
+			path = YO;
+			sourceTree = "<group>";
+		};
+		8DE49B9519FC075500461150 /* YQActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B9619FC075500461150 /* YQActivityIndicatorView.h */,
+				8DE49B9719FC075500461150 /* YQActivityIndicatorView.m */,
+			);
+			path = YQActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		8DE49B9819FC075500461150 /* YQButton */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B9919FC075500461150 /* YQButton.h */,
+				8DE49B9A19FC075500461150 /* YQButton.m */,
+			);
+			path = YQButton;
+			sourceTree = "<group>";
+		};
+		8DE49B9B19FC075500461150 /* YQLabel */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49B9C19FC075500461150 /* YQLabel.h */,
+				8DE49B9D19FC075500461150 /* YQLabel.m */,
+			);
+			path = YQLabel;
+			sourceTree = "<group>";
+		};
+		8DE49BA019FC075500461150 /* YQNumberIcons */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49BA119FC075500461150 /* iPadYQNumbers-00.png */,
+				8DE49BA219FC075500461150 /* iPadYQNumbers-00@2x.png */,
+				8DE49BA319FC075500461150 /* iPadYQNumbers-1.png */,
+				8DE49BA419FC075500461150 /* iPadYQNumbers-10.png */,
+				8DE49BA519FC075500461150 /* iPadYQNumbers-10@2x.png */,
+				8DE49BA619FC075500461150 /* iPadYQNumbers-11.png */,
+				8DE49BA719FC075500461150 /* iPadYQNumbers-11@2x.png */,
+				8DE49BA819FC075500461150 /* iPadYQNumbers-12.png */,
+				8DE49BA919FC075500461150 /* iPadYQNumbers-12@2x.png */,
+				8DE49BAA19FC075500461150 /* iPadYQNumbers-13.png */,
+				8DE49BAB19FC075500461150 /* iPadYQNumbers-13@2x.png */,
+				8DE49BAC19FC075500461150 /* iPadYQNumbers-14.png */,
+				8DE49BAD19FC075500461150 /* iPadYQNumbers-14@2x.png */,
+				8DE49BAE19FC075500461150 /* iPadYQNumbers-15.png */,
+				8DE49BAF19FC075500461150 /* iPadYQNumbers-15@2x.png */,
+				8DE49BB019FC075500461150 /* iPadYQNumbers-16.png */,
+				8DE49BB119FC075500461150 /* iPadYQNumbers-16@2x.png */,
+				8DE49BB219FC075500461150 /* iPadYQNumbers-17.png */,
+				8DE49BB319FC075500461150 /* iPadYQNumbers-17@2x.png */,
+				8DE49BB419FC075500461150 /* iPadYQNumbers-18.png */,
+				8DE49BB519FC075500461150 /* iPadYQNumbers-18@2x.png */,
+				8DE49BB619FC075500461150 /* iPadYQNumbers-19.png */,
+				8DE49BB719FC075500461150 /* iPadYQNumbers-19@2x.png */,
+				8DE49BB819FC075500461150 /* iPadYQNumbers-1@2x.png */,
+				8DE49BB919FC075500461150 /* iPadYQNumbers-2.png */,
+				8DE49BBA19FC075500461150 /* iPadYQNumbers-20.png */,
+				8DE49BBB19FC075500461150 /* iPadYQNumbers-20@2x.png */,
+				8DE49BBC19FC075500461150 /* iPadYQNumbers-2@2x.png */,
+				8DE49BBD19FC075500461150 /* iPadYQNumbers-3.png */,
+				8DE49BBE19FC075500461150 /* iPadYQNumbers-3@2x.png */,
+				8DE49BBF19FC075500461150 /* iPadYQNumbers-4.png */,
+				8DE49BC019FC075500461150 /* iPadYQNumbers-4@2x.png */,
+				8DE49BC119FC075500461150 /* iPadYQNumbers-5.png */,
+				8DE49BC219FC075500461150 /* iPadYQNumbers-5@2x.png */,
+				8DE49BC319FC075500461150 /* iPadYQNumbers-6.png */,
+				8DE49BC419FC075500461150 /* iPadYQNumbers-6@2x.png */,
+				8DE49BC519FC075500461150 /* iPadYQNumbers-7.png */,
+				8DE49BC619FC075500461150 /* iPadYQNumbers-7@2x.png */,
+				8DE49BC719FC075500461150 /* iPadYQNumbers-8.png */,
+				8DE49BC819FC075500461150 /* iPadYQNumbers-8@2x.png */,
+				8DE49BC919FC075500461150 /* iPadYQNumbers-9.png */,
+				8DE49BCA19FC075500461150 /* iPadYQNumbers-9@2x.png */,
+				8DE49BCB19FC075500461150 /* YQNumbers-00.png */,
+				8DE49BCC19FC075500461150 /* YQNumbers-00@2x.png */,
+				8DE49BCD19FC075500461150 /* YQNumbers-1.png */,
+				8DE49BCE19FC075500461150 /* YQNumbers-10.png */,
+				8DE49BCF19FC075500461150 /* YQNumbers-10@2x.png */,
+				8DE49BD019FC075500461150 /* YQNumbers-11.png */,
+				8DE49BD119FC075500461150 /* YQNumbers-11@2x.png */,
+				8DE49BD219FC075500461150 /* YQNumbers-12.png */,
+				8DE49BD319FC075500461150 /* YQNumbers-12@2x.png */,
+				8DE49BD419FC075500461150 /* YQNumbers-13.png */,
+				8DE49BD519FC075500461150 /* YQNumbers-13@2x.png */,
+				8DE49BD619FC075500461150 /* YQNumbers-14.png */,
+				8DE49BD719FC075500461150 /* YQNumbers-14@2x.png */,
+				8DE49BD819FC075500461150 /* YQNumbers-15.png */,
+				8DE49BD919FC075500461150 /* YQNumbers-15@2x.png */,
+				8DE49BDA19FC075500461150 /* YQNumbers-16.png */,
+				8DE49BDB19FC075500461150 /* YQNumbers-16@2x.png */,
+				8DE49BDC19FC075500461150 /* YQNumbers-17.png */,
+				8DE49BDD19FC075500461150 /* YQNumbers-17@2x.png */,
+				8DE49BDE19FC075500461150 /* YQNumbers-18.png */,
+				8DE49BDF19FC075500461150 /* YQNumbers-18@2x.png */,
+				8DE49BE019FC075500461150 /* YQNumbers-19.png */,
+				8DE49BE119FC075500461150 /* YQNumbers-19@2x.png */,
+				8DE49BE219FC075500461150 /* YQNumbers-1@2x.png */,
+				8DE49BE319FC075500461150 /* YQNumbers-2.png */,
+				8DE49BE419FC075500461150 /* YQNumbers-20.png */,
+				8DE49BE519FC075500461150 /* YQNumbers-20@2x.png */,
+				8DE49BE619FC075500461150 /* YQNumbers-2@2x.png */,
+				8DE49BE719FC075500461150 /* YQNumbers-3.png */,
+				8DE49BE819FC075500461150 /* YQNumbers-3@2x.png */,
+				8DE49BE919FC075500461150 /* YQNumbers-4.png */,
+				8DE49BEA19FC075500461150 /* YQNumbers-4@2x.png */,
+				8DE49BEB19FC075500461150 /* YQNumbers-5.png */,
+				8DE49BEC19FC075500461150 /* YQNumbers-5@2x.png */,
+				8DE49BED19FC075500461150 /* YQNumbers-6.png */,
+				8DE49BEE19FC075500461150 /* YQNumbers-6@2x.png */,
+				8DE49BEF19FC075500461150 /* YQNumbers-7.png */,
+				8DE49BF019FC075500461150 /* YQNumbers-7@2x.png */,
+				8DE49BF119FC075500461150 /* YQNumbers-8.png */,
+				8DE49BF219FC075500461150 /* YQNumbers-8@2x.png */,
+				8DE49BF319FC075500461150 /* YQNumbers-9.png */,
+				8DE49BF419FC075500461150 /* YQNumbers-9@2x.png */,
+			);
+			path = YQNumberIcons;
+			sourceTree = "<group>";
+		};
+		8DE49BF519FC075500461150 /* YQParse */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49BF619FC075500461150 /* YQNetworking */,
+				8DE49C0A19FC075500461150 /* YQParse.h */,
+				8DE49C0B19FC075500461150 /* YQParse.m */,
+				8DE49C0C19FC075500461150 /* YQParseConstants.h */,
+				8DE49C0D19FC075500461150 /* YQParseImgaeView.h */,
+				8DE49C0E19FC075500461150 /* YQParseImgaeView.m */,
+				8DE49C0F19FC075500461150 /* YQParseObject.h */,
+				8DE49C1019FC075500461150 /* YQParseObject.m */,
+				8DE49C1119FC075500461150 /* YQParseQuery.h */,
+				8DE49C1219FC075500461150 /* YQParseQuery.m */,
+				8DE49C1319FC075500461150 /* YQParseRequestOperationManager.h */,
+				8DE49C1419FC075500461150 /* YQParseRequestOperationManager.m */,
+				8DE49C1519FC075500461150 /* YQParseUser.h */,
+				8DE49C1619FC075500461150 /* YQParseUser.m */,
+			);
+			path = YQParse;
+			sourceTree = "<group>";
+		};
+		8DE49BF619FC075500461150 /* YQNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49BF719FC075500461150 /* YQHTTPRequestOperation.h */,
+				8DE49BF819FC075500461150 /* YQHTTPRequestOperation.m */,
+				8DE49BF919FC075500461150 /* YQHTTPRequestOperationManager.h */,
+				8DE49BFA19FC075500461150 /* YQHTTPRequestOperationManager.m */,
+				8DE49BFB19FC075500461150 /* YQHTTPSessionManager.h */,
+				8DE49BFC19FC075500461150 /* YQHTTPSessionManager.m */,
+				8DE49BFD19FC075500461150 /* YQNetworking.h */,
+				8DE49BFE19FC075500461150 /* YQNetworkReachabilityManager.h */,
+				8DE49BFF19FC075500461150 /* YQNetworkReachabilityManager.m */,
+				8DE49C0019FC075500461150 /* YQSecurityPolicy.h */,
+				8DE49C0119FC075500461150 /* YQSecurityPolicy.m */,
+				8DE49C0219FC075500461150 /* YQURLConnectionOperation.h */,
+				8DE49C0319FC075500461150 /* YQURLConnectionOperation.m */,
+				8DE49C0419FC075500461150 /* YQURLRequestSerialization.h */,
+				8DE49C0519FC075500461150 /* YQURLRequestSerialization.m */,
+				8DE49C0619FC075500461150 /* YQURLResponseSerialization.h */,
+				8DE49C0719FC075500461150 /* YQURLResponseSerialization.m */,
+				8DE49C0819FC075500461150 /* YQURLSessionManager.h */,
+				8DE49C0919FC075500461150 /* YQURLSessionManager.m */,
+			);
+			path = YQNetworking;
+			sourceTree = "<group>";
+		};
+		8DE49C1719FC075500461150 /* YQPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49C1819FC075500461150 /* YQPopoverController.h */,
+				8DE49C1919FC075500461150 /* YQPopoverController.m */,
+				8DE49C1A19FC075500461150 /* YQStoryboardPopoverSegue.h */,
+				8DE49C1B19FC075500461150 /* YQStoryboardPopoverSegue.m */,
+			);
+			path = YQPopoverController;
+			sourceTree = "<group>";
+		};
+		8DE49C1C19FC075500461150 /* YQWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49C1D19FC075500461150 /* YQWebViewController.strings */,
+				8DE49C2619FC075500461150 /* UIActivities */,
+				8DE49C3519FC075500461150 /* YQModalWebViewController.h */,
+				8DE49C3619FC075500461150 /* YQModalWebViewController.m */,
+				8DE49C3719FC075500461150 /* YQWebViewController.bundle */,
+				8DE49C3819FC075500461150 /* YQWebViewController.h */,
+				8DE49C3919FC075500461150 /* YQWebViewController.m */,
+			);
+			path = YQWebViewController;
+			sourceTree = "<group>";
+		};
+		8DE49C2619FC075500461150 /* UIActivities */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49C2719FC075500461150 /* Chrome */,
+				8DE49C2D19FC075500461150 /* Safari */,
+				8DE49C3319FC075500461150 /* YQWebViewControllerActivity.h */,
+				8DE49C3419FC075500461150 /* YQWebViewControllerActivity.m */,
+			);
+			path = UIActivities;
+			sourceTree = "<group>";
+		};
+		8DE49C2719FC075500461150 /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49C2819FC075500461150 /* YQWebViewControllerActivityChrome-iPad.png */,
+				8DE49C2919FC075500461150 /* YQWebViewControllerActivityChrome-iPad@2x.png */,
+				8DE49C2A19FC075500461150 /* YQWebViewControllerActivityChrome.h */,
+				8DE49C2B19FC075500461150 /* YQWebViewControllerActivityChrome.m */,
+				8DE49C2C19FC075500461150 /* YQWebViewControllerActivityChrome@2x.png */,
+			);
+			path = Chrome;
+			sourceTree = "<group>";
+		};
+		8DE49C2D19FC075500461150 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				8DE49C2E19FC075500461150 /* YQWebViewControllerActivitySafari-iPad.png */,
+				8DE49C2F19FC075500461150 /* YQWebViewControllerActivitySafari-iPad@2x.png */,
+				8DE49C3019FC075500461150 /* YQWebViewControllerActivitySafari.h */,
+				8DE49C3119FC075500461150 /* YQWebViewControllerActivitySafari.m */,
+				8DE49C3219FC075500461150 /* YQWebViewControllerActivitySafari@2x.png */,
+			);
+			path = Safari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +934,15 @@
 			knownRegions = (
 				en,
 				Base,
+				da,
+				de,
+				"es-ES",
+				es,
+				fr,
+				ja,
+				pt,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 8DB6F3A519F1BC4E002ED90F;
 			productRefGroup = 8DB6F3AF19F1BC4E002ED90F /* Products */;
@@ -310,10 +960,106 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE49C9E19FC075500461150 /* YQNumbers-4.png in Resources */,
+				8DE49C9C19FC075500461150 /* YQNumbers-3.png in Resources */,
+				8DE49C9819FC075500461150 /* YQNumbers-2.png in Resources */,
+				8DE49C8519FC075500461150 /* YQNumbers-11.png in Resources */,
+				8DE49C8719FC075500461150 /* YQNumbers-12.png in Resources */,
+				8DE49C4519FC075500461150 /* LeaftaggerAddComment.png in Resources */,
+				8DE49CA419FC075500461150 /* YQNumbers-7.png in Resources */,
+				8DE49C9719FC075500461150 /* YQNumbers-1@2x.png in Resources */,
+				8DE49C7319FC075500461150 /* iPadYQNumbers-3@2x.png in Resources */,
+				8DE49C5E19FC075500461150 /* iPadYQNumbers-12@2x.png in Resources */,
+				8DE49C6B19FC075500461150 /* iPadYQNumbers-19.png in Resources */,
+				8DE49C4719FC075500461150 /* LeaftaggerLogo.png in Resources */,
+				8DE49C8019FC075500461150 /* YQNumbers-00.png in Resources */,
+				8DE49C9B19FC075500461150 /* YQNumbers-2@2x.png in Resources */,
+				8DE49C6F19FC075500461150 /* iPadYQNumbers-20.png in Resources */,
+				8DE49C6419FC075500461150 /* iPadYQNumbers-15@2x.png in Resources */,
+				8DE49C5B19FC075500461150 /* iPadYQNumbers-11.png in Resources */,
+				8DE49C8E19FC075500461150 /* YQNumbers-15@2x.png in Resources */,
+				8DE49C8B19FC075500461150 /* YQNumbers-14.png in Resources */,
+				8DE49C8419FC075500461150 /* YQNumbers-10@2x.png in Resources */,
 				8DB6F3BC19F1BC4E002ED90F /* Main.storyboard in Resources */,
+				8DE49C5C19FC075500461150 /* iPadYQNumbers-11@2x.png in Resources */,
+				8DE49C8C19FC075500461150 /* YQNumbers-14@2x.png in Resources */,
+				8DE49CC119FC075500461150 /* YQWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				8DE49C8319FC075500461150 /* YQNumbers-10.png in Resources */,
+				8DE49C7919FC075500461150 /* iPadYQNumbers-6@2x.png in Resources */,
+				8DE49C9619FC075500461150 /* YQNumbers-19@2x.png in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
+				8DE49CA919FC075500461150 /* YQNumbers-9@2x.png in Resources */,
+				8DE49CC619FC075500461150 /* YQWebViewController.bundle in Resources */,
+				8DE49C8A19FC075500461150 /* YQNumbers-13@2x.png in Resources */,
 				8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */,
+				8DE49C7019FC075500461150 /* iPadYQNumbers-20@2x.png in Resources */,
+				8DE49C9A19FC075500461150 /* YQNumbers-20@2x.png in Resources */,
+				8DE49C6919FC075500461150 /* iPadYQNumbers-18.png in Resources */,
+				8DE49C6319FC075500461150 /* iPadYQNumbers-15.png in Resources */,
+				8DE49CBC19FC075500461150 /* YQWebViewControllerActivityChrome-iPad.png in Resources */,
+				8DE49C6019FC075500461150 /* iPadYQNumbers-13@2x.png in Resources */,
+				8DE49C7519FC075500461150 /* iPadYQNumbers-4@2x.png in Resources */,
+				8DE49C7219FC075500461150 /* iPadYQNumbers-3.png in Resources */,
+				8DE49C5F19FC075500461150 /* iPadYQNumbers-13.png in Resources */,
+				8DE49C8D19FC075500461150 /* YQNumbers-15.png in Resources */,
+				8DE49C5919FC075500461150 /* iPadYQNumbers-10.png in Resources */,
+				8DE49C9D19FC075500461150 /* YQNumbers-3@2x.png in Resources */,
+				8DE49CA619FC075500461150 /* YQNumbers-8.png in Resources */,
+				8DE49CA119FC075500461150 /* YQNumbers-5@2x.png in Resources */,
+				8DE49C7C19FC075500461150 /* iPadYQNumbers-8.png in Resources */,
+				8DE49C5719FC075500461150 /* iPadYQNumbers-00@2x.png in Resources */,
+				8DE49C6619FC075500461150 /* iPadYQNumbers-16@2x.png in Resources */,
+				8DE49C8219FC075500461150 /* YQNumbers-1.png in Resources */,
+				8DE49C6C19FC075500461150 /* iPadYQNumbers-19@2x.png in Resources */,
+				8DE49C4819FC075500461150 /* LeaftaggerLogo@2x.png in Resources */,
+				8DE49C9919FC075500461150 /* YQNumbers-20.png in Resources */,
+				8DE49C7B19FC075500461150 /* iPadYQNumbers-7@2x.png in Resources */,
+				8DE49C6A19FC075500461150 /* iPadYQNumbers-18@2x.png in Resources */,
+				8DE49C9F19FC075500461150 /* YQNumbers-4@2x.png in Resources */,
+				8DE49C7D19FC075500461150 /* iPadYQNumbers-8@2x.png in Resources */,
+				8DE49C7119FC075500461150 /* iPadYQNumbers-2@2x.png in Resources */,
+				8DE49CBD19FC075500461150 /* YQWebViewControllerActivityChrome-iPad@2x.png in Resources */,
+				8DE49C8F19FC075500461150 /* YQNumbers-16.png in Resources */,
+				8DE49C6719FC075500461150 /* iPadYQNumbers-17.png in Resources */,
+				8DE49CA719FC075500461150 /* YQNumbers-8@2x.png in Resources */,
+				8DE49CA319FC075500461150 /* YQNumbers-6@2x.png in Resources */,
+				8DE49C7619FC075500461150 /* iPadYQNumbers-5.png in Resources */,
+				8DE49CA019FC075500461150 /* YQNumbers-5.png in Resources */,
+				8DE49CA219FC075500461150 /* YQNumbers-6.png in Resources */,
+				8DE49C8919FC075500461150 /* YQNumbers-13.png in Resources */,
+				8DE49C6D19FC075500461150 /* iPadYQNumbers-1@2x.png in Resources */,
+				8DE49C7F19FC075500461150 /* iPadYQNumbers-9@2x.png in Resources */,
+				8DE49C9419FC075500461150 /* YQNumbers-18@2x.png in Resources */,
+				8DE49C6219FC075500461150 /* iPadYQNumbers-14@2x.png in Resources */,
+				8DE49C7E19FC075500461150 /* iPadYQNumbers-9.png in Resources */,
+				8DE49CA519FC075500461150 /* YQNumbers-7@2x.png in Resources */,
+				8DE49CC019FC075500461150 /* YQWebViewControllerActivitySafari-iPad.png in Resources */,
+				8DE49C7819FC075500461150 /* iPadYQNumbers-6.png in Resources */,
+				8DE49C4619FC075500461150 /* LeaftaggerAddComment@2x.png in Resources */,
+				8DE49C6819FC075500461150 /* iPadYQNumbers-17@2x.png in Resources */,
+				8DE49C9219FC075500461150 /* YQNumbers-17@2x.png in Resources */,
+				8DE49C5D19FC075500461150 /* iPadYQNumbers-12.png in Resources */,
+				8DE49C7A19FC075500461150 /* iPadYQNumbers-7.png in Resources */,
+				8DE49C9519FC075500461150 /* YQNumbers-19.png in Resources */,
+				8DE49C9119FC075500461150 /* YQNumbers-17.png in Resources */,
+				8DE49C9019FC075500461150 /* YQNumbers-16@2x.png in Resources */,
+				8DE49C7719FC075500461150 /* iPadYQNumbers-5@2x.png in Resources */,
+				8DE49CA819FC075500461150 /* YQNumbers-9.png in Resources */,
+				8DE49C5819FC075500461150 /* iPadYQNumbers-1.png in Resources */,
+				8DE49CC319FC075500461150 /* YQWebViewControllerActivitySafari@2x.png in Resources */,
 				8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */,
+				8DE49C6119FC075500461150 /* iPadYQNumbers-14.png in Resources */,
+				8DE49C6E19FC075500461150 /* iPadYQNumbers-2.png in Resources */,
+				8DE49C7419FC075500461150 /* iPadYQNumbers-4.png in Resources */,
+				8DE49CBF19FC075500461150 /* YQWebViewControllerActivityChrome@2x.png in Resources */,
+				8DE49C9319FC075500461150 /* YQNumbers-18.png in Resources */,
+				8DE49C5A19FC075500461150 /* iPadYQNumbers-10@2x.png in Resources */,
+				8DE49C8819FC075500461150 /* YQNumbers-12@2x.png in Resources */,
+				8DE49C5619FC075500461150 /* iPadYQNumbers-00.png in Resources */,
+				8DE49CBB19FC075500461150 /* YQWebViewController.strings in Resources */,
+				8DE49C6519FC075500461150 /* iPadYQNumbers-16.png in Resources */,
+				8DE49C8619FC075500461150 /* YQNumbers-11@2x.png in Resources */,
+				8DE49C8119FC075500461150 /* YQNumbers-00@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,22 +1077,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE49CB919FC075500461150 /* YQPopoverController.m in Sources */,
+				8DE49CAF19FC075500461150 /* YQURLConnectionOperation.m in Sources */,
+				8DE49CAB19FC075500461150 /* YQHTTPRequestOperationManager.m in Sources */,
 				8DCDD3CA19FB1382003C5746 /* ImagesRowTableViewCell.m in Sources */,
+				8DE49CAD19FC075500461150 /* YQNetworkReachabilityManager.m in Sources */,
+				8DE49CB619FC075500461150 /* YQParseQuery.m in Sources */,
+				8DE49CB019FC075500461150 /* YQURLRequestSerialization.m in Sources */,
+				8DE49CAE19FC075500461150 /* YQSecurityPolicy.m in Sources */,
+				8DE49C4E19FC075500461150 /* LeaftaggerScreenManager.m in Sources */,
+				8DE49C3C19FC075500461150 /* Leaftagger.m in Sources */,
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8DE49CBA19FC075500461150 /* YQStoryboardPopoverSegue.m in Sources */,
+				8DE49C3E19FC075500461150 /* LeaftaggerAddCommentViewController.m in Sources */,
 				8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */,
+				8DE49C4B19FC075500461150 /* LeaftaggerPage.m in Sources */,
+				8DE49C5319FC075500461150 /* YQButton.m in Sources */,
+				8DE49CB319FC075500461150 /* YQParse.m in Sources */,
+				8DE49CCB19FC10BA00461150 /* AdManager.swift in Sources */,
+				8DE49C5119FC075500461150 /* YO.m in Sources */,
+				8DE49C4119FC075500461150 /* LeaftaggerComment.m in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
+				8DE49C4419FC075500461150 /* LeaftaggerCommentTableViewCell.m in Sources */,
+				8DE49CC219FC075500461150 /* YQWebViewControllerActivitySafari.m in Sources */,
+				8DE49C3D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m in Sources */,
+				8DE49C4A19FC075500461150 /* LeaftaggerObject.m in Sources */,
+				8DE49C4019FC075500461150 /* LeaftaggerBetaUser.m in Sources */,
+				8DE49CB519FC075500461150 /* YQParseObject.m in Sources */,
 				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
+				8DE49C4219FC075500461150 /* LeaftaggerCommentOptionsViewController.m in Sources */,
+				8DE49C4919FC075500461150 /* LeaftaggeriPadNavigationViewController.m in Sources */,
+				8DE49C3F19FC075500461150 /* LeaftaggerApp.m in Sources */,
 				8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
+				8DE49CBE19FC075500461150 /* YQWebViewControllerActivityChrome.m in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
+				8DE49CC919FC0F8400461150 /* Ad.swift in Sources */,
+				8DE49CB219FC075500461150 /* YQURLSessionManager.m in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
+				8DE49C5219FC075500461150 /* YQActivityIndicatorView.m in Sources */,
+				8DE49CB119FC075500461150 /* YQURLResponseSerialization.m in Sources */,
+				8DE49C4F19FC075500461150 /* LeaftaggerTapGestureRecognizer.m in Sources */,
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
+				8DE49CB719FC075500461150 /* YQParseRequestOperationManager.m in Sources */,
 				8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */,
+				8DE49CAC19FC075500461150 /* YQHTTPSessionManager.m in Sources */,
+				8DE49CC719FC075500461150 /* YQWebViewController.m in Sources */,
 				8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */,
+				8DE49C4319FC075500461150 /* LeaftaggerCommentsViewController.m in Sources */,
+				8DE49CAA19FC075500461150 /* YQHTTPRequestOperation.m in Sources */,
+				8DE49CC419FC075500461150 /* YQWebViewControllerActivity.m in Sources */,
+				8DE49CC519FC075500461150 /* YQModalWebViewController.m in Sources */,
+				8DE49CB819FC075500461150 /* YQParseUser.m in Sources */,
+				8DE49C5519FC075500461150 /* YQLeaftaggerPointButton.m in Sources */,
+				8DE49C5019FC075500461150 /* LeaftaggerView.m in Sources */,
+				8DE49C4C19FC075500461150 /* LeaftaggerPoint.m in Sources */,
 				8D9777D119F841FB006ABF30 /* DownView.swift in Sources */,
+				8DE49C5419FC075500461150 /* YQLabel.m in Sources */,
+				8DE49C4D19FC075500461150 /* LeaftaggerReordVideoViewController.m in Sources */,
 				8DD6B4D019F77CC100B30EA9 /* AssistantView.swift in Sources */,
+				8DE49CB419FC075500461150 /* YQParseImgaeView.m in Sources */,
 				8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +1176,23 @@
 				8DB6F3C019F1BC4F002ED90F /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8DE49C1D19FC075500461150 /* YQWebViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DE49C1E19FC075500461150 /* da */,
+				8DE49C1F19FC075500461150 /* de */,
+				8DE49C2019FC075500461150 /* en */,
+				8DE49C2119FC075500461150 /* es-ES */,
+				8DE49C2219FC075500461150 /* es */,
+				8DE49C2319FC075500461150 /* fr */,
+				8DE49C2419FC075500461150 /* ja */,
+				8DE49C2519FC075500461150 /* pt */,
+				8DE49C3A19FC075500461150 /* zh-Hans */,
+				8DE49C3B19FC075500461150 /* zh-Hant */,
+			);
+			name = YQWebViewController.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        parseSetup()
         
-        singleMethodSetup()
+        
+        parseSetup()
+        leaftaggerSetup()
+        singleMethodSetup()     // after parseSetup
+        
+        
         return true
     }
     
@@ -31,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         VoiceImagesManager.sharedInstance
         VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
+        
+        AdManager.sharedInstance
+        AdManager.sharedInstance.startLoadingDataFromParse()
     }
     
     func parseSetup(){
@@ -50,6 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+    }
+    
+    func leaftaggerSetup(){
+        Leaftagger.setApplicationId("OwnvY79qyoEj4FcUgx5YM79Df", apiKey: "7wyINdp1iQ")
     }
     
     func applicationWillResignActive(application: UIApplication) {
