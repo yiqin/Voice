@@ -18,6 +18,8 @@ class Article: NSObject {
     var briefDescription: String
     var briefImage : PFImageView
     
+    var parseObject: PFObject
+    
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
         createdAt = articlePFObject.createdAt
@@ -34,6 +36,8 @@ class Article: NSObject {
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load article image succesfully.")
         }
+        
+        parseObject = articlePFObject
     };
     
 }

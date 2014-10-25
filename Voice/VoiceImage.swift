@@ -16,6 +16,9 @@ class VoiceImage: NSObject {
     
     var image : PFImageView
     
+    var parseObject: PFObject
+    
+    
     init(voiceImagePFObject:PFObject) {
         objectId = voiceImagePFObject.objectId
         createdAt = voiceImagePFObject.createdAt
@@ -41,8 +44,7 @@ class VoiceImage: NSObject {
             println("Load voice image succesfully.")
         }
         
-
         // image = voiceImagePFObject["image"] as PFImageView
-        
+        parseObject = articlePFObject
     }
 }
