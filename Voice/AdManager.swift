@@ -33,7 +33,8 @@ class AdManager: NSObject {
                 
                 for object in objects {
                     let newAd = Ad(articlePFObject: object as PFObject)
-                    println(newAd.cityName)
+                    println(newAd.name)     // check the result
+                    
                     recievedAds.addObject(newAd)
                 }
                 

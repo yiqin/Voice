@@ -16,8 +16,8 @@ class Ad: NSObject {
     
     var parseObject: PFObject
     
-    var cityName: String
-    
+    var name: String
+    var atLocationName: String
     
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
@@ -26,7 +26,8 @@ class Ad: NSObject {
         
         parseObject = articlePFObject
         
-        cityName = articlePFObject["cityName"] as String
+        name = articlePFObject["name"] as String
+        atLocationName = articlePFObject["atLocationName"] as String
     };
     
    

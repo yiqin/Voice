@@ -28,7 +28,7 @@
             <connections>
                 <outlet property="image" destination="F0L-Uj-ecs" id="QM9-UD-tGc"/>
             </connections>
-            <point key="canvasLocation" x="349" y="274.5"/>
+            <point key="canvasLocation" x="349" y="274"/>
         </collectionViewCell>
     </objects>
 </document>
