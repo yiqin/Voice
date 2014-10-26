@@ -21,7 +21,7 @@ class ArticlesManager: NSObject {
     
     func startLoadingDataFromParse() {
         var query  = PFQuery(className: "Article")
-        query.orderByAscending("updatedAt")
+        query.orderByDescending("updatedAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("Load articles from Parse.com.")

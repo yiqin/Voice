@@ -10,7 +10,7 @@ import UIKit
 
 class VoiceImagesManager: NSObject {
     
-    let numberPerRow = 7;
+    let numberPerRow = 4;
     var numberOfRows = 0;
     var voiceImages : NSMutableArray = [];
 
