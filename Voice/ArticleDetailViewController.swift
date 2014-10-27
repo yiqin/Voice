@@ -9,12 +9,16 @@
 import UIKit
 
 class ArticleDetailViewController: UIViewController {
-
     
+    var backButton = UIButton()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
+        backButton.frame = CGRectMake(0, 30, 100, 30)
+        backButton.backgroundColor = UIColor.redColor()
+        backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
+        view.addSubview(backButton)
         
     }
 
@@ -29,7 +33,12 @@ class ArticleDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    func backButtonPressed(sender: UIButton!){
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

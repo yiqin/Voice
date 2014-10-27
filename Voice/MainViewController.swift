@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate, UpViewDelegate {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate, ArticlesTableViewControllerDelegate {
 
     var assistantView = AssistantView()
     var firstTimeLoad = true
@@ -51,7 +51,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             
             // upView.articlesTableVC
             // upView.articlesTableVC.delegate = self
-            upView.delegate = self
+            upView.articlesTableVC.delegate = self
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)
@@ -94,12 +94,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
         downView.setNeedsDisplay()
     }
     
-    func moveToSelectArticleFromUpView() {
-        
-        
+    // Delegate Chain
+    func moveToSelectArticle() {
         let articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil)
         self.navigationController?.pushViewController(articleDetailViewController, animated: true)
-
     }
 
 }

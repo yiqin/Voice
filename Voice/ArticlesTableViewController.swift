@@ -16,6 +16,22 @@ class ArticlesTableViewController: UITableViewController {
     
     var messageLabel = UILabel()
     var delegate:ArticlesTableViewControllerDelegate?
+   
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+    }
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+        
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
