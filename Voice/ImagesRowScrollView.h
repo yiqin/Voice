@@ -16,7 +16,7 @@
 - (instancetype) initWithFrame:(CGRect)frame rowIndex:(int)rowIndex;
 
 
-@property (nonatomic) int rowNumber;
+@property (nonatomic) int rowNumber;    // No need. The data is in collectionData
 
 @property (nonatomic, strong) NSArray *imagesCollectionData;
 @property (nonatomic, strong) UICollectionView *collectionView;

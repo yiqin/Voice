@@ -108,11 +108,11 @@ class ImagesRowsTableViewController: UITableViewController {
         }
     }
     
+    /*
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Select \(indexPath.row)")
+        // println("Select \(indexPath.row)")
     }
-    
-    
+    */
     
     /*
     // Override to support conditional editing of the table view.
