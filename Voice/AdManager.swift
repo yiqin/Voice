@@ -19,11 +19,10 @@ class AdManager: NSObject {
         return Static.instance
     }
     
-    func startLoadingDataFromParse() {
+    func startLoadingDataFromParse(location: AdsLocation) {
         var query  = PFQuery(className: "Ad")
-        
-        /************************************/
-        // where operation is here
+    
+        query.whereKey("atLocation", equalTo: location.parseObject)
         
         query.orderByAscending("updatedAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
@@ -45,6 +44,10 @@ class AdManager: NSObject {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
+
+        /************************************/
+        // where operation is here
+        
     }
    
 }

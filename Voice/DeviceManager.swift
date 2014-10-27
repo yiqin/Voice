@@ -10,6 +10,7 @@ import Foundation
 
 class DeviceManager: NSObject {
     
+    /*
     var test:Int = 0{
         didSet{
             println("didSet called")
@@ -18,6 +19,7 @@ class DeviceManager: NSObject {
             println("willSet called")
         }
     }
+    */
     
     var screenWidth : CGFloat = 0.0
     var screenHeight : CGFloat = 0.0

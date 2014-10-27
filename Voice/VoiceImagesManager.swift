@@ -21,6 +21,8 @@ class VoiceImagesManager: NSObject {
         return Static.instance
     }
     
+    /***********************************************/
+    // return too much image would carse problem.
     func startLoadingDataFromParse() {
         var query  = PFQuery(className: "VoiceImage")
         query.orderByAscending("updatedAt")
