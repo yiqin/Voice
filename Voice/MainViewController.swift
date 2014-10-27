@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate, UpViewDelegate {
 
     var assistantView = AssistantView()
     var firstTimeLoad = true
@@ -41,7 +41,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             println(DeviceManager.sharedInstance.screenHeight)
             
             assistantView.updateFrame()     // updateFrame method has be here
-            assistantView.tapRecognizer.delegate = self
+            assistantView.tapRecognizer.delegate = self     // Three delegate
             assistantView.panRecognizer.delegate = self
             assistantView.delegate = self
             
@@ -50,6 +50,8 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             
             
             // upView.articlesTableVC
+            // upView.articlesTableVC.delegate = self
+            upView.delegate = self
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)
@@ -92,7 +94,13 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
         downView.setNeedsDisplay()
     }
     
-    
+    func moveToSelectArticleFromUpView() {
+        
+        
+        let articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil)
+        self.navigationController?.pushViewController(articleDetailViewController, animated: true)
+
+    }
 
 }
 

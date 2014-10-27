@@ -8,10 +8,31 @@
 
 import UIKit
 
-class UpView: UIView {
+protocol UpViewDelegate {
+    func moveToSelectArticleFromUpView()
+}
 
+class UpView: UIView, ArticlesTableViewControllerDelegate {
+
+    var firstTimeLoad = true
     var articlesTableVC = ArticlesTableViewController(style: UITableViewStyle.Plain)
+    
+    
+    var delegate:UpViewDelegate?    // must be var
 
+    override init() {
+        super.init()
+        // delegate = UpViewDelegate;
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.brownColor()
         frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
@@ -21,6 +42,19 @@ class UpView: UIView {
     
     func loadArticlesTableVC(maxY:CGFloat) {
         articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
+        
+        
+        if (firstTimeLoad){
+            articlesTableVC.delegate = self
+            firstTimeLoad = false
+        }
+        
+    }
+    
+    // Delegate Chain
+    func moveToSelectArticle() {
+        delegate?.moveToSelectArticleFromUpView()
+        
     }
     
     /*
