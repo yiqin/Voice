@@ -49,6 +49,8 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             downView.updateFrame(CGRectGetMaxY(assistantView.frame))
             
             
+            // upView.articlesTableVC
+            
             self.view.addSubview(upView)
             self.view.addSubview(downView)
             self.view.addSubview(assistantView)
@@ -89,6 +91,8 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
         downView.updateFrame(CGRectGetMaxY(assistantView.frame))
         downView.setNeedsDisplay()
     }
+    
+    
 
 }
 

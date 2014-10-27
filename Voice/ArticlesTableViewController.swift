@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol ArticlesTableViewControllerDelegate {
+    func moveToSelectArticle()
+}
+
 class ArticlesTableViewController: UITableViewController {
     
     var messageLabel = UILabel()
-
+    var delegate:ArticlesTableViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,6 +115,20 @@ class ArticlesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
+        delegate?.moveToSelectArticle()
+        
+        // let articleDetailViewController = self.storyboard.instantiateViewControllerWithIdentifier("ArticleDetailViewController") as ArticleDetailViewController
+        
+        // var articleDetailViewController = ArticleDetailViewController()
+        
+        // self.pushViewController(articleDetailViewController, animated: true)
+        // self.showViewController(articleDetailViewController, sender: nil)
+        
+        
+        // navigationController?.pushViewController(articleDetailViewController, animated: true)
+        // navigationController?.popToViewController(articleDetailViewController, animated: true)
+        
+        
     }
     
     

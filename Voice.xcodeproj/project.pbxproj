@@ -184,6 +184,7 @@
 		8DE49CC719FC075500461150 /* YQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49C3919FC075500461150 /* YQWebViewController.m */; };
 		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
 		8DE49CCB19FC10BA00461150 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdManager.swift */; };
+		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,6 +440,7 @@
 		8DE49C3B19FC075500461150 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/YQWebViewController.strings"; sourceTree = "<group>"; };
 		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		8DE49CCA19FC10BA00461150 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +508,7 @@
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
 				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
+				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
 				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
 				8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */,
 				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
@@ -1131,6 +1134,7 @@
 				8DE49CC419FC075500461150 /* YQWebViewControllerActivity.m in Sources */,
 				8DE49CC519FC075500461150 /* YQModalWebViewController.m in Sources */,
 				8DE49CB819FC075500461150 /* YQParseUser.m in Sources */,
+				8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */,
 				8DE49C5519FC075500461150 /* YQLeaftaggerPointButton.m in Sources */,
 				8DE49C5019FC075500461150 /* LeaftaggerView.m in Sources */,
 				8DE49C4C19FC075500461150 /* LeaftaggerPoint.m in Sources */,
