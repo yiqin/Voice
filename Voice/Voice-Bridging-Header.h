@@ -6,3 +6,7 @@
 #import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"
 #import "Leaftagger.h"
+
+#import "ArticleCoverTableViewCell.h"
+#import "ArticleDetailBlockTableViewCell.h"
+#import "AdTableViewCell.h"

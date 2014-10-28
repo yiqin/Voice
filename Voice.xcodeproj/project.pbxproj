@@ -188,6 +188,9 @@
 		8DFC024519FF08800098C1BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024419FF08800098C1BA /* UserManager.swift */; };
 		8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024619FF0E350098C1BA /* AdsLocation.swift */; };
 		8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */; };
+		8DFC024C19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */; };
+		8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */; };
+		8DFC025219FF1E160098C1BA /* ArticleCoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,6 +450,12 @@
 		8DFC024419FF08800098C1BA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8DFC024619FF0E350098C1BA /* AdsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLocation.swift; sourceTree = "<group>"; };
 		8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailBodyTableViewController.swift; sourceTree = "<group>"; };
+		8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailBlockTableViewCell.h; sourceTree = "<group>"; };
+		8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailBlockTableViewCell.m; sourceTree = "<group>"; };
+		8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
+		8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
+		8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCoverTableViewCell.h; sourceTree = "<group>"; };
+		8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCoverTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,6 +526,12 @@
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
 				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
 				8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */,
+				8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */,
+				8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */,
+				8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */,
+				8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */,
+				8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */,
+				8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */,
 				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
 				8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */,
 				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
@@ -1101,6 +1116,7 @@
 				8DE49C4E19FC075500461150 /* LeaftaggerScreenManager.m in Sources */,
 				8DE49C3C19FC075500461150 /* Leaftagger.m in Sources */,
 				8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */,
+				8DFC025219FF1E160098C1BA /* ArticleCoverTableViewCell.m in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
 				8DE49CBA19FC075500461150 /* YQStoryboardPopoverSegue.m in Sources */,
 				8DE49C3E19FC075500461150 /* LeaftaggerAddCommentViewController.m in Sources */,
@@ -1112,6 +1128,7 @@
 				8DE49C5119FC075500461150 /* YO.m in Sources */,
 				8DE49C4119FC075500461150 /* LeaftaggerComment.m in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
+				8DFC024C19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m in Sources */,
 				8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */,
 				8DE49C4419FC075500461150 /* LeaftaggerCommentTableViewCell.m in Sources */,
 				8DE49CC219FC075500461150 /* YQWebViewControllerActivitySafari.m in Sources */,
@@ -1119,6 +1136,7 @@
 				8DE49C4A19FC075500461150 /* LeaftaggerObject.m in Sources */,
 				8DE49C4019FC075500461150 /* LeaftaggerBetaUser.m in Sources */,
 				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,
+				8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */,
 				8DE49CB519FC075500461150 /* YQParseObject.m in Sources */,
 				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
 				8DE49C4219FC075500461150 /* LeaftaggerCommentOptionsViewController.m in Sources */,

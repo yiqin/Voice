@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleDetailBodyTableViewController: UITableViewController {
 
+    var adPosition = 3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,24 +34,78 @@ class ArticleDetailBodyTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 8
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (indexPath.row == 0) {
+            return ArticleCoverTableViewCell.cellHeight()
+        }
+        else if (indexPath.row == adPosition) {
+            return AdTableViewCell.cellHeight()
+        }
+        else {
+            return ArticleDetailBlockTableViewCell.cellHeight()
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let articleCoverIdentifier = "ArticleCoverIdentifier"
+        let articleDetailBlockIdentifier = "ArticleDetailBlockIdentifier"
+        let adIdentifier = "AdIdentifier"
+        
+        if (indexPath.row == 0){
+            var cell = tableView.dequeueReusableCellWithIdentifier(articleCoverIdentifier) as? ArticleCoverTableViewCell
+            
+            if cell != nil {
+                // println("Cell exist")
+                
+            }
+            else {
+                // println("Create new Cell")
+                cell = ArticleCoverTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleCoverIdentifier)
+            }
+            cell?.textLabel.text = "Cover Page"
+            return cell!
+        }
+        else if (indexPath.row == adPosition){
+            var cell = tableView.dequeueReusableCellWithIdentifier(adIdentifier) as? AdTableViewCell
+            
+            if cell != nil {
+                // println("Cell exist")
+                
+            }
+            else {
+                // println("Create new Cell")
+                cell = AdTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: adIdentifier)
+            }
+            cell?.textLabel.text = "Ad"
+            return cell!
 
-        // Configure the cell...
+        }
+        else {
+            var cell = tableView.dequeueReusableCellWithIdentifier(articleDetailBlockIdentifier) as? ArticleDetailBlockTableViewCell
+            
+            if cell != nil {
+                // println("Cell exist")
+                
+            }
+            else {
+                // println("Create new Cell")
+                cell = ArticleDetailBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleDetailBlockIdentifier)
+            }
+            cell?.textLabel.text = "Article Body"
+            return cell!
+        }
 
-        return cell
+        
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
