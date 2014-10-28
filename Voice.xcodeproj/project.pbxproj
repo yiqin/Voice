@@ -187,6 +187,7 @@
 		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
 		8DFC024519FF08800098C1BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024419FF08800098C1BA /* UserManager.swift */; };
 		8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024619FF0E350098C1BA /* AdsLocation.swift */; };
+		8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -445,6 +446,7 @@
 		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		8DFC024419FF08800098C1BA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8DFC024619FF0E350098C1BA /* AdsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLocation.swift; sourceTree = "<group>"; };
+		8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailBodyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
 				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
+				8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */,
 				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
 				8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */,
 				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
@@ -1115,6 +1118,7 @@
 				8DE49C3D19FC075500461150 /* LeaftaggerAddCommentNavigationViewController.m in Sources */,
 				8DE49C4A19FC075500461150 /* LeaftaggerObject.m in Sources */,
 				8DE49C4019FC075500461150 /* LeaftaggerBetaUser.m in Sources */,
+				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,
 				8DE49CB519FC075500461150 /* YQParseObject.m in Sources */,
 				8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */,
 				8DE49C4219FC075500461150 /* LeaftaggerCommentOptionsViewController.m in Sources */,

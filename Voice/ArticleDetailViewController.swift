@@ -11,6 +11,7 @@ import UIKit
 class ArticleDetailViewController: UIViewController {
     
     var backButton = UIButton()
+    var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -19,6 +20,9 @@ class ArticleDetailViewController: UIViewController {
         backButton.backgroundColor = UIColor.redColor()
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
+        
+        articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
+        view.addSubview(articleDetailBodyTVC.view)
         
     }
 
