@@ -534,6 +534,7 @@
 				8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */,
 				8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */,
 				8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */,
+				8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */,
 			);
 			name = DownView;
 			sourceTree = "<group>";
@@ -582,7 +583,6 @@
 				8DB363BB1A00914500B87619 /* DownView */,
 				8DB363B91A00911A00B87619 /* DataManager */,
 				8DB363BC1A00916300B87619 /* ArticleViewController */,
-				8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */,
 				8DB363BA1A00912F00B87619 /* DataClass */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
