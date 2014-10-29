@@ -18,11 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        /********************/
+        // this is wrong. Put them here.
         parseSetup()
         leaftaggerSetup()
         singleMethodSetup()     // after parseSetup
-        SkyLab()
+        mixpanelSetup()
         
         return true
     }
@@ -63,6 +64,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func leaftaggerSetup(){
         Leaftagger.setApplicationId("OwnvY79qyoEj4FcUgx5YM79Df", apiKey: "7wyINdp1iQ")
+    }
+    
+    func mixpanelSetup(){
+        Mixpanel.sharedInstanceWithToken("9ac1a39b8aa88386183e57ebaffec1b8")
+        
+        let deviceId = UIDevice.currentDevice().identifierForVendor.UUIDString
+        let deviceName = UIDevice.currentDevice().name
+        
+        var mixpanel = Mixpanel.sharedInstance()
+        mixpanel.identify(deviceId)
+        
+        let dictionary = ["deviceId": deviceId, "deviceName": deviceName]
+        mixpanel.people.set(dictionary)
+        mixpanel.track("App Launches")
     }
     
     func applicationWillResignActive(application: UIApplication) {

@@ -3,7 +3,7 @@
 //
 
 #import <Parse/Parse.h>
-#import "Mixpanel.h"
+
 
 #import "Leaftagger.h"
 #import "YQButton.h"    // in Leaftagger folder
@@ -15,3 +15,5 @@
 #import "AdTableViewCell.h"
 
 #import "SkyLab.h"
+#import "Mixpanel.h"
+#import "VoiceMixpanel.h"
