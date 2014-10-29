@@ -489,6 +489,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DB363B81A00910E00B87619 /* UpView */ = {
+			isa = PBXGroup;
+			children = (
+				8D9777CE19F841EE006ABF30 /* UpView.swift */,
+				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
+				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
+				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
+			);
+			name = UpView;
+			sourceTree = "<group>";
+		};
+		8DB363B91A00911A00B87619 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC024419FF08800098C1BA /* UserManager.swift */,
+				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
+				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
+				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
+				8DE49CCA19FC10BA00461150 /* AdManager.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		8DB363BA1A00912F00B87619 /* DataClass */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
+				8DE49CC819FC0F8400461150 /* Ad.swift */,
+				8DFC024619FF0E350098C1BA /* AdsLocation.swift */,
+				8DDEDC2719F88E0500550516 /* Article.swift */,
+			);
+			name = DataClass;
+			sourceTree = "<group>";
+		};
+		8DB363BB1A00914500B87619 /* DownView */ = {
+			isa = PBXGroup;
+			children = (
+				8D9777D019F841FB006ABF30 /* DownView.swift */,
+				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
+				8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */,
+				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
+				8DCDD3CB19FB227D003C5746 /* ImagesRowScrollView.h */,
+				8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */,
+				8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */,
+				8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */,
+			);
+			name = DownView;
+			sourceTree = "<group>";
+		};
+		8DB363BC1A00916300B87619 /* ArticleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
+				8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */,
+				8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */,
+				8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */,
+				8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */,
+				8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */,
+				8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */,
+				8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */,
+			);
+			name = ArticleViewController;
+			sourceTree = "<group>";
+		};
 		8DB6F3A519F1BC4E002ED90F = {
 			isa = PBXGroup;
 			children = (
@@ -514,36 +578,12 @@
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
-				8D9777CE19F841EE006ABF30 /* UpView.swift */,
-				8D9777D019F841FB006ABF30 /* DownView.swift */,
-				8DFC024419FF08800098C1BA /* UserManager.swift */,
-				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
-				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
-				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
-				8DE49CCA19FC10BA00461150 /* AdManager.swift */,
-				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
-				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
-				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
-				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
-				8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */,
-				8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */,
-				8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */,
-				8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */,
-				8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */,
-				8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */,
-				8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */,
-				8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */,
-				8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */,
-				8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */,
-				8DCDD3CB19FB227D003C5746 /* ImagesRowScrollView.h */,
-				8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */,
-				8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */,
-				8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */,
+				8DB363B81A00910E00B87619 /* UpView */,
+				8DB363BB1A00914500B87619 /* DownView */,
+				8DB363B91A00911A00B87619 /* DataManager */,
+				8DB363BC1A00916300B87619 /* ArticleViewController */,
 				8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */,
-				8DDEDC2719F88E0500550516 /* Article.swift */,
-				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
-				8DE49CC819FC0F8400461150 /* Ad.swift */,
-				8DFC024619FF0E350098C1BA /* AdsLocation.swift */,
+				8DB363BA1A00912F00B87619 /* DataClass */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
 				8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */,
