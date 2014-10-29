@@ -10,16 +10,12 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
     
-    var backButton = UIButton()
+    var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
-        backButton.frame = CGRectMake(0, 30, 100, 30)
-        backButton.backgroundColor = UIColor.redColor()
-        backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
-        view.addSubview(backButton)
         
         articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
         
@@ -37,6 +33,11 @@ class ArticleDetailViewController: UIViewController {
         
         
         view.addSubview(articleDetailBodyTVC.view)
+        
+        
+        // backButton on the top
+        backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
+        view.addSubview(backButton)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -46,8 +47,6 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         // Do any additional setup after loading the view.
     }
     
