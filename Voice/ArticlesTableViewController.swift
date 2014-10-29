@@ -20,7 +20,7 @@ class ArticlesTableViewController: UITableViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
-        
+        self.tableView.separatorColor = UIColor.clearColor()
     }
     
     override init(style: UITableViewStyle) {
@@ -131,19 +131,8 @@ class ArticlesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         delegate?.moveToSelectArticle()
-        
-        // let articleDetailViewController = self.storyboard.instantiateViewControllerWithIdentifier("ArticleDetailViewController") as ArticleDetailViewController
-        
-        // var articleDetailViewController = ArticleDetailViewController()
-        
-        // self.pushViewController(articleDetailViewController, animated: true)
-        // self.showViewController(articleDetailViewController, sender: nil)
-        
-        
-        // navigationController?.pushViewController(articleDetailViewController, animated: true)
-        // navigationController?.popToViewController(articleDetailViewController, animated: true)
-        
         
     }
     

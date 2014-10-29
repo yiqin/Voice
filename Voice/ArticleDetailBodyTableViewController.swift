@@ -16,6 +16,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.grayColor()
+        // tableView.separatorColor = UIColor.clearColor()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -104,9 +105,16 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             cell?.textLabel.text = "Article Body"
             return cell!
         }
-
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Select \(indexPath.row)")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
