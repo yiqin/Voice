@@ -10,7 +10,7 @@ import UIKit
 
 class ArticleDetailBodyTableViewController: UITableViewController {
 
-    var adPosition = 3
+    var adPosition = -1 // Default value
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +85,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 // println("Create new Cell")
                 cell = AdTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: adIdentifier)
             }
+
             cell?.textLabel.text = "Ad"
             return cell!
 

@@ -22,8 +22,21 @@ class ArticleDetailViewController: UIViewController {
         view.addSubview(backButton)
         
         articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
-        view.addSubview(articleDetailBodyTVC.view)
         
+        // So-called A&B Testing
+        // If the test is not reset, A/B testing won't change.
+        SkyLab.abTestWithName("SLAdPosition", a: { () -> Void in
+            println("SLAdPosition: a test")
+            self.articleDetailBodyTVC.adPosition = 2;
+        
+        }, b: { () -> Void in
+            println("SLAdPosition: b test")
+            self.articleDetailBodyTVC.adPosition = 3;
+        })
+        SkyLab.resetTestNamed("SLAdPosition")
+        
+        
+        view.addSubview(articleDetailBodyTVC.view)
     }
 
     required init(coder aDecoder: NSCoder) {

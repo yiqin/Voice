@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         parseSetup()
         leaftaggerSetup()
         singleMethodSetup()     // after parseSetup
-        
+        SkyLab()
         
         return true
     }

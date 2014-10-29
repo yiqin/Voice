@@ -22,7 +22,7 @@ class UserManager: NSObject {
     func startLoadingRelatedAdsFromParse() {
         var query  = PFQuery(className: "AdsLocation")
         query.orderByDescending("updatedAt")
-        
+                
         query.getObjectInBackgroundWithId("TX1TdJitsX") { (object: PFObject!, error: NSError!) -> Void in
             self.adsLocations.addObject(AdsLocation(adsLocationPFObject: object))
             
