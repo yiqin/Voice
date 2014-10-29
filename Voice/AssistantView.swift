@@ -16,13 +16,13 @@ class AssistantView: UIView {
     
     let inclinedAngle = 8*M_PI/180;
     var inclineHeight = CGFloat(0.0)
+    
     var assistantHeight = CGFloat(40.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
     var testString = UILabel()
     var testButton = UIButton()
     var testView = UIView()
-    
     
     var lastLocation:CGPoint?  // Why init here?
     
@@ -67,8 +67,7 @@ class AssistantView: UIView {
     /**************************/
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         lastLocation = center
-        backgroundColor = UIColor.yellowColor()
-        
+        backgroundColor = UIColor.clearColor()
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
@@ -78,7 +77,6 @@ class AssistantView: UIView {
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         // It didn't work
         backgroundColor = UIColor.redColor()
-        
     }
     
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
@@ -106,7 +104,7 @@ class AssistantView: UIView {
         testString = UILabel(frame: CGRectMake(-20, assistantHeight-inclineHeight+18, assistantWidth+40, assistantHeight))  // some number is here.
         // self.testString.center = self.center
         // testString.backgroundColor = UIColor.redColor()
-        testString.text = "testing"
+        testString.text = "Voice"
         testString.textAlignment = NSTextAlignment.Center
         
         testString.layer.anchorPoint = CGPointMake(0.5, 0.5)
@@ -167,17 +165,18 @@ class AssistantView: UIView {
     func drawTriangle(rect: CGRect){
         var path = CGPathCreateMutable()
         CGPathMoveToPoint(path, nil, CGRectGetMinX(rect), CGRectGetMaxY(rect))
-        CGPathAddLineToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect)-inclineHeight+6)   // some number is here.
+        
+        /************************************/
+        // Only some numbers can garantee the quality.
+        CGPathAddLineToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect)-inclineHeight+6.5)   // some number is here.
         CGPathAddLineToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect))
         CGPathAddLineToPoint(path, nil, CGRectGetMinX(rect), CGRectGetMaxY(rect))
         
         var shapeLayer = CAShapeLayer()
         shapeLayer.path = path
-        shapeLayer.fillColor = UIColor.greenColor().CGColor
+        shapeLayer.fillColor = UIColor.blackColor().CGColor
         self.layer.addSublayer(shapeLayer)
         
     }
-    
-    
 
 }
