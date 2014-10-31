@@ -54,7 +54,7 @@ class DeviceManager: NSObject {
         query.orderByDescending("updatedAt")
         
         query.getObjectInBackgroundWithId("TX1TdJitsX") { (object: PFObject!, error: NSError!) -> Void in
-            self.adsLocations.addObject(AdsLocation(adsLocationPFObject: object))
+            self.adsLocations.addObject(AdsLocation(parseObject: object))
             
             // A block is here
             

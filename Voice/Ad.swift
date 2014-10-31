@@ -22,15 +22,15 @@ class Ad: NSObject {
     /// multiply ad images belonged to each ad.
     var adImages : NSMutableArray = []
     
-    init(articlePFObject:PFObject) {
-        objectId = articlePFObject.objectId
-        createdAt = articlePFObject.createdAt
-        updatedAt = articlePFObject.updatedAt
+    init(parseObject:PFObject) {
+        objectId = parseObject.objectId
+        createdAt = parseObject.createdAt
+        updatedAt = parseObject.updatedAt
         
-        parseObject = articlePFObject
+        self.parseObject = parseObject
         
-        name = articlePFObject["name"] as String
-        atLocationName = articlePFObject["atLocationName"] as String
+        name = parseObject["name"] as String
+        atLocationName = parseObject["atLocationName"] as String
     }
     
     
@@ -45,7 +45,7 @@ class Ad: NSObject {
                 var recievedAdImages = NSMutableArray()
                 
                 for object in objects {
-                    let newAdImage = AdImage(adImagePFObject: object as PFObject)
+                    let newAdImage = AdImage(parseObject: object as PFObject)
                     recievedAdImages.addObject(newAdImage)
                 }
                 

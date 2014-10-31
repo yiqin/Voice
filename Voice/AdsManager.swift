@@ -38,7 +38,7 @@ class AdsManager: NSObject {
                 var recievedAds = NSMutableArray()
                 
                 for object in objects {
-                    let newAd = Ad(articlePFObject: object as PFObject)
+                    let newAd = Ad(parseObject: object as PFObject)
                     newAd.loadAdImagesFromParse()
                     
                     println(newAd.name)     // check the result

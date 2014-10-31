@@ -20,24 +20,24 @@ class Article: NSObject {
     
     var parseObject: PFObject
     
-    init(articlePFObject:PFObject) {
-        objectId = articlePFObject.objectId
-        createdAt = articlePFObject.createdAt
-        updatedAt = articlePFObject.updatedAt
+    init(parseObject:PFObject) {
+        objectId = parseObject.objectId
+        createdAt = parseObject.createdAt
+        updatedAt = parseObject.updatedAt
         
-        title = articlePFObject["title"] as String
-        briefDescription = articlePFObject["briefDescription"] as String    // How to check this value
+        title = parseObject["title"] as String
+        briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
         
         briefImage = PFImageView()
         
-        let thunmbnail = articlePFObject["briefImage"] as PFFile
+        let thunmbnail = parseObject["briefImage"] as PFFile
         briefImage.file = thunmbnail
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load article image succesfully.")
         }
         
-        parseObject = articlePFObject
+        self.parseObject = parseObject
     };
     
 }

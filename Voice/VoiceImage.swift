@@ -19,10 +19,10 @@ class VoiceImage: NSObject {
     var parseObject: PFObject
     
     
-    init(voiceImagePFObject:PFObject) {
-        objectId = voiceImagePFObject.objectId
-        createdAt = voiceImagePFObject.createdAt
-        updatedAt = voiceImagePFObject.updatedAt
+    init(parseObject:PFObject) {
+        objectId = parseObject.objectId
+        createdAt = parseObject.createdAt
+        updatedAt = parseObject.updatedAt
         
         // PFFile *thumbnail = [self.recipePFObject objectForKey:@"picture"];
         /*
@@ -38,13 +38,13 @@ class VoiceImage: NSObject {
         
         image = PFImageView()
         
-        let thunmbnail = voiceImagePFObject["image"] as PFFile
+        let thunmbnail = parseObject["image"] as PFFile
         image.file = thunmbnail
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load voice image succesfully.")
         }
         
         // image = voiceImagePFObject["image"] as PFImageView
-        parseObject = voiceImagePFObject
+        self.parseObject = parseObject
     }
 }

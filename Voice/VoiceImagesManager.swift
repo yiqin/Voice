@@ -47,7 +47,7 @@ class VoiceImagesManager: NSObject {
                 var recievedVoiceImages = NSMutableArray()
                 
                 for object in objects {
-                    let newVoiceImage = VoiceImage(voiceImagePFObject: object as PFObject)
+                    let newVoiceImage = VoiceImage(parseObject: object as PFObject)
                     recievedVoiceImages.addObject(newVoiceImage)
                 }
                 

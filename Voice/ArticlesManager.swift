@@ -32,7 +32,7 @@ class ArticlesManager: NSObject {
                 var recievedArticles = NSMutableArray()
                 
                 for object in objects {
-                    let newArtical = Article(articlePFObject: object as PFObject)
+                    let newArtical = Article(parseObject: object as PFObject)
                     recievedArticles.addObject(newArtical)
                 }
                 

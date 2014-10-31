@@ -19,20 +19,20 @@ class AdImage: NSObject {
     var parseObject: PFObject
     
     
-    init(adImagePFObject:PFObject) {
-        objectId = adImagePFObject.objectId
-        createdAt = adImagePFObject.createdAt
-        updatedAt = adImagePFObject.updatedAt
+    init(parseObject:PFObject) {
+        objectId = parseObject.objectId
+        createdAt = parseObject.createdAt
+        updatedAt = parseObject.updatedAt
         
         image = PFImageView()
         
-        let thunmbnail = adImagePFObject["image"] as PFFile
+        let thunmbnail = parseObject["image"] as PFFile
         image.file = thunmbnail
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load ad image succesfully.")
         }
         
-        parseObject = adImagePFObject
+        self.parseObject = parseObject
     }
    
 }

@@ -19,14 +19,14 @@ class AdsLocation: NSObject {
     var cityName: String
     var stateName: String
     
-    init(adsLocationPFObject:PFObject) {
-        objectId = adsLocationPFObject.objectId
-        createdAt = adsLocationPFObject.createdAt
-        updatedAt = adsLocationPFObject.updatedAt
+    init(parseObject:PFObject) {
+        objectId = parseObject.objectId
+        createdAt = parseObject.createdAt
+        updatedAt = parseObject.updatedAt
         
-        parseObject = adsLocationPFObject
+        self.parseObject = parseObject
         
-        cityName = adsLocationPFObject["cityName"] as String
-        stateName = adsLocationPFObject["stateName"] as String
+        cityName = parseObject["cityName"] as String
+        stateName = parseObject["stateName"] as String
     };
 }
