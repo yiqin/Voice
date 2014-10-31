@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "ArticleDetailBlockTableViewCell.h"
+#import "ArticleTextBlockTableViewCell.h"
 
-@implementation ArticleDetailBlockTableViewCell
+@implementation ArticleTextBlockTableViewCell
 
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -23,6 +23,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

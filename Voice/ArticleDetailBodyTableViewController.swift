@@ -16,7 +16,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.grayColor()
-        // tableView.separatorColor = UIColor.clearColor()
+        tableView.separatorColor = UIColor.clearColor()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,13 +52,13 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             return AdTableViewCell.cellHeight()
         }
         else {
-            return ArticleDetailBlockTableViewCell.cellHeight()
+            return ArticleTextBlockTableViewCell.cellHeight()
         }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let articleCoverIdentifier = "ArticleCoverIdentifier"
-        let articleDetailBlockIdentifier = "ArticleDetailBlockIdentifier"
+        let articleTextBlockIdentifier = "ArticleTextBlockIdentifier"
         let adIdentifier = "AdIdentifier"
         
         if (indexPath.row == 0){
@@ -92,7 +92,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
 
         }
         else {
-            var cell = tableView.dequeueReusableCellWithIdentifier(articleDetailBlockIdentifier) as? ArticleDetailBlockTableViewCell
+            var cell = tableView.dequeueReusableCellWithIdentifier(articleTextBlockIdentifier) as? ArticleTextBlockTableViewCell
             
             if cell != nil {
                 // println("Cell exist")
@@ -100,9 +100,9 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
-                cell = ArticleDetailBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleDetailBlockIdentifier)
+                cell = ArticleTextBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleTextBlockIdentifier)
             }
-            cell?.textLabel.text = "Article Body"
+            cell?.textLabel.text = "Article Text"
             return cell!
         }
     }

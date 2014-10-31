@@ -261,7 +261,7 @@
 		8DFC024519FF08800098C1BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024419FF08800098C1BA /* UserManager.swift */; };
 		8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024619FF0E350098C1BA /* AdsLocation.swift */; };
 		8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */; };
-		8DFC024C19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */; };
+		8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024B19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m */; };
 		8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */; };
 		8DFC025219FF1E160098C1BA /* ArticleCoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -646,8 +646,8 @@
 		8DFC024419FF08800098C1BA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8DFC024619FF0E350098C1BA /* AdsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLocation.swift; sourceTree = "<group>"; };
 		8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailBodyTableViewController.swift; sourceTree = "<group>"; };
-		8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailBlockTableViewCell.h; sourceTree = "<group>"; };
-		8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailBlockTableViewCell.m; sourceTree = "<group>"; };
+		8DFC024A19FF189C0098C1BA /* ArticleTextBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextBlockTableViewCell.h; sourceTree = "<group>"; };
+		8DFC024B19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextBlockTableViewCell.m; sourceTree = "<group>"; };
 		8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
 		8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCoverTableViewCell.h; sourceTree = "<group>"; };
@@ -1190,8 +1190,8 @@
 				8DFC024819FF14320098C1BA /* ArticleDetailBodyTableViewController.swift */,
 				8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */,
 				8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */,
-				8DFC024A19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.h */,
-				8DFC024B19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m */,
+				8DFC024A19FF189C0098C1BA /* ArticleTextBlockTableViewCell.h */,
+				8DFC024B19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m */,
 				8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */,
 				8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */,
 			);
@@ -1584,7 +1584,7 @@
 				8D571B681A016AE100859378 /* LeaftaggerPoint.m in Sources */,
 				8D571B6F1A016AE100859378 /* YQButton.m in Sources */,
 				8D571B6A1A016AE100859378 /* LeaftaggerScreenManager.m in Sources */,
-				8DFC024C19FF189C0098C1BA /* ArticleDetailBlockTableViewCell.m in Sources */,
+				8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */,
 				8D571EEF1A0175FF00859378 /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				8D571F141A0175FF00859378 /* MPTypeDescription.m in Sources */,
 				8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */,

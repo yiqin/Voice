@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class Ad;
+@class AdsManager;
+
 @interface AdTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) UIImageView *image;
 
 + (CGFloat) cellHeight;
 

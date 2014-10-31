@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ArticleDetailBlockTableViewCell : UITableViewCell
+@interface ArticleTextBlockTableViewCell : UITableViewCell
 
 
 

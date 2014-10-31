@@ -11,7 +11,7 @@
 #import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"
 #import "ArticleCoverTableViewCell.h"
-#import "ArticleDetailBlockTableViewCell.h"
+#import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
 
 #import "SkyLab.h"
