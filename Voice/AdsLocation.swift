@@ -17,6 +17,7 @@ class AdsLocation: NSObject {
     var parseObject: PFObject
     
     var cityName: String
+    var stateName: String
     
     init(adsLocationPFObject:PFObject) {
         objectId = adsLocationPFObject.objectId
@@ -26,5 +27,6 @@ class AdsLocation: NSObject {
         parseObject = adsLocationPFObject
         
         cityName = adsLocationPFObject["cityName"] as String
+        stateName = adsLocationPFObject["stateName"] as String
     };
 }
