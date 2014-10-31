@@ -24,6 +24,7 @@ class Article: NSObject {
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
+        self.parseObject = parseObject
         
         title = parseObject["title"] as String
         briefDescription = parseObject["briefDescription"] as String    // How to check this value
@@ -37,7 +38,6 @@ class Article: NSObject {
             println("Load article image succesfully.")
         }
         
-        self.parseObject = parseObject
     };
     
 }

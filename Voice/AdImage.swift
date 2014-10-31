@@ -23,6 +23,7 @@ class AdImage: NSObject {
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
+        self.parseObject = parseObject
         
         image = PFImageView()
         
@@ -31,8 +32,6 @@ class AdImage: NSObject {
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load ad image succesfully.")
         }
-        
-        self.parseObject = parseObject
     }
    
 }

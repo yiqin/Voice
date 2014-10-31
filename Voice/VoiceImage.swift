@@ -23,18 +23,7 @@ class VoiceImage: NSObject {
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
-        
-        // PFFile *thumbnail = [self.recipePFObject objectForKey:@"picture"];
-        /*
-        // PFFile *thumbnail = [self.recipePFObject objectForKey:@"picture"];
-        self.image = [[PFImageView alloc] init];
-        self.image.file = thumbnail;
-        // self.image.image = thumbnailImageView.image.squareCroppedImage;
-        [self.image loadInBackground:^(UIImage *image, NSError *error) {
-        if (!error) {
-        }
-        }];
-        */
+        self.parseObject = parseObject
         
         image = PFImageView()
         
@@ -43,8 +32,5 @@ class VoiceImage: NSObject {
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load voice image succesfully.")
         }
-        
-        // image = voiceImagePFObject["image"] as PFImageView
-        self.parseObject = parseObject
     }
 }

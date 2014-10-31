@@ -26,13 +26,11 @@ class Ad: NSObject {
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
-        
         self.parseObject = parseObject
         
         name = parseObject["name"] as String
         atLocationName = parseObject["atLocationName"] as String
     }
-    
     
     func loadAdImagesFromParse() {
         var query  = PFQuery(className: "AdImage")
@@ -56,11 +54,6 @@ class Ad: NSObject {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
-
-        
     }
-    
-    
-    
-   
+
 }

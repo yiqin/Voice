@@ -23,7 +23,6 @@ class AdsLocation: NSObject {
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
-        
         self.parseObject = parseObject
         
         cityName = parseObject["cityName"] as String
