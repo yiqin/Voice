@@ -92,15 +92,12 @@ class ImagesRowsTableViewController: UITableViewController {
             return UITableViewCell()
         }
         else {
-            
             if cell != nil {
                 // println("Cell exist")
-                
             }
             else {
                 // println("Create new Cell")
                 cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
-                
             }
             cell?.loadCell(indexPath)
             return cell!

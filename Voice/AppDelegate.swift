@@ -31,16 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func singleMethodSetup() {
         
         UserManager.sharedInstance
-        UserManager.sharedInstance.startLoadingRelatedAdsFromParse()
-        
         DeviceManager.sharedInstance
+        AdManager.sharedInstance
+        
+        DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
         
         ArticlesManager.sharedInstance
         ArticlesManager.sharedInstance.startLoadingDataFromParse()
         
         VoiceImagesManager.sharedInstance
         VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
-        
     }
     
     func parseSetup(){

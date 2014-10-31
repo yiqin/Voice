@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Manages the list of articles in the main view.
+ Each item has Article class, rather than ArticleDetail class.
+*/
 class ArticlesManager: NSObject {
     
     var articles : NSMutableArray = []

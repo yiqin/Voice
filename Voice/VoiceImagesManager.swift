@@ -8,9 +8,14 @@
 
 import UIKit
 
+/**
+ Manages images that shown on the main view controller.
+*/
 class VoiceImagesManager: NSObject {
     
-    let numberPerRow = 4;
+    /// The numbers of images in a row.
+    var numberPerRow = 4;
+    /// The numbers of rows in the image table view.
     var numberOfRows = 0;
     var voiceImages : NSMutableArray = [];
 
@@ -60,6 +65,12 @@ class VoiceImagesManager: NSObject {
         voiceImages.addObject(newVoiceImage)
     }
     
+    /**
+     Fecth voice images.
+    
+     :param: rowIndex row index in the table view on DownViewn
+     :return: NSArray that contains voiceImages
+    */
     func fetchVoiceImagesWithRowIndex(rowIndex:Int) -> NSArray
     {
         if rowIndex > (numberOfRows-1) {        // Start from 1

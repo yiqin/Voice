@@ -27,8 +27,6 @@
         [self setSubViews];
         self.rowIndex = (int)indexPath.row;
         
-        
-        
     }
     return self;
 }
@@ -36,9 +34,12 @@
 - (void) setSubViews
 {
     
-    
 }
 
+/*!
+ Load images into row scroll view.
+ @param:  the coloumn index in the.
+ */
 - (void) loadCell:(NSIndexPath *)indexPath
 {
     NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);

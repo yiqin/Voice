@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Manages all user information. It includes
+*/
 class AdManager: NSObject {
     
     var ads : NSMutableArray = []
@@ -19,9 +22,13 @@ class AdManager: NSObject {
         return Static.instance
     }
     
+    /**
+     Load ads from Parse.com and save them into AdManager.sharedInstance.ads
+    
+     :param: location the location information wrapped in AdsLocation
+    */
     func startLoadingDataFromParse(location: AdsLocation) {
         var query  = PFQuery(className: "Ad")
-    
         query.whereKey("atLocation", equalTo: location.parseObject)
         
         query.orderByAscending("updatedAt")
