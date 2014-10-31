@@ -19,6 +19,9 @@ class Ad: NSObject {
     var name: String
     var atLocationName: String
     
+    /// multiply ad images belonged to each ad.
+    var adImages : NSMutableArray = []
+    
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
         createdAt = articlePFObject.createdAt
@@ -28,7 +31,36 @@ class Ad: NSObject {
         
         name = articlePFObject["name"] as String
         atLocationName = articlePFObject["atLocationName"] as String
-    };
+    }
+    
+    
+    func loadAdImagesFromParse() {
+        var query  = PFQuery(className: "AdImage")
+        query.orderByDescending("updatedAt")
+        query.whereKey("belongTo", equalTo: self.parseObject)
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+
+            if error == nil {
+                var recievedAdImages = NSMutableArray()
+                
+                for object in objects {
+                    let newAdImage = AdImage(adImagePFObject: object as PFObject)
+                    recievedAdImages.addObject(newAdImage)
+                }
+                
+                self.adImages.removeAllObjects()
+                self.adImages.addObjectsFromArray(recievedAdImages)
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
+
+        
+    }
+    
+    
     
    
 }

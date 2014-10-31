@@ -8,9 +8,16 @@
 
 import UIKit
 
+/**
+ Display the detail of an article. 
+ The detail consist of several blcoks, including the over page, text paragraghes and images
+*/
 class ArticleDetailViewController: UIViewController {
     
+    /// backButton on the top
     var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
+    
+    /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -18,6 +25,7 @@ class ArticleDetailViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         
         articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
+        
         
         // So-called A&B Testing
         // If the test is not reset, A/B testing won't change.
@@ -35,7 +43,6 @@ class ArticleDetailViewController: UIViewController {
         view.addSubview(articleDetailBodyTVC.view)
         
         
-        // backButton on the top
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
     }

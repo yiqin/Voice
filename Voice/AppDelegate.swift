@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // this is wrong. Put them here.
         parseSetup()
         leaftaggerSetup()
+        
         singleMethodSetup()     // after parseSetup
         mixpanelSetup()
         
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UserManager.sharedInstance
         DeviceManager.sharedInstance
-        AdManager.sharedInstance
+        AdsManager.sharedInstance
         
         DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
         

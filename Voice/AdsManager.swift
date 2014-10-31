@@ -11,19 +11,19 @@ import UIKit
 /**
  Manages all user information. It includes
 */
-class AdManager: NSObject {
+class AdsManager: NSObject {
     
     var ads : NSMutableArray = []
     
-    class var sharedInstance : AdManager {
+    class var sharedInstance : AdsManager {
         struct Static {
-            static let instance = AdManager()
+            static let instance = AdsManager()
         }
         return Static.instance
     }
     
     /**
-     Load ads from Parse.com and save them into AdManager.sharedInstance.ads
+     Load ads from Parse.com acoording to the location, and save them into AdManager.sharedInstance.ads
     
      :param: location the location information wrapped in AdsLocation
     */
@@ -39,6 +39,8 @@ class AdManager: NSObject {
                 
                 for object in objects {
                     let newAd = Ad(articlePFObject: object as PFObject)
+                    newAd.loadAdImagesFromParse()
+                    
                     println(newAd.name)     // check the result
                     
                     recievedAds.addObject(newAd)
@@ -51,9 +53,6 @@ class AdManager: NSObject {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
-
-        /************************************/
-        // where operation is here
         
     }
    

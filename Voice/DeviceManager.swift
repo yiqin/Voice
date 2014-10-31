@@ -46,7 +46,7 @@ class DeviceManager: NSObject {
     }
     
     /**
-     Handle the location of ads.
+     Handle the location of ads. After getting the location, we need to use AdsLocation to fetch related ads.
      - Currently load Lafayette with the objectId TX1TdJitsX
     */
     func startLoadingRelatedAdsFromParse() {
@@ -58,7 +58,7 @@ class DeviceManager: NSObject {
             
             // A block is here
             
-            AdManager.sharedInstance.startLoadingDataFromParse(self.adsLocations.objectAtIndex(0) as AdsLocation)
+            AdsManager.sharedInstance.startLoadingDataFromParse(self.adsLocations.objectAtIndex(0) as AdsLocation)
         }
     }
     

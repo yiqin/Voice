@@ -224,6 +224,7 @@
 		8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571F261A01789A00859378 /* VoiceMixpanel.m */; };
 		8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */; };
 		8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */; };
+		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8DB363CA1A009CC700B87619 /* SkyLab.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB363C91A009CC700B87619 /* SkyLab.m */; };
@@ -255,7 +256,7 @@
 		8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */; };
 		8DDEDC2819F88E0500550516 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2719F88E0500550516 /* Article.swift */; };
 		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
-		8DE49CCB19FC10BA00461150 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdManager.swift */; };
+		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
 		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
 		8DFC024519FF08800098C1BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024419FF08800098C1BA /* UserManager.swift */; };
 		8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024619FF0E350098C1BA /* AdsLocation.swift */; };
@@ -600,6 +601,7 @@
 		8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8DB363C81A009CC700B87619 /* SkyLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyLab.h; sourceTree = "<group>"; };
@@ -639,7 +641,7 @@
 		8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		8DDEDC2719F88E0500550516 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
-		8DE49CCA19FC10BA00461150 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		8DE49CCA19FC10BA00461150 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		8DFC024419FF08800098C1BA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8DFC024619FF0E350098C1BA /* AdsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLocation.swift; sourceTree = "<group>"; };
@@ -1148,7 +1150,7 @@
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
-				8DE49CCA19FC10BA00461150 /* AdManager.swift */,
+				8DE49CCA19FC10BA00461150 /* AdsManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -1157,6 +1159,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
+				8D8173DC1A0418C4006D8EA7 /* AdImage.swift */,
 				8DE49CC819FC0F8400461150 /* Ad.swift */,
 				8DFC024619FF0E350098C1BA /* AdsLocation.swift */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
@@ -1180,7 +1183,7 @@
 			name = DownView;
 			sourceTree = "<group>";
 		};
-		8DB363BC1A00916300B87619 /* ArticleViewController */ = {
+		8DB363BC1A00916300B87619 /* ArticleDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */,
@@ -1192,7 +1195,7 @@
 				8DFC024D19FF1BC20098C1BA /* AdTableViewCell.h */,
 				8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */,
 			);
-			name = ArticleViewController;
+			name = ArticleDetailViewController;
 			sourceTree = "<group>";
 		};
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
@@ -1246,7 +1249,7 @@
 				8DB363B91A00911A00B87619 /* DataManager */,
 				8DB363B81A00910E00B87619 /* UpView */,
 				8DB363BB1A00914500B87619 /* DownView */,
-				8DB363BC1A00916300B87619 /* ArticleViewController */,
+				8DB363BC1A00916300B87619 /* ArticleDetailViewController */,
 				8DB6F3BA19F1BC4E002ED90F /* Main.storyboard */,
 				8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */,
 				8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */,
@@ -1565,7 +1568,7 @@
 				8D571B591A016AE100859378 /* LeaftaggerAddCommentNavigationViewController.m in Sources */,
 				8D571B601A016AE100859378 /* LeaftaggerCommentTableViewCell.m in Sources */,
 				8D571B701A016AE100859378 /* YQLabel.m in Sources */,
-				8DE49CCB19FC10BA00461150 /* AdManager.swift in Sources */,
+				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
 				8D571EF21A0175FF00859378 /* MPApplicationStateSerializer.m in Sources */,
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
 				8D571EEE1A0175FF00859378 /* MPABTestDesignerSnapshotRequestMessage.m in Sources */,
@@ -1615,6 +1618,7 @@
 				8D571F081A0175FF00859378 /* MPPassThroughValueTransformer.m in Sources */,
 				8D571BE01A016AE100859378 /* YQWebViewControllerActivity.m in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
+				8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */,
 				8D571BCD1A016AE100859378 /* YQURLResponseSerialization.m in Sources */,
 				8D571F161A0175FF00859378 /* MPUIEdgeInsetsToNSDictionaryValueTransformer.m in Sources */,
 				8D571F111A0175FF00859378 /* MPTweak.m in Sources */,
