@@ -12,7 +12,7 @@ class Article: NSObject {
     
     var objectId: String
     var createdAt: NSDate
-    var updateAt: NSDate
+    var updatedAt: NSDate
     
     var title: String
     var briefDescription: String
@@ -23,7 +23,7 @@ class Article: NSObject {
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
         createdAt = articlePFObject.createdAt
-        updateAt = articlePFObject.updatedAt
+        updatedAt = articlePFObject.updatedAt
         
         title = articlePFObject["title"] as String
         briefDescription = articlePFObject["briefDescription"] as String    // How to check this value

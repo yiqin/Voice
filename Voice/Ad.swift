@@ -12,7 +12,7 @@ class Ad: NSObject {
     
     var objectId: String
     var createdAt: NSDate
-    var updateAt: NSDate
+    var updatedAt: NSDate
     
     var parseObject: PFObject
     
@@ -22,7 +22,7 @@ class Ad: NSObject {
     init(articlePFObject:PFObject) {
         objectId = articlePFObject.objectId
         createdAt = articlePFObject.createdAt
-        updateAt = articlePFObject.updatedAt
+        updatedAt = articlePFObject.updatedAt
         
         parseObject = articlePFObject
         

@@ -12,7 +12,7 @@ class AdsLocation: NSObject {
     
     var objectId: String
     var createdAt: NSDate
-    var updateAt: NSDate
+    var updatedAt: NSDate
     
     var parseObject: PFObject
     
@@ -22,7 +22,7 @@ class AdsLocation: NSObject {
     init(adsLocationPFObject:PFObject) {
         objectId = adsLocationPFObject.objectId
         createdAt = adsLocationPFObject.createdAt
-        updateAt = adsLocationPFObject.updatedAt
+        updatedAt = adsLocationPFObject.updatedAt
         
         parseObject = adsLocationPFObject
         

@@ -12,7 +12,7 @@ class VoiceImage: NSObject {
     
     var objectId: String
     var createdAt: NSDate
-    var updateAt: NSDate
+    var updatedAt: NSDate
     
     var image : PFImageView
     
@@ -22,7 +22,7 @@ class VoiceImage: NSObject {
     init(voiceImagePFObject:PFObject) {
         objectId = voiceImagePFObject.objectId
         createdAt = voiceImagePFObject.createdAt
-        updateAt = voiceImagePFObject.updatedAt
+        updatedAt = voiceImagePFObject.updatedAt
         
         // PFFile *thumbnail = [self.recipePFObject objectForKey:@"picture"];
         /*
