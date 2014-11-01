@@ -54,7 +54,7 @@ class VoiceImagesManager: NSObject {
                 self.voiceImages.removeAllObjects()
                 self.voiceImages.addObjectsFromArray(recievedVoiceImages)
                 
-                // self.fetchVoiceImagesWithRowIndex(1)    // check 2nd row -> 1
+                self.fetchVoiceImagesWithRowIndex(1)    // check 2nd row -> 1
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
@@ -73,7 +73,7 @@ class VoiceImagesManager: NSObject {
     */
     func fetchVoiceImagesWithRowIndex(rowIndex:Int) -> NSArray
     {
-        if rowIndex > (numberOfRows-1) {        // numberOfRows start from 1
+        if rowIndex > (numberOfRows-1) {        // Start from 1
             return []
         }
         else {
@@ -86,9 +86,8 @@ class VoiceImagesManager: NSObject {
                 arrayLength = numberPerRow
             }
             
-            println("receive rowIndex: \(rowIndex)")
-            println("How many images in the row: \(arrayLength)")
-            // println(voiceImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
+            println("How many images in the last row: \(arrayLength)")
+            println(voiceImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
             
             return voiceImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength))
         }

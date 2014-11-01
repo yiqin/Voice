@@ -24,25 +24,20 @@
 {
     self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setSubViews:indexPath];
+        [self setSubViews];
         self.rowIndex = (int)indexPath.row;
         
     }
     return self;
 }
 
-- (void) setSubViews:(NSIndexPath *)indexPath
+- (void) setSubViews
 {
-    NSLog(@"setSubViews: %d", indexPath.row);
-    // Load images row scroll view here.
-    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:(int)indexPath.row];
-    [self addSubview:self.imagesRowScrollView];
     
-    // [self.imagesRowScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 }
 
 /*!
- Load images into row scroll view. (This method is wrong.....)
+ Load images into row scroll view.
  @param:  the coloumn index in the.
  */
 - (void) loadCell:(NSIndexPath *)indexPath
@@ -50,10 +45,8 @@
     NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);
     
     // Load images row scroll view here.
-    // self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:(int)indexPath.row];
-    [self.imagesRowScrollView loadCollectionDataWithRowIndex:self.rowIndex];
-    
-    // [self addSubview:self.imagesRowScrollView];
+    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:(int)indexPath.row];
+    [self addSubview:self.imagesRowScrollView];
 }
 
 - (void)awakeFromNib {
