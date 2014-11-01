@@ -18,6 +18,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        NSLog(@"When we init iamgesCollectionData: %d", rowIndex);
+        
         self.imagesCollectionData = [[VoiceImagesManager sharedInstance] fetchVoiceImagesWithRowIndex:rowIndex];
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -38,6 +41,12 @@
         [self addSubview:self.collectionView];
     }
     return self;
+}
+
+- (void) loadCollectionDataWithRowIndex:(int)rowIndex
+{
+    self.imagesCollectionData = [[VoiceImagesManager sharedInstance] fetchVoiceImagesWithRowIndex:rowIndex];
+    // self.collectionView.reloadData;
 }
 
 #pragma mark - UICollectionViewDataSource methods

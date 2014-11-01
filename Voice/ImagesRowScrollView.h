@@ -15,6 +15,8 @@
 
 - (instancetype) initWithFrame:(CGRect)frame rowIndex:(int)rowIndex;
 
+- (void) loadCollectionDataWithRowIndex:(int)rowIndex;
+
 
 @property (nonatomic) int rowNumber;    // No need. The data is in collectionData
 
