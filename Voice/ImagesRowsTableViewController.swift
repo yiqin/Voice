@@ -99,9 +99,9 @@ class ImagesRowsTableViewController: UITableViewController {
                 // println("Create new Cell")
                 cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
             }
+            
             cell?.loadCell(indexPath)
             return cell!
-            // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
     }
     
