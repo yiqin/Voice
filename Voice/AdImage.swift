@@ -8,22 +8,12 @@
 
 import UIKit
 
-class AdImage: NSObject {
-    
-    var objectId: String
-    var createdAt: NSDate
-    var updatedAt: NSDate
+class AdImage: NSVoiceObject {
     
     var image : PFImageView
     
-    var parseObject: PFObject
-    
-    
     init(parseObject:PFObject) {
-        objectId = parseObject.objectId
-        createdAt = parseObject.createdAt
-        updatedAt = parseObject.updatedAt
-        self.parseObject = parseObject
+        super.init(parseObject:parseObject)
         
         image = PFImageView()
         

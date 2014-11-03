@@ -8,22 +8,13 @@
 
 import UIKit
 
-class AdsLocation: NSObject {
-    
-    var objectId: String
-    var createdAt: NSDate
-    var updatedAt: NSDate
-    
-    var parseObject: PFObject
+class AdsLocation: NSVoiceObject {
     
     var cityName: String
     var stateName: String
     
     init(parseObject:PFObject) {
-        objectId = parseObject.objectId
-        createdAt = parseObject.createdAt
-        updatedAt = parseObject.updatedAt
-        self.parseObject = parseObject
+        super.init(parseObject:parseObject)
         
         cityName = parseObject["cityName"] as String
         stateName = parseObject["stateName"] as String

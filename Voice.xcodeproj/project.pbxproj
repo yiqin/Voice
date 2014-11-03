@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
 		8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */; };
+		8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */; };
 		8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* VoiceImage.swift */; };
 		8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */; };
 		8D571B581A016AE100859378 /* Leaftagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571A871A016AE100859378 /* Leaftagger.m */; };
@@ -280,6 +281,7 @@
 		8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesManager.swift; sourceTree = "<group>"; };
 		8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
 		8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
+		8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSVoiceObject.swift; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* VoiceImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImagesManager.swift; sourceTree = "<group>"; };
 		8D571A861A016AE100859378 /* Leaftagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leaftagger.h; sourceTree = "<group>"; };
@@ -1158,6 +1160,7 @@
 		8DB363BA1A00912F00B87619 /* DataClass */ = {
 			isa = PBXGroup;
 			children = (
+				8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */,
 				8D4AB35219F9B7DC00222967 /* VoiceImage.swift */,
 				8D8173DC1A0418C4006D8EA7 /* AdImage.swift */,
 				8DE49CC819FC0F8400461150 /* Ad.swift */,
@@ -1571,6 +1574,7 @@
 				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
 				8D571EF21A0175FF00859378 /* MPApplicationStateSerializer.m in Sources */,
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
+				8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */,
 				8D571EEE1A0175FF00859378 /* MPABTestDesignerSnapshotRequestMessage.m in Sources */,
 				8D571F1C1A0175FF00859378 /* NSInvocation+MPHelpers.m in Sources */,
 				8D571B5B1A016AE100859378 /* LeaftaggerApp.m in Sources */,

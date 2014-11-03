@@ -8,27 +8,17 @@
 
 import UIKit
 
-class Article: NSObject {
-    
-    var objectId: String
-    var createdAt: NSDate
-    var updatedAt: NSDate
+class Article: NSVoiceObject {
     
     var title: String
     var briefDescription: String
     var briefImage : PFImageView
     
-    var parseObject: PFObject
-    
     init(parseObject:PFObject) {
-        objectId = parseObject.objectId
-        createdAt = parseObject.createdAt
-        updatedAt = parseObject.updatedAt
-        self.parseObject = parseObject
+        super.init(parseObject:parseObject)
         
         title = parseObject["title"] as String
         briefDescription = parseObject["briefDescription"] as String    // How to check this value
-        
         
         briefImage = PFImageView()
         

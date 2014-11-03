@@ -8,13 +8,7 @@
 
 import UIKit
 
-class Ad: NSObject {
-    
-    var objectId: String
-    var createdAt: NSDate
-    var updatedAt: NSDate
-    
-    var parseObject: PFObject
+class Ad: NSVoiceObject {
     
     var name: String
     var atLocationName: String
@@ -23,10 +17,7 @@ class Ad: NSObject {
     var adImages : NSMutableArray = []
     
     init(parseObject:PFObject) {
-        objectId = parseObject.objectId
-        createdAt = parseObject.createdAt
-        updatedAt = parseObject.updatedAt
-        self.parseObject = parseObject
+        super.init(parseObject:parseObject)
         
         name = parseObject["name"] as String
         atLocationName = parseObject["atLocationName"] as String
