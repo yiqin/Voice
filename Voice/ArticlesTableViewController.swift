@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ArticlesTableViewControllerDelegate {
-    func moveToSelectArticle()
+    func moveToSelectArticle(selectedArticle:Article)
 }
 
 class ArticlesTableViewController: UITableViewController {
@@ -131,8 +131,9 @@ class ArticlesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
+        var articles = ArticlesManager.sharedInstance.articles
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        delegate?.moveToSelectArticle()
+        delegate?.moveToSelectArticle(articles.objectAtIndex(indexPath.row) as Article)
         
     }
     

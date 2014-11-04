@@ -12,6 +12,7 @@
 		8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */; };
 		8D1B5B7C1A0853F600B32925 /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7B1A0853F600B32925 /* ArticleDetail.swift */; };
 		8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */; };
+		8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */; };
 		8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* VoiceImage.swift */; };
 		8D4AB35519F9B95D00222967 /* VoiceImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */; };
 		8D571B581A016AE100859378 /* Leaftagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571A871A016AE100859378 /* Leaftagger.m */; };
@@ -286,6 +287,7 @@
 		8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSVoiceObject.swift; sourceTree = "<group>"; };
 		8D1B5B7B1A0853F600B32925 /* ArticleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
 		8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBlock.swift; sourceTree = "<group>"; };
+		8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* VoiceImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImagesManager.swift; sourceTree = "<group>"; };
 		8D571A861A016AE100859378 /* Leaftagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leaftagger.h; sourceTree = "<group>"; };
@@ -1157,6 +1159,7 @@
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
 				8D4AB35419F9B95D00222967 /* VoiceImagesManager.swift */,
 				8DE49CCA19FC10BA00461150 /* AdsManager.swift */,
+				8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -1586,6 +1589,7 @@
 				8D571B5B1A016AE100859378 /* LeaftaggerApp.m in Sources */,
 				8D571EF51A0175FF00859378 /* MPCGAffineTransformToNSDictionaryValueTransformer.m in Sources */,
 				8D571F0E1A0175FF00859378 /* MPSurveyQuestion.m in Sources */,
+				8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */,
 				8DB363CA1A009CC700B87619 /* SkyLab.m in Sources */,
 				8D571EFD1A0175FF00859378 /* MPEnumDescription.m in Sources */,
 				8D571EF11A0175FF00859378 /* MPABTestDesignerTweakResponseMessage.m in Sources */,

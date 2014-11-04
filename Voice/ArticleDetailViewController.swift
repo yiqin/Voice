@@ -14,13 +14,20 @@ import UIKit
 */
 class ArticleDetailViewController: UIViewController {
     
+    var selectedArticle : Article
+    
     /// backButton on the top
     var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    
+    
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
+        
+        self.selectedArticle = selectedArticle!
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
@@ -55,6 +62,32 @@ class ArticleDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        
+        // Put this into Data Manager.
+        var query  = PFQuery(className: "ArticleDetail")
+        query.orderByDescending("updatedAt")
+        query.whereKey("belongTo", equalTo: self.selectedArticle.parseObject)
+        
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                var recievedObjects = NSMutableArray()
+                
+                for object in objects {
+                    
+                    var articleDetail = ArticleDetail(parseObject: object as PFObject)
+                    
+                }
+                // self.init(parseObject:resultPFObject)
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
+        
+        
+        
     }
     
     func backButtonPressed(sender: UIButton!){

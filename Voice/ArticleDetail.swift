@@ -12,6 +12,9 @@ class ArticleDetail: NSVoiceObject {
     
     var articleBlocks : NSMutableArray = []
     
+    
+        
+    
     override init(parseObject:PFObject) {
         
         
@@ -19,6 +22,9 @@ class ArticleDetail: NSVoiceObject {
         super.init(parseObject:parseObject)
         
         // Fetch Article Blockes.
+        
+        
+        // Put this into DataManager
         var query  = PFQuery(className: "ArticleBlock")
         query.orderByDescending("updatedAt")
         query.whereKey("belongTo", equalTo: self.parseObject)
@@ -29,6 +35,11 @@ class ArticleDetail: NSVoiceObject {
                 
                 for object in objects {
                     let newReadyObject = ArticleBlock(parseObject: object as PFObject)
+                    println(newReadyObject.text)
+                    
+                    // Add it to ArticleDetailManager
+                    ArticleDetailManager.sharedInstance.addArticleBlock(newReadyObject)
+                    
                     recievedObjects.addObject(newReadyObject)
                 }
                 

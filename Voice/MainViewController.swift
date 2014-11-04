@@ -95,8 +95,9 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
     }
     
     // Delegate Chain
-    func moveToSelectArticle() {
-        let articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil)
+    func moveToSelectArticle(selectedArticle:Article) {
+        var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
+        // articleDetailViewController.selectedArticle = selectedArticle;
         self.navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
 

@@ -22,8 +22,4 @@ class UserManager: NSObject {
     }
     
     
-    
-
-    
-    
 }
