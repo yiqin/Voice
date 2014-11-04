@@ -19,6 +19,8 @@ class ArticleDetailManager: NSObject {
         return Static.instance
     }
     
+    
+    
     func addArticleBlock(articleBlock:ArticleBlock){
         articleBlocks.addObject(articleBlock);
         

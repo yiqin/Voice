@@ -43,6 +43,8 @@ class ArticleDetail: NSVoiceObject {
                     recievedObjects.addObject(newReadyObject)
                 }
                 
+                // Send a notification to tableViewControlle to relaod the data.
+                
                 self.articleBlocks.removeAllObjects()
                 self.articleBlocks.addObjectsFromArray(recievedObjects)
                 
