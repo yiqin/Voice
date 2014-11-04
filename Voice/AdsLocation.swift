@@ -13,10 +13,12 @@ class AdsLocation: NSVoiceObject {
     var cityName: String
     var stateName: String
     
-    init(parseObject:PFObject) {
-        super.init(parseObject:parseObject)
-        
+    override init(parseObject:PFObject) {
         cityName = parseObject["cityName"] as String
         stateName = parseObject["stateName"] as String
+        
+        super.init(parseObject:parseObject)
+        
+        
     };
 }

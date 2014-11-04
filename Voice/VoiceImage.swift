@@ -12,8 +12,8 @@ class VoiceImage: NSVoiceObject {
     
     var image : PFImageView
     
-    init(parseObject:PFObject) {
-        super.init(parseObject:parseObject)
+    override init(parseObject:PFObject) {
+        
         
         image = PFImageView()
         
@@ -22,5 +22,7 @@ class VoiceImage: NSVoiceObject {
         image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load voice image succesfully.")
         }
+        
+        super.init(parseObject:parseObject)
     }
 }

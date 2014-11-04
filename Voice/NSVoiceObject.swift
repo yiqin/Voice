@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ General super class in the Voice
+*/
 class NSVoiceObject: NSObject {
     
     var objectId: String
@@ -15,16 +18,10 @@ class NSVoiceObject: NSObject {
     var updatedAt: NSDate
     var parseObject: PFObject
     
-    
     init(parseObject:PFObject) {
-        
         objectId = parseObject.objectId
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
         self.parseObject = parseObject
-        
-        
-        
     }
-    
 }

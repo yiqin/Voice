@@ -16,11 +16,11 @@ class Ad: NSVoiceObject {
     /// multiply ad images belonged to each ad.
     var adImages : NSMutableArray = []
     
-    init(parseObject:PFObject) {
-        super.init(parseObject:parseObject)
-        
+    override init(parseObject:PFObject) {
         name = parseObject["name"] as String
         atLocationName = parseObject["atLocationName"] as String
+        
+        super.init(parseObject:parseObject)
     }
     
     func loadAdImagesFromParse() {

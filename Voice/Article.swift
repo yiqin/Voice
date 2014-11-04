@@ -14,9 +14,7 @@ class Article: NSVoiceObject {
     var briefDescription: String
     var briefImage : PFImageView
     
-    init(parseObject:PFObject) {
-        super.init(parseObject:parseObject)
-        
+    override init(parseObject:PFObject) {
         title = parseObject["title"] as String
         briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
@@ -28,6 +26,7 @@ class Article: NSVoiceObject {
             println("Load article image succesfully.")
         }
         
+        super.init(parseObject:parseObject)
     };
     
 }
