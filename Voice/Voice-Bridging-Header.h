@@ -14,6 +14,5 @@
 #import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
 
-#import "SkyLab.h"
 #import "Mixpanel.h"
 #import "VoiceMixpanel.h"

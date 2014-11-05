@@ -230,7 +230,6 @@
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
-		8DB363CA1A009CC700B87619 /* SkyLab.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB363C91A009CC700B87619 /* SkyLab.m */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
 		8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B519F1BC4E002ED90F /* Voice.xcdatamodeld */; };
 		8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */; };
@@ -610,8 +609,6 @@
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
-		8DB363C81A009CC700B87619 /* SkyLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyLab.h; sourceTree = "<group>"; };
-		8DB363C91A009CC700B87619 /* SkyLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyLab.m; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3B219F1BC4E002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1211,18 +1208,8 @@
 			isa = PBXGroup;
 			children = (
 				8D571E701A0175FE00859378 /* Mixpanel */,
-				8DB363C71A009CC700B87619 /* SkyLab */,
 			);
 			path = ThirdPartyLibraries;
-			sourceTree = "<group>";
-		};
-		8DB363C71A009CC700B87619 /* SkyLab */ = {
-			isa = PBXGroup;
-			children = (
-				8DB363C81A009CC700B87619 /* SkyLab.h */,
-				8DB363C91A009CC700B87619 /* SkyLab.m */,
-			);
-			path = SkyLab;
 			sourceTree = "<group>";
 		};
 		8DB6F3A519F1BC4E002ED90F = {
@@ -1587,7 +1574,6 @@
 				8D571EF51A0175FF00859378 /* MPCGAffineTransformToNSDictionaryValueTransformer.m in Sources */,
 				8D571F0E1A0175FF00859378 /* MPSurveyQuestion.m in Sources */,
 				8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */,
-				8DB363CA1A009CC700B87619 /* SkyLab.m in Sources */,
 				8D571EFD1A0175FF00859378 /* MPEnumDescription.m in Sources */,
 				8D571EF11A0175FF00859378 /* MPABTestDesignerTweakResponseMessage.m in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,

@@ -22,36 +22,17 @@ class ArticleDetailViewController: UIViewController {
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
     
-    
-    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
         
         self.selectedArticle = selectedArticle!
         
-        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceReload", object: nil)
-        
-        
-        
-        articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
-        
-        
-        // So-called A&B Testing
-        // If the test is not reset, A/B testing won't change.
-        SkyLab.abTestWithName("SLAdPosition", a: { () -> Void in
-            println("SLAdPosition: a test")
-            self.articleDetailBodyTVC.adPosition = 2;
-        
-        }, b: { () -> Void in
-            println("SLAdPosition: b test")
-            self.articleDetailBodyTVC.adPosition = 3;
-        })
-        SkyLab.resetTestNamed("SLAdPosition")
-        
+        articleDetailBodyTVC.view.frame = CGRectMake(0, 45, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-45)
+        let randomNumber = Int(arc4random_uniform(2))+2
+        self.articleDetailBodyTVC.adPosition = randomNumber;
         
         view.addSubview(articleDetailBodyTVC.view)
         
