@@ -29,4 +29,8 @@ class ArticleDetailManager: NSObject {
     func removeArticleBlocks(){
         articleBlocks.removeAllObjects()
     }
+    
+    func addAllArticleBlcoks(savedArticleBlocks: NSMutableArray){
+        articleBlocks = savedArticleBlocks
+    }
 }

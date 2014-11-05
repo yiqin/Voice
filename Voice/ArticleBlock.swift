@@ -19,7 +19,5 @@ class ArticleBlock:NSVoiceObject{
         
         super.init(parseObject:parseObject)
     };
-    
-    
-    
+
 }

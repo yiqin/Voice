@@ -111,10 +111,16 @@ class ArticleDetailBodyTableViewController: UITableViewController {
 
             cell?.textLabel.text = "Article Text"
             
+            if (indexPath.row < adPosition && indexPath.row > 0){
+                blockIndex = indexPath.row-1
+            }
+            else if (indexPath.row > adPosition){
+                blockIndex = indexPath.row-2
+            }
+            
             if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1){
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
                 cell?.textLabel.text = articleBlock.text
-                blockIndex++
             }
             
             
