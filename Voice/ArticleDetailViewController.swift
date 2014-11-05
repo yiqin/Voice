@@ -31,6 +31,11 @@ class ArticleDetailViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceReload", object: nil)
+        
+        
+        
         articleDetailBodyTVC.view.frame = CGRectMake(0, 60, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-60)
         
         
@@ -101,6 +106,12 @@ class ArticleDetailViewController: UIViewController {
     }
     
 
+    func reloadTableViewController() {
+        
+        self.articleDetailBodyTVC.tableView.reloadData()
+        
+    }
+    
     /*
     // MARK: - Navigation
 

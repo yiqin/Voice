@@ -41,6 +41,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
+        
         return 8
     }
     
@@ -102,7 +103,25 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 // println("Create new Cell")
                 cell = ArticleTextBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleTextBlockIdentifier)
             }
+            
+            /**********************************/
+            // Testing
             cell?.textLabel.text = "Article Text"
+            
+            if (indexPath.row == 1){
+                // cell?.textLabel.text =  as? String
+                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(0) as ArticleBlock
+                cell?.textLabel.text = articleBlock.text
+            }
+            else if (indexPath.row == 4) {
+                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(1) as ArticleBlock
+                cell?.textLabel.text = articleBlock.text
+            }
+            else if (indexPath.row == 5) {
+                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(2) as ArticleBlock
+                cell?.textLabel.text = articleBlock.text
+            }
+            
             return cell!
         }
     }
@@ -115,7 +134,6 @@ class ArticleDetailBodyTableViewController: UITableViewController {
     }
     
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

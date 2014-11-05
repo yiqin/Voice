@@ -13,7 +13,6 @@ class ArticleDetail: NSVoiceObject {
     var articleBlocks : NSMutableArray = []
     
     
-        
     
     override init(parseObject:PFObject) {
         
@@ -44,6 +43,9 @@ class ArticleDetail: NSVoiceObject {
                 }
                 
                 // Send a notification to tableViewControlle to relaod the data.
+                NSNotificationCenter.defaultCenter().postNotificationName("VoiceReload", object: nil)
+                
+                
                 
                 self.articleBlocks.removeAllObjects()
                 self.articleBlocks.addObjectsFromArray(recievedObjects)
