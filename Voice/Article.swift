@@ -12,7 +12,9 @@ class Article: NSVoiceObject {
     
     var title: String
     var briefDescription: String
-    var briefImage : PFImageView
+    var briefImage: PFImageView
+    
+    var articleBlocks : NSMutableArray = []
     
     override init(parseObject:PFObject) {
         title = parseObject["title"] as String
@@ -29,4 +31,41 @@ class Article: NSVoiceObject {
         super.init(parseObject:parseObject)
     };
     
+    func startLoading(){
+        // remove articleblocks no mater what it has.
+        ArticleDetailManager.sharedInstance.removeArticleBlocks()
+        
+        var query  = PFQuery(className: "ArticleBlock")
+        query.orderByDescending("updatedAt")
+        query.whereKey("belongTo", equalTo: self.parseObject)
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                var recievedObjects = NSMutableArray()
+                
+                /*****************************/
+                // This is not a safe method.
+                // Only one object is returned.
+                for object in objects {
+                    let newReadyObject = ArticleBlock(parseObject: object as PFObject)
+                    println(newReadyObject.text)
+                    
+                    // Add it to ArticleDetailManager
+                    ArticleDetailManager.sharedInstance.addArticleBlock(newReadyObject)
+                    
+                    recievedObjects.addObject(newReadyObject)
+                }
+                
+                // Send a notification to tableViewControlle to relaod the data.
+                NSNotificationCenter.defaultCenter().postNotificationName("VoiceReload", object: nil)
+                
+                self.articleBlocks.removeAllObjects()
+                self.articleBlocks.addObjectsFromArray(recievedObjects)
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
+    }
+
 }

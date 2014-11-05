@@ -131,13 +131,14 @@ class ArticlesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
-        var articles = ArticlesManager.sharedInstance.articles
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        delegate?.moveToSelectArticle(articles.objectAtIndex(indexPath.row) as Article)
         
+        let articles = ArticlesManager.sharedInstance.articles
+        let selectedArticle = articles.objectAtIndex(indexPath.row) as Article
+        
+        selectedArticle.startLoading()
+        delegate?.moveToSelectArticle(selectedArticle)
     }
-    
-    
     
     
     /*

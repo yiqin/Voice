@@ -10,7 +10,6 @@
 		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
 		8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */; };
 		8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */; };
-		8D1B5B7C1A0853F600B32925 /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7B1A0853F600B32925 /* ArticleDetail.swift */; };
 		8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */; };
 		8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */; };
 		8D4AB35319F9B7DC00222967 /* VoiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* VoiceImage.swift */; };
@@ -285,7 +284,6 @@
 		8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
 		8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
 		8D1B5B791A0830BB00B32925 /* NSVoiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSVoiceObject.swift; sourceTree = "<group>"; };
-		8D1B5B7B1A0853F600B32925 /* ArticleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
 		8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBlock.swift; sourceTree = "<group>"; };
 		8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* VoiceImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceImage.swift; sourceTree = "<group>"; };
@@ -1173,7 +1171,6 @@
 				8DE49CC819FC0F8400461150 /* Ad.swift */,
 				8DFC024619FF0E350098C1BA /* AdsLocation.swift */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
-				8D1B5B7B1A0853F600B32925 /* ArticleDetail.swift */,
 				8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */,
 			);
 			name = DataClass;
@@ -1618,7 +1615,6 @@
 				8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8D571BC91A016AE100859378 /* YQNetworkReachabilityManager.m in Sources */,
-				8D1B5B7C1A0853F600B32925 /* ArticleDetail.swift in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
 				8D571BD61A016AE100859378 /* YQStoryboardPopoverSegue.m in Sources */,

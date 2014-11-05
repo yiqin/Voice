@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ It contains only one article. All article blocks are saved into articleBlocks.
+*/
 class ArticleDetailManager: NSObject {
     
     var articleBlocks : NSMutableArray = []
@@ -19,11 +22,11 @@ class ArticleDetailManager: NSObject {
         return Static.instance
     }
     
-    
-    
     func addArticleBlock(articleBlock:ArticleBlock){
-        articleBlocks.addObject(articleBlock);
-        
+        articleBlocks.addObject(articleBlock)
     }
     
+    func removeArticleBlocks(){
+        articleBlocks.removeAllObjects()
+    }
 }

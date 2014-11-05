@@ -28,6 +28,7 @@ class ArticleDetailViewController: UIViewController {
         
         self.selectedArticle = selectedArticle!
         
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
@@ -43,11 +44,11 @@ class ArticleDetailViewController: UIViewController {
         // If the test is not reset, A/B testing won't change.
         SkyLab.abTestWithName("SLAdPosition", a: { () -> Void in
             println("SLAdPosition: a test")
-            self.articleDetailBodyTVC.adPosition = 2;
+            self.articleDetailBodyTVC.adPosition = 1;
         
         }, b: { () -> Void in
             println("SLAdPosition: b test")
-            self.articleDetailBodyTVC.adPosition = 3;
+            self.articleDetailBodyTVC.adPosition = 2;
         })
         SkyLab.resetTestNamed("SLAdPosition")
         
@@ -65,51 +66,20 @@ class ArticleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        
-        
-        // Put this into Data Manager.
-        var query  = PFQuery(className: "ArticleDetail")
-        query.orderByDescending("updatedAt")
-        query.whereKey("belongTo", equalTo: self.selectedArticle.parseObject)
-        
-        
-        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                var recievedObjects = NSMutableArray()
-                
-                for object in objects {
-                    
-                    var articleDetail = ArticleDetail(parseObject: object as PFObject)
-                    
-                }
-                // self.init(parseObject:resultPFObject)
-                
-            } else {
-                NSLog("Error: %@ %@", error, error.userInfo!)
-            }
-        }
-        
-        
-        
     }
     
     func backButtonPressed(sender: UIButton!){
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     func reloadTableViewController() {
-        
         self.articleDetailBodyTVC.tableView.reloadData()
-        
     }
     
     /*

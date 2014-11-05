@@ -11,6 +11,7 @@ import UIKit
 class ArticleDetailBodyTableViewController: UITableViewController {
 
     var adPosition = -1 // Default value
+    var blockIndex = 0  // A pointer.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,12 @@ class ArticleDetailBodyTableViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
-        return 8
+        if(ArticleDetailManager.sharedInstance.articleBlocks.count==0){
+            return 1;
+        }
+        else {
+            return ArticleDetailManager.sharedInstance.articleBlocks.count+2;
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -90,29 +96,37 @@ class ArticleDetailBodyTableViewController: UITableViewController {
 
             cell?.textLabel.text = "Ad"
             return cell!
-
         }
         else {
             var cell = tableView.dequeueReusableCellWithIdentifier(articleTextBlockIdentifier) as? ArticleTextBlockTableViewCell
             
             if cell != nil {
                 // println("Cell exist")
-                
             }
             else {
                 // println("Create new Cell")
                 cell = ArticleTextBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleTextBlockIdentifier)
             }
             
-            /**********************************/
-            // Testing
+
             cell?.textLabel.text = "Article Text"
             
+            if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1){
+                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
+                cell?.textLabel.text = articleBlock.text
+                blockIndex++
+            }
+            
+            
+            /**********************************/
+            // Testing
+            /*
             if (indexPath.row == 1){
                 // cell?.textLabel.text =  as? String
-                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(0) as ArticleBlock
-                cell?.textLabel.text = articleBlock.text
+                
             }
+            */
+            /*
             else if (indexPath.row == 4) {
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(1) as ArticleBlock
                 cell?.textLabel.text = articleBlock.text
@@ -121,6 +135,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(2) as ArticleBlock
                 cell?.textLabel.text = articleBlock.text
             }
+            */
             
             return cell!
         }
