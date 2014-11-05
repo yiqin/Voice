@@ -32,6 +32,12 @@ class Article: NSVoiceObject {
     };
     
     func startLoading(){
+        
+        // If articleBlocks already have contents, directly return. No need to load again.
+        if (articleBlocks.count>0){
+            return
+        }
+        
         // remove articleblocks no mater what it has.
         ArticleDetailManager.sharedInstance.removeArticleBlocks()
         
