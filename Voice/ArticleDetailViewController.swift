@@ -44,11 +44,11 @@ class ArticleDetailViewController: UIViewController {
         // If the test is not reset, A/B testing won't change.
         SkyLab.abTestWithName("SLAdPosition", a: { () -> Void in
             println("SLAdPosition: a test")
-            self.articleDetailBodyTVC.adPosition = 1;
+            self.articleDetailBodyTVC.adPosition = 2;
         
         }, b: { () -> Void in
             println("SLAdPosition: b test")
-            self.articleDetailBodyTVC.adPosition = 2;
+            self.articleDetailBodyTVC.adPosition = 3;
         })
         SkyLab.resetTestNamed("SLAdPosition")
         
