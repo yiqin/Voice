@@ -122,7 +122,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
                 cell?.textLabel.text = articleBlock.text
             }
-            
+            cell?.textLabel.numberOfLines = 0
             
             /**********************************/
             // Testing
