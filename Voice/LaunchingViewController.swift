@@ -10,21 +10,21 @@ import UIKit
 
 class LaunchingViewController: UIViewController {
 
-    lazy var imageView:YLImageView = YLImageView()
+    lazy var gifImageView:UIImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imageView.frame = CGRectMake(0, 160, 320, 240)
-        self.view.addSubview(self.imageView)
-        let path = NSBundle.mainBundle().URLForResource("joy", withExtension: "gif")
-        let data = NSData(contentsOfURL: path!)
-        self.imageView.image = YLGIFImage(data: data!)
+        gifImageView = UIImageView(frame: CGRectMake(0, 160, 320, 240))
+        view.addSubview(gifImageView)
+        gifImageView.setAnimatableImage(named: "joy.gif")
+        gifImageView.startAnimating()
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
+        gifImageView.stopAnimating()
         var mainViewController = MainViewController(nibName:nil, bundle:nil)
         self.navigationController?.pushViewController(mainViewController, animated: false)
     }

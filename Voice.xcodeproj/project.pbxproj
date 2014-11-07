@@ -272,6 +272,9 @@
 		8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024B19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m */; };
 		8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */; };
 		8DFC025219FF1E160098C1BA /* ArticleCoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */; };
+		8DFC050C1A0D186A00678269 /* YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05091A0D186A00678269 /* YQGifImage.swift */; };
+		8DFC050D1A0D186A00678269 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */; };
+		8DFC050E1A0D186A00678269 /* UIImageView+YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -672,6 +675,9 @@
 		8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCoverTableViewCell.h; sourceTree = "<group>"; };
 		8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCoverTableViewCell.m; sourceTree = "<group>"; };
+		8DFC05091A0D186A00678269 /* YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQGifImage.swift; sourceTree = "<group>"; };
+		8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSourceHelpers.swift; sourceTree = "<group>"; };
+		8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+YQGifImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1247,6 +1253,7 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8DFC05081A0D186A00678269 /* GIFUGIFImage */,
 				8D9F7F291A0C5AFF0026AA07 /* YLGIFImage */,
 				8D1A70DE1A0ACE5B00228126 /* INTULLocationManager */,
 				8D571E701A0175FE00859378 /* Mixpanel */,
@@ -1346,6 +1353,16 @@
 				8DD6B4AD19F74BCC00B30EA9 /* ParseFacebookUtils.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DFC05081A0D186A00678269 /* GIFUGIFImage */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC05091A0D186A00678269 /* YQGifImage.swift */,
+				8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */,
+				8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */,
+			);
+			path = GIFUGIFImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1570,6 +1587,7 @@
 				8D571EE81A0175FF00859378 /* MPABTestDesignerClearRequestMessage.m in Sources */,
 				8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */,
 				8D571B581A016AE100859378 /* Leaftagger.m in Sources */,
+				8DFC050E1A0D186A00678269 /* UIImageView+YQGifImage.swift in Sources */,
 				8D571F091A0175FF00859378 /* MPPropertyDescription.m in Sources */,
 				8D571BDA1A016AE100859378 /* YQWebViewControllerActivityChrome.m in Sources */,
 				8D571EE71A0175FF00859378 /* MPABTestDesignerChangeResponseMessage.m in Sources */,
@@ -1611,6 +1629,7 @@
 				8D571B591A016AE100859378 /* LeaftaggerAddCommentNavigationViewController.m in Sources */,
 				8D571B601A016AE100859378 /* LeaftaggerCommentTableViewCell.m in Sources */,
 				8D571B701A016AE100859378 /* YQLabel.m in Sources */,
+				8DFC050C1A0D186A00678269 /* YQGifImage.swift in Sources */,
 				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
 				8D571EF21A0175FF00859378 /* MPApplicationStateSerializer.m in Sources */,
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
@@ -1673,6 +1692,7 @@
 				8D571F131A0175FF00859378 /* MPTweakStore.m in Sources */,
 				8D571BDE1A016AE100859378 /* YQWebViewControllerActivitySafari.m in Sources */,
 				8D571F0B1A0175FF00859378 /* MPSurvey.m in Sources */,
+				8DFC050D1A0D186A00678269 /* ImageSourceHelpers.swift in Sources */,
 				8D571B711A016AE100859378 /* YQLeaftaggerPointButton.m in Sources */,
 				8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */,
 				8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */,
