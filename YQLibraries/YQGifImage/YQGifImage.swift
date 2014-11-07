@@ -1,7 +1,7 @@
 import UIKit
 import ImageIO
 
-class AnimatedImage: UIImage {
+class YQGifImage: UIImage {
   // MARK: - Constants
   let framesToPreload = 10
   let maxTimeStep = 1.0
@@ -14,7 +14,7 @@ class AnimatedImage: UIImage {
 
   // MARK: - Private Properties
   private lazy var displayLink: CADisplayLink = CADisplayLink(target: self, selector: "updateCurrentFrame")
-  private lazy var preloadFrameQueue = dispatch_queue_create("co.kaishin.GIFPreloadImages", DISPATCH_QUEUE_SERIAL)
+  private lazy var preloadFrameQueue = dispatch_queue_create("info.yiqin.GIFPreloadImages", DISPATCH_QUEUE_SERIAL)
   private var currentFrameIndex = 0
   private var imageSource: CGImageSource?
   private var timeSinceLastFrameChange: NSTimeInterval = 0.0

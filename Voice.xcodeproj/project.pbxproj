@@ -233,8 +233,6 @@
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */; };
-		8D9F7F2E1A0C5AFF0026AA07 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */; };
-		8D9F7F2F1A0C5AFF0026AA07 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */; };
 		8D9F7F311A0C5B910026AA07 /* joy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8D9F7F301A0C5B910026AA07 /* joy.gif */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
 		8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B519F1BC4E002ED90F /* Voice.xcdatamodeld */; };
@@ -272,9 +270,9 @@
 		8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024B19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m */; };
 		8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */; };
 		8DFC025219FF1E160098C1BA /* ArticleCoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */; };
-		8DFC050C1A0D186A00678269 /* YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05091A0D186A00678269 /* YQGifImage.swift */; };
-		8DFC050D1A0D186A00678269 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */; };
-		8DFC050E1A0D186A00678269 /* UIImageView+YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */; };
+		8DFC05131A0D1FDB00678269 /* UIImageView+YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05101A0D1FDB00678269 /* UIImageView+YQGifImage.swift */; };
+		8DFC05141A0D1FDB00678269 /* YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05111A0D1FDB00678269 /* YQGifImage.swift */; };
+		8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -624,10 +622,6 @@
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
-		8D9F7F2A1A0C5AFF0026AA07 /* YLGIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLGIFImage.h; sourceTree = "<group>"; };
-		8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLGIFImage.m; sourceTree = "<group>"; };
-		8D9F7F2C1A0C5AFF0026AA07 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
-		8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageView.m; sourceTree = "<group>"; };
 		8D9F7F301A0C5B910026AA07 /* joy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = joy.gif; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3B219F1BC4E002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -675,9 +669,9 @@
 		8DFC024E19FF1BC20098C1BA /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		8DFC025019FF1E160098C1BA /* ArticleCoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCoverTableViewCell.h; sourceTree = "<group>"; };
 		8DFC025119FF1E160098C1BA /* ArticleCoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCoverTableViewCell.m; sourceTree = "<group>"; };
-		8DFC05091A0D186A00678269 /* YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQGifImage.swift; sourceTree = "<group>"; };
-		8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSourceHelpers.swift; sourceTree = "<group>"; };
-		8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+YQGifImage.swift"; sourceTree = "<group>"; };
+		8DFC05101A0D1FDB00678269 /* UIImageView+YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+YQGifImage.swift"; sourceTree = "<group>"; };
+		8DFC05111A0D1FDB00678269 /* YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQGifImage.swift; sourceTree = "<group>"; };
+		8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQImageSourceHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -729,6 +723,7 @@
 		8D571A841A016AE100859378 /* YQLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8DFC050F1A0D1FDB00678269 /* YQGifImage */,
 				8D571A851A016AE100859378 /* Leaftagger */,
 			);
 			path = YQLibraries;
@@ -1170,17 +1165,6 @@
 			name = Analytics;
 			sourceTree = "<group>";
 		};
-		8D9F7F291A0C5AFF0026AA07 /* YLGIFImage */ = {
-			isa = PBXGroup;
-			children = (
-				8D9F7F2A1A0C5AFF0026AA07 /* YLGIFImage.h */,
-				8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */,
-				8D9F7F2C1A0C5AFF0026AA07 /* YLImageView.h */,
-				8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */,
-			);
-			path = YLGIFImage;
-			sourceTree = "<group>";
-		};
 		8DB363B81A00910E00B87619 /* UpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1253,8 +1237,6 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				8DFC05081A0D186A00678269 /* GIFUGIFImage */,
-				8D9F7F291A0C5AFF0026AA07 /* YLGIFImage */,
 				8D1A70DE1A0ACE5B00228126 /* INTULLocationManager */,
 				8D571E701A0175FE00859378 /* Mixpanel */,
 			);
@@ -1355,14 +1337,14 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		8DFC05081A0D186A00678269 /* GIFUGIFImage */ = {
+		8DFC050F1A0D1FDB00678269 /* YQGifImage */ = {
 			isa = PBXGroup;
 			children = (
-				8DFC05091A0D186A00678269 /* YQGifImage.swift */,
-				8DFC050A1A0D186A00678269 /* ImageSourceHelpers.swift */,
-				8DFC050B1A0D186A00678269 /* UIImageView+YQGifImage.swift */,
+				8DFC05101A0D1FDB00678269 /* UIImageView+YQGifImage.swift */,
+				8DFC05111A0D1FDB00678269 /* YQGifImage.swift */,
+				8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */,
 			);
-			path = GIFUGIFImage;
+			path = YQGifImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1581,19 +1563,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFC05131A0D1FDB00678269 /* UIImageView+YQGifImage.swift in Sources */,
 				8D571BCB1A016AE100859378 /* YQURLConnectionOperation.m in Sources */,
 				8DFC024519FF08800098C1BA /* UserManager.swift in Sources */,
 				8D571BCC1A016AE100859378 /* YQURLRequestSerialization.m in Sources */,
 				8D571EE81A0175FF00859378 /* MPABTestDesignerClearRequestMessage.m in Sources */,
 				8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */,
 				8D571B581A016AE100859378 /* Leaftagger.m in Sources */,
-				8DFC050E1A0D186A00678269 /* UIImageView+YQGifImage.swift in Sources */,
 				8D571F091A0175FF00859378 /* MPPropertyDescription.m in Sources */,
 				8D571BDA1A016AE100859378 /* YQWebViewControllerActivityChrome.m in Sources */,
 				8D571EE71A0175FF00859378 /* MPABTestDesignerChangeResponseMessage.m in Sources */,
 				8D571EF71A0175FF00859378 /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
 				8D571F001A0175FF00859378 /* MPNotificationViewController.m in Sources */,
-				8D9F7F2E1A0C5AFF0026AA07 /* YLGIFImage.m in Sources */,
 				8D571F0F1A0175FF00859378 /* MPSurveyQuestionViewController.m in Sources */,
 				8D571F071A0175FF00859378 /* MPObjectSerializerContext.m in Sources */,
 				8D571BCE1A016AE100859378 /* YQURLSessionManager.m in Sources */,
@@ -1615,6 +1596,7 @@
 				8D571F201A0175FF00859378 /* UIImage+MPAverageColor.m in Sources */,
 				8D571F1F1A0175FF00859378 /* UIColor+MPColor.m in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8DFC05141A0D1FDB00678269 /* YQGifImage.swift in Sources */,
 				8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */,
 				8D571F211A0175FF00859378 /* UIImage+MPImageEffects.m in Sources */,
 				8D571EEA1A0175FF00859378 /* MPABTestDesignerConnection.m in Sources */,
@@ -1629,7 +1611,6 @@
 				8D571B591A016AE100859378 /* LeaftaggerAddCommentNavigationViewController.m in Sources */,
 				8D571B601A016AE100859378 /* LeaftaggerCommentTableViewCell.m in Sources */,
 				8D571B701A016AE100859378 /* YQLabel.m in Sources */,
-				8DFC050C1A0D186A00678269 /* YQGifImage.swift in Sources */,
 				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
 				8D571EF21A0175FF00859378 /* MPApplicationStateSerializer.m in Sources */,
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
@@ -1669,6 +1650,7 @@
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8D571BC91A016AE100859378 /* YQNetworkReachabilityManager.m in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
+				8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
 				8D571BD61A016AE100859378 /* YQStoryboardPopoverSegue.m in Sources */,
 				8DE49CC919FC0F8400461150 /* Ad.swift in Sources */,
@@ -1692,7 +1674,6 @@
 				8D571F131A0175FF00859378 /* MPTweakStore.m in Sources */,
 				8D571BDE1A016AE100859378 /* YQWebViewControllerActivitySafari.m in Sources */,
 				8D571F0B1A0175FF00859378 /* MPSurvey.m in Sources */,
-				8DFC050D1A0D186A00678269 /* ImageSourceHelpers.swift in Sources */,
 				8D571B711A016AE100859378 /* YQLeaftaggerPointButton.m in Sources */,
 				8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */,
 				8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */,
@@ -1711,7 +1692,6 @@
 				8D571EED1A0175FF00859378 /* MPABTestDesignerDisconnectMessage.m in Sources */,
 				8D571F151A0175FF00859378 /* MPUIColorToNSStringValueTransformer.m in Sources */,
 				8D571EF41A0175FF00859378 /* MPCATransform3DToNSDictionaryValueTransformer.m in Sources */,
-				8D9F7F2F1A0C5AFF0026AA07 /* YLImageView.m in Sources */,
 				8D571B6D1A016AE100859378 /* YO.m in Sources */,
 				8D571F051A0175FF00859378 /* MPObjectSerializer.m in Sources */,
 				8D571F1B1A0175FF00859378 /* NSData+MPBase64.m in Sources */,

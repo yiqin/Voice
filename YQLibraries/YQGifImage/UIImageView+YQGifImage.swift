@@ -2,9 +2,9 @@ import UIKit
 
 extension UIImageView {
   // MARK: - Computed Properties
-  var animatableImage: AnimatedImage? {
-    if image is AnimatedImage {
-      return image as? AnimatedImage
+  var animatableImage: YQGifImage? {
+    if image is YQGifImage {
+      return image as? YQGifImage
     } else {
       return nil
     }
@@ -18,7 +18,6 @@ extension UIImageView {
     return animatableImage != nil
   }
 
-  // MARK: - Method Overrides
   override public func displayLayer(layer: CALayer!) {
     if let image = animatableImage {
       if let frame = image.currentFrame {
@@ -27,24 +26,28 @@ extension UIImageView {
     }
   }
 
-  // MARK: - Setter Methods
   func setAnimatableImage(named name: String) {
-    image = AnimatedImage.imageWithName(name, delegate: self)
+    image = YQGifImage.imageWithName(name, delegate: self)
     layer.setNeedsDisplay()
   }
 
   func setAnimatableImage(#data: NSData) {
-    image = AnimatedImage.imageWithData(data, delegate: self)
+    image = YQGifImage.imageWithData(data, delegate: self)
     layer.setNeedsDisplay()
   }
 
-  // MARK: - Animation
+  /**
+    Control Animation to start
+  */
   func startAnimating() {
     if animatable {
       animatableImage!.resumeAnimation()
     }
   }
 
+  /**
+    Control Animation to stop
+  */
   func stopAnimating() {
     if animatable {
       animatableImage!.pauseAnimation()
