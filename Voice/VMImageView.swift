@@ -1,5 +1,5 @@
 //
-//  VoicePFImageView.swift
+//  VMImageView.swift
 //  Voice
 //
 //  Created by yiqin on 11/7/14.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-
-class VoicePFImageView: PFImageView {
+/**
+ Handle image downloading from Parse.com
+ */
+class VMImageView: PFImageView {
     
     /**
      check whether the image is downloading.
@@ -17,8 +19,6 @@ class VoicePFImageView: PFImageView {
       - false: not downloading.
      */
     var isLoading:Bool
-    
-    
     
     override init() {
         isLoading = false

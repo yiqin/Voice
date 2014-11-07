@@ -13,10 +13,10 @@ class ArticleBlock:NSVoiceObject{
     var text:String
     var isText:Bool
     
-    var image : VoicePFImageView
+    var image : VMImageView
     
     override init(parseObject:PFObject) {
-        image = VoicePFImageView()
+        image = VMImageView()
         text = ""
         isText = parseObject["isText"] as Bool
         
@@ -28,15 +28,11 @@ class ArticleBlock:NSVoiceObject{
         else {
             let thunmbnail = parseObject["image"] as PFFile
             image.file = thunmbnail
-            
-            
             image.isLoading = true
             image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
                 println("Load voice image succesfully.")
                 self.image.isLoading = false
             }
         }
-        
-        
     };
 }

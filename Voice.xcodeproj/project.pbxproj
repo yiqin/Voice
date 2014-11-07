@@ -273,7 +273,7 @@
 		8DFC05131A0D1FDB00678269 /* UIImageView+YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05101A0D1FDB00678269 /* UIImageView+YQGifImage.swift */; };
 		8DFC05141A0D1FDB00678269 /* YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05111A0D1FDB00678269 /* YQGifImage.swift */; };
 		8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */; };
-		8DFFD0AA1A0D4D6C00497E2B /* VoicePFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFD0A91A0D4D6C00497E2B /* VoicePFImageView.swift */; };
+		8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFD0A91A0D4D6C00497E2B /* VMImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -673,7 +673,7 @@
 		8DFC05101A0D1FDB00678269 /* UIImageView+YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+YQGifImage.swift"; sourceTree = "<group>"; };
 		8DFC05111A0D1FDB00678269 /* YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQGifImage.swift; sourceTree = "<group>"; };
 		8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQImageSourceHelpers.swift; sourceTree = "<group>"; };
-		8DFFD0A91A0D4D6C00497E2B /* VoicePFImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicePFImageView.swift; sourceTree = "<group>"; };
+		8DFFD0A91A0D4D6C00497E2B /* VMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1353,7 +1353,7 @@
 		8DFFD0A81A0D49C600497E2B /* VoiceUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				8DFFD0A91A0D4D6C00497E2B /* VoicePFImageView.swift */,
+				8DFFD0A91A0D4D6C00497E2B /* VMImageView.swift */,
 			);
 			name = VoiceUIKit;
 			sourceTree = "<group>";
@@ -1665,7 +1665,7 @@
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
 				8D571BD61A016AE100859378 /* YQStoryboardPopoverSegue.m in Sources */,
 				8DE49CC919FC0F8400461150 /* Ad.swift in Sources */,
-				8DFFD0AA1A0D4D6C00497E2B /* VoicePFImageView.swift in Sources */,
+				8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */,
 				8D571B691A016AE100859378 /* LeaftaggerReordVideoViewController.m in Sources */,
 				8D571BD41A016AE100859378 /* YQParseUser.m in Sources */,
 				8D1A70E41A0ACE5B00228126 /* INTULocationManager.m in Sources */,

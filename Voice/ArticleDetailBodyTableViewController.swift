@@ -10,8 +10,8 @@ import UIKit
 
 class ArticleDetailBodyTableViewController: UITableViewController {
 
+    /// Ad position in the table.
     var adPosition = -1 // Default value
-    var blockIndex = 0  // A pointer.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +110,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             
 
             cell?.textLabel.text = "Article Text"
+            var blockIndex = -1;
             
             if (indexPath.row < adPosition && indexPath.row > 0){
                 blockIndex = indexPath.row-1
@@ -118,7 +119,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 blockIndex = indexPath.row-2
             }
             
-            if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1){
+            if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1 && blockIndex >= 0){
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
                 cell?.textLabel.text = articleBlock.text
             }

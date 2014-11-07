@@ -13,9 +13,13 @@ import UIKit
 */
 class NSVoiceObject: NSObject {
     
+    /// unique id on Parse
     var objectId: String
+    /// created time on Parse
     var createdAt: NSDate
+    /// latest updated time on Parse
     var updatedAt: NSDate
+    /// the whole PFObject on Parse
     var parseObject: PFObject
     
     init(parseObject:PFObject) {
@@ -23,5 +27,6 @@ class NSVoiceObject: NSObject {
         createdAt = parseObject.createdAt
         updatedAt = parseObject.updatedAt
         self.parseObject = parseObject
+        super.init()
     }
 }
