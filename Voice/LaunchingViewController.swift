@@ -21,9 +21,15 @@ class LaunchingViewController: UIViewController {
         let data = NSData(contentsOfURL: path!)
         self.imageView.image = YLGIFImage(data: data!)
         
-        // Do any additional setup after loading the view.
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
-
+    
+    func moveToMainViewController() {
+        var mainViewController = MainViewController(nibName:nil, bundle:nil)
+        // articleDetailViewController.selectedArticle = selectedArticle;
+        self.navigationController?.pushViewController(mainViewController, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
