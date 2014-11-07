@@ -14,6 +14,10 @@ class LaunchingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         
         gifImageView = UIImageView(frame: CGRectMake(0, 160, 320, 240))
         view.addSubview(gifImageView)

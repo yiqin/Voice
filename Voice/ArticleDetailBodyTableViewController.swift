@@ -124,25 +124,6 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             }
             cell?.textLabel.numberOfLines = 0
             
-            /**********************************/
-            // Testing
-            /*
-            if (indexPath.row == 1){
-                // cell?.textLabel.text =  as? String
-                
-            }
-            */
-            /*
-            else if (indexPath.row == 4) {
-                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(1) as ArticleBlock
-                cell?.textLabel.text = articleBlock.text
-            }
-            else if (indexPath.row == 5) {
-                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(2) as ArticleBlock
-                cell?.textLabel.text = articleBlock.text
-            }
-            */
-            
             return cell!
         }
     }

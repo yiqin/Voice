@@ -13,8 +13,6 @@ class VoiceImage: NSVoiceObject {
     var image : PFImageView
     
     override init(parseObject:PFObject) {
-        
-        
         image = PFImageView()
         
         let thunmbnail = parseObject["image"] as PFFile

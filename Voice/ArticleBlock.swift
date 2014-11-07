@@ -11,13 +11,32 @@ import UIKit
 class ArticleBlock:NSVoiceObject{
     
     var text:String
+    var isText:Bool
     
+    var image : VoicePFImageView
     
     override init(parseObject:PFObject) {
-        
-        text = parseObject["text"] as String
+        image = VoicePFImageView()
+        text = ""
+        isText = parseObject["isText"] as Bool
         
         super.init(parseObject:parseObject)
+        
+        if (isText) {
+            text = parseObject["text"] as String
+        }
+        else {
+            let thunmbnail = parseObject["image"] as PFFile
+            image.file = thunmbnail
+            
+            
+            image.isLoading = true
+            image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                println("Load voice image succesfully.")
+                self.image.isLoading = false
+            }
+        }
+        
+        
     };
-
 }

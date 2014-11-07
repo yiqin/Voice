@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /********************/
         // this is wrong. Put them here.
         parseSetup()
-        leaftaggerSetup()
+        // leaftaggerSetup()
         
-        singleMethodSetup()     // after parseSetup
-        mixpanelSetup()
+        // singleMethodSetup()     // after parseSetup
+        // mixpanelSetup()
         
         return true
     }
