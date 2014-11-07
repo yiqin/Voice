@@ -232,6 +232,10 @@
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
+		8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */; };
+		8D9F7F2E1A0C5AFF0026AA07 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */; };
+		8D9F7F2F1A0C5AFF0026AA07 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */; };
+		8D9F7F311A0C5B910026AA07 /* joy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8D9F7F301A0C5B910026AA07 /* joy.gif */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
 		8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B519F1BC4E002ED90F /* Voice.xcdatamodeld */; };
 		8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */; };
@@ -616,6 +620,12 @@
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
+		8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
+		8D9F7F2A1A0C5AFF0026AA07 /* YLGIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLGIFImage.h; sourceTree = "<group>"; };
+		8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLGIFImage.m; sourceTree = "<group>"; };
+		8D9F7F2C1A0C5AFF0026AA07 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
+		8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageView.m; sourceTree = "<group>"; };
+		8D9F7F301A0C5B910026AA07 /* joy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = joy.gif; sourceTree = "<group>"; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3B219F1BC4E002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1154,6 +1164,17 @@
 			name = Analytics;
 			sourceTree = "<group>";
 		};
+		8D9F7F291A0C5AFF0026AA07 /* YLGIFImage */ = {
+			isa = PBXGroup;
+			children = (
+				8D9F7F2A1A0C5AFF0026AA07 /* YLGIFImage.h */,
+				8D9F7F2B1A0C5AFF0026AA07 /* YLGIFImage.m */,
+				8D9F7F2C1A0C5AFF0026AA07 /* YLImageView.h */,
+				8D9F7F2D1A0C5AFF0026AA07 /* YLImageView.m */,
+			);
+			path = YLGIFImage;
+			sourceTree = "<group>";
+		};
 		8DB363B81A00910E00B87619 /* UpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1226,6 +1247,7 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8D9F7F291A0C5AFF0026AA07 /* YLGIFImage */,
 				8D1A70DE1A0ACE5B00228126 /* INTULLocationManager */,
 				8D571E701A0175FE00859378 /* Mixpanel */,
 			);
@@ -1258,6 +1280,8 @@
 			isa = PBXGroup;
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
+				8D9F7F301A0C5B910026AA07 /* joy.gif */,
+				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
 				8D571F281A0178A000859378 /* Analytics */,
@@ -1474,6 +1498,7 @@
 				8D571B971A016AE100859378 /* iPadYQNumbers-7@2x.png in Resources */,
 				8D571B861A016AE100859378 /* iPadYQNumbers-18@2x.png in Resources */,
 				8D571BBB1A016AE100859378 /* YQNumbers-4@2x.png in Resources */,
+				8D9F7F311A0C5B910026AA07 /* joy.gif in Resources */,
 				8D571B991A016AE100859378 /* iPadYQNumbers-8@2x.png in Resources */,
 				8D571B8D1A016AE100859378 /* iPadYQNumbers-2@2x.png in Resources */,
 				8D571BD91A016AE100859378 /* YQWebViewControllerActivityChrome-iPad@2x.png in Resources */,
@@ -1550,6 +1575,7 @@
 				8D571EE71A0175FF00859378 /* MPABTestDesignerChangeResponseMessage.m in Sources */,
 				8D571EF71A0175FF00859378 /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
 				8D571F001A0175FF00859378 /* MPNotificationViewController.m in Sources */,
+				8D9F7F2E1A0C5AFF0026AA07 /* YLGIFImage.m in Sources */,
 				8D571F0F1A0175FF00859378 /* MPSurveyQuestionViewController.m in Sources */,
 				8D571F071A0175FF00859378 /* MPObjectSerializerContext.m in Sources */,
 				8D571BCE1A016AE100859378 /* YQURLSessionManager.m in Sources */,
@@ -1571,6 +1597,7 @@
 				8D571F201A0175FF00859378 /* UIImage+MPAverageColor.m in Sources */,
 				8D571F1F1A0175FF00859378 /* UIColor+MPColor.m in Sources */,
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
+				8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */,
 				8D571F211A0175FF00859378 /* UIImage+MPImageEffects.m in Sources */,
 				8D571EEA1A0175FF00859378 /* MPABTestDesignerConnection.m in Sources */,
 				8D571F061A0175FF00859378 /* MPObjectSerializerConfig.m in Sources */,
@@ -1664,6 +1691,7 @@
 				8D571EED1A0175FF00859378 /* MPABTestDesignerDisconnectMessage.m in Sources */,
 				8D571F151A0175FF00859378 /* MPUIColorToNSStringValueTransformer.m in Sources */,
 				8D571EF41A0175FF00859378 /* MPCATransform3DToNSDictionaryValueTransformer.m in Sources */,
+				8D9F7F2F1A0C5AFF0026AA07 /* YLImageView.m in Sources */,
 				8D571B6D1A016AE100859378 /* YO.m in Sources */,
 				8D571F051A0175FF00859378 /* MPObjectSerializer.m in Sources */,
 				8D571F1B1A0175FF00859378 /* NSData+MPBase64.m in Sources */,
