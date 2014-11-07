@@ -12,6 +12,9 @@ protocol AssistantViewDelegate {
     func updateUpAnDownViewSize()
 }
 
+/**
+ Incline view. No used anymore.
+ */
 class AssistantView: UIView {
     
     let inclinedAngle = 8*M_PI/180;

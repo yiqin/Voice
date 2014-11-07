@@ -9,9 +9,9 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantViewDelegate, ArticlesTableViewControllerDelegate {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate {
 
-    var assistantView = AssistantView()
+    var assistantHorizontalView = AssistantHorizontalView()
     var firstTimeLoad = true
     
     var upView = UpView()
@@ -39,22 +39,20 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             println(DeviceManager.sharedInstance.screenWidth)
             println(DeviceManager.sharedInstance.screenHeight)
             
-            assistantView.updateFrame()     // updateFrame method has be here
-            assistantView.tapRecognizer.delegate = self     // Three delegate
-            assistantView.panRecognizer.delegate = self
-            assistantView.delegate = self
+            assistantHorizontalView.updateFrame()     // updateFrame method has be here
+            assistantHorizontalView.tapRecognizer.delegate = self     // Three delegate
+            assistantHorizontalView.panRecognizer.delegate = self
+            assistantHorizontalView.delegate = self
             
-            upView.updateFrame(CGRectGetMaxY(assistantView.frame))
-            downView.updateFrame(CGRectGetMaxY(assistantView.frame))
+            upView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
+            downView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
             
             
-            // upView.articlesTableVC
-            // upView.articlesTableVC.delegate = self
             upView.articlesTableVC.delegate = self
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)
-            self.view.addSubview(assistantView)
+            self.view.addSubview(assistantHorizontalView)
             firstTimeLoad = false
         }
     }
@@ -87,13 +85,12 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
 
     func updateUpAnDownViewSize() {
         // println("Delegate works")
-        upView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        upView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
         upView.setNeedsDisplay()
-        downView.updateFrame(CGRectGetMaxY(assistantView.frame))
+        downView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
         downView.setNeedsDisplay()
     }
     
-    // Delegate Chain
     func moveToSelectArticle(selectedArticle:Article) {
         var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
         // articleDetailViewController.selectedArticle = selectedArticle;

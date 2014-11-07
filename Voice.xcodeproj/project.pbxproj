@@ -274,6 +274,7 @@
 		8DFC05141A0D1FDB00678269 /* YQGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05111A0D1FDB00678269 /* YQGifImage.swift */; };
 		8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */; };
 		8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFD0A91A0D4D6C00497E2B /* VMImageView.swift */; };
+		8DFFD0AC1A0D55CC00497E2B /* AssistantHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFD0AB1A0D55CC00497E2B /* AssistantHorizontalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -674,6 +675,7 @@
 		8DFC05111A0D1FDB00678269 /* YQGifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQGifImage.swift; sourceTree = "<group>"; };
 		8DFC05121A0D1FDB00678269 /* YQImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQImageSourceHelpers.swift; sourceTree = "<group>"; };
 		8DFFD0A91A0D4D6C00497E2B /* VMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMImageView.swift; sourceTree = "<group>"; };
+		8DFFD0AB1A0D55CC00497E2B /* AssistantHorizontalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantHorizontalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1275,6 +1277,7 @@
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
+				8DFFD0AB1A0D55CC00497E2B /* AssistantHorizontalView.swift */,
 				8D571F281A0178A000859378 /* Analytics */,
 				8DFFD0A81A0D49C600497E2B /* VoiceUIKit */,
 				8DB363BA1A00912F00B87619 /* DataClass */,
@@ -1668,6 +1671,7 @@
 				8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */,
 				8D571B691A016AE100859378 /* LeaftaggerReordVideoViewController.m in Sources */,
 				8D571BD41A016AE100859378 /* YQParseUser.m in Sources */,
+				8DFFD0AC1A0D55CC00497E2B /* AssistantHorizontalView.swift in Sources */,
 				8D1A70E41A0ACE5B00228126 /* INTULocationManager.m in Sources */,
 				8D571F1A1A0175FF00859378 /* MPWebSocket.m in Sources */,
 				8D571EF81A0175FF00859378 /* MPCGRectToNSDictionaryValueTransformer.m in Sources */,
