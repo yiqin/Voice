@@ -15,19 +15,18 @@ class LaunchingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imageView.frame = CGRectMake(10, 50, 300, 240)
+        self.imageView.frame = CGRectMake(0, 160, 320, 240)
         self.view.addSubview(self.imageView)
         let path = NSBundle.mainBundle().URLForResource("joy", withExtension: "gif")
         let data = NSData(contentsOfURL: path!)
         self.imageView.image = YLGIFImage(data: data!)
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
         var mainViewController = MainViewController(nibName:nil, bundle:nil)
-        // articleDetailViewController.selectedArticle = selectedArticle;
-        self.navigationController?.pushViewController(mainViewController, animated: true)
+        self.navigationController?.pushViewController(mainViewController, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
