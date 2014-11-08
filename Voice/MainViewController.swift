@@ -46,9 +46,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             upView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
             downView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
             
-            
             upView.articlesTableVC.delegate = self
             upView.articlesTableVC.tableView.setContentOffset(CGPointMake(0, ArticlesTableViewController.initContentOffset()), animated: false)
+            
+            downView.imagesRowsTableVC.tableView.setContentOffset(CGPointMake(0, ImagesRowsTableViewController.initContentOffset()), animated: false)
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)
@@ -93,7 +94,6 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
     
     func moveToSelectArticle(selectedArticle:Article) {
         var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
-        // articleDetailViewController.selectedArticle = selectedArticle;
         self.navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
 

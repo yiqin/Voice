@@ -64,20 +64,15 @@ class AssistantHorizontalView: UIView {
         var translation = recognizer.translationInView(self.superview!)
         
         // Update the location of AssistantHorizontalView
-        /*
         // Animation
-        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
-            
+        UIView.animateWithDuration(0.25, delay: 0.05, options: .CurveEaseInOut, animations: { () -> Void in
+        
             self.center = CGPointMake(lastX!, translation.y+lastY!)
+            self.delegate?.updateUpAnDownViewSize()
             
         }) { (finished) -> Void in
             
         }
-        */
-        
-        self.center = CGPointMake(lastX!, translation.y+lastY!)
-        
-        delegate?.updateUpAnDownViewSize()
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -90,11 +85,11 @@ class AssistantHorizontalView: UIView {
     }
     
     func updateFrame() {
-        // Had to repeat
+        // repeat (update later.)
         assistantHeight = CGFloat(50.0)
         assistantWidth = DeviceManager.sharedInstance.screenWidth
         
-        self.frame = CGRectMake(0, 100, assistantWidth, assistantHeight)
+        self.frame = CGRectMake(0, 300, assistantWidth, assistantHeight)
         
         testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
         testButton.backgroundColor = UIColor.redColor()

@@ -80,7 +80,7 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 130
+        return ImagesRowTableViewCell.cellHeight()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -103,6 +103,10 @@ class ImagesRowsTableViewController: UITableViewController {
             cell?.loadCell(indexPath)
             return cell!
         }
+    }
+    
+    class func initContentOffset() -> CGFloat {
+        return ImagesRowTableViewCell.cellHeight()*2
     }
     
     /*

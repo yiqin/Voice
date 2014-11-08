@@ -19,6 +19,6 @@
 @property (nonatomic, strong) ImagesRowScrollView *imagesRowScrollView;
 
 - (void) loadCell:(NSIndexPath *)indexPath;
-+ (float) cellHeight;
++ (CGFloat) cellHeight;
 
 @end
