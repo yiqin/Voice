@@ -21,6 +21,7 @@ class ArticlesTableViewController: UITableViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableView.separatorColor = UIColor.clearColor()
+        
     }
     
     override init(style: UITableViewStyle) {
@@ -138,6 +139,20 @@ class ArticlesTableViewController: UITableViewController {
         
         selectedArticle.startLoading()
         delegate?.moveToSelectArticle(selectedArticle)
+    }
+    
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        // This will be called every time the user scrolls the scroll view with their finger
+        // so each time this is called, contentOffset should be different.
+        var offset = scrollView.contentOffset.y
+        // blackOverlayUiView.alpha = offset / 568
+        println(offset)
+    }
+    
+    func updateScrollView(){
+        // var offset = self.view.contentOffset.y
+        // println(offset)
     }
     
     

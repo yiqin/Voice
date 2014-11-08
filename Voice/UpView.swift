@@ -44,6 +44,7 @@ class UpView: UIView {
     
     func loadArticlesTableVC(maxY:CGFloat) {
         articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
+        articlesTableVC.updateScrollView()
     }
     
     /*
