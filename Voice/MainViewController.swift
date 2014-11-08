@@ -48,6 +48,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             
             
             upView.articlesTableVC.delegate = self
+            upView.articlesTableVC.tableView.setContentOffset(CGPointMake(0, ArticlesTableViewController.initContentOffset()), animated: false)
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)

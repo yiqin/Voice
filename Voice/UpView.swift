@@ -31,8 +31,6 @@ class UpView: UIView {
         /*
         UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
             
-            
-            
             }) { (finished) -> Void in
                 
         }
@@ -45,8 +43,9 @@ class UpView: UIView {
     }
     
     func loadArticlesTableVC(maxY:CGFloat) {
-        articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
-        articlesTableVC.updateScrollView(maxY)
+        let bottomLine = maxY-AssistantHorizontalView.height()
+        articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, bottomLine)
+        articlesTableVC.updateScrollView(bottomLine)
     }
     
     /*

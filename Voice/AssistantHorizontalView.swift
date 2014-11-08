@@ -13,10 +13,8 @@ protocol AssistantHorizontalViewDelegate {
 }
 
 class AssistantHorizontalView: UIView {
-
-
     
-    var assistantHeight = CGFloat(40.0)
+    var assistantHeight = CGFloat(50.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
     var testString = UILabel()
@@ -66,6 +64,7 @@ class AssistantHorizontalView: UIView {
         var translation = recognizer.translationInView(self.superview!)
         
         // Update the location of AssistantHorizontalView
+        /*
         // Animation
         UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
             
@@ -74,7 +73,9 @@ class AssistantHorizontalView: UIView {
         }) { (finished) -> Void in
             
         }
+        */
         
+        self.center = CGPointMake(lastX!, translation.y+lastY!)
         
         delegate?.updateUpAnDownViewSize()
     }
@@ -90,11 +91,10 @@ class AssistantHorizontalView: UIView {
     
     func updateFrame() {
         // Had to repeat
-        assistantHeight = CGFloat(40.0)
+        assistantHeight = CGFloat(50.0)
         assistantWidth = DeviceManager.sharedInstance.screenWidth
         
         self.frame = CGRectMake(0, 100, assistantWidth, assistantHeight)
-        
         
         testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
         testButton.backgroundColor = UIColor.redColor()
@@ -102,7 +102,9 @@ class AssistantHorizontalView: UIView {
         // testButton.textAlignment = NSTextAlignment.Center
         
         // self.addSubview(testButton)
-        
     }
     
+    class func height() -> CGFloat {
+        return 50.0
+    }
 }

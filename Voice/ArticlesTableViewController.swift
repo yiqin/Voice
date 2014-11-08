@@ -18,23 +18,20 @@ class ArticlesTableViewController: UITableViewController {
     var delegate:ArticlesTableViewControllerDelegate?
     
     var lastContentOffset : CGFloat
-    var lastMaxY : CGFloat
+    var lastBottomLine : CGFloat
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         lastContentOffset = 0
-        lastMaxY = 0
+        lastBottomLine = 0
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableView.separatorColor = UIColor.clearColor()
-        
-        
-        // self.tableView.contentOffset = 100
     }
     
     override init(style: UITableViewStyle) {
         lastContentOffset = 0
-        lastMaxY = 0
+        lastBottomLine = 0
         super.init(style: style)
     }
 
@@ -67,9 +64,6 @@ class ArticlesTableViewController: UITableViewController {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
-            
-            
-            // self.tableView.setContentOffset(CGPointMake(0, self.lastContentOffset), animated: false)
         })
         
         if ((self.refreshControl) != nil){
@@ -151,33 +145,28 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        // This will be called every time the user scrolls the scroll view with their finger
-        // so each time this is called, contentOffset should be different.
-        var offset = scrollView.contentOffset.y
-        // blackOverlayUiView.alpha = offset / 568
-        
-        
-        self.lastContentOffset = offset
-        
-        
-        println(offset)
+        lastContentOffset = scrollView.contentOffset.y
     }
     
-    func updateScrollView(maxY:CGFloat){
+    /**
+     Update Scroll View When AssistantHorizontalView is moving.
+     */
+    func updateScrollView(bottomLine:CGFloat){
+        var deltaBottomLine = bottomLine - lastBottomLine
         
-        println("maxY value: \(maxY)")
-        println("Update the scroll view: \(self.lastContentOffset)")
+        if (self.lastContentOffset > 0.0) {
+            self.tableView.setContentOffset(CGPointMake(0, self.lastContentOffset-deltaBottomLine), animated: false)
+        }
+        else if (self.lastContentOffset == 0.0 && deltaBottomLine < 0) {
+            self.tableView.setContentOffset(CGPointMake(0, -deltaBottomLine), animated: false)
+        }
         
-        var deltaY = maxY - lastMaxY
-        
-        
-        self.tableView.setContentOffset(CGPointMake(0, self.lastContentOffset-deltaY), animated: false)
-        
-        
-        lastMaxY = maxY
-        
+        lastBottomLine = bottomLine
     }
     
+    class func initContentOffset() -> CGFloat {
+        return ArticleTableViewCell.cellHeight()*4
+    }
     
     /*
     // Override to support conditional editing of the table view.
