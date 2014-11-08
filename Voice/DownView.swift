@@ -12,22 +12,24 @@ class DownView: UIView {
 
     // For testing
     var imagesRowsTableVC = ImagesRowsTableViewController(style: UITableViewStyle.Plain)
+    var firstTimeLoad = true
     
     func updateFrame(maxY:CGFloat){
-        backgroundColor = UIColor.grayColor()
-        
         /*
         UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
             
             
             
             }) { (finished) -> Void in
-                
         }
         */
         self.frame = CGRectMake(0, maxY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-maxY)
         
-        self.addSubview(imagesRowsTableVC.view)
+        if (firstTimeLoad) {
+            self.addSubview(imagesRowsTableVC.view)
+            firstTimeLoad = false
+        }
+        
         loadImagesRowsTableVC(maxY)
     }
     
