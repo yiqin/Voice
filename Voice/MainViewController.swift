@@ -12,6 +12,7 @@ import Parse
 class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate {
 
     var assistantHorizontalView = AssistantHorizontalView()
+    /// Is called everytime we reload the table. A firstTimeLoad is necessary
     var firstTimeLoad = true
     
     var upView = UpView()
@@ -28,11 +29,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        super.viewDidAppear(animated)
     }
     
     override func viewDidLayoutSubviews() {
-        // Is called everytime we reload the table. A firstTimeLoad is necessary
         if firstTimeLoad == true {
             // Device Size First.
             DeviceManager.sharedInstance.setDeviceSize()
