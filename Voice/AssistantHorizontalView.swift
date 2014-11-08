@@ -14,6 +14,8 @@ protocol AssistantHorizontalViewDelegate {
 
 class AssistantHorizontalView: UIView {
 
+    
+    
     var assistantHeight = CGFloat(40.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
@@ -31,8 +33,8 @@ class AssistantHorizontalView: UIView {
     
     
     override init() {
-        super.init(frame: CGRect(x: 0, y: DeviceManager.sharedInstance.screenHeight*0.5, width: assistantWidth, height: assistantHeight))    // default value, it's not correct.
-        backgroundColor = UIColor.clearColor()
+        super.init()    // default value, it's not correct.
+        backgroundColor = UIColor.blueColor()
         
         lastLocation = self.center
         
@@ -43,6 +45,13 @@ class AssistantHorizontalView: UIView {
         self.addGestureRecognizer(panRecognizer)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func handleTap(recognizer:UITapGestureRecognizer){
         println("Handle Tap")
@@ -56,7 +65,7 @@ class AssistantHorizontalView: UIView {
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
         center = CGPointMake(lastX!, translation.y+lastY!)
-        
+    
         
         delegate?.updateUpAnDownViewSize()
     }
@@ -64,44 +73,28 @@ class AssistantHorizontalView: UIView {
     /**************************/
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         lastLocation = center
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.blueColor()
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.blueColor()
     }
     
-    /*
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-    // It didn't work
-    backgroundColor = UIColor.redColor()
-    }
-    
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-    backgroundColor = UIColor.yellowColor()
-    
-    }
-    */
-    
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     func updateFrame() {
         // Had to repeat
         assistantHeight = CGFloat(40.0)
-        assistantWidth = DeviceManager.sharedInstance.screenWidth   // padding
+        assistantWidth = DeviceManager.sharedInstance.screenWidth
         
-        
-        self.frame = CGRectMake(0, 0, assistantWidth, assistantHeight)
+        self.frame = CGRectMake(0, 100, assistantWidth, assistantHeight)
         
         testString = UILabel(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
-        testString.center = self.center
         testString.backgroundColor = UIColor.redColor()
         testString.text = "Voice"
         testString.textAlignment = NSTextAlignment.Center
         
-        addSubview(testString)
+        self.addSubview(testString)
         
     }
     
