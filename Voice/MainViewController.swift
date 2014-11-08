@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UIGestureRecognizerDelegate, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate {
+class MainViewController: UIViewController, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate {
 
     var assistantHorizontalView = AssistantHorizontalView()
     /// Is called everytime we reload the table. A firstTimeLoad is necessary
@@ -38,9 +38,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
             println(DeviceManager.sharedInstance.screenWidth)
             println(DeviceManager.sharedInstance.screenHeight)
             
-            assistantHorizontalView.updateFrame()     // updateFrame method has be here
-            assistantHorizontalView.tapRecognizer.delegate = self     // Three delegate
-            assistantHorizontalView.panRecognizer.delegate = self
+            assistantHorizontalView.updateFrame()     // updateFrame method here (update later)
             assistantHorizontalView.delegate = self
             
             upView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
@@ -58,34 +56,12 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate, Assista
         }
     }
     
-    /*******************/
-    /*
-    func handleTap(recognizer:UITapGestureRecognizer){
-        println("MainViewController: Tap")
-        
-    }
-    
-    func gestureRecognizerShouldBegin(gestureRecognizer: UITapGestureRecognizer) -> Bool {
-        println("MainViewController: tap should begin")
-        assistantView.backgroundColor = UIColor.yellowColor()
-        return true
-    }
-
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        println(gestureRecognizer)
-        println("MainViewController: tap should receive")
-        // assistantView.backgroundColor = UIColor.blueColor()
-        return true
-    }
-    */
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     func updateUpAnDownViewSize() {
-        // println("Delegate works")
         upView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))
         upView.setNeedsDisplay()
         downView.updateFrame(CGRectGetMaxY(assistantHorizontalView.frame))

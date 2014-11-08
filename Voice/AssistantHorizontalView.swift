@@ -12,7 +12,7 @@ protocol AssistantHorizontalViewDelegate {
     func updateUpAnDownViewSize()
 }
 
-class AssistantHorizontalView: UIView {
+class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     
     var assistantHeight = CGFloat(50.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
@@ -36,11 +36,8 @@ class AssistantHorizontalView: UIView {
         
         lastLocation = self.center
         
-        tapRecognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
         panRecognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
-        
-        // self.addGestureRecognizer(tapRecognizer)
-        self.addGestureRecognizer(panRecognizer)
+        panRecognizer.delegate = self
     }
     
     override init(frame: CGRect) {
@@ -56,6 +53,9 @@ class AssistantHorizontalView: UIView {
         
     }
     
+    /**
+     At the end of the recognizer, update the location of AssistantHorizontalView with Animation.
+     */
     func handlePan(recognizer:UIPanGestureRecognizer){
         // println("Handle Pan")
         
@@ -75,15 +75,6 @@ class AssistantHorizontalView: UIView {
         }
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        lastLocation = center
-        backgroundColor = UIColor.blueColor()
-    }
-    
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        backgroundColor = UIColor.blueColor()
-    }
-    
     func updateFrame() {
         // repeat (update later.)
         assistantHeight = CGFloat(50.0)
@@ -91,12 +82,30 @@ class AssistantHorizontalView: UIView {
         
         self.frame = CGRectMake(0, 300, assistantWidth, assistantHeight)
         
-        testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
-        testButton.backgroundColor = UIColor.redColor()
-        // testButton.titleLabel?.text = "Voice Me"
-        // testButton.textAlignment = NSTextAlignment.Center
+        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(0, 0, assistantWidth, assistantHeight)
         
-        // self.addSubview(testButton)
+        button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+        
+        button.setTitle("Voice ME", forState: UIControlState.Normal)
+        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        button.addGestureRecognizer(panRecognizer)
+        
+        self.addSubview(button)
+    }
+    
+    /**
+     Record start position into lastLocation.
+     */
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        lastLocation = center
+        return true
+    }
+    
+    func buttonAction(sender:UIButton!) {
+        println("Button tapped")
+        
     }
     
     class func height() -> CGFloat {

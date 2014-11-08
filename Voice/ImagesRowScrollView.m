@@ -32,8 +32,7 @@
         self.collectionView.contentOffset = CGPointMake(60*(5%(rowIndex+1)),0);    // set contentOffset here
         
         UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
-        [self.collectionView registerNib:nib
-              forCellWithReuseIdentifier:@"ImageCell"];
+        [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ImageCell"];
         
         [self addSubview:self.collectionView];
     }
