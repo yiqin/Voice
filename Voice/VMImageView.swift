@@ -14,17 +14,20 @@ import UIKit
 class VMImageView: PFImageView {
     
     /**
-     check whether the image is downloading.
+     check whether the image is downloading. Default value is false.
       - true: downloading. 
       - false: not downloading.
      */
-    var isLoading:Bool
+    var isLoading = false
     
     override init() {
-        isLoading = false
         super.init()
     }
 
+    override init(frame:CGRect){
+        super.init(frame: frame)
+    }    
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
