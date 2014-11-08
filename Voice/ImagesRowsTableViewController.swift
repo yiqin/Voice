@@ -33,7 +33,7 @@ class ImagesRowsTableViewController: UITableViewController {
     
     
     func getLatestImages() {
-        VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
+        StreetImagesManager.sharedInstance.startLoadingDataFromParse()
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
@@ -57,7 +57,7 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (VoiceImagesManager.sharedInstance.numberOfRows == 0) {
+        if (StreetImagesManager.sharedInstance.numberOfRows == 0) {
             messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))
             messageLabel.text = "No data is currently available. Please pull down to refresh."
             messageLabel.textColor = UIColor.blackColor()
@@ -74,7 +74,7 @@ class ImagesRowsTableViewController: UITableViewController {
         else {
             messageLabel.removeFromSuperview()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-            return VoiceImagesManager.sharedInstance.numberOfRows
+            return StreetImagesManager.sharedInstance.numberOfRows
         }
         
     }
@@ -84,11 +84,11 @@ class ImagesRowsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var voiceImages = VoiceImagesManager.sharedInstance.voiceImages
-        let voiceImageIdentifier = "VoiceImageIdentifier"
-        var cell = tableView.dequeueReusableCellWithIdentifier(voiceImageIdentifier) as? ImagesRowTableViewCell
+        var streetImages = StreetImagesManager.sharedInstance.streetImages
+        let streetImageIdentifier = "StreetImageIdentifier"
+        var cell = tableView.dequeueReusableCellWithIdentifier(streetImageIdentifier) as? ImagesRowTableViewCell
         
-        if voiceImages.count == 0 {
+        if streetImages.count == 0 {
             return UITableViewCell()
         }
         else {
@@ -97,7 +97,7 @@ class ImagesRowsTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
-                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: voiceImageIdentifier)
+                cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetImageIdentifier)
             }
             
             cell?.loadCell(indexPath)

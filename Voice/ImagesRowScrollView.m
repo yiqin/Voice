@@ -18,7 +18,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.imagesCollectionData = [[VoiceImagesManager sharedInstance] fetchVoiceImagesWithRowIndex:rowIndex];
+        self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:rowIndex];
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -54,11 +54,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ImageCellIdentifier = @"ImageCell";
-    VoiceImage *voiceImage = [self.imagesCollectionData objectAtIndex:indexPath.row];
+    StreetImage *streetImage = [self.imagesCollectionData objectAtIndex:indexPath.row];
     
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ImageCellIdentifier forIndexPath:indexPath];
     
-    [cell.image setImage: voiceImage.image.image];
+    [cell.image setImage: streetImage.image.image];
     
     return cell;
 }

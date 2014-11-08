@@ -40,8 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ArticlesManager.sharedInstance
         ArticlesManager.sharedInstance.startLoadingDataFromParse()
         
-        VoiceImagesManager.sharedInstance
-        VoiceImagesManager.sharedInstance.startLoadingDataFromParse()
+        StreetImagesManager.sharedInstance
+        StreetImagesManager.sharedInstance.startLoadingDataFromParse()
     }
     
     func parseSetup(){

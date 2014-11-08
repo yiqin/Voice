@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class VoiceImage;
-@class VoiceImagesManager;
+@class StreetImage;
+@class StreetImagesManager;
 
 @interface ImagesRowScrollView : UIView <UICollectionViewDataSource, UICollectionViewDelegate>
 

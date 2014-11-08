@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VoiceImage: NSVoiceObject {
+class StreetImage: NSVoiceObject {
     
     var image : PFImageView
     

@@ -11,17 +11,17 @@ import UIKit
 /**
  Manages images that shown on the main view controller.
 */
-class VoiceImagesManager: NSObject {
+class StreetImagesManager: NSObject {
     
     /// The numbers of images in a row.
     var numberPerRow = 4;
     /// The numbers of rows in the image table view.
     var numberOfRows = 0;
-    var voiceImages : NSMutableArray = [];
+    var streetImages : NSMutableArray = [];
 
-    class var sharedInstance : VoiceImagesManager {
+    class var sharedInstance : StreetImagesManager {
         struct Static {
-            static let instance = VoiceImagesManager()
+            static let instance = StreetImagesManager()
         }
         return Static.instance
     }
@@ -29,7 +29,7 @@ class VoiceImagesManager: NSObject {
     /***********************************************/
     // return too much image would carse problem.
     func startLoadingDataFromParse() {
-        var query  = PFQuery(className: "VoiceImage")
+        var query  = PFQuery(className: "StreetImage")
         query.orderByAscending("updatedAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
@@ -44,25 +44,25 @@ class VoiceImagesManager: NSObject {
                 
                 println("The total number of rows is \(self.numberOfRows)")
                 
-                var recievedVoiceImages = NSMutableArray()
+                var recievedImages = NSMutableArray()
                 
                 for object in objects {
-                    let newVoiceImage = VoiceImage(parseObject: object as PFObject)
-                    recievedVoiceImages.addObject(newVoiceImage)
+                    let newImage = StreetImage(parseObject: object as PFObject)
+                    recievedImages.addObject(newImage)
                 }
                 
-                self.voiceImages.removeAllObjects()
-                self.voiceImages.addObjectsFromArray(recievedVoiceImages)
+                self.streetImages.removeAllObjects()
+                self.streetImages.addObjectsFromArray(recievedImages)
                 
-                self.fetchVoiceImagesWithRowIndex(1)    // check 2nd row -> 1
+                self.fetchStreetImagesWithRowIndex(1)    // check 2nd row -> 1
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
     }
     
-    func addVoiceImage(newVoiceImage:VoiceImage) {
-        voiceImages.addObject(newVoiceImage)
+    func addStreetImage(newStreetImage:StreetImage) {
+        streetImages.addObject(newStreetImage)
     }
     
     /**
@@ -71,7 +71,7 @@ class VoiceImagesManager: NSObject {
      :param: rowIndex row index in the table view on DownViewn
      :return: NSArray that contains voiceImages
     */
-    func fetchVoiceImagesWithRowIndex(rowIndex:Int) -> NSArray
+    func fetchStreetImagesWithRowIndex(rowIndex:Int) -> NSArray
     {
         if rowIndex > (numberOfRows-1) {        // Start from 1
             return []
@@ -79,17 +79,17 @@ class VoiceImagesManager: NSObject {
         else {
             let startIndex = rowIndex*numberPerRow
             var arrayLength = 0
-            if ((rowIndex+1)*numberPerRow > voiceImages.count) {
-                arrayLength = voiceImages.count%numberPerRow
+            if ((rowIndex+1)*numberPerRow > streetImages.count) {
+                arrayLength = streetImages.count%numberPerRow
             }
             else {
                 arrayLength = numberPerRow
             }
             
             println("How many images in the last row: \(arrayLength)")
-            println(voiceImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
+            println(streetImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
             
-            return voiceImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength))
+            return streetImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength))
         }
     }
     
