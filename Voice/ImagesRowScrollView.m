@@ -30,8 +30,8 @@
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
-        int r = rand() % 8;
-        self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
+        // int r = rand() % 8;
+        // self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
         
         UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
         [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ImageCell"];
@@ -41,11 +41,17 @@
     return self;
 }
 
-
-
 - (void) loadCollectionImages:(NSIndexPath *)indexPath
 {
+    self.rowNumber = indexPath.row;
+    
     self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:indexPath.row];
+    
+    // NSLog(@"%f", [[StreetImagesManager sharedInstance] getCollectionContentOffset:indexPath.row]);
+    
+    
+    [self.collectionView setContentOffset:CGPointMake([[StreetImagesManager sharedInstance] getCollectionContentOffset:self.rowNumber],0) animated:NO];
+
     
     [self.collectionView reloadData];
 }
@@ -59,6 +65,13 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.imagesCollectionData count];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // NSLog(@"%f", scrollView.contentOffset.x);
+    
+    [[StreetImagesManager sharedInstance] setCollectionContentOffset:self.rowNumber offset:scrollView.contentOffset.x];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -78,8 +91,6 @@
     NSLog(@"%d x %ld", self.rowNumber, (long)indexPath.row);
     
 }
-
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

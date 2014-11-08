@@ -17,6 +17,8 @@ class ImagesRowsTableViewController: UITableViewController {
         
         Leaftagger.tagLeafOnViewController(self)
         
+        self.tableView.separatorColor = UIColor.clearColor()
+        
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.backgroundColor = UIColor.purpleColor()
         self.refreshControl?.tintColor = UIColor.whiteColor()
@@ -30,7 +32,6 @@ class ImagesRowsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
     
     func getLatestImages() {
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()

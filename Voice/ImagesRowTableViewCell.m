@@ -15,7 +15,6 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor brownColor];
         [self setSubViews];
         
     }
@@ -50,6 +49,7 @@
     
     // Load images row scroll view here.
     [self.imagesRowScrollView loadCollectionImages:indexPath];
+    
 }
 
 - (void)awakeFromNib {

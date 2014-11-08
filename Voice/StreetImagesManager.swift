@@ -18,7 +18,9 @@ class StreetImagesManager: NSObject {
     /// The numbers of rows in the image table view.
     var numberOfRows = 0;
     var streetImages : NSMutableArray = [];
-
+    
+    var collectionContentOffsets = NSMutableDictionary();
+    
     class var sharedInstance : StreetImagesManager {
         struct Static {
             static let instance = StreetImagesManager()
@@ -26,8 +28,9 @@ class StreetImagesManager: NSObject {
         return Static.instance
     }
     
-    /***********************************************/
-    // return too much image would carse problem.
+    /**
+     return too much image would carse problem.
+     */
     func startLoadingDataFromParse() {
         var query  = PFQuery(className: "StreetImage")
         query.orderByAscending("updatedAt")
@@ -46,6 +49,7 @@ class StreetImagesManager: NSObject {
                 
                 var recievedImages = NSMutableArray()
                 
+                
                 for object in objects {
                     let newImage = StreetImage(parseObject: object as PFObject)
                     recievedImages.addObject(newImage)
@@ -54,7 +58,7 @@ class StreetImagesManager: NSObject {
                 self.streetImages.removeAllObjects()
                 self.streetImages.addObjectsFromArray(recievedImages)
                 
-                self.fetchStreetImagesWithRowIndex(1)    // check 2nd row -> 1
+                // self.fetchStreetImagesWithRowIndex(1)    // check 2nd row -> 1
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
@@ -71,8 +75,7 @@ class StreetImagesManager: NSObject {
      :param: rowIndex row index in the table view on DownViewn
      :return: NSArray that contains voiceImages
     */
-    func fetchStreetImagesWithRowIndex(rowIndex:Int) -> NSArray
-    {
+    func fetchStreetImagesWithRowIndex(rowIndex:Int) -> NSArray {
         if rowIndex > (numberOfRows-1) {        // Start from 1
             return []
         }
@@ -94,5 +97,21 @@ class StreetImagesManager: NSObject {
     }
     
     
+    func getCollectionContentOffset(rowIndex:Int) -> CGFloat {
+        
+        if ((collectionContentOffsets.objectForKey(rowIndex)) != nil){
+            return collectionContentOffsets.objectForKey(rowIndex) as CGFloat
+        }
+        else {
+            return CGFloat(0)
+        }
+    }
+    
+    func setCollectionContentOffset(rowIndex:Int, offset:CGFloat) {
+        
+        collectionContentOffsets.setObject(offset, forKey: rowIndex)
+        
+    }
+
     
 }
