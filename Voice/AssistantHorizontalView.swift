@@ -65,10 +65,16 @@ class AssistantHorizontalView: UIView {
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
         
-        
-        
         // Update the location of AssistantHorizontalView
-        center = CGPointMake(lastX!, translation.y+lastY!)
+        // Animation
+        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            
+            self.center = CGPointMake(lastX!, translation.y+lastY!)
+            
+        }) { (finished) -> Void in
+            
+        }
+        
         
         delegate?.updateUpAnDownViewSize()
     }

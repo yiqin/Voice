@@ -15,7 +15,17 @@ class DownView: UIView {
     
     func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.grayColor()
-        frame = CGRectMake(0, maxY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-maxY)
+        
+        
+        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            
+            self.frame = CGRectMake(0, maxY, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-maxY)
+            
+            }) { (finished) -> Void in
+                
+        }
+        
+        
         self.addSubview(imagesRowsTableVC.view)
         loadImagesRowsTableVC(maxY)
     }
