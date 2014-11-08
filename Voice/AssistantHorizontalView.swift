@@ -14,7 +14,7 @@ protocol AssistantHorizontalViewDelegate {
 
 class AssistantHorizontalView: UIView {
 
-    
+
     
     var assistantHeight = CGFloat(40.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
@@ -41,7 +41,7 @@ class AssistantHorizontalView: UIView {
         tapRecognizer = UITapGestureRecognizer(target: self, action:"handleTap:")
         panRecognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
         
-        self.addGestureRecognizer(tapRecognizer)
+        // self.addGestureRecognizer(tapRecognizer)
         self.addGestureRecognizer(panRecognizer)
     }
     
@@ -65,7 +65,6 @@ class AssistantHorizontalView: UIView {
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
         center = CGPointMake(lastX!, translation.y+lastY!)
-    
         
         delegate?.updateUpAnDownViewSize()
     }
@@ -89,12 +88,13 @@ class AssistantHorizontalView: UIView {
         
         self.frame = CGRectMake(0, 100, assistantWidth, assistantHeight)
         
-        testString = UILabel(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
-        testString.backgroundColor = UIColor.redColor()
-        testString.text = "Voice"
-        testString.textAlignment = NSTextAlignment.Center
         
-        self.addSubview(testString)
+        testButton = UIButton(frame: CGRectMake(0, 0, assistantWidth, assistantHeight))
+        testButton.backgroundColor = UIColor.redColor()
+        // testButton.titleLabel?.text = "Voice Me"
+        // testButton.textAlignment = NSTextAlignment.Center
+        
+        // self.addSubview(testButton)
         
     }
     
