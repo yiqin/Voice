@@ -64,12 +64,15 @@ class AssistantHorizontalView: UIView {
         var lastX = lastLocation?.x
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
+        
+        
+        
+        // Update the location of AssistantHorizontalView
         center = CGPointMake(lastX!, translation.y+lastY!)
         
         delegate?.updateUpAnDownViewSize()
     }
     
-    /**************************/
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         lastLocation = center
         backgroundColor = UIColor.blueColor()
@@ -78,8 +81,6 @@ class AssistantHorizontalView: UIView {
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
         backgroundColor = UIColor.blueColor()
     }
-    
-
     
     func updateFrame() {
         // Had to repeat
