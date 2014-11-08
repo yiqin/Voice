@@ -14,11 +14,11 @@
 @implementation ImagesRowScrollView
 
 
-- (instancetype) initWithFrame:(CGRect)frame rowIndex:(int)rowIndex
+- (instancetype) initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:rowIndex];
+        // self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:rowIndex];
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -29,7 +29,9 @@
         self.collectionView.dataSource = self;
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
-        self.collectionView.contentOffset = CGPointMake(60*(5%(rowIndex+1)),0);    // set contentOffset here
+        
+        int r = rand() % 8;
+        self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
         
         UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
         [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ImageCell"];
@@ -37,6 +39,15 @@
         [self addSubview:self.collectionView];
     }
     return self;
+}
+
+
+
+- (void) loadCollectionImages:(NSIndexPath *)indexPath
+{
+    self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:indexPath.row];
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource methods
@@ -67,6 +78,8 @@
     NSLog(@"%d x %ld", self.rowNumber, (long)indexPath.row);
     
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -86,11 +86,13 @@ class StreetImagesManager: NSObject {
                 arrayLength = numberPerRow
             }
             
-            println("How many images in the last row: \(arrayLength)")
-            println(streetImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
+            // println("How many images in the last row: \(arrayLength)")
+            // println(streetImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength)).count)
             
             return streetImages.subarrayWithRange(NSMakeRange(startIndex, arrayLength))
         }
     }
+    
+    
     
 }

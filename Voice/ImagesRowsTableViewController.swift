@@ -97,9 +97,11 @@ class ImagesRowsTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
+                
                 cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetImageIdentifier)
+                
+                println("ImagesRowsTVC index: \(indexPath.row)")
             }
-            
             cell?.loadCell(indexPath)
             return cell!
         }

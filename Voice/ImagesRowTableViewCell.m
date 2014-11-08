@@ -16,6 +16,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = [UIColor brownColor];
+        [self setSubViews];
+        
     }
     return self;
 }
@@ -24,15 +26,17 @@
 {
     self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setSubViews];
         self.rowIndex = (int)indexPath.row;
-        
+        [self setSubViews];
     }
     return self;
 }
 
 - (void) setSubViews
 {
+    // NSLog(@"Set SubViews: %d", self.rowIndex);
+    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130)];
+    [self addSubview:self.imagesRowScrollView];
     
 }
 
@@ -42,11 +46,10 @@
  */
 - (void) loadCell:(NSIndexPath *)indexPath
 {
-    NSLog(@"ImagesRowTableViewCell: %d", self.rowIndex);
+    NSLog(@"ImagesRowTableViewCell: %d", indexPath.row);
     
     // Load images row scroll view here.
-    self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) rowIndex:(int)indexPath.row];
-    [self addSubview:self.imagesRowScrollView];
+    [self.imagesRowScrollView loadCollectionImages:indexPath];
 }
 
 - (void)awakeFromNib {
