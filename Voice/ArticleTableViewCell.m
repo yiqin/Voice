@@ -71,7 +71,7 @@
     // Configure the view for the selected state
 }
 
-+ (float) cellHeight
++ (CGFloat) cellHeight
 {
     return 130;
 }

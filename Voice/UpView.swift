@@ -28,15 +28,17 @@ class UpView: UIView {
     func updateFrame(maxY:CGFloat){
         backgroundColor = UIColor.brownColor()
         
-        
+        /*
         UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
             
-            self.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
+            
             
             }) { (finished) -> Void in
                 
         }
+        */
         
+        self.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
         
         self.addSubview(articlesTableVC.view)
         loadArticlesTableVC(maxY)
@@ -44,7 +46,7 @@ class UpView: UIView {
     
     func loadArticlesTableVC(maxY:CGFloat) {
         articlesTableVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
-        articlesTableVC.updateScrollView()
+        articlesTableVC.updateScrollView(maxY)
     }
     
     /*

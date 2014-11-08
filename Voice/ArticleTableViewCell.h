@@ -21,6 +21,6 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier tableWidth:(CGFloat)tableWidth;
 
 - (void)loadCellFromArticle:(Article *)article;
-+ (float)cellHeight;
++ (CGFloat)cellHeight;
 
 @end

@@ -16,17 +16,26 @@ class ArticlesTableViewController: UITableViewController {
     
     var messageLabel = UILabel()
     var delegate:ArticlesTableViewControllerDelegate?
-   
+    
+    var lastContentOffset : CGFloat
+    var lastMaxY : CGFloat
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        lastContentOffset = 0
+        lastMaxY = 0
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableView.separatorColor = UIColor.clearColor()
         
+        
+        // self.tableView.contentOffset = 100
     }
     
     override init(style: UITableViewStyle) {
+        lastContentOffset = 0
+        lastMaxY = 0
         super.init(style: style)
-        
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -53,19 +62,20 @@ class ArticlesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    
     func getLatestArticles() {
         ArticlesManager.sharedInstance.startLoadingDataFromParse()
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
+            
+            
+            // self.tableView.setContentOffset(CGPointMake(0, self.lastContentOffset), animated: false)
         })
         
         if ((self.refreshControl) != nil){
             self.refreshControl?.endRefreshing()
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,11 +108,10 @@ class ArticlesTableViewController: UITableViewController {
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
             return ArticlesManager.sharedInstance.articles.count
         }
-        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 130
+        return ArticleTableViewCell.cellHeight()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -141,18 +150,32 @@ class ArticlesTableViewController: UITableViewController {
         delegate?.moveToSelectArticle(selectedArticle)
     }
     
-    
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         // This will be called every time the user scrolls the scroll view with their finger
         // so each time this is called, contentOffset should be different.
         var offset = scrollView.contentOffset.y
         // blackOverlayUiView.alpha = offset / 568
+        
+        
+        self.lastContentOffset = offset
+        
+        
         println(offset)
     }
     
-    func updateScrollView(){
-        // var offset = self.view.contentOffset.y
-        // println(offset)
+    func updateScrollView(maxY:CGFloat){
+        
+        println("maxY value: \(maxY)")
+        println("Update the scroll view: \(self.lastContentOffset)")
+        
+        var deltaY = maxY - lastMaxY
+        
+        
+        self.tableView.setContentOffset(CGPointMake(0, self.lastContentOffset-deltaY), animated: false)
+        
+        
+        lastMaxY = maxY
+        
     }
     
     
