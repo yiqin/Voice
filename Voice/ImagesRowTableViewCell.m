@@ -35,8 +35,11 @@
 {
     // NSLog(@"Set SubViews: %d", self.rowIndex);
     self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130)];
-    [self addSubview:self.imagesRowScrollView];
     
+    // spend two hours to fix this bug....
+    self.imagesRowScrollView.backgroundColor = [UIColor blackColor];
+    
+    [self addSubview:self.imagesRowScrollView];
 }
 
 /*!

@@ -18,6 +18,7 @@ class ImagesRowsTableViewController: UITableViewController {
         Leaftagger.tagLeafOnViewController(self)
         
         self.tableView.separatorColor = UIColor.clearColor()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.backgroundColor = UIColor.purpleColor()
@@ -98,7 +99,6 @@ class ImagesRowsTableViewController: UITableViewController {
             }
             else {
                 // println("Create new Cell")
-                
                 cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetImageIdentifier)
                 
                 println("ImagesRowsTVC index: \(indexPath.row)")

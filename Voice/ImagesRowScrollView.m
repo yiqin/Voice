@@ -27,8 +27,8 @@
         self.collectionView.dataSource = self;
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
-        self.collectionView.backgroundColor = [UIColor whiteColor];
-        
+        self.collectionView.backgroundColor = [UIColor blackColor];
+                
         // int r = rand() % 8;
         // self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
         
