@@ -18,17 +18,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:rowIndex];
-        
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.itemSize = CGSizeMake(130, 130);
+        flowLayout.itemSize = CGSizeMake(125, 125);
         
         self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130) collectionViewLayout:flowLayout];
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
+        self.collectionView.backgroundColor = [UIColor whiteColor];
         
         // int r = rand() % 8;
         // self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
@@ -51,7 +50,6 @@
     
     
     [self.collectionView setContentOffset:CGPointMake([[StreetImagesManager sharedInstance] getCollectionContentOffset:self.rowNumber],0) animated:NO];
-
     
     [self.collectionView reloadData];
 }
@@ -81,7 +79,7 @@
     
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ImageCellIdentifier forIndexPath:indexPath];
     
-    [cell.image setImage: streetImage.image.image];
+    [cell.imageView setImage: streetImage.image.image];
     
     return cell;
 }

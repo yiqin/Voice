@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -14,6 +15,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-Uj-ecs">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -26,7 +28,7 @@
             </constraints>
             <size key="customSize" width="176" height="153"/>
             <connections>
-                <outlet property="image" destination="F0L-Uj-ecs" id="QM9-UD-tGc"/>
+                <outlet property="imageView" destination="F0L-Uj-ecs" id="1U5-T6-Ghx"/>
             </connections>
             <point key="canvasLocation" x="349" y="274"/>
         </collectionViewCell>
