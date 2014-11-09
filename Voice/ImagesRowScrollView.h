@@ -13,8 +13,6 @@
 
 @interface ImagesRowScrollView : UIView <UICollectionViewDataSource, UICollectionViewDelegate>
 
-- (instancetype) initWithFrame:(CGRect)frame;
-
 @property (nonatomic) int rowNumber;
 @property (nonatomic, strong) NSArray *imagesCollectionData;
 @property (nonatomic, strong) UICollectionView *collectionView;

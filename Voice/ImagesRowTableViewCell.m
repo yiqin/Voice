@@ -21,16 +21,6 @@
     return self;
 }
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath
-{
-    self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.rowIndex = (int)indexPath.row;
-        [self setSubViews];
-    }
-    return self;
-}
-
 - (void) setSubViews
 {
     // NSLog(@"Set SubViews: %d", self.rowIndex);
