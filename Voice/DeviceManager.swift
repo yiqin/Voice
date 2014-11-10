@@ -15,13 +15,12 @@ class DeviceManager: NSObject {
     
     var screenWidth : CGFloat = 0.0
     var screenHeight : CGFloat = 0.0
-
     
+    /// Parse.com maybe retrun several AdsLocation. But we just use the first one.
     var adsLocations : NSMutableArray = []
 
+    /// If cityName is all, then load ads randomly. If cityName is specified, then load the ads
     var cityName = "all"
-    // If cityName is all, then load ads randomly
-    // If cityName is specified, then load the ads
     
     /**
      Handle the size of screen.
@@ -47,22 +46,18 @@ class DeviceManager: NSObject {
     
     /**
      Handle the location of ads. After getting the location, we need to use AdsLocation to fetch related ads.
-     - Currently load Lafayette with the objectId TX1TdJitsX
+     - Currently load Lafayette with the objectId "TX1TdJitsX", it should be cityName in the next version.
     */
     func startLoadingRelatedAdsFromParse() {
         var query  = PFQuery(className: "AdsLocation")
         query.orderByDescending("updatedAt")
         
         query.getObjectInBackgroundWithId("TX1TdJitsX") { (object: PFObject!, error: NSError!) -> Void in
+            
             self.adsLocations.addObject(AdsLocation(parseObject: object))
-            
-            // A block is here
-            
             AdsManager.sharedInstance.startLoadingDataFromParse(self.adsLocations.objectAtIndex(0) as AdsLocation)
         }
     }
-    
-    
     
     class var sharedInstance : DeviceManager {
         struct Static {
