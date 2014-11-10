@@ -24,7 +24,7 @@ class LaunchingViewController: UIViewController {
         gifImageView.setAnimatableImage(named: "joy.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {

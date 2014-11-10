@@ -38,7 +38,7 @@ class Article: NSVoiceObject {
         super.init(parseObject:parseObject)
     };
     
-    func startLoading(){
+    func startLoadWholeArticle(){
         // remove articleblocks no mater what it has.
         ArticleDetailManager.sharedInstance.removeArticleBlocks()
         
@@ -70,7 +70,7 @@ class Article: NSVoiceObject {
                 }
                 
                 // Send a notification to tableViewControlle to relaod the data.
-                NSNotificationCenter.defaultCenter().postNotificationName("VoiceReload", object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("VoiceArticleReload", object: nil)
                 
                 self.articleBlocks.removeAllObjects()
                 self.articleBlocks.addObjectsFromArray(recievedObjects)

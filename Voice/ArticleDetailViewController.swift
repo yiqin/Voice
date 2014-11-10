@@ -30,18 +30,15 @@ class ArticleDetailViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceReload", object: nil)
-        
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         let randomNumber = Int(arc4random_uniform(2))+2
         self.articleDetailBodyTVC.adPosition = randomNumber;
-        
-        
         view.addSubview(articleDetailBodyTVC.view)
-        
         
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -51,6 +48,7 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Leaftagger.tagLeafOnViewController(self)
     }
     
     func backButtonPressed(sender: UIButton!){

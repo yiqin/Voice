@@ -17,7 +17,9 @@ class ArticlesTableViewController: UITableViewController {
     var messageLabel = UILabel()
     var delegate:ArticlesTableViewControllerDelegate?
     
+    /// Record the content offset of the article table view controller. Update when the user scroll the article table view.
     var lastContentOffset : CGFloat
+    /// Bottom line of the article table view controller
     var lastBottomLine : CGFloat
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -38,7 +40,6 @@ class ArticlesTableViewController: UITableViewController {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,9 +128,7 @@ class ArticlesTableViewController: UITableViewController {
                 cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
             }
             cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
-            
             return cell!
-            // cell?.title.text = articles.objectAtIndex(indexPath.row).title
         }
     }
     
@@ -140,7 +139,7 @@ class ArticlesTableViewController: UITableViewController {
         let articles = ArticlesManager.sharedInstance.articles
         let selectedArticle = articles.objectAtIndex(indexPath.row) as Article
         
-        selectedArticle.startLoading()
+        selectedArticle.startLoadWholeArticle()
         delegate?.moveToSelectArticle(selectedArticle)
     }
     

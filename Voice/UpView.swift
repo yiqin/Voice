@@ -26,16 +26,7 @@ class UpView: UIView {
     }
     
     func updateFrame(maxY:CGFloat){
-        /*
-        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
-            
-            }) { (finished) -> Void in
-                
-        }
-        */
-        
         self.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, maxY)
-        
         if (firstTimeLoad) {
             self.addSubview(articlesTableVC.view)
             firstTimeLoad = false
