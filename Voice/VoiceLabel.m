@@ -10,11 +10,11 @@
 
 @implementation VoiceLabel
 
-- (instancetype)initWithFrame:(CGRect)frame font:(UIFont *)font text:(NSString *)text
+- (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setFrame:frame font:font text:text];
+        [self setFrame:frame font:self.font text:text];
     }
     return self;
 }
@@ -33,6 +33,11 @@
     [self sizeToFit];
     CGFloat labelHeight = self.frame.size.height;
     self.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, labelHeight);
+}
+
+- (void)updateFrameWithText:(NSString *)text
+{
+    [self setFrame:self.frame font:self.font text:text];
 }
 
 @end

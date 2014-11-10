@@ -7,6 +7,7 @@
 //
 
 #import "ArticleTextBlockTableViewCell.h"
+#import <Voice-Swift.h>
 
 @implementation ArticleTextBlockTableViewCell
 
@@ -16,10 +17,17 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // self.backgroundColor = [UIColor brownColor];
+        self.paragraph = [[VoiceLabel alloc] initWithFrame:CGRectMake(10, 15, [DeviceManager sharedInstance].screenWidth-20, 500)];
+        
+        [self addSubview:self.paragraph];
     }
     return self;
 }
 
+- (void)updateFrame:(NSString *)paragraphText
+{
+    [self.paragraph updateFrameWithText:paragraphText];
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -32,8 +40,15 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)cellHeight {
-    return 130.0;
++ (CGFloat)cellHeight:(NSString *)paragraphText
+{
+    VoiceLabel *voiceLabel = [[VoiceLabel alloc] initWithFrame:CGRectMake(10, 15, [DeviceManager sharedInstance].screenWidth-20, 44) text:paragraphText];
+    return CGRectGetHeight(voiceLabel.frame)+30;
+}
+
++ (CGFloat)cellHeight
+{
+    return 130;
 }
 
 @end

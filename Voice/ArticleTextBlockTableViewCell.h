@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VoiceLabel.h"
+
+@class DeviceManager;
 
 @interface ArticleTextBlockTableViewCell : UITableViewCell
 
+@property(strong, nonatomic) VoiceLabel *paragraph;
 
+- (void)updateFrame:(NSString *)paragraphText;
 
-+ (CGFloat) cellHeight;
++ (CGFloat)cellHeight:(NSString *)paragraphText;
++ (CGFloat)cellHeight;
 
 @end

@@ -10,6 +10,8 @@
 
 @interface VoiceLabel : UILabel
 
-- (instancetype)initWithFrame:(CGRect)frame font:(UIFont *)font text:(NSString *)text;
+- (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text;
+- (void)setFrame:(CGRect)frame font:(UIFont *)font text:(NSString *)text;
+- (void)updateFrameWithText:(NSString *)text;
 
 @end

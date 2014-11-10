@@ -58,6 +58,12 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             return AdTableViewCell.cellHeight()
         }
         else {
+            let blockIndex = getBlockIndex(indexPath.row)
+            if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1 && blockIndex >= 0){
+                let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
+                return ArticleTextBlockTableViewCell.cellHeight(articleBlock.text)
+            }
+            
             return ArticleTextBlockTableViewCell.cellHeight()
         }
     }
@@ -77,7 +83,6 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 cell = ArticleCoverTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleCoverIdentifier)
                 cell?.coverImageView.image = article.coverImage.image
             }
-            cell?.textLabel.text = "Cover Page"
             return cell!
         }
         else if (indexPath.row == adPosition){
@@ -85,14 +90,11 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             
             if cell != nil {
                 // println("Cell exist")
-                
             }
             else {
                 // println("Create new Cell")
                 cell = AdTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: adIdentifier)
             }
-
-            cell?.textLabel.text = "Ad"
             return cell!
         }
         else {
@@ -106,34 +108,32 @@ class ArticleDetailBodyTableViewController: UITableViewController {
                 cell = ArticleTextBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleTextBlockIdentifier)
             }
             
-
-            cell?.textLabel.text = "Article Text"
-            var blockIndex = -1;
-            
-            if (indexPath.row < adPosition && indexPath.row > 0){
-                blockIndex = indexPath.row-1
-            }
-            else if (indexPath.row > adPosition){
-                blockIndex = indexPath.row-2
-            }
-            
+            let blockIndex = getBlockIndex(indexPath.row)
             if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1 && blockIndex >= 0){
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
-                cell?.textLabel.text = articleBlock.text
+                // cell?.paragraph.text = articleBlock.text
+                cell?.updateFrame(articleBlock.text)
             }
-            cell?.textLabel.numberOfLines = 0
-            
             return cell!
         }
     }
     
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
     }
     
+    func getBlockIndex(currentIndexRow: Int) -> Int{
+        
+        var blockIndex = -1;
+        if (currentIndexRow < adPosition && currentIndexRow > 0){
+            blockIndex = currentIndexRow-1
+        }
+        else if (currentIndexRow > adPosition){
+            blockIndex = currentIndexRow-2
+        }
+        return blockIndex
+    }
     
     /*
     // Override to support conditional editing of the table view.
