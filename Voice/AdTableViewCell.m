@@ -23,16 +23,16 @@
         
         int randNum1 = rand() % 3;
         int randNum2 = rand() % 3;
-        
+        // Random images based on locations.
         Ad *randomAd = [[AdsManager sharedInstance].ads objectAtIndex:randNum1];
         AdImage *randomAdImage = [randomAd.adImages objectAtIndex:randNum2];
         
-        self.image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-        [self.image setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-        [self.image setContentMode:UIViewContentModeScaleAspectFit];
+        self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
+        [self.adImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+        [self.adImageView setContentMode:UIViewContentModeScaleAspectFit];
         
-        self.image.image = randomAdImage.image.image;
-        [self addSubview:self.image];
+        self.adImageView.image = randomAdImage.image.image;
+        [self addSubview:self.adImageView];
     }
     return self;
 }

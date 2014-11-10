@@ -20,19 +20,22 @@ class ArticleDetailViewController: UIViewController {
     var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     
     /// The tabla view controller display the detail of the article.
-    var articleDetailBodyTVC = ArticleDetailBodyTableViewController()
+    var articleDetailBodyTVC : ArticleDetailBodyTableViewController
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
         
         self.selectedArticle = selectedArticle!
+        self.articleDetailBodyTVC = ArticleDetailBodyTableViewController(selectedArticle: selectedArticle!)
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceReload", object: nil)
-        articleDetailBodyTVC.view.frame = CGRectMake(0, 45, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-45)
+        
+        articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         let randomNumber = Int(arc4random_uniform(2))+2
         self.articleDetailBodyTVC.adPosition = randomNumber;
+        
         
         view.addSubview(articleDetailBodyTVC.view)
         
@@ -59,6 +62,9 @@ class ArticleDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     After loading the article blocks from Parse.com, we reload article detail.
+    */
     func reloadTableViewController() {
         self.articleDetailBodyTVC.tableView.reloadData()
     }

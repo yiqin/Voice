@@ -13,7 +13,7 @@
 
 @interface AdTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) UIImageView *image;
+@property (strong, nonatomic) UIImageView *adImageView;
 
 + (CGFloat) cellHeight;
 

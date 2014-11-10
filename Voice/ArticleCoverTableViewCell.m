@@ -11,6 +11,21 @@
 
 @implementation ArticleCoverTableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.backgroundColor = [UIColor lightGrayColor];
+        
+        self.coverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
+        [self.coverImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+        [self.coverImageView setContentMode:UIViewContentModeScaleAspectFit];
+        
+        [self addSubview:self.coverImageView];
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }

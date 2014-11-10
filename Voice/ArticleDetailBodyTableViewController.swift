@@ -12,18 +12,22 @@ class ArticleDetailBodyTableViewController: UITableViewController {
 
     /// Ad position in the table.
     var adPosition = -1 // Default value
+    var article: Article
+    
+    init(selectedArticle: Article) {
+        article = selectedArticle
+        super.init(nibName: nil, bundle: nil)    // this has a higher priority.
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.grayColor()
         tableView.separatorColor = UIColor.clearColor()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,15 +38,10 @@ class ArticleDetailBodyTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        
         if(ArticleDetailManager.sharedInstance.articleBlocks.count==0){
             return 1;
         }
@@ -72,12 +71,11 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             var cell = tableView.dequeueReusableCellWithIdentifier(articleCoverIdentifier) as? ArticleCoverTableViewCell
             
             if cell != nil {
-                // println("Cell exist")
                 
             }
             else {
-                // println("Create new Cell")
                 cell = ArticleCoverTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleCoverIdentifier)
+                cell?.coverImageView.image = article.coverImage.image
             }
             cell?.textLabel.text = "Cover Page"
             return cell!

@@ -13,6 +13,7 @@ class Article: NSVoiceObject {
     var title: String
     var briefDescription: String
     var briefImage: PFImageView
+    var coverImage: PFImageView
     
     var articleBlocks : NSMutableArray = []
     
@@ -21,11 +22,17 @@ class Article: NSVoiceObject {
         briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
         briefImage = PFImageView()
-        
         let thunmbnail = parseObject["briefImage"] as PFFile
         briefImage.file = thunmbnail
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load article image succesfully.")
+        }
+        
+        coverImage = PFImageView()
+        let thunmbnail2 = parseObject["coverImage"] as PFFile
+        coverImage.file = thunmbnail2
+        coverImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+            println("Load cover image succesfully.")
         }
         
         super.init(parseObject:parseObject)

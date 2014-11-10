@@ -12,6 +12,8 @@
 
 @interface ArticleCoverTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) UIImageView *coverImageView;
+
 + (CGFloat) cellHeight;
 
 @end
