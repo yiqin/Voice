@@ -17,21 +17,17 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     var assistantHeight = CGFloat(50.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
-    var testString = UILabel()
-    var testButton = UIButton()
-    var testView = UIView()
-    
     var lastLocation:CGPoint?  // Why init here?
     
-    var tapRecognizer = UIGestureRecognizer()   // Update to tap later
     var panRecognizer = UIPanGestureRecognizer()
     
+    // var isVelocityDominate = false
     
     var delegate:AssistantHorizontalViewDelegate?
     
     
     override init() {
-        super.init()    // default value, it's not correct.
+        super.init()
         backgroundColor = UIColor.blueColor()
         
         lastLocation = self.center
@@ -48,11 +44,6 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func handleTap(recognizer:UITapGestureRecognizer){
-        println("Handle Tap")
-        
-    }
-    
     /**
      At the end of the recognizer, update the location of AssistantHorizontalView with Animation.
      */
@@ -63,16 +54,48 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
         
+        
+        var finalCenter: CGPoint
+        var animtaionType:UIViewAnimationOptions
+        // The view is still inside the screen.
+        /*************************************/
+        // velocity works bad.
+        /*
+        var velocity = recognizer.velocityInView(self.superview!)
+        if (velocity.y>200){
+            finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
+            isVelocityDominate = true
+        }
+        else if (velocity.y<(-200)){
+            finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
+            isVelocityDominate = true
+        }
+        else
+        */
+        if ((translation.y+lastY!)<100){
+            finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
+            animtaionType = UIViewAnimationOptions.CurveLinear
+        }
+        else if ((translation.y+lastY!)>450){
+            finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
+            animtaionType = UIViewAnimationOptions.CurveLinear
+        }
+        else {
+            finalCenter = CGPointMake(lastX!, translation.y+lastY!)
+            animtaionType = UIViewAnimationOptions.CurveEaseInOut
+        }
+        
         // Update the location of AssistantHorizontalView
         // Animation
-        UIView.animateWithDuration(0.25, delay: 0.05, options: .CurveEaseInOut, animations: { () -> Void in
-        
-            self.center = CGPointMake(lastX!, translation.y+lastY!)
+        UIView.animateWithDuration(0.20, delay: 0.05, options: animtaionType, animations: { () -> Void in
+            
+            self.center = finalCenter
             self.delegate?.updateUpAnDownViewSize()
             
-        }) { (finished) -> Void in
-            
+            }) { (finished) -> Void in
+                
         }
+
     }
     
     func updateFrame() {
@@ -82,7 +105,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         
         self.frame = CGRectMake(0, 300, assistantWidth, assistantHeight)
         
-        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(0, 0, assistantWidth, assistantHeight)
         
         button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
