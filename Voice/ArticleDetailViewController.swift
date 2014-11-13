@@ -52,7 +52,7 @@ class ArticleDetailViewController: UIViewController {
         
         
         
-        
+        // Only one line code is needed to implement.
         Leaftagger.tagLeafOnViewController(self)
         
         
