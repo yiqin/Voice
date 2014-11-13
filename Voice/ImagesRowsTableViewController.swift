@@ -15,7 +15,12 @@ class ImagesRowsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         Leaftagger.tagLeafOnViewController(self)
+        
+        
+        
         
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None

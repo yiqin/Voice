@@ -73,6 +73,8 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
         var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
         self.navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
+    
+    
 
 }
 

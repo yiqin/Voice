@@ -21,10 +21,10 @@ class LaunchingViewController: UIViewController {
         
         gifImageView = UIImageView(frame: CGRectMake(0, 160, 320, 240))
         view.addSubview(gifImageView)
-        gifImageView.setAnimatableImage(named: "joy.gif")
+        gifImageView.setAnimatableImage(named: "Launching.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {

@@ -48,7 +48,19 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
+        
+        
         Leaftagger.tagLeafOnViewController(self)
+        
+        
+        
+        
+        
+        
+        
     }
     
     func backButtonPressed(sender: UIButton!){

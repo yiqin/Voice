@@ -129,9 +129,13 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     func buttonAction(sender:UIButton!) {
         println("Button tapped")
         
+        /*
         let alertView = UIAlertView(title: "Voice ME", message: "More features are on the way.", delegate: self, cancelButtonTitle: "OK")
         
         alertView.show()
+        */
+        SweetAlert().showAlert("Good job!", subTitle: "You clicked the button!", style: AlertStyle.Success)
+        
     }
     
     class func height() -> CGFloat {
