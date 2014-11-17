@@ -11,6 +11,10 @@
 @class StreetImage;
 @class StreetImagesManager;
 
+@protocol ImageViewCellDelegation
+- (void) moveToSelectedStreetImage:(StreetImage *)streetImage;
+@end
+
 @interface ImagesRowScrollView : UIView <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) int rowNumber;
@@ -19,5 +23,6 @@
 
 - (void) loadCollectionImages:(NSIndexPath *)indexPath;
 
+@property (nonatomic, strong) id<ImageViewCellDelegation> delegate;
 
 @end

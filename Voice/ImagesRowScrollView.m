@@ -89,7 +89,8 @@
     NSLog(@"%d x %ld", self.rowNumber, (long)indexPath.row);
     
     // a delegate to MainViewController
-    
+    StreetImage *streetImage = [self.imagesCollectionData objectAtIndex:indexPath.row];
+    [self.delegate moveToSelectedStreetImage:streetImage];
 }
 
 /*

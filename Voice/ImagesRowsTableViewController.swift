@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ImagesRowsTableViewController: UITableViewController {
+protocol ImagesRowsTableViewControllerDelegate {
+    func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage)
+}
+
+class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegation {
 
     var messageLabel = UILabel()
+    var delegate:ImagesRowsTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +102,7 @@ class ImagesRowsTableViewController: UITableViewController {
             else {
                 // println("Create new Cell")
                 cell = ImagesRowTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetImageIdentifier)
-                
+                cell?.imagesRowScrollView.delegate = self
                 println("ImagesRowsTVC index: \(indexPath.row)")
             }
             cell?.loadCell(indexPath)
@@ -107,6 +112,12 @@ class ImagesRowsTableViewController: UITableViewController {
     
     class func initContentOffset() -> CGFloat {
         return ImagesRowTableViewCell.cellHeight()*2
+    }
+    
+    func moveToSelectedStreetImage(streetImage: StreetImage!) {
+        
+        delegate?.moveToSelectArticleFromImageRows(streetImage)
+        
     }
     
     /*

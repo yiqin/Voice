@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate {
+class MainViewController: UIViewController, AssistantHorizontalViewDelegate, ArticlesTableViewControllerDelegate, ImagesRowsTableViewControllerDelegate {
 
     var assistantHorizontalView = AssistantHorizontalView()
     /// Is called everytime we reload the table. A firstTimeLoad is necessary
@@ -49,6 +49,7 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
             upView.articlesTableVC.tableView.setContentOffset(CGPointMake(0, ArticlesTableViewController.initContentOffset()), animated: false)
             
             downView.imagesRowsTableVC.tableView.setContentOffset(CGPointMake(0, ImagesRowsTableViewController.initContentOffset()), animated: false)
+            downView.imagesRowsTableVC.delegate = self
             
             self.view.addSubview(upView)
             self.view.addSubview(downView)
@@ -74,7 +75,14 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
         self.navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
     
+    /**
+     A delegation chain
+    */
+    func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage){
+        
+        print(selectedStreetImage.objectId)
+        
+    }
     
-
 }
 
