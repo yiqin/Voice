@@ -41,7 +41,7 @@
     
     
     self.briefImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 120, 120)];
-    // [[UIImage alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+    self.briefImage.contentMode = UIViewContentModeScaleAspectFit;
     
     [self addSubview:self.title];
     [self addSubview:self.briefDescription];
@@ -50,7 +50,6 @@
     UIView *seperateLine = [[UIView alloc] initWithFrame:CGRectMake(0, 129, 500, 1)];
     seperateLine.backgroundColor = [UIColor whiteColor];
     [self addSubview:seperateLine];
-    
 }
 
 - (void) loadCellFromArticle:(Article *)article

@@ -98,6 +98,7 @@ class ArticlesTableViewController: UITableViewController {
         else {
             messageLabel.removeFromSuperview()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
+            
             return ArticlesManager.sharedInstance.articles.count
         }
     }

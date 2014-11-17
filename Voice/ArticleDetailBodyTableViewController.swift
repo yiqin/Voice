@@ -81,7 +81,9 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             }
             else {
                 cell = ArticleCoverTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleCoverIdentifier)
+                cell?.selectionStyle = UITableViewCellSelectionStyle.None
                 cell?.coverImageView.image = article.coverImage.image
+
             }
             return cell!
         }
@@ -94,6 +96,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             else {
                 // println("Create new Cell")
                 cell = AdTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: adIdentifier)
+                cell?.selectionStyle = UITableViewCellSelectionStyle.None
             }
             return cell!
         }
@@ -106,6 +109,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             else {
                 // println("Create new Cell")
                 cell = ArticleTextBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleTextBlockIdentifier)
+                cell?.selectionStyle = UITableViewCellSelectionStyle.None
             }
             
             let blockIndex = getBlockIndex(indexPath.row)
