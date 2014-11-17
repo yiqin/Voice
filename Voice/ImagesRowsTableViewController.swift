@@ -15,13 +15,6 @@ class ImagesRowsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        Leaftagger.tagLeafOnViewController(self)
-        
-        
-        
-        
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -50,7 +43,6 @@ class ImagesRowsTableViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

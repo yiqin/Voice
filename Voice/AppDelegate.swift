@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /********************/
         // this is wrong. Put them here.
         parseSetup()
-        leaftaggerSetup()
         
         singleMethodSetup()     // after parseSetup
         mixpanelSetup()
@@ -61,10 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-    }
-    
-    func leaftaggerSetup(){
-        Leaftagger.setApplicationId("OwnvY79qyoEj4FcUgx5YM79Df", apiKey: "7wyINdp1iQ")
     }
     
     func mixpanelSetup(){

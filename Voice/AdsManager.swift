@@ -53,7 +53,6 @@ class AdsManager: NSObject {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
-        
     }
    
 }

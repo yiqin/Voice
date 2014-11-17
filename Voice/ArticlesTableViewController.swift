@@ -43,15 +43,12 @@ class ArticlesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Leaftagger.tagLeafOnViewController(self)
-        
+                
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.backgroundColor = UIColor.purpleColor()
         self.refreshControl?.tintColor = UIColor.whiteColor()
         
         self.refreshControl?.addTarget(self, action: "getLatestArticles", forControlEvents: .ValueChanged)
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
