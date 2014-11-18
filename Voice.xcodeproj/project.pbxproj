@@ -104,8 +104,8 @@
 		8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */; };
 		8DB6F3CD19F1BC4F002ED90F /* VoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */; };
 		8DBD8D9B1A19A857008B0102 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD8D9A1A19A857008B0102 /* YQButton.m */; };
-		8DC695551A1C067C002D06B8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695531A1C067C002D06B8 /* Crashlytics.framework */; };
-		8DC695561A1C067C002D06B8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695541A1C067C002D06B8 /* Fabric.framework */; };
+		8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695571A1C07E6002D06B8 /* Crashlytics.framework */; };
+		8DC6955A1A1C07E6002D06B8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695581A1C07E6002D06B8 /* Fabric.framework */; };
 		8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */; };
 		8DCDD3CA19FB1382003C5746 /* ImagesRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */; };
 		8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3CC19FB227D003C5746 /* ImagesRowScrollView.m */; };
@@ -310,8 +310,8 @@
 		8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTests.swift; sourceTree = "<group>"; };
 		8DBD8D991A19A857008B0102 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
 		8DBD8D9A1A19A857008B0102 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
-		8DC695531A1C067C002D06B8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
-		8DC695541A1C067C002D06B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		8DC695571A1C07E6002D06B8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8DC695581A1C07E6002D06B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesRowsTableViewController.swift; sourceTree = "<group>"; };
 		8DCDD3C819FB1382003C5746 /* ImagesRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesRowTableViewCell.h; sourceTree = "<group>"; };
 		8DCDD3C919FB1382003C5746 /* ImagesRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesRowTableViewCell.m; sourceTree = "<group>"; };
@@ -364,11 +364,11 @@
 				8D571D8B1A0173B000859378 /* UIKit.framework in Frameworks */,
 				8DD6B4C419F74C3200B30EA9 /* SystemConfiguration.framework in Frameworks */,
 				8DD6B4C219F74C2A00B30EA9 /* StoreKit.framework in Frameworks */,
-				8DC695561A1C067C002D06B8 /* Fabric.framework in Frameworks */,
+				8DC6955A1A1C07E6002D06B8 /* Fabric.framework in Frameworks */,
 				8DD6B4C019F74C2100B30EA9 /* Security.framework in Frameworks */,
 				8DD6B4BE19F74C1B00B30EA9 /* QuartzCore.framework in Frameworks */,
 				8DD6B4BC19F74C1500B30EA9 /* MobileCoreServices.framework in Frameworks */,
-				8DC695551A1C067C002D06B8 /* Crashlytics.framework in Frameworks */,
+				8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */,
 				8DD6B4BA19F74C0C00B30EA9 /* libz.dylib in Frameworks */,
 				8DD6B4B819F74BFE00B30EA9 /* CoreLocation.framework in Frameworks */,
 				8DD6B4B619F74BF500B30EA9 /* CoreGraphics.framework in Frameworks */,
@@ -712,8 +712,8 @@
 		8DD6B4AA19F74BCC00B30EA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DC695531A1C067C002D06B8 /* Crashlytics.framework */,
-				8DC695541A1C067C002D06B8 /* Fabric.framework */,
+				8DC695571A1C07E6002D06B8 /* Crashlytics.framework */,
+				8DC695581A1C07E6002D06B8 /* Fabric.framework */,
 				8D571F231A0176D200859378 /* libicucore.dylib */,
 				8D571D8C1A0173BF00859378 /* Foundation.framework */,
 				8D571D8A1A0173B000859378 /* UIKit.framework */,
@@ -883,7 +883,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 2e8419ec528eee3a9a176375d0f40efe2b051785 8aa708c664bd2dde000577a80e4d4d8ef9b6e7c967618492527365427cdab01a";
+			shellScript = "./Frameworks/Fabric.framework/run 2e8419ec528eee3a9a176375d0f40efe2b051785 8aa708c664bd2dde000577a80e4d4d8ef9b6e7c967618492527365427cdab01a";
 		};
 /* End PBXShellScriptBuildPhase section */
 
