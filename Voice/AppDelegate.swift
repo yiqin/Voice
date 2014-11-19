@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Fabric.with([Crashlytics()])
         
         
         /********************/
@@ -28,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         singleMethodSetup()     // after parseSetup
         mixpanelSetup()
+        
+        Fabric.with([Crashlytics()])
         
         return true
     }
