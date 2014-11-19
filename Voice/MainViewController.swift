@@ -26,6 +26,7 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
         super.viewDidLoad()
         view.backgroundColor = UIColor.clearColor()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func viewDidAppear(animated: Bool) {

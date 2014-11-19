@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 protocol ImagesRowsTableViewControllerDelegate {
     func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage)
@@ -115,7 +116,7 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
     }
     
     func moveToSelectedStreetImage(streetImage: StreetImage!) {
-        
+        Crashlytics.sharedInstance().crash()
         delegate?.moveToSelectArticleFromImageRows(streetImage)
         
     }
