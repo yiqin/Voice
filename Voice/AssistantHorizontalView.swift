@@ -72,7 +72,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         }
         else
         */
-        if ((translation.y+lastY!)<100){
+        if ((translation.y+lastY!)<160){
             finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
             animtaionType = UIViewAnimationOptions.CurveLinear
         }
