@@ -54,7 +54,11 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
                 
                 htmlPFFile.getDataInBackgroundWithBlock({ (htmlData: NSData!, error: NSError!) -> Void in
                     
-                    var content = NSString(data: htmlData, encoding: NSUTF8StringEncoding)
+                    var testData = NSMutableData()
+                    testData.appendData(htmlData)
+                    testData.appendData(htmlData)
+                    
+                    var content = NSString(data: testData, encoding: NSUTF8StringEncoding)
                     
                     objweb.loadHTMLString(content, baseURL: baseUrl)
                     
