@@ -73,16 +73,15 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
     
     func moveToSelectArticle(selectedArticle:Article) {
         var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
-        self.navigationController?.pushViewController(articleDetailViewController, animated: true)
+        navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
     
     /**
      A delegation chain
     */
     func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage){
-        
-        print(selectedStreetImage.objectId)
-        
+        var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
+        navigationController?.pushViewController(streetImageDetailViewController, animated: true)
     }
     
 }
