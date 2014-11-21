@@ -79,7 +79,7 @@ class MainViewController: UIViewController, AssistantHorizontalViewDelegate, Art
     /**
      A delegation chain
     */
-    func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage){
+    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
         var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
         navigationController?.pushViewController(streetImageDetailViewController, animated: true)
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ImagesRowsTableViewControllerDelegate {
-    func moveToSelectArticleFromImageRows(selectedStreetImage:StreetImage)
+    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage)
 }
 
 class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegation {
@@ -115,7 +115,7 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
     }
     
     func moveToSelectedStreetImage(streetImage: StreetImage!) {
-        delegate?.moveToSelectArticleFromImageRows(streetImage)
+        delegate?.moveToSelectStreetImageFromImageRows(streetImage)
         
     }
     
