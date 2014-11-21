@@ -30,64 +30,8 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     func moveToMainViewController() {
         gifImageView.stopAnimating()
         
-        // Testing
-        /*
         var mainViewController = MainViewController(nibName:nil, bundle:nil)
         self.navigationController?.pushViewController(mainViewController, animated: false)
-        */
-        
-        var objweb = ArticleHTMLWebView(frame: CGRectMake(0, 0, 320, 560))
-        
-        objweb.delegate = self
-        
-        var path = NSBundle.mainBundle().bundlePath
-        var baseUrl  = NSURL.fileURLWithPath("\(path)")
-        
-        self.view.addSubview(objweb)
-
-        
-        var query = PFQuery(className:"HTMLTest")
-        query.getObjectInBackgroundWithId("Ciu0YsqTfe") { (html: PFObject!, error: NSError!) -> Void in
-            if error == nil {
-                var htmlPFFile = html.objectForKey("file") as PFFile
-                NSLog("%@", htmlPFFile.name)
-                
-                htmlPFFile.getDataInBackgroundWithBlock({ (htmlData: NSData!, error: NSError!) -> Void in
-                    
-                    var testData = NSMutableData()
-                    testData.appendData(htmlData)
-                    testData.appendData(htmlData)
-                    
-                    var content = NSString(data: testData, encoding: NSUTF8StringEncoding)
-                    
-                    objweb.loadHTMLString(content, baseURL: baseUrl)
-                    
-                })
-                
-            } else {
-                NSLog("%@", error)
-            }
-        }
-        
-        
-        
-        /*
-        
-        // Test webview
-        var objweb = ArticleHTMLWebView(frame: CGRectMake(0, 0, 320, 560))
-        
-        objweb.delegate = self
-        var path = NSBundle.mainBundle().bundlePath
-        
-        var baseUrl  = NSURL.fileURLWithPath("\(path)")
-        
-        let bundle = NSBundle.mainBundle()
-        let pathhtml = bundle.pathForResource("voiceText", ofType: "html")
-        var content = String(contentsOfFile:pathhtml!, encoding: NSUTF8StringEncoding, error: nil)
-
-        objweb.loadHTMLString(content, baseURL: baseUrl)
-        self.view.addSubview(objweb)
-        */
         
     }
     

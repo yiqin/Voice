@@ -131,6 +131,7 @@
 		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
 		8DF4F65B1A1E53E80025BAF9 /* voiceText.html in Resources */ = {isa = PBXBuildFile; fileRef = 8DF4F65A1A1E53E80025BAF9 /* voiceText.html */; };
 		8DF4F65D1A1E544C0025BAF9 /* ArticleHTMLWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F65C1A1E544C0025BAF9 /* ArticleHTMLWebView.swift */; };
+		8DF4F65F1A1EE8140025BAF9 /* UnusedCode.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */; };
 		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
 		8DFC024519FF08800098C1BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024419FF08800098C1BA /* UserManager.swift */; };
 		8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024619FF0E350098C1BA /* AdsLocation.swift */; };
@@ -343,6 +344,7 @@
 		8DE49CCA19FC10BA00461150 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 		8DF4F65A1A1E53E80025BAF9 /* voiceText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = voiceText.html; sourceTree = SOURCE_ROOT; };
 		8DF4F65C1A1E544C0025BAF9 /* ArticleHTMLWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHTMLWebView.swift; sourceTree = "<group>"; };
+		8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UnusedCode.txt; sourceTree = "<group>"; };
 		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		8DFC024419FF08800098C1BA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8DFC024619FF0E350098C1BA /* AdsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLocation.swift; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 		8DB6F3A519F1BC4E002ED90F = {
 			isa = PBXGroup;
 			children = (
+				8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */,
 				8D571BEC1A016E4500859378 /* Images */,
 				8D571A841A016AE100859378 /* YQLibraries */,
 				8DB363C61A009CC700B87619 /* ThirdPartyLibraries */,
@@ -949,6 +952,7 @@
 				8D571EF11A0175FF00859378 /* MPABTestDesignerTweakResponseMessage.m in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
 				8D571F101A0175FF00859378 /* MPSwizzler.m in Sources */,
+				8DF4F65F1A1EE8140025BAF9 /* UnusedCode.txt in Sources */,
 				8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */,
 				8D571EEF1A0175FF00859378 /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */,

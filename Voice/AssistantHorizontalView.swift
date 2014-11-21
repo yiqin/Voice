@@ -57,21 +57,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         
         var finalCenter: CGPoint
         var animtaionType:UIViewAnimationOptions
-        // The view is still inside the screen.
-        /*************************************/
-        // velocity works bad.
-        /*
-        var velocity = recognizer.velocityInView(self.superview!)
-        if (velocity.y>200){
-            finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
-            isVelocityDominate = true
-        }
-        else if (velocity.y<(-200)){
-            finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
-            isVelocityDominate = true
-        }
-        else
-        */
+
         if ((translation.y+lastY!)<100){
             finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
             animtaionType = UIViewAnimationOptions.CurveLinear

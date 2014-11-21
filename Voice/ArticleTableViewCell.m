@@ -57,27 +57,6 @@
     self.title.text = article.title;
     self.briefDescription.text = article.briefDescription;
     self.briefImage.image = article.briefImage.image;
-    // Create URL from HTML file in application bundle
-    
-    
-    NSURL *html = [[NSBundle mainBundle] URLForResource: @"text" withExtension:@"html"];
-    
-    // Create attributed string from HTML
-    NSAttributedString *attrStr = [[NSAttributedString alloc]
-                                   initWithFileURL:html
-                                   options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType}
-                                   documentAttributes:nil error:nil];
-    
-    // Create textview, add attributed str
-    // UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, 320, 50)];
-    // [textView setAttributedText:attrStr];
-    
-    [self.title setAttributedText:attrStr];
-    
-    // Show textview
-    // [self addSubview:textView];
-    
-    
 }
 
 - (void)awakeFromNib {
