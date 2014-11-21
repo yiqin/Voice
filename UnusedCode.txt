@@ -69,3 +69,23 @@ NSAttributedString *attrStr = [[NSAttributedString alloc]
  isVelocityDominate = true
  }
 
+
+
+if (false) {
+    if ((translation.y+lastY!)<assistantInitPosition+assistantHeight*0.5-middleOffset){
+        finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
+        animtaionType = UIViewAnimationOptions.CurveEaseInOut
+        animtationTime = 0.5
+    }
+    else if ((translation.y+lastY!)>assistantInitPosition+assistantHeight*0.5+middleOffset){
+        finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
+        animtaionType = UIViewAnimationOptions.CurveEaseInOut
+        animtationTime = 0.5
+    }
+    else {
+        finalCenter = CGPointMake(lastX!, translation.y+lastY!)
+        animtaionType = UIViewAnimationOptions.CurveEaseInOut
+        animtationTime = 0.5
+    }
+}
+

@@ -14,14 +14,17 @@ protocol AssistantHorizontalViewDelegate {
 
 class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     
-    var assistantHeight = CGFloat(50.0)
+    let assistantInitPosition = CGFloat(300.0)
+    let velocityLimitLevelOne = CGFloat(50.0)
+    let velocityLimitLevelTwo = CGFloat(2000.0)
+    
+    var assistantHeight = CGFloat(70.0)
     var assistantWidth = DeviceManager.sharedInstance.screenWidth    // padding
     
-    var lastLocation:CGPoint?  // Why init here?
+    var lastLocation:CGPoint?
+    var isVelocityDominate = true
     
     var panRecognizer = UIPanGestureRecognizer()
-    
-    // var isVelocityDominate = false
     
     var delegate:AssistantHorizontalViewDelegate?
     
@@ -54,32 +57,70 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         var lastY = lastLocation?.y
         var translation = recognizer.translationInView(self.superview!)
         
+        // init animation variables
+        var finalCenter = self.center
+        var animtaionType = UIViewAnimationOptions.CurveEaseInOut
+        var animtationTime = 0.5
         
-        var finalCenter: CGPoint
-        var animtaionType:UIViewAnimationOptions
+        
+        var velocity = recognizer.velocityInView(self.superview!)
+        
+        let middlePosition = (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5)*0.5
+        
+        println(velocity.y)
+        if (velocity.y>velocityLimitLevelOne){
+            
+            if (velocity.y>velocityLimitLevelTwo){
+                finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
+                animtaionType = UIViewAnimationOptions.CurveEaseInOut
+                animtationTime = 0.6
+            }
+            else {
+                finalCenter = CGPointMake(lastX!, middlePosition)
+                animtaionType = UIViewAnimationOptions.CurveLinear
+                animtationTime = 0.4
+                
+                if((translation.y+lastY!) > middlePosition){
+                    finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
+                }
+            }
+            
+        }
+        else if (velocity.y<(-velocityLimitLevelOne)){
+            
+            if (velocity.y<(-velocityLimitLevelTwo)){
+                finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
+                animtaionType = UIViewAnimationOptions.CurveEaseInOut
+                animtationTime = 0.6
+            }
+            else {
+                finalCenter = CGPointMake(lastX!, middlePosition)
+                animtaionType = UIViewAnimationOptions.CurveLinear
+                animtationTime = 0.4
+                
+                if((translation.y+lastY!) < middlePosition){
+                    finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
+                }
+            }
+            
+        }
 
-        if ((translation.y+lastY!)<100){
-            finalCenter = CGPointMake(lastX!, assistantHeight*0.5)
-            animtaionType = UIViewAnimationOptions.CurveLinear
-        }
-        else if ((translation.y+lastY!)>450){
-            finalCenter = CGPointMake(lastX!, (DeviceManager.sharedInstance.screenHeight-assistantHeight*0.5))
-            animtaionType = UIViewAnimationOptions.CurveLinear
-        }
-        else {
-            finalCenter = CGPointMake(lastX!, translation.y+lastY!)
-            animtaionType = UIViewAnimationOptions.CurveEaseInOut
-        }
         
         // Update the location of AssistantHorizontalView
         // Animation
-        UIView.animateWithDuration(0.20, delay: 0.00, options: animtaionType, animations: { () -> Void in
+        if (isVelocityDominate) {
             
-            self.center = finalCenter
-            self.delegate?.updateUpAnDownViewSize()
+            // self.isVelocityDominate = false
             
-            }) { (finished) -> Void in
+            UIView.animateWithDuration(animtationTime, delay: 0.0, options: animtaionType, animations: { () -> Void in
                 
+                self.center = finalCenter
+                self.isVelocityDominate = true
+                self.delegate?.updateUpAnDownViewSize()
+                
+                }) { (finished) -> Void in
+                    
+            }
         }
 
     }
@@ -89,8 +130,10 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         assistantHeight = CGFloat(50.0)
         assistantWidth = DeviceManager.sharedInstance.screenWidth
         
-        self.frame = CGRectMake(0, 300, assistantWidth, assistantHeight)
+        // Setup init position
+        self.frame = CGRectMake(0, assistantInitPosition, assistantWidth, assistantHeight)
         
+        // button
         let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(0, 0, assistantWidth, assistantHeight)
         
@@ -114,14 +157,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     
     func buttonAction(sender:UIButton!) {
         println("Button tapped")
-        
-        /*
-        let alertView = UIAlertView(title: "Voice ME", message: "More features are on the way.", delegate: self, cancelButtonTitle: "OK")
-        
-        alertView.show()
-        */
         SweetAlert().showAlert("Good job!", subTitle: "You clicked the button!", style: AlertStyle.Success)
-        
     }
     
     class func height() -> CGFloat {
