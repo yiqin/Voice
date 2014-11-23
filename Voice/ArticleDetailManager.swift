@@ -34,9 +34,11 @@ class ArticleDetailManager: NSObject {
         articleBlocks = savedArticleBlocks
     }
     
+    
+    /**
+     More checks are required now.
+    */
     func checkWhetherDataAreReady() -> Bool {
-        
-        
         for articleBlock in articleBlocks {
             println((articleBlock as ArticleBlock).isHtmlLoading)
             

@@ -64,6 +64,13 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
                 
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        SVProgressHUD.show()
+    }
+
+    
     func backButtonPressed(sender: UIButton!){
         self.navigationController?.popViewControllerAnimated(true)
     }

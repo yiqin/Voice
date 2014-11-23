@@ -40,9 +40,11 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         query.whereKey("belongTo", equalTo: streetImage.parseObject)
         query.orderByAscending("indexNumber")
         
+        /*
         if(self.objects.count == 0){
             query.cachePolicy = kPFCachePolicyCacheThenNetwork
         }
+        */
         
         return query
     }
@@ -72,6 +74,8 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         // The image is reload again and again and again.
         let thunmbnail = object["image"] as PFFile
         cell?.streetDetailImageView.file = thunmbnail
+        cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+        
         cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load Street Detail Image ssauccesfully.")
         }

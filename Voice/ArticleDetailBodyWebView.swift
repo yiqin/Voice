@@ -42,6 +42,8 @@ class ArticleDetailBodyWebView: UIWebView {
             }
             var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
             loadHTMLString(content, baseURL: baseUrl)
+            
+            SVProgressHUD.dismiss()
         }
     }
     
