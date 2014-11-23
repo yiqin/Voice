@@ -10,41 +10,21 @@ import UIKit
 
 class ArticleDetailBodyWebView: UIWebView {
     
-    var path = NSBundle.mainBundle().bundlePath
-    var baseUrl = NSURL()
-    
-    var allHtmlData = NSMutableData()
+
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        var baseUrl  = NSURL.fileURLWithPath("\(path)")
+       
         
         
-         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("load"), userInfo: nil, repeats: false)
+        // load()
         
     }
-    
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    func load(){
-        println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
-        
-        if(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady()){
-            
-            for articleBlock in ArticleDetailManager.sharedInstance.articleBlocks {
-                allHtmlData.appendData((articleBlock as ArticleBlock).htmlData)
-            }
-            var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
-            loadHTMLString(content, baseURL: baseUrl)
-            
-            SVProgressHUD.dismiss()
-        }
     }
     
     /*

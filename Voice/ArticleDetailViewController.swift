@@ -36,16 +36,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.view.backgroundColor = UIColor.whiteColor()
         
         articleDetailBodyWebView.delegate = self
-        view.addSubview(articleDetailBodyWebView)
         
+        load()
         
         // Disable articleDetailBodyTVC now.
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         let randomNumber = Int(arc4random_uniform(2))+2
         self.articleDetailBodyTVC.adPosition = randomNumber;
         // view.addSubview(articleDetailBodyTVC.view)
-        
-        
         
         
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
@@ -67,7 +65,9 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        /*
         SVProgressHUD.show()
+        */
     }
 
     
@@ -86,6 +86,51 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     func reloadTableViewController() {
         self.articleDetailBodyTVC.tableView.reloadData()
     }
+    
+    
+    func load(){
+        println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
+        
+        if(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady()){
+            
+            var path = NSBundle.mainBundle().bundlePath
+            var baseUrl  = NSURL.fileURLWithPath("\(path)")
+            
+            var allHtmlData = NSMutableData()
+            
+            for articleBlock in ArticleDetailManager.sharedInstance.articleBlocks {
+                allHtmlData.appendData((articleBlock as ArticleBlock).htmlData)
+            }
+            var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
+            articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
+            
+            /*
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            SVProgressHUD.dismiss()
+            })
+            })
+            */
+            
+        }
+        else {
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("load"), userInfo: nil, repeats: false)
+        }
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        // More animations come here.
+        // view.addSubview(articleDetailBodyWebView)
+        
+        UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
+        }) { (completion) -> Void in
+            
+        }
+        
+    }
+    
+    
     
     /*
     // MARK: - Navigation
