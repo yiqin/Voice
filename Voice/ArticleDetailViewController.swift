@@ -12,7 +12,7 @@ import UIKit
  Display the detail of an article. 
  The detail consist of several blcoks, including the over page, text paragraghes and images
 */
-class ArticleDetailViewController: UIViewController {
+class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     
     var selectedArticle : Article
     
@@ -22,23 +22,28 @@ class ArticleDetailViewController: UIViewController {
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC : ArticleDetailBodyTableViewController
     
-    
+    var articleDetailBodyWebView : ArticleDetailBodyWebView
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
         
         self.selectedArticle = selectedArticle!
         self.articleDetailBodyTVC = ArticleDetailBodyTableViewController(selectedArticle: selectedArticle!)
         
+        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
+        
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        articleDetailBodyWebView.delegate = self
+        view.addSubview(articleDetailBodyWebView)
+        
         
         // Disable articleDetailBodyTVC now.
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         let randomNumber = Int(arc4random_uniform(2))+2
         self.articleDetailBodyTVC.adPosition = randomNumber;
         // view.addSubview(articleDetailBodyTVC.view)
-        
-        
         
         
         
@@ -56,7 +61,7 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+                
     }
     
     func backButtonPressed(sender: UIButton!){

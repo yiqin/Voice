@@ -61,7 +61,7 @@ class Article: NSVoiceObject {
                 // Only one object is returned.
                 for object in objects {
                     let newReadyObject = ArticleBlock(parseObject: object as PFObject)
-                    println(newReadyObject.text)
+                    // println(newReadyObject.text)
                     
                     // Add it to ArticleDetailManager
                     ArticleDetailManager.sharedInstance.addArticleBlock(newReadyObject)

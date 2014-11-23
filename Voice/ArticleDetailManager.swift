@@ -33,4 +33,17 @@ class ArticleDetailManager: NSObject {
     func addAllArticleBlcoks(savedArticleBlocks: NSMutableArray){
         articleBlocks = savedArticleBlocks
     }
+    
+    func checkWhetherDataAreReady() -> Bool {
+        
+        
+        for articleBlock in articleBlocks {
+            println((articleBlock as ArticleBlock).isHtmlLoading)
+            
+            if((articleBlock as ArticleBlock).isHtmlLoading == false){
+                return false
+            }
+        }
+        return true
+    }
 }
