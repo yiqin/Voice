@@ -22,6 +22,8 @@ class ArticleDetailViewController: UIViewController {
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC : ArticleDetailBodyTableViewController
     
+    
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
         
         self.selectedArticle = selectedArticle!
@@ -30,10 +32,16 @@ class ArticleDetailViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
+        // Disable articleDetailBodyTVC now.
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         let randomNumber = Int(arc4random_uniform(2))+2
         self.articleDetailBodyTVC.adPosition = randomNumber;
-        view.addSubview(articleDetailBodyTVC.view)
+        // view.addSubview(articleDetailBodyTVC.view)
+        
+        
+        
+        
+        
         
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)

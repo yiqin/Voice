@@ -15,13 +15,36 @@ class ArticleBlock:NSVoiceObject{
     
     var image : VMImageView
     
+    var htmlData : NSData
+    
+    /**
+    check whether the html is downloading. Default value is false.
+    - true: downloading.
+    - false: not downloading.
+    */
+    var isHtmlLoading = false
+    
     override init(parseObject:PFObject) {
         image = VMImageView()
         text = ""
         isText = parseObject["isText"] as Bool
         
+        let htmlPFFile = parseObject["html"] as PFFile
+        
+        htmlData = NSData()
+
         super.init(parseObject:parseObject)
         
+        htmlPFFile.getDataInBackgroundWithBlock({ (receivedHtmlData: NSData!, error: NSError!) -> Void in
+            
+            println("Load HTML successfully.")
+            
+            self.isHtmlLoading = true
+            self.htmlData = receivedHtmlData
+            
+        })
+        
+        // No use now.
         if (isText) {
             text = parseObject["text"] as String
         }
@@ -34,5 +57,7 @@ class ArticleBlock:NSVoiceObject{
                 self.image.isLoading = false
             }
         }
+        
+        
     };
 }
