@@ -10,6 +10,7 @@ import UIKit
 
 class AdImage: NSVoiceObject {
     
+    // Change the name
     var image : PFImageView
     
     override init(parseObject:PFObject) {

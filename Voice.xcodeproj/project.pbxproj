@@ -91,6 +91,7 @@
 		8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571F261A01789A00859378 /* VoiceMixpanel.m */; };
 		8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */; };
 		8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */; };
+		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
@@ -297,6 +298,8 @@
 		8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
+		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D881A831A10599B0027C8ED /* VoiceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceLabel.h; sourceTree = "<group>"; };
 		8D881A841A10599B0027C8ED /* VoiceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceLabel.m; sourceTree = "<group>"; };
@@ -756,6 +759,8 @@
 			children = (
 				8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */,
 				8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */,
+				8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */,
+				8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */,
 			);
 			name = StreetDetailViewController;
 			sourceTree = "<group>";
@@ -986,6 +991,7 @@
 				8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
+				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
 				8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
 				8DE49CC919FC0F8400461150 /* Ad.swift in Sources */,
@@ -1154,7 +1160,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";
@@ -1174,7 +1180,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";

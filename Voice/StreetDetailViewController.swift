@@ -13,10 +13,17 @@ class StreetDetailViewController: UIViewController {
     /// backButton on the top
     var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     
+    var streetDetailTVC : StreetDetailBodyTableViewController
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedStreetImage: StreetImage? ) {
+        
+        streetDetailTVC = StreetDetailBodyTableViewController(selectedStreetImage: selectedStreetImage!)
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        streetDetailTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
+        view.addSubview(streetDetailTVC.view)
         
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)

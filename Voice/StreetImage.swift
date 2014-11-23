@@ -10,6 +10,9 @@ import UIKit
 
 class StreetImage: NSVoiceObject {
     
+    // No use
+    var streetDetailImages : NSMutableArray = []
+    
     var image : PFImageView
     
     override init(parseObject:PFObject) {
@@ -23,4 +26,17 @@ class StreetImage: NSVoiceObject {
         
         super.init(parseObject:parseObject)
     }
+    
+    // No use
+    func loadDetailImagesFromParse(objects:NSArray) {
+        
+        for var i = 0; i <  objects.count; i++ {
+
+
+        }
+        
+        
+    }
+    
+    
 }

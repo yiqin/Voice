@@ -14,5 +14,7 @@
 #import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
 
+#import "StreetDetailBlockTableViewCell.h"
+
 #import "Mixpanel.h"
 #import "VoiceMixpanel.h"
