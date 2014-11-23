@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface StreetDetailBlockTableViewCell : PFTableViewCell
-// @property (strong, nonatomic) IBOutlet PFImageView *streetDetailImageView;
+
 @property (strong, nonatomic) PFImageView *streetDetailImageView;
 
 @end

@@ -76,31 +76,8 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             println("Load Street Detail Image ssauccesfully.")
         }
         
-        
-        /*
-        var streetDetailImageView: PFImageView = cell?.viewWithTag(100) as PFImageView
-        // streetDetailImageView.image = UIImage(named: object["image"] as PFFile)
-        
-        let thunmbnail = object["image"] as PFFile
-        streetDetailImageView.file = thunmbnail
-        streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-            println("Load Street Detail Image ssauccesfully.")
-        }
-        */
-        
-        /*
-        cell?.imageView.contentMode = UIViewContentMode.ScaleAspectFill;
-        
-        cell?.imageView.file = object["image"] as PFFile
-        
-        cell?.imageView.frame = CGRectMake(0, 0, 100, 50)
-        */
-        
-        
         return cell
     }
-    
-    
 
     /*
     // MARK: - Navigation
