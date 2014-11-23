@@ -29,7 +29,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.selectedArticle = selectedArticle!
         self.articleDetailBodyTVC = ArticleDetailBodyTableViewController(selectedArticle: selectedArticle!)
         
-        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
+        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 45, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-45))
         
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
