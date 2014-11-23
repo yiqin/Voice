@@ -50,6 +50,10 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         view.addSubview(backButton)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
+        
+        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+        self.view.addGestureRecognizer(swipeRight)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -122,7 +126,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
         
-        UIView.transitionWithView(view, duration: 1.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+        UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
         }) { (completion) -> Void in
             
@@ -130,7 +134,10 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         
     }
     
-    
+    func swipeRight(recognizer:UISwipeGestureRecognizer){
+        println("Swipe right.")
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     /*
     // MARK: - Navigation

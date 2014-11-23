@@ -28,6 +28,8 @@ class StreetDetailViewController: UIViewController {
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
         
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+        self.view.addGestureRecognizer(swipeRight)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -54,6 +56,11 @@ class StreetDetailViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
 
+    func swipeRight(recognizer:UISwipeGestureRecognizer){
+        println("Swipe right.")
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     /*
     // MARK: - Navigation
 
