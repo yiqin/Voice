@@ -122,7 +122,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
         
-        UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+        UIView.transitionWithView(view, duration: 1.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
         }) { (completion) -> Void in
             
