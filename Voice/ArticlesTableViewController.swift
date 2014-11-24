@@ -58,7 +58,7 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     func getLatestArticles() {
-        ArticlesManager.sharedInstance.startLoadingDataFromParse()
+        ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
