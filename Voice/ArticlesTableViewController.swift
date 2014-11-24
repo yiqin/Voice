@@ -110,6 +110,7 @@ class ArticlesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let articleIdentifier = "ArticleIdentifier"
+        let loadMoreArticleDataIdentifier = "LoadMoreArticleData"
         
         var articles = ArticlesManager.sharedInstance.articles
         if articles.count == 0 {
@@ -131,9 +132,9 @@ class ArticlesTableViewController: UITableViewController {
             return cell!
         }
         else {
-            var cell = tableView.dequeueReusableCellWithIdentifier("LoadMoreArticleData") as? UITableViewCell
+            var cell = tableView.dequeueReusableCellWithIdentifier(loadMoreArticleDataIdentifier) as? UITableViewCell
             
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "LoadMoreArticleData")
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: loadMoreArticleDataIdentifier)
             
             cell?.textLabel.text = "Load More Data"
             return cell!
