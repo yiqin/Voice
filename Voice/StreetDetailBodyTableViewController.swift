@@ -17,6 +17,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
         self.tableView.separatorColor = UIColor.clearColor()
+        self.view.hidden = false;
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -49,8 +50,9 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     }
     
     override func objectsDidLoad(error: NSError!) {
-        
+        super.objectsDidLoad(error) // Don't forget the super method.
     }
+    
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
