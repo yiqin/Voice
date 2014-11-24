@@ -97,9 +97,9 @@ class ArticlesTableViewController: UITableViewController {
         }
         else {
             messageLabel.removeFromSuperview()
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
-            
-            return ArticlesManager.sharedInstance.articles.count
+            // self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine    // This is not a good UI.
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+            return ArticlesManager.sharedInstance.articles.count+1
         }
     }
     
@@ -108,14 +108,16 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var articles = ArticlesManager.sharedInstance.articles
-        let articleIdentifier = "ArticleIdentifier"
-        var cell = tableView.dequeueReusableCellWithIdentifier(articleIdentifier) as? ArticleTableViewCell
         
+        let articleIdentifier = "ArticleIdentifier"
+        
+        var articles = ArticlesManager.sharedInstance.articles
         if articles.count == 0 {
             return UITableViewCell()
         }
-        else {
+        else if (indexPath.row < articles.count) {
+            
+            var cell = tableView.dequeueReusableCellWithIdentifier(articleIdentifier) as? ArticleTableViewCell
             
             if cell != nil {
                 // println("Cell exist")
@@ -128,17 +130,28 @@ class ArticlesTableViewController: UITableViewController {
             cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
             return cell!
         }
+        else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("LoadMoreArticleData") as? UITableViewCell
+            
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "LoadMoreArticleData")
+            
+            cell?.textLabel.text = "Load More Data"
+            return cell!
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
         let articles = ArticlesManager.sharedInstance.articles
-        let selectedArticle = articles.objectAtIndex(indexPath.row) as Article
         
-        selectedArticle.startLoadWholeArticle()
-        delegate?.moveToSelectArticle(selectedArticle)
+        if (indexPath.row < articles.count) {
+            let selectedArticle = articles.objectAtIndex(indexPath.row) as Article
+            selectedArticle.startLoadWholeArticle()
+            delegate?.moveToSelectArticle(selectedArticle)
+        } else {
+            
+        }
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {

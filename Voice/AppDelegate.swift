@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
         
         ArticlesManager.sharedInstance
-        ArticlesManager.sharedInstance.startLoadingDataFromParse()
+        ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
         
         StreetImagesManager.sharedInstance
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()
