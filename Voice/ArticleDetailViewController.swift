@@ -69,14 +69,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        /*
+        
         SVProgressHUD.show()
-        */
+
     }
 
     
     func backButtonPressed(sender: UIButton!){
-        self.navigationController?.popViewControllerAnimated(true)
+        popBackToMainViewController()
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,16 +108,9 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
             articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
             
-            /*
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            SVProgressHUD.dismiss()
-            })
-            })
-            */
-            
         }
         else {
+            // this is not a perfect method.
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("load"), userInfo: nil, repeats: false)
         }
     }
@@ -126,16 +119,24 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
         
+        SVProgressHUD.popActivity()
+        SVProgressHUD.dismiss()
+        
         UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
         }) { (completion) -> Void in
             
         }
-        
     }
     
     func swipeRight(recognizer:UISwipeGestureRecognizer){
         println("Swipe right.")
+        popBackToMainViewController()
+    }
+    
+    func popBackToMainViewController(){
+        SVProgressHUD.popActivity()
+        SVProgressHUD.dismiss()
         self.navigationController?.popViewControllerAnimated(true)
     }
     
