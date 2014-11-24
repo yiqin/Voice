@@ -96,6 +96,12 @@
 		8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD01A22412200EB01FB /* defaultImage.png */; };
 		8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD31A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m */; };
 		8D6C2BD61A22CD1500EB01FB /* ConfigDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD51A22CD1500EB01FB /* ConfigDataManager.swift */; };
+		8D6C2BE41A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD91A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.m */; };
+		8D6C2BE51A22E98800EB01FB /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BDB1A22E98800EB01FB /* SWCellScrollView.m */; };
+		8D6C2BE61A22E98800EB01FB /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BDD1A22E98800EB01FB /* SWLongPressGestureRecognizer.m */; };
+		8D6C2BE71A22E98800EB01FB /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BDF1A22E98800EB01FB /* SWTableViewCell.m */; };
+		8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */; };
+		8D6C2BE91A22E98800EB01FB /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -309,6 +315,18 @@
 		8D6C2BD21A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleLoadMoreDataTableViewCell.h; sourceTree = "<group>"; };
 		8D6C2BD31A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleLoadMoreDataTableViewCell.m; sourceTree = "<group>"; };
 		8D6C2BD51A22CD1500EB01FB /* ConfigDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigDataManager.swift; sourceTree = "<group>"; };
+		8D6C2BD81A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		8D6C2BD91A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		8D6C2BDA1A22E98800EB01FB /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		8D6C2BDB1A22E98800EB01FB /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		8D6C2BDC1A22E98800EB01FB /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		8D6C2BDD1A22E98800EB01FB /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		8D6C2BDE1A22E98800EB01FB /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		8D6C2BDF1A22E98800EB01FB /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		8D6C2BE01A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		8D6C2BE21A22E98800EB01FB /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -584,6 +602,25 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		8D6C2BD71A22E98800EB01FB /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8D6C2BD81A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.h */,
+				8D6C2BD91A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.m */,
+				8D6C2BDA1A22E98800EB01FB /* SWCellScrollView.h */,
+				8D6C2BDB1A22E98800EB01FB /* SWCellScrollView.m */,
+				8D6C2BDC1A22E98800EB01FB /* SWLongPressGestureRecognizer.h */,
+				8D6C2BDD1A22E98800EB01FB /* SWLongPressGestureRecognizer.m */,
+				8D6C2BDE1A22E98800EB01FB /* SWTableViewCell.h */,
+				8D6C2BDF1A22E98800EB01FB /* SWTableViewCell.m */,
+				8D6C2BE01A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.h */,
+				8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */,
+				8D6C2BE21A22E98800EB01FB /* SWUtilityButtonView.h */,
+				8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
 		8DB363B81A00910E00B87619 /* UpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +697,7 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8D6C2BD71A22E98800EB01FB /* SWTableViewCell */,
 				8D6C2BC91A223FA000EB01FB /* SVProgressHUD */,
 				8D1A70DE1A0ACE5B00228126 /* INTULLocationManager */,
 				8D571E701A0175FE00859378 /* Mixpanel */,
@@ -973,6 +1011,7 @@
 				8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */,
 				8DFC05141A0D1FDB00678269 /* YQGifImage.swift in Sources */,
 				8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */,
+				8D6C2BE71A22E98800EB01FB /* SWTableViewCell.m in Sources */,
 				8D571F211A0175FF00859378 /* UIImage+MPImageEffects.m in Sources */,
 				8D571EEA1A0175FF00859378 /* MPABTestDesignerConnection.m in Sources */,
 				8D571F061A0175FF00859378 /* MPObjectSerializerConfig.m in Sources */,
@@ -1008,6 +1047,7 @@
 				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,
 				8D571EF01A0175FF00859378 /* MPABTestDesignerTweakRequestMessage.m in Sources */,
 				8D571F171A0175FF00859378 /* MPUIFontToNSDictionaryValueTransformer.m in Sources */,
+				8D6C2BE41A22E98800EB01FB /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				8DFC024F19FF1BC20098C1BA /* AdTableViewCell.m in Sources */,
 				8DF4F6651A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift in Sources */,
 				8D4AB35519F9B95D00222967 /* StreetImagesManager.swift in Sources */,
@@ -1015,6 +1055,7 @@
 				8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */,
 				8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
+				8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
 				8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */,
 				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
@@ -1024,6 +1065,7 @@
 				8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */,
 				8DFFD0AC1A0D55CC00497E2B /* AssistantHorizontalView.swift in Sources */,
 				8D1A70E41A0ACE5B00228126 /* INTULocationManager.m in Sources */,
+				8D6C2BE51A22E98800EB01FB /* SWCellScrollView.m in Sources */,
 				8D571F1A1A0175FF00859378 /* MPWebSocket.m in Sources */,
 				8D571EF81A0175FF00859378 /* MPCGRectToNSDictionaryValueTransformer.m in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
@@ -1053,9 +1095,11 @@
 				8D571F1B1A0175FF00859378 /* NSData+MPBase64.m in Sources */,
 				8D571EEC1A0175FF00859378 /* MPABTestDesignerDeviceInfoResponseMessage.m in Sources */,
 				8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */,
+				8D6C2BE91A22E98800EB01FB /* SWUtilityButtonView.m in Sources */,
 				8D571F121A0175FF00859378 /* MPTweakInline.m in Sources */,
 				8D571EF91A0175FF00859378 /* MPCGSizeToNSDictionaryValueTransformer.m in Sources */,
 				8D571EF31A0175FF00859378 /* MPBOOLToNSNumberValueTransformer.m in Sources */,
+				8D6C2BE61A22E98800EB01FB /* SWLongPressGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,7 +1230,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";
@@ -1206,7 +1250,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Voice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";

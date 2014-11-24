@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "SWTableViewCell.h"
+
 @class Article;
 
-@interface ArticleTableViewCell : UITableViewCell
+@interface ArticleTableViewCell : SWTableViewCell
 
 @property (nonatomic) CGFloat tableWidth;
 

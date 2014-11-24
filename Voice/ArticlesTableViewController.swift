@@ -12,7 +12,7 @@ protocol ArticlesTableViewControllerDelegate {
     func moveToSelectArticle(selectedArticle:Article)
 }
 
-class ArticlesTableViewController: UITableViewController {
+class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegate {
     
     var messageLabel = UILabel()
     var delegate:ArticlesTableViewControllerDelegate?
@@ -203,6 +203,19 @@ class ArticlesTableViewController: UITableViewController {
     class func initContentOffset() -> CGFloat {
         return ArticleTableViewCell.cellHeight()*4
     }
+    
+    
+    
+    func rightButtons() -> NSArray {
+        var rightUtilityButtons = NSMutableArray()
+        
+        
+        
+        return rightUtilityButtons
+    }
+    
+    
+    
     
     /*
     // Override to support conditional editing of the table view.
