@@ -13,6 +13,7 @@
 #import "ArticleCoverTableViewCell.h"
 #import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
+#import "ArticleLoadMoreDataTableViewCell.h"
 
 #import "StreetDetailBlockTableViewCell.h"
 

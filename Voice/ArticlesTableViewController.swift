@@ -58,15 +58,14 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     func getLatestArticles() {
-        ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
-        
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.tableView.reloadData()
+        ArticlesManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
+            if (success){
+                self.tableView.reloadData()
+                if ((self.refreshControl) != nil){
+                    self.refreshControl?.endRefreshing()
+                }
+            }
         })
-        
-        if ((self.refreshControl) != nil){
-            self.refreshControl?.endRefreshing()
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,7 +109,7 @@ class ArticlesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let articleIdentifier = "ArticleIdentifier"
-        let loadMoreArticleDataIdentifier = "LoadMoreArticleData"
+        let articleLoadMoreDataIdentifier = "ArticleLoadMoreData"
         
         var articles = ArticlesManager.sharedInstance.articles
         if articles.count == 0 {
@@ -132,9 +131,13 @@ class ArticlesTableViewController: UITableViewController {
             return cell!
         }
         else {
-            var cell = tableView.dequeueReusableCellWithIdentifier(loadMoreArticleDataIdentifier) as? UITableViewCell
-            
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: loadMoreArticleDataIdentifier)
+            var cell = tableView.dequeueReusableCellWithIdentifier(articleLoadMoreDataIdentifier) as? ArticleLoadMoreDataTableViewCell
+            if cell != nil {
+                
+            }
+            else {
+                cell = ArticleLoadMoreDataTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleLoadMoreDataIdentifier)
+            }
             
             cell?.textLabel.text = "Load More Data"
             return cell!
@@ -153,7 +156,7 @@ class ArticlesTableViewController: UITableViewController {
         } else {
             ArticlesManager.sharedInstance.loadMoreDataFromParse({ (success) -> Void in
                 if (success){
-                    
+                    self.tableView.reloadData()
                 }
             })
         }

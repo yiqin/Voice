@@ -94,6 +94,7 @@
 		8D6C2BCE1A223FA000EB01FB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C2BCB1A223FA000EB01FB /* SVProgressHUD.bundle */; };
 		8D6C2BCF1A223FA000EB01FB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BCD1A223FA000EB01FB /* SVProgressHUD.m */; };
 		8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD01A22412200EB01FB /* defaultImage.png */; };
+		8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BD31A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -304,6 +305,8 @@
 		8D6C2BCC1A223FA000EB01FB /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		8D6C2BCD1A223FA000EB01FB /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		8D6C2BD01A22412200EB01FB /* defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImage.png; sourceTree = "<group>"; };
+		8D6C2BD21A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleLoadMoreDataTableViewCell.h; sourceTree = "<group>"; };
+		8D6C2BD31A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleLoadMoreDataTableViewCell.m; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -586,6 +589,8 @@
 				8DDEDC2319F8768100550516 /* ArticlesTableViewController.swift */,
 				8D1B529819FA8852006B9850 /* ArticleTableViewCell.h */,
 				8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */,
+				8D6C2BD21A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.h */,
+				8D6C2BD31A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m */,
 			);
 			name = UpView;
 			sourceTree = "<group>";
@@ -1007,6 +1012,7 @@
 				8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
+				8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */,
 				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
 				8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
