@@ -79,6 +79,10 @@
     
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ImageCellIdentifier forIndexPath:indexPath];
     
+    if (streetImage.isFirstLoad) {
+        // Update later...........
+    }
+    
     [cell.imageView setImage: streetImage.image.image];
     
     return cell;

@@ -10,6 +10,6 @@
 #import <Parse/Parse.h>
 
 @interface ImageCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet PFImageView *imageView;
 
 @end

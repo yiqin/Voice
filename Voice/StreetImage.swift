@@ -10,33 +10,24 @@ import UIKit
 
 class StreetImage: NSVoiceObject {
     
-    // No use
-    var streetDetailImages : NSMutableArray = []
+    var isFirstLoad:Bool
+    var imagePFFile: PFFile
     
     var image : PFImageView
     
     override init(parseObject:PFObject) {
         image = PFImageView()
         
-        let thunmbnail = parseObject["image"] as PFFile
-        image.file = thunmbnail
-        image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-            println("Load voice image succesfully.")
-        }
+        imagePFFile = parseObject["image"] as PFFile
+        image.file = imagePFFile
+        
+        isFirstLoad = true
         
         super.init(parseObject:parseObject)
-    }
-    
-    // No use
-    func loadDetailImagesFromParse(objects:NSArray) {
         
-        for var i = 0; i <  objects.count; i++ {
-
-
+        image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+            println("Load voice image succesfully.")
+            self.isFirstLoad =  false
         }
-        
-        
     }
-    
-    
 }
