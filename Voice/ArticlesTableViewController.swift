@@ -151,7 +151,11 @@ class ArticlesTableViewController: UITableViewController {
             selectedArticle.startLoadWholeArticle()
             delegate?.moveToSelectArticle(selectedArticle)
         } else {
-            
+            ArticlesManager.sharedInstance.loadMoreDataFromParse({ (success) -> Void in
+                if (success){
+                    
+                }
+            })
         }
     }
     

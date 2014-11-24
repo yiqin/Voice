@@ -25,7 +25,16 @@ class ArticlesManager: NSObject {
         return Static.instance
     }
     
+    /**
+     quick way to start to load article data from Parse.com
+    */
     func startLoadingDataFromParse(pageIndex:Int) {
+        startLoadingDataFromParse(pageIndex, completionClosure: { (success) -> () in
+            
+        })
+    }
+    
+    func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
         var query  = PFQuery(className: "Article")
         
         query.orderByDescending("createdAt")
@@ -46,6 +55,7 @@ class ArticlesManager: NSObject {
                     self.articles.removeAllObjects()
                 }
                 self.articles.addObjectsFromArray(recievedArticles)
+                completionClosure(success: true)
                 
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
@@ -53,9 +63,13 @@ class ArticlesManager: NSObject {
         }
     }
     
-    func loadMoreDataFromParse(){
+    func loadMoreDataFromParse(completionClosure: (success :Bool) ->()){
         currentPageIndex++;
-        startLoadingDataFromParse(currentPageIndex)
+        startLoadingDataFromParse(currentPageIndex, completionClosure: { (success) -> () in
+            if (success){
+                completionClosure(success: true)
+            }
+        })
     }
     
     func addArticle(newArticle:Article) {
