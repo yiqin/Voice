@@ -24,7 +24,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView.setAnimatableImage(named: "Launching.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
@@ -32,7 +32,6 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         var mainViewController = MainViewController(nibName:nil, bundle:nil)
         self.navigationController?.pushViewController(mainViewController, animated: false)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,7 +39,6 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
