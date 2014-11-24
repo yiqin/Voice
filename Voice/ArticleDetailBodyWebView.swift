@@ -10,17 +10,8 @@ import UIKit
 
 class ArticleDetailBodyWebView: UIWebView {
     
-
-    
     override init(frame: CGRect) {
-        
         super.init(frame: frame)
-        
-       
-        
-        
-        // load()
-        
     }
     
     required init(coder aDecoder: NSCoder) {

@@ -16,8 +16,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         streetImage = selectedStreetImage
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
-        
-        loadingViewEnabled = false
+        self.tableView.separatorColor = UIColor.clearColor()
     }
     
     required init(coder aDecoder: NSCoder) {

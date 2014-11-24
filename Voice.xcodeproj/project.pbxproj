@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D01A7D419F8ACB3001C2D78 /* ArticlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */; };
-		8D0216D11A1D762E00623B0C /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 8D0216D01A1D762E00623B0C /* text.html */; };
 		8D1A70E41A0ACE5B00228126 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A70E01A0ACE5B00228126 /* INTULocationManager.m */; };
 		8D1A70E51A0ACE5B00228126 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A70E21A0ACE5B00228126 /* INTULocationRequest.m */; };
 		8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B529919FA8852006B9850 /* ArticleTableViewCell.m */; };
@@ -134,8 +133,6 @@
 		8DDEDC2819F88E0500550516 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2719F88E0500550516 /* Article.swift */; };
 		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
 		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
-		8DF4F65B1A1E53E80025BAF9 /* voiceText.html in Resources */ = {isa = PBXBuildFile; fileRef = 8DF4F65A1A1E53E80025BAF9 /* voiceText.html */; };
-		8DF4F65D1A1E544C0025BAF9 /* ArticleHTMLWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F65C1A1E544C0025BAF9 /* ArticleHTMLWebView.swift */; };
 		8DF4F65F1A1EE8140025BAF9 /* UnusedCode.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */; };
 		8DF4F6631A1EEB190025BAF9 /* StreetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */; };
 		8DF4F6651A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */; };
@@ -165,7 +162,6 @@
 
 /* Begin PBXFileReference section */
 		8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesManager.swift; sourceTree = "<group>"; };
-		8D0216D01A1D762E00623B0C /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = SOURCE_ROOT; };
 		8D1A70DF1A0ACE5B00228126 /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
 		8D1A70E01A0ACE5B00228126 /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
 		8D1A70E11A0ACE5B00228126 /* INTULocationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationRequest.h; sourceTree = "<group>"; };
@@ -357,8 +353,6 @@
 		8DDEDC2719F88E0500550516 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		8DE49CCA19FC10BA00461150 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
-		8DF4F65A1A1E53E80025BAF9 /* voiceText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = voiceText.html; sourceTree = SOURCE_ROOT; };
-		8DF4F65C1A1E544C0025BAF9 /* ArticleHTMLWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHTMLWebView.swift; sourceTree = "<group>"; };
 		8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UnusedCode.txt; sourceTree = "<group>"; };
 		8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailViewController.swift; sourceTree = "<group>"; };
 		8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailBodyTableViewController.swift; sourceTree = "<group>"; };
@@ -692,12 +686,9 @@
 			isa = PBXGroup;
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
-				8D0216D01A1D762E00623B0C /* text.html */,
-				8DF4F65A1A1E53E80025BAF9 /* voiceText.html */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9F7F301A0C5B910026AA07 /* Launching.gif */,
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
-				8DF4F65C1A1E544C0025BAF9 /* ArticleHTMLWebView.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DFFD0AB1A0D55CC00497E2B /* AssistantHorizontalView.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
@@ -910,11 +901,9 @@
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
 				8D571EFB1A0175FF00859378 /* MPCloseBtn.png in Resources */,
 				8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */,
-				8D0216D11A1D762E00623B0C /* text.html in Resources */,
 				8D9F7F311A0C5B910026AA07 /* Launching.gif in Resources */,
 				8D571F1E1A0175FF00859378 /* test_variant.json in Resources */,
 				8D571EFC1A0175FF00859378 /* MPCloseBtn@2x.png in Resources */,
-				8DF4F65B1A1E53E80025BAF9 /* voiceText.html in Resources */,
 				8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */,
 				8D571EFF1A0175FF00859378 /* MPNotification.storyboard in Resources */,
 				8D571BF31A016E6800859378 /* backArrow.png in Resources */,
@@ -1005,7 +994,6 @@
 				8D571EEF1A0175FF00859378 /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */,
 				8D571F141A0175FF00859378 /* MPTypeDescription.m in Sources */,
-				8DF4F65D1A1E544C0025BAF9 /* ArticleHTMLWebView.swift in Sources */,
 				8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */,
 				8D571EF61A0175FF00859378 /* MPCGColorRefToNSStringValueTransformer.m in Sources */,
 				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,
