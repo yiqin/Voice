@@ -82,7 +82,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             else {
                 cell = ArticleCoverTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleCoverIdentifier)
                 cell?.selectionStyle = UITableViewCellSelectionStyle.None
-                cell?.coverImageView.image = article.coverImage.image
+                // cell?.coverImageView.image = article.coverImage.image
 
             }
             return cell!

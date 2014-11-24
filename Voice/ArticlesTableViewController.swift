@@ -103,7 +103,13 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return ArticleTableViewCell.cellHeight()
+        var articles = ArticlesManager.sharedInstance.articles
+        if (indexPath.row < articles.count) {
+            return ArticleTableViewCell.cellHeight()
+        }
+        else {
+            return ArticleLoadMoreDataTableViewCell.cellHeight()
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -29,4 +29,10 @@
     // Configure the view for the selected state
 }
 
++ (CGFloat) cellHeight
+{
+    return 50;
+}
+
+
 @end

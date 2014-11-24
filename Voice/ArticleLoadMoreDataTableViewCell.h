@@ -10,4 +10,6 @@
 
 @interface ArticleLoadMoreDataTableViewCell : UITableViewCell
 
++ (CGFloat)cellHeight;
+
 @end
