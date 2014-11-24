@@ -10,24 +10,35 @@ import UIKit
 
 class Article: NSVoiceObject {
     
+    var isFirstLoad:Bool
+    
     var title: String
     var briefDescription: String
     var briefImage: PFImageView
     
+    var briefImagePFFile: PFFile
+    
     var articleBlocks : NSMutableArray = []
     
     override init(parseObject:PFObject) {
+        isFirstLoad = true
+        
         title = parseObject["title"] as String
         briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
+        
+        briefImagePFFile = parseObject["briefImage"] as PFFile
+        
+        
         briefImage = PFImageView()
-        let thunmbnail = parseObject["briefImage"] as PFFile
-        briefImage.file = thunmbnail
-        briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-            println("Load article image succesfully.")
-        }
+        briefImage.file = briefImagePFFile
         
         super.init(parseObject:parseObject)
+        
+        briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+            println("Load article image succesfully.")
+            self.isFirstLoad = false
+        }
     };
     
     func startLoadWholeArticle(){

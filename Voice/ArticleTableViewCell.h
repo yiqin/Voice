@@ -14,7 +14,7 @@
 
 @property (nonatomic) CGFloat tableWidth;
 
-@property (nonatomic, strong) UIImageView *briefImage;
+@property (nonatomic, strong) PFImageView *briefImage;
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UILabel *briefDescription;
 

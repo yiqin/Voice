@@ -40,7 +40,7 @@
     self.briefDescription.numberOfLines = 0;
     
     
-    self.briefImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 120, 120)];
+    self.briefImage = [[PFImageView alloc] initWithFrame:CGRectMake(5, 5, 120, 120)];
     self.briefImage.contentMode = UIViewContentModeScaleAspectFit;
     
     [self addSubview:self.title];
@@ -56,7 +56,10 @@
 {
     self.title.text = article.title;
     self.briefDescription.text = article.briefDescription;
-    self.briefImage.image = article.briefImage.image;
+    
+    if (!article.isFirstLoad) {
+        self.briefImage.image = article.briefImage.image;
+    }
 }
 
 - (void)awakeFromNib {

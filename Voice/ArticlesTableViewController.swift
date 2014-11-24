@@ -133,7 +133,19 @@ class ArticlesTableViewController: UITableViewController {
                 // println("Create new Cell")
                 cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
             }
-            cell?.loadCellFromArticle(articles.objectAtIndex(indexPath.row) as Article)
+            
+            var article = articles.objectAtIndex(indexPath.row) as Article
+            
+            if(article.isFirstLoad){
+                let thunmbnail = article.briefImagePFFile
+                cell?.briefImage.file = thunmbnail
+                cell?.briefImage.image = UIImage(named: "defaultImage.png")
+                
+                cell?.briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                    println("Load Image ssauccesfully.")
+                }
+            }
+            cell?.loadCellFromArticle(article)
             return cell!
         }
         else {
