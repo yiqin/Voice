@@ -76,4 +76,8 @@ class ArticlesManager: NSObject {
         articles.addObject(newArticle)
     }
     
+    func removeArticle(index:Int) {
+        articles.removeObjectAtIndex(index)
+    }
+    
 }

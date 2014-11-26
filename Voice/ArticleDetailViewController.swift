@@ -63,14 +63,18 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-                
+        
+        
+        SVProgressHUD.show()
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         
-        SVProgressHUD.show()
+        
 
     }
 
@@ -108,6 +112,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
             articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
             
+
         }
         else {
             // this is not a perfect method.
@@ -128,6 +133,8 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             
         }
     }
+    
+    
     
     func swipeRight(recognizer:UISwipeGestureRecognizer){
         println("Swipe right.")

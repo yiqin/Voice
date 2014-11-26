@@ -132,7 +132,11 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
             else {
                 // println("Create new Cell")
                 cell = ArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleIdentifier, tableWidth: DeviceManager.sharedInstance.screenWidth)
+                cell?.leftUtilityButtons = leftButtons()
+                cell?.rightUtilityButtons = rightButtons()
+                cell?.delegate = self
             }
+            cell?.indexPath = indexPath // Track the indexPath on Cell
             
             var article = articles.objectAtIndex(indexPath.row) as Article
             
@@ -209,13 +213,68 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
     func rightButtons() -> NSArray {
         var rightUtilityButtons = NSMutableArray()
         
-        
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red: 1.0, green: 0.231, blue: 0.188, alpha: 1.0), title: "")
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red: 1.0, green: 0.231, blue: 0.188, alpha: 1.0), title: "")
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red: 1.0, green: 0.231, blue: 0.188, alpha: 1.0), title: "Hide")
         
         return rightUtilityButtons
     }
     
+    func leftButtons() -> NSArray {
+        var leftUtilityButtons = NSMutableArray()
+        
+        return leftUtilityButtons
+    }
     
     
+    
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, scrollingToState state: SWCellState) {
+        switch state {
+        case SWCellState.CellStateCenter:
+            break
+        case SWCellState.CellStateLeft:
+            break
+        case SWCellState.CellStateRight:
+            hideArticleFromTableView(cell)
+            break
+        default:
+            break
+        }
+    }
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerLeftUtilityButtonWithIndex index: Int) {
+        
+    }
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
+        
+    }
+    
+    func swipeableTableViewCellShouldHideUtilityButtonsOnSwipe(cell: SWTableViewCell!) -> Bool {
+        return true
+    }
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, canSwipeToState state: SWCellState) -> Bool {
+        return true
+    }
+    
+    func hideArticleFromTableView(cell: SWTableViewCell!) {
+        println(cell.indexPath.row)
+        println(cell.indexPath.section)
+        
+        // self.tableView.beginUpdates()
+        ArticlesManager.sharedInstance.removeArticle(cell.indexPath.row)
+        
+        let path = NSIndexPath(forRow: cell.indexPath.row, inSection: cell.indexPath.section)
+        let indexArray = [path] as NSArray
+        
+        // This animation is not perfect, but works.
+        self.tableView.deleteRowsAtIndexPaths(indexArray, withRowAnimation: UITableViewRowAnimation.Left)
+        
+        self.tableView.reloadData()
+        // self.tableView.endUpdates()
+    }
     
     /*
     // Override to support conditional editing of the table view.

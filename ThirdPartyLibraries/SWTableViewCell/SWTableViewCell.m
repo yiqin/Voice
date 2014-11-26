@@ -75,6 +75,9 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
 
 - (void)initializer
 {
+    // Setup
+    self.indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    
     // Set up scroll view that will host our cell content
     self.cellScrollView = [[SWCellScrollView alloc] init];
     self.cellScrollView.translatesAutoresizingMaskIntoConstraints = NO;
