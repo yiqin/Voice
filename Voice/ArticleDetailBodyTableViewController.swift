@@ -61,7 +61,8 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             let blockIndex = getBlockIndex(indexPath.row)
             if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1 && blockIndex >= 0){
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
-                return ArticleTextBlockTableViewCell.cellHeight(articleBlock.text)
+                // return ArticleTextBlockTableViewCell.cellHeight(articleBlock.text)
+                return ArticleTextBlockTableViewCell.cellHeight()
             }
             
             return ArticleTextBlockTableViewCell.cellHeight()
@@ -116,7 +117,7 @@ class ArticleDetailBodyTableViewController: UITableViewController {
             if(blockIndex <= ArticleDetailManager.sharedInstance.articleBlocks.count-1 && blockIndex >= 0){
                 let articleBlock = ArticleDetailManager.sharedInstance.articleBlocks.objectAtIndex(blockIndex) as ArticleBlock
                 // cell?.paragraph.text = articleBlock.text
-                cell?.updateFrame(articleBlock.text)
+                // cell?.updateFrame(articleBlock.text)
             }
             return cell!
         }

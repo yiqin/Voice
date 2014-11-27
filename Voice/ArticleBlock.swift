@@ -10,11 +10,6 @@ import UIKit
 
 class ArticleBlock:NSVoiceObject{
     
-    var text:String
-    var isText:Bool
-    
-    var image : VMImageView
-    
     var htmlData : NSData
     
     /**
@@ -25,9 +20,6 @@ class ArticleBlock:NSVoiceObject{
     var isHtmlLoading = false
     
     override init(parseObject:PFObject) {
-        image = VMImageView()
-        text = ""
-        isText = parseObject["isText"] as Bool
         
         let htmlPFFile = parseObject["html"] as PFFile
         
@@ -41,23 +33,7 @@ class ArticleBlock:NSVoiceObject{
             
             self.isHtmlLoading = true
             self.htmlData = receivedHtmlData
-            
         })
-        
-        // No use now.
-        if (isText) {
-            text = parseObject["text"] as String
-        }
-        else {
-            let thunmbnail = parseObject["image"] as PFFile
-            image.file = thunmbnail
-            image.isLoading = true
-            image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                println("Load voice image succesfully.")
-                self.image.isLoading = false
-            }
-        }
-        
         
     };
 }
