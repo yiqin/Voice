@@ -36,13 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DeviceManager.sharedInstance
         AdsManager.sharedInstance
         
-        DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
+        // Previous method.
+        // DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
         
         ArticlesManager.sharedInstance
         ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
         
         StreetImagesManager.sharedInstance
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()
+        
+        VoiceLocationManager.sharedInstance
+        VoiceLocationManager.sharedInstance.getCurrentLocation()
     }
     
     func parseSetup(){

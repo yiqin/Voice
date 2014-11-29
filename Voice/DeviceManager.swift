@@ -21,6 +21,15 @@ class DeviceManager: NSObject {
 
     /// If cityName is all, then load ads randomly. If cityName is specified, then load the ads
     var cityName = "all"
+
+    
+    class var sharedInstance : DeviceManager {
+        struct Static {
+            static let instance = DeviceManager()
+        }
+        return Static.instance
+    }
+    
     
     /**
      Handle the size of screen.
@@ -44,10 +53,12 @@ class DeviceManager: NSObject {
         }
     }
     
+    // No use anymore
     /**
      Handle the location of ads. After getting the location, we need to use AdsLocation to fetch related ads.
      - Currently load Lafayette with the objectId "TX1TdJitsX", it should be cityName in the next version.
     */
+    /*
     func startLoadingRelatedAdsFromParse() {
         var query  = PFQuery(className: "AdsLocation")
         query.orderByDescending("updatedAt")
@@ -58,12 +69,7 @@ class DeviceManager: NSObject {
             AdsManager.sharedInstance.startLoadingDataFromParse(self.adsLocations.objectAtIndex(0) as AdsLocation)
         }
     }
-    
-    class var sharedInstance : DeviceManager {
-        struct Static {
-            static let instance = DeviceManager()
-        }
-        return Static.instance
-    }
+    */
+
     
 }

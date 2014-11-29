@@ -25,3 +25,4 @@
 #import "Mixpanel.h"
 #import "VoiceMixpanel.h"
 #import "SVProgressHUD.h"
+#import "INTULocationManager.h"
