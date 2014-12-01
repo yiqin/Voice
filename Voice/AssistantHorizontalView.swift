@@ -31,7 +31,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     
     override init() {
         super.init()
-        backgroundColor = UIColor.blueColor()
+        // backgroundColor = UIColor.blueColor()
         
         lastLocation = self.center
         
@@ -126,12 +126,12 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     }
     
     func updateFrame() {
-        // repeat (update later.)
+        // size repeat (update later.)
         assistantHeight = CGFloat(50.0)
         assistantWidth = DeviceManager.sharedInstance.screenWidth
         
         // Setup init position
-        self.frame = CGRectMake(0, assistantInitPosition, assistantWidth, assistantHeight)
+        frame = CGRectMake(0, assistantInitPosition, assistantWidth, assistantHeight)
         
         // button
         let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
@@ -139,12 +139,15 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         
         button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
         
-        button.setTitle("Voice ME", forState: UIControlState.Normal)
+        // button.setTitle("Voice ME", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        button.setBackgroundImage(UIImage(named: "testImage.jpg"), forState: UIControlState.Normal)
         
         button.addGestureRecognizer(panRecognizer)
         
-        self.addSubview(button)
+        
+        addSubview(button)
     }
     
     /**
