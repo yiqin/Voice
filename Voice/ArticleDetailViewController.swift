@@ -141,11 +141,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
         
+        self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
+        /*
         UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
+            
         }) { (completion) -> Void in
             
         }
+        */
     }
     
     

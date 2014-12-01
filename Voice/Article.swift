@@ -41,33 +41,7 @@ class Article: NSVoiceObject {
             self.isFirstLoad = false
         }
         
-        // directlyLoadWholeArticleWithNotification(false)
-        var query  = PFQuery(className: "ArticleBlock")
-        query.orderByAscending("indexNumber")
-        query.whereKey("belongTo", equalTo: self.parseObject)
-        
-        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                var recievedObjects = NSMutableArray()
-                
-                /*****************************/
-                // This is not a safe method.
-                // Only one object is returned.
-                for object in objects {
-                    let newReadyObject = ArticleBlock(parseObject: object as PFObject)
-                    // println(newReadyObject.text)
-                    
-                    recievedObjects.addObject(newReadyObject)
-                }
-                
-                self.articleBlocks.removeAllObjects()
-                self.articleBlocks.addObjectsFromArray(recievedObjects)
-                self.isArticleBlocksReady = true
-            } else {
-                NSLog("Error: %@ %@", error, error.userInfo!)
-            }
-        }
-
+        directlyLoadWholeArticleWithNotification(false)
     };
     
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
@@ -102,9 +76,10 @@ class Article: NSVoiceObject {
                 
                 
                 self.articleBlocks.removeAllObjects()
-                
                 self.articleBlocks.addObjectsFromArray(recievedObjects)
+                
                 self.isArticleBlocksReady = true
+                self.testHTML()
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
@@ -117,7 +92,6 @@ class Article: NSVoiceObject {
         // remove articleblocks no mater what it has.
         // Maybe not
         
-        
         // If articleBlocks already have contents, directly return. No need to load again.
         if (articleBlocks.count>0){
             ArticleDetailManager.sharedInstance.addAllArticleBlcoks(articleBlocks)
@@ -126,5 +100,21 @@ class Article: NSVoiceObject {
         
         directlyLoadWholeArticleWithNotification(true)
     }
-
+    
+    // Not sure whether this method work or not.
+    func testHTML(){
+        // Assign a value here.
+        var articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, 320, 560))
+        
+        var path = NSBundle.mainBundle().bundlePath
+        var baseUrl  = NSURL.fileURLWithPath("\(path)")
+        
+        var allHtmlData = NSMutableData()
+        
+        for articleBlock in articleBlocks {
+            allHtmlData.appendData((articleBlock as ArticleBlock).htmlData)
+        }
+        var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
+        articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
+    }
 }
