@@ -37,7 +37,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         
         articleDetailBodyWebView.delegate = self
         
-        load()
+        loadWeb()
         
         // Disable articleDetailBodyTVC now.
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
@@ -96,10 +96,25 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     }
     
     
-    func load(){
+    func loadWeb(){
         println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
         
-        if(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady()){
+        // Why selectedArticle has zero values...
+        if (selectedArticle.isArticleBlocksReady){
+            
+            var path = NSBundle.mainBundle().bundlePath
+            var baseUrl  = NSURL.fileURLWithPath("\(path)")
+            
+            var allHtmlData = NSMutableData()
+            
+            for articleBlock in selectedArticle.articleBlocks {
+                allHtmlData.appendData((articleBlock as ArticleBlock).htmlData)
+            }
+            var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
+            articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
+            
+        }
+        else if(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady()){
             
             var path = NSBundle.mainBundle().bundlePath
             var baseUrl  = NSURL.fileURLWithPath("\(path)")
@@ -111,12 +126,11 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             }
             var content = NSString(data: allHtmlData, encoding: NSUTF8StringEncoding)
             articleDetailBodyWebView.loadHTMLString(content, baseURL: baseUrl)
-            
 
         }
         else {
             // this is not a perfect method.
-            var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("load"), userInfo: nil, repeats: false)
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("loadWeb"), userInfo: nil, repeats: false)
         }
     }
     
@@ -133,7 +147,6 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             
         }
     }
-    
     
     
     func swipeRight(recognizer:UISwipeGestureRecognizer){

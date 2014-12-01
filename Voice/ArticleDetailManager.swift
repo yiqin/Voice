@@ -26,6 +26,7 @@ class ArticleDetailManager: NSObject {
         articleBlocks.addObject(articleBlock)
     }
     
+    // This is not a safe method.
     func removeArticleBlocks(){
         articleBlocks.removeAllObjects()
     }
