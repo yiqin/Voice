@@ -47,7 +47,7 @@
     [self.cellScrollView addSubview:self.briefDescription];
     [self.cellScrollView addSubview:self.briefImage];
     
-    UIView *seperateLine = [[UIView alloc] initWithFrame:CGRectMake(0, 129, 500, 1)];
+    UIView *seperateLine = [[UIView alloc] initWithFrame:CGRectMake(0, 129, 500, 0.5)];
     seperateLine.backgroundColor = [UIColor whiteColor];
     [self addSubview:seperateLine];
 }

@@ -14,10 +14,10 @@ import UIKit
 class StreetImagesManager: NSObject {
     
     /// The numbers of images in a row.
-    var numberPerRow = 5;
+    var numberPerRow = 5
     /// The numbers of rows in the image table view.
-    var numberOfRows = 0;
-    var streetImages : NSMutableArray = [];
+    var numberOfRows = 0
+    var streetImages : NSMutableArray = []
     
     /// Collection content offsets for every row.
     var collectionContentOffsets = NSMutableDictionary();
