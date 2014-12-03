@@ -47,8 +47,6 @@
     self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:indexPath.row];
     
     // NSLog(@"%f", [[StreetImagesManager sharedInstance] getCollectionContentOffset:indexPath.row]);
-    
-    
     [self.collectionView setContentOffset:CGPointMake([[StreetImagesManager sharedInstance] getCollectionContentOffset:self.rowNumber],0) animated:NO];
     
     [self.collectionView reloadData];
