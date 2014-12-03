@@ -5,7 +5,7 @@
 #import <Parse/Parse.h>
 
 
-#import "YQButton.h"    // in Leaftagger folder
+#import "YQButton.h"
 
 #import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"

@@ -16,6 +16,8 @@
 		8D4A345D1A2D092200F4E0CA /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4A345C1A2D092200F4E0CA /* testImage.jpg */; };
 		8D4AB35319F9B7DC00222967 /* StreetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* StreetImage.swift */; };
 		8D4AB35519F9B95D00222967 /* StreetImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */; };
+		8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E48001A2EC01F003705D7 /* assistantView1.jpg */; };
+		8D4E48031A2EC01F003705D7 /* assistantView2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E48011A2EC01F003705D7 /* assistantView2.jpg */; };
 		8D571BF31A016E6800859378 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D571BF11A016E6800859378 /* backArrow.png */; };
 		8D571BF41A016E6800859378 /* backArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D571BF21A016E6800859378 /* backArrow@2x.png */; };
 		8D571D8B1A0173B000859378 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D571D8A1A0173B000859378 /* UIKit.framework */; };
@@ -182,6 +184,8 @@
 		8D4A345C1A2D092200F4E0CA /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* StreetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImagesManager.swift; sourceTree = "<group>"; };
+		8D4E48001A2EC01F003705D7 /* assistantView1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = assistantView1.jpg; sourceTree = "<group>"; };
+		8D4E48011A2EC01F003705D7 /* assistantView2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = assistantView2.jpg; sourceTree = "<group>"; };
 		8D571BF11A016E6800859378 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
 		8D571BF21A016E6800859378 /* backArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backArrow@2x.png"; sourceTree = "<group>"; };
 		8D571D8A1A0173B000859378 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -452,6 +456,8 @@
 			children = (
 				8D571BF11A016E6800859378 /* backArrow.png */,
 				8D571BF21A016E6800859378 /* backArrow@2x.png */,
+				8D4E48001A2EC01F003705D7 /* assistantView1.jpg */,
+				8D4E48011A2EC01F003705D7 /* assistantView2.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -955,9 +961,11 @@
 				8DB6F3BC19F1BC4E002ED90F /* Main.storyboard in Resources */,
 				8D571F1D1A0175FF00859378 /* snapshot_config.json in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
+				8D4E48031A2EC01F003705D7 /* assistantView2.jpg in Resources */,
 				8D6E0D171A2D3AE400F7B8B6 /* unnamed.jpg in Resources */,
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
 				8D571EFB1A0175FF00859378 /* MPCloseBtn.png in Resources */,
+				8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */,
 				8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */,
 				8D9F7F311A0C5B910026AA07 /* Launching.gif in Resources */,
 				8D571F1E1A0175FF00859378 /* test_variant.json in Resources */,

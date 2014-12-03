@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-		self.layer.cornerRadius = 5.0;
+		// self.layer.cornerRadius = 5.0;
         self.layer.masksToBounds = YES;
 		self.titleLabel.textAlignment = NSTextAlignmentCenter;
 		
@@ -40,82 +40,6 @@
 }
 
 @end
-
-@implementation YQOneButton
-
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		self.backgroundColor = [UIColor colorWithRed:148.0/255.0 green:202.0/255.0 blue:84.0/255.0 alpha:1.0];
-		self.regularColor = [UIColor colorWithRed:148.0/255.0 green:202.0/255.0 blue:84.0/255.0 alpha:1.0];
-		self.highlightedColor = [UIColor colorWithRed:84.0/255.0 green:163.0/255.0 blue:141.0/255.0 alpha:0.5];
-	}
-	return self;
-}
-
-@end
-
-@implementation YQTwoButton
-
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		self.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:178.0/255.0 blue:89.0/255.0 alpha:1.0];
-		self.regularColor = [UIColor colorWithRed:245.0/255.0 green:178.0/255.0 blue:89.0/255.0 alpha:1.0];
-		self.highlightedColor = [UIColor colorWithRed:84.0/255.0 green:163.0/255.0 blue:141.0/255.0 alpha:0.5];
-	}
-	return self;
-}
-
-@end
-
-@implementation YQThreeButton
-
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		self.backgroundColor = [UIColor colorWithRed:112.0/255.0 green:218.0/255.0 blue:189.0/255.0 alpha:1.0];
-		self.regularColor = [UIColor colorWithRed:112.0/255.0 green:218.0/255.0 blue:189.0/255.0 alpha:1.0];
-		self.highlightedColor = [UIColor colorWithRed:84.0/255.0 green:163.0/255.0 blue:141.0/255.0 alpha:0.5];
-	}
-	return self;
-}
-
-@end
-
-@implementation YQFourButton
-
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		self.backgroundColor = [UIColor colorWithRed:213.0/255.0 green:165.0/255.0 blue:216.0/255.0 alpha:1.0];
-		self.regularColor = [UIColor colorWithRed:213.0/255.0 green:165.0/255.0 blue:216.0/255.0 alpha:1.0];
-		self.highlightedColor = [UIColor colorWithRed:84.0/255.0 green:163.0/255.0 blue:141.0/255.0 alpha:0.5];
-	}
-	return self;
-}
-
-@end
-
-@implementation YQFiveButton
-
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		self.backgroundColor = [UIColor colorWithRed:252.0/255.0 green:122.0/255.0 blue:125.0/255.0 alpha:1.0];
-		self.regularColor = [UIColor colorWithRed:252.0/255.0 green:122.0/255.0 blue:125.0/255.0 alpha:1.0];
-		self.highlightedColor = [UIColor colorWithRed:84.0/255.0 green:163.0/255.0 blue:141.0/255.0 alpha:0.5];
-	}
-	return self;
-}
-
-@end
-
 
 @implementation YQButtonWithImage
 

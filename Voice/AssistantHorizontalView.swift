@@ -134,22 +134,11 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         frame = CGRectMake(0, assistantInitPosition, assistantWidth, assistantHeight)
         
         // button
-        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(0, 0, assistantWidth, assistantHeight)
-        
-        button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
-        
-        // button.setTitle("Voice ME", forState: UIControlState.Normal)
+        let button = YQButtonWithImage(frame: CGRectMake(0, 0, assistantWidth, assistantHeight), image: "assistantView1.jpg", selectedImage: "assistantView2.jpg")
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        // This need more works.......
-        button.highlighted = false
-        button.setBackgroundImage(UIImage(named: "testImage.jpg"), forState: UIControlState.Normal)
-        button.setBackgroundImage(UIImage(named: "unnamed.jpg"), forState: UIControlState.Highlighted)
         
         button.addGestureRecognizer(panRecognizer)
-        
-        
         addSubview(button)
     }
     
@@ -163,7 +152,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     
     func buttonAction(sender:UIButton!) {
         println("Button tapped")
-        SweetAlert().showAlert("Good job!", subTitle: "You clicked the button!", style: AlertStyle.Success)
+        // SweetAlert().showAlert("Good job!", subTitle: "You clicked the button!", style: AlertStyle.Success)
     }
     
     class func height() -> CGFloat {
