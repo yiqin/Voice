@@ -14,11 +14,12 @@ import UIKit
 class StreetImagesManager: NSObject {
     
     /// The numbers of images in a row.
-    var numberPerRow = 4;
+    var numberPerRow = 5;
     /// The numbers of rows in the image table view.
     var numberOfRows = 0;
     var streetImages : NSMutableArray = [];
     
+    /// Collection content offsets for every row.
     var collectionContentOffsets = NSMutableDictionary();
     
     class var sharedInstance : StreetImagesManager {
@@ -96,7 +97,12 @@ class StreetImagesManager: NSObject {
         }
     }
     
+    /**
+    Collection content offset
     
+    :rowIndex: rowIndex row index in the table view on DownView
+    :return: return collection content offset
+    */
     func getCollectionContentOffset(rowIndex:Int) -> CGFloat {
         
         if ((collectionContentOffsets.objectForKey(rowIndex)) != nil){
@@ -107,11 +113,13 @@ class StreetImagesManager: NSObject {
         }
     }
     
-    func setCollectionContentOffset(rowIndex:Int, offset:CGFloat) {
-        
-        collectionContentOffsets.setObject(offset, forKey: rowIndex)
-        
-    }
-
+    /**
+    Collection content offset
     
+    :rowIndex: rowIndex row index in the table view on DownViewn
+    :offset: the updated offset in the specified row.
+    */
+    func setCollectionContentOffset(rowIndex:Int, offset:CGFloat) {
+        collectionContentOffsets.setObject(offset, forKey: rowIndex)
+    }
 }
