@@ -142,7 +142,10 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         // button.setTitle("Voice ME", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
+        // This need more works.......
+        button.highlighted = false
         button.setBackgroundImage(UIImage(named: "testImage.jpg"), forState: UIControlState.Normal)
+        button.setBackgroundImage(UIImage(named: "unnamed.jpg"), forState: UIControlState.Highlighted)
         
         button.addGestureRecognizer(panRecognizer)
         
