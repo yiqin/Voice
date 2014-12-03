@@ -13,7 +13,6 @@
 		8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */; };
 		8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */; };
 		8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24C4C01A151F080008AC10 /* SweetAlert.swift */; };
-		8D4A345D1A2D092200F4E0CA /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4A345C1A2D092200F4E0CA /* testImage.jpg */; };
 		8D4AB35319F9B7DC00222967 /* StreetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* StreetImage.swift */; };
 		8D4AB35519F9B95D00222967 /* StreetImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */; };
 		8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E48001A2EC01F003705D7 /* assistantView1.jpg */; };
@@ -103,7 +102,6 @@
 		8D6C2BE71A22E98800EB01FB /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BDF1A22E98800EB01FB /* SWTableViewCell.m */; };
 		8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */; };
 		8D6C2BE91A22E98800EB01FB /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */; };
-		8D6E0D171A2D3AE400F7B8B6 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D6E0D161A2D3AE400F7B8B6 /* unnamed.jpg */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -181,7 +179,6 @@
 		8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBlock.swift; sourceTree = "<group>"; };
 		8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
 		8D24C4C01A151F080008AC10 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
-		8D4A345C1A2D092200F4E0CA /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* StreetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImagesManager.swift; sourceTree = "<group>"; };
 		8D4E48001A2EC01F003705D7 /* assistantView1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = assistantView1.jpg; sourceTree = "<group>"; };
@@ -330,7 +327,6 @@
 		8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		8D6C2BE21A22E98800EB01FB /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
-		8D6E0D161A2D3AE400F7B8B6 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -745,8 +741,6 @@
 			isa = PBXGroup;
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
-				8D6E0D161A2D3AE400F7B8B6 /* unnamed.jpg */,
-				8D4A345C1A2D092200F4E0CA /* testImage.jpg */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9F7F301A0C5B910026AA07 /* Launching.gif */,
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
@@ -955,14 +949,12 @@
 			files = (
 				8D571F0C1A0175FF00859378 /* MPSurvey.storyboard in Resources */,
 				8D571EE31A0175FF00859378 /* Media.xcassets in Resources */,
-				8D4A345D1A2D092200F4E0CA /* testImage.jpg in Resources */,
 				8D6C2BCE1A223FA000EB01FB /* SVProgressHUD.bundle in Resources */,
 				8D571BF41A016E6800859378 /* backArrow@2x.png in Resources */,
 				8DB6F3BC19F1BC4E002ED90F /* Main.storyboard in Resources */,
 				8D571F1D1A0175FF00859378 /* snapshot_config.json in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
 				8D4E48031A2EC01F003705D7 /* assistantView2.jpg in Resources */,
-				8D6E0D171A2D3AE400F7B8B6 /* unnamed.jpg in Resources */,
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
 				8D571EFB1A0175FF00859378 /* MPCloseBtn.png in Resources */,
 				8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */,

@@ -24,8 +24,8 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.backgroundColor = UIColor.purpleColor()
-        self.refreshControl?.tintColor = UIColor.whiteColor()
+        self.refreshControl?.backgroundColor = UIColor.whiteColor()
+        // self.refreshControl?.tintColor = UIColor.whiteColor()
         
         self.refreshControl?.addTarget(self, action: "getLatestImages", forControlEvents: .ValueChanged)
         
@@ -64,7 +64,7 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
         if (StreetImagesManager.sharedInstance.numberOfRows == 0) {
             messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))
             messageLabel.text = "No data is currently available. Please pull down to refresh."
-            messageLabel.textColor = UIColor.blackColor()
+            messageLabel.textColor = UIColor.whiteColor()
             messageLabel.numberOfLines = 0
             messageLabel.textAlignment = NSTextAlignment.Center
             messageLabel.font = UIFont(name: "Palatino-Italic", size: 20)

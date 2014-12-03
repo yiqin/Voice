@@ -45,8 +45,8 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
         super.viewDidLoad()
                 
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.backgroundColor = UIColor.purpleColor()
-        self.refreshControl?.tintColor = UIColor.whiteColor()
+        self.refreshControl?.backgroundColor = UIColor.whiteColor()
+        // self.refreshControl?.tintColor = UIColor.whiteColor()
         
         self.refreshControl?.addTarget(self, action: "getLatestArticles", forControlEvents: .ValueChanged)
         

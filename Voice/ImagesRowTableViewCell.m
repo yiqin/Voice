@@ -27,7 +27,7 @@
     self.imagesRowScrollView = [[ImagesRowScrollView alloc] initWithFrame:CGRectMake(0, 0, [DeviceManager sharedInstance].screenWidth, 130)];
     
     // spend two hours to fix this bug....
-    self.imagesRowScrollView.backgroundColor = [UIColor blackColor];
+    self.imagesRowScrollView.backgroundColor = [UIColor whiteColor];
     
     [self addSubview:self.imagesRowScrollView];
 }
