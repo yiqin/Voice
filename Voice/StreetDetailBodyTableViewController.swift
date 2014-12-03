@@ -12,8 +12,15 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     var streetImage: StreetImage
     
+    /// Check is it the first time to load the image from parse.com?
+    var isFisrtLoadCheckSet: NSMutableSet
+    /// Store images from parse.com and fetch images locally
+    var imageDictionary: NSMutableDictionary
+    
     init(selectedStreetImage: StreetImage) {
         streetImage = selectedStreetImage
+        isFisrtLoadCheckSet = NSMutableSet()
+        imageDictionary = NSMutableDictionary()
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
         self.tableView.separatorColor = UIColor.clearColor()
@@ -53,7 +60,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         super.objectsDidLoad(error) // Don't forget the super method.
     }
     
-    
+    /// Update height here after the downlaod is finished.
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let object = self.objects[indexPath.row] as PFObject
@@ -72,14 +79,41 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         }
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         
-        // The image is reload again and again and again.
-        let thunmbnail = object["image"] as PFFile
-        cell?.streetDetailImageView.file = thunmbnail
-        cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
         
-        cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-            println("Load Street Detail Image ssauccesfully.")
+        if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
+            
+            let thunmbnail = object["image"] as PFFile
+            cell?.streetDetailImageView.file = thunmbnail
+            cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+            
+            cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                
+                println("Load Street Detail Image ssauccesfully.")
+                
+                println("Image Width: \(image.size.width)")
+                println("Image Height: \(image.size.height)")
+                
+                let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+                
+                
+                var object_ = self.objects[indexPath.row] as PFObject
+                
+                object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
+                println(image.size.height*ratio)
+                
+                self.imageDictionary.setObject(image, forKey: indexPath.row)
+                
+                tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                
+               self.isFisrtLoadCheckSet.addObject(indexPath.row)
+            }
         }
+        else {
+            // let thunmbnail = object["image"] as PFFile
+            // cell?.streetDetailImageView.file = thunmbnail
+            cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
+        }
+        
         
         return cell
     }
