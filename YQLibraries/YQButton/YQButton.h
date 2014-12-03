@@ -15,26 +15,6 @@
 
 @end
 
-@interface YQOneButton : YQButton
-
-@end
-
-@interface YQTwoButton : YQButton
-
-@end
-
-@interface YQThreeButton : YQButton
-
-@end
-
-@interface YQFourButton : YQButton
-
-@end
-
-@interface YQFiveButton : YQButton
-
-@end
-
 @interface YQButtonWithImage : YQButton
 
 // mutable subclass(NString, NSDictionary)
