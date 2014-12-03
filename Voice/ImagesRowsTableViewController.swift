@@ -110,8 +110,9 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
         }
     }
     
+    /// class method to define the init offset. It will create some wired animation.
     class func initContentOffset() -> CGFloat {
-        return ImagesRowTableViewCell.cellHeight()*2
+        return ImagesRowTableViewCell.cellHeight()*0
     }
     
     func moveToSelectedStreetImage(streetImage: StreetImage!) {

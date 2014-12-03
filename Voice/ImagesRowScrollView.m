@@ -11,6 +11,10 @@
 #import <Parse/Parse.h>
 #import <Voice-Swift.h>
 
+@interface ImagesRowScrollView()
+@property(nonatomic) BOOL isFirstLoad;
+@end
+
 @implementation ImagesRowScrollView
 
 
@@ -28,9 +32,8 @@
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         self.collectionView.backgroundColor = [UIColor whiteColor];
-                
-        // int r = rand() % 8;
-        // self.collectionView.contentOffset = CGPointMake(60*(5%(r+1)),0);    // set contentOffset here
+        
+        self.isFirstLoad = YES;
         
         UINib *nib = [UINib nibWithNibName:@"ImageCollectionViewCell" bundle:nil];
         [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ImageCell"];
@@ -47,7 +50,17 @@
     self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:indexPath.row];
     
     // NSLog(@"%f", [[StreetImagesManager sharedInstance] getCollectionContentOffset:indexPath.row]);
-    [self.collectionView setContentOffset:CGPointMake([[StreetImagesManager sharedInstance] getCollectionContentOffset:self.rowNumber],0) animated:NO];
+    if (self.isFirstLoad) {
+        self.isFirstLoad = NO;
+        int r = arc4random_uniform(6);
+        NSLog(@"Random number:   %i",r);
+        
+        // self.collectionView.contentOffset = CGPointMake(50*r,0);    // set contentOffset here
+        [self.collectionView setContentOffset:CGPointMake(50*r,0) animated:NO];
+    }
+    else {
+        [self.collectionView setContentOffset:CGPointMake([[StreetImagesManager sharedInstance] getCollectionContentOffset:self.rowNumber],0) animated:NO];
+    }
     
     [self.collectionView reloadData];
 }
