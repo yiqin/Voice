@@ -23,6 +23,7 @@ class StreetDetailViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         
         streetDetailTVC.view.frame = CGRectMake(0, 45, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-45)
+        streetDetailTVC.pullToRefreshEnabled = false;
         view.addSubview(streetDetailTVC.view)
         
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)

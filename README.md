@@ -3,7 +3,7 @@
 
 ---
 ## Todo List
-1. Rename VoiceImage in backend. Each VoiceImage has any numbers of images.
+1. imageHeight is redundant......
 2. Middle bar has one more animation.
 3. Update A/B testing method.
 

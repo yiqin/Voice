@@ -25,6 +25,9 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
         self.tableView.separatorColor = UIColor.clearColor()
         self.view.hidden = false;
+        
+        pullToRefreshEnabled = false;
+        paginationEnabled = false;
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -43,9 +46,15 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     }
     
     override func queryForTable() -> PFQuery! {
+        
+        
         var query = PFQuery(className: "StreetDetailImage")
         query.whereKey("belongTo", equalTo: streetImage.parseObject)
         query.orderByAscending("indexNumber")
+        
+        if (self.pullToRefreshEnabled) {
+            query.cachePolicy = kPFCachePolicyNetworkOnly;
+        }
         
         /*
         if(self.objects.count == 0){
