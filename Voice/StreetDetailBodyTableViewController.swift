@@ -27,7 +27,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         self.view.hidden = false;
         
         pullToRefreshEnabled = false;
-        paginationEnabled = false;
+        self.refreshControl = nil;   // Disable refresh......
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -47,14 +47,15 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func queryForTable() -> PFQuery! {
         
-        
         var query = PFQuery(className: "StreetDetailImage")
         query.whereKey("belongTo", equalTo: streetImage.parseObject)
         query.orderByAscending("indexNumber")
         
+        /*
         if (self.pullToRefreshEnabled) {
-            query.cachePolicy = kPFCachePolicyNetworkOnly;
+            query.cachePolicy = kPFCachePolicyCacheOnly;
         }
+*/
         
         /*
         if(self.objects.count == 0){
@@ -97,6 +98,10 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             
             cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
                 
+                
+                
+                
+                
                 println("Load Street Detail Image ssauccesfully.")
                 
                 println("Image Width: \(image.size.width)")
@@ -104,7 +109,9 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 
                 let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
                 
-                
+                // ==================================================
+                // Strong and weak reference.........................
+                // ==================================================
                 var object_ = self.objects[indexPath.row] as PFObject
                 
                 object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
@@ -114,7 +121,13 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 
                 tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                 
-               self.isFisrtLoadCheckSet.addObject(indexPath.row)
+                
+                self.isFisrtLoadCheckSet.addObject(indexPath.row)
+               
+                
+                
+                
+               // self.loadNextCell(indexPath)
             }
         }
         else {
@@ -127,6 +140,46 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         return cell
     }
 
+    // This method failed. Still need imageheight.
+    func loadNextCell(indexPath: NSIndexPath!){
+        let row = indexPath.row+1
+        if(row >= self.objects.count){
+            return
+        }
+        
+        let object = self.objects[(row)] as PFObject
+        let streetDetailImageView = PFImageView()
+        streetDetailImageView.file = object["image"] as PFFile
+        
+        streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+            
+            println("Load Street Detail Image ssauccesfully.")
+            
+            println("Image Width: \(image.size.width)")
+            println("Image Height: \(image.size.height)")
+            
+            let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+            
+            
+            if ((self.isFisrtLoadCheckSet.member(indexPath.row)) == nil){
+                
+                
+                var object_ = self.objects[row] as PFObject
+                
+                object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
+                println(image.size.height*ratio)
+                
+                self.imageDictionary.setObject(image, forKey: row)
+                
+                // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                // self.isFisrtLoadCheckSet.addObject(row)
+                
+                // self.loadNextCell(indexPath)
+
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
