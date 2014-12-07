@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         VoiceLocationManager.sharedInstance
         VoiceLocationManager.sharedInstance.getCurrentLocation()
+        
+        ConfigDataManager.sharedInstance
     }
     
     func parseSetup(){

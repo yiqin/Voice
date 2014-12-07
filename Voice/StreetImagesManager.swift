@@ -60,6 +60,9 @@ class StreetImagesManager: NSObject {
                 self.streetImages.addObjectsFromArray(recievedImages)
                 
                 // self.fetchStreetImagesWithRowIndex(1)    // check 2nd row -> 1
+                
+                // Then we start to load config paramters.
+                ConfigDataManager.sharedInstance.startToRetrieveConfig()
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
