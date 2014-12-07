@@ -33,14 +33,14 @@ class ConfigDataManager: NSObject {
                 // config = PFConfig.currentConfig()
             }
             
-            var welcomeMessage = config["launchingGIF"] as? PFFile
-            if welcomeMessage == nil {
+            var launchingGIF = config["launchingGIF"] as? PFFile
+            if launchingGIF == nil {
                 println("Falling back to default message.")
                 
             }
             else {
                 println("Success....")
-                
+                NSUserDefaultsDataManager.sharedInstance.setLaunchingGIF(launchingGIF!)
                 
                 
             }

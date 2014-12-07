@@ -22,7 +22,11 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
         gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         view.addSubview(gifImageView)
+        
         gifImageView.setAnimatableImage(named: "launching_1.gif")
+        // More works is needed here to setup.................
+        // gifImageView.setAnimatableImage(data: NSUserDefaultsDataManager.sharedInstance.getLaunchingGIF())
+        
         gifImageView.startAnimating()
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
