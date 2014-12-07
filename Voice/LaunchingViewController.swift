@@ -19,19 +19,20 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        gifImageView = UIImageView(frame: CGRectMake(0, 160, 320, 240))
+        gifImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
+        gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         view.addSubview(gifImageView)
-        gifImageView.setAnimatableImage(named: "Launching.gif")
+        gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
         gifImageView.stopAnimating()
         
         var mainViewController = MainViewController(nibName:nil, bundle:nil)
-        self.navigationController?.pushViewController(mainViewController, animated: false)
+        self.navigationController?.pushViewController(mainViewController, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

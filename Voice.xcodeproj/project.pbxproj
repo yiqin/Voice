@@ -120,6 +120,7 @@
 		8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */; };
 		8DB6F3CD19F1BC4F002ED90F /* VoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */; };
 		8DBD8D9B1A19A857008B0102 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD8D9A1A19A857008B0102 /* YQButton.m */; };
+		8DC512551A34075000FDFE28 /* launching_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DC512541A34075000FDFE28 /* launching_1.gif */; };
 		8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695571A1C07E6002D06B8 /* Crashlytics.framework */; };
 		8DC6955A1A1C07E6002D06B8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695581A1C07E6002D06B8 /* Fabric.framework */; };
 		8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */; };
@@ -355,6 +356,7 @@
 		8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTests.swift; sourceTree = "<group>"; };
 		8DBD8D991A19A857008B0102 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
 		8DBD8D9A1A19A857008B0102 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
+		8DC512541A34075000FDFE28 /* launching_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launching_1.gif; sourceTree = "<group>"; };
 		8DC695571A1C07E6002D06B8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8DC695581A1C07E6002D06B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8DCDD3C619FB0932003C5746 /* ImagesRowsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesRowsTableViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		8D571BEC1A016E4500859378 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8DC512541A34075000FDFE28 /* launching_1.gif */,
 				8D571BF11A016E6800859378 /* backArrow.png */,
 				8D571BF21A016E6800859378 /* backArrow@2x.png */,
 				8D4E48001A2EC01F003705D7 /* assistantView1.jpg */,
@@ -963,6 +966,7 @@
 				8D571F1E1A0175FF00859378 /* test_variant.json in Resources */,
 				8D571EFC1A0175FF00859378 /* MPCloseBtn@2x.png in Resources */,
 				8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */,
+				8DC512551A34075000FDFE28 /* launching_1.gif in Resources */,
 				8D571EFF1A0175FF00859378 /* MPNotification.storyboard in Resources */,
 				8D571BF31A016E6800859378 /* backArrow.png in Resources */,
 			);
