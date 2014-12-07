@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "SWTableViewCell.h"
+#import "VoiceLabel.h"
 
 @class Article;
 
@@ -17,8 +18,7 @@
 @property (nonatomic) CGFloat tableWidth;
 
 @property (nonatomic, strong) PFImageView *briefImage;
-@property (nonatomic, strong) UILabel *title;
-@property (nonatomic, strong) UILabel *briefDescription;
+@property (nonatomic, strong) VoiceLabel *title;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier tableWidth:(CGFloat)tableWidth;
 

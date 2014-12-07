@@ -13,7 +13,7 @@ class Article: NSVoiceObject {
     var isFirstLoad:Bool
     
     var title: String
-    var briefDescription: String
+    // var briefDescription: String
     var briefImage: PFImageView
     
     var briefImagePFFile: PFFile
@@ -25,7 +25,7 @@ class Article: NSVoiceObject {
         isFirstLoad = true
         
         title = parseObject["title"] as String
-        briefDescription = parseObject["briefDescription"] as String    // How to check this value
+        // briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
         
         briefImagePFFile = parseObject["briefImage"] as PFFile
