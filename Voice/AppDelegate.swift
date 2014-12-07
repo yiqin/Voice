@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ConfigDataManager.sharedInstance
         
-        NSUserDefaultsDataManager.sharedInstance
+        VoiceUserDefaultsDataManager.sharedInstance
     }
     
     func parseSetup(){

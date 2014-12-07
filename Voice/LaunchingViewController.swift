@@ -23,13 +23,15 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         view.addSubview(gifImageView)
         
-        gifImageView.setAnimatableImage(named: "launching_1.gif")
-        // More works is needed here to setup.................
-        // gifImageView.setAnimatableImage(data: NSUserDefaultsDataManager.sharedInstance.getLaunchingGIF())
-        
+        if(VoiceUserDefaultsDataManager.sharedInstance.checkFirstTimeLoad()){
+            gifImageView.setAnimatableImage(data: VoiceUserDefaultsDataManager.sharedInstance.getLaunchingGIF())
+        }
+        else {
+            gifImageView.setAnimatableImage(named: "launching_1.gif")
+        }
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.8, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
