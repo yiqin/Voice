@@ -16,7 +16,7 @@ class ArticlesManager: NSObject {
     
     var articles : NSMutableArray = []
     var currentPageIndex = 0;
-    let itemsPerPage = 8;
+    let itemsPerPage = 10;
     
     class var sharedInstance : ArticlesManager {
         struct Static {

@@ -118,6 +118,8 @@
 		8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BD19F1BC4F002ED90F /* Images.xcassets */; };
 		8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6F3BF19F1BC4F002ED90F /* LaunchScreen.xib */; };
 		8DB6F3CD19F1BC4F002ED90F /* VoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */; };
+		8DBCF7321A34C19200EC1526 /* icon-130.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCF7301A34C19200EC1526 /* icon-130.png */; };
+		8DBCF7331A34C19200EC1526 /* icon-130@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCF7311A34C19200EC1526 /* icon-130@2x.png */; };
 		8DBD8D9B1A19A857008B0102 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD8D9A1A19A857008B0102 /* YQButton.m */; };
 		8DC512551A34075000FDFE28 /* launching_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DC512541A34075000FDFE28 /* launching_1.gif */; };
 		8DC512571A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC512561A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift */; };
@@ -353,6 +355,8 @@
 		8DB6F3C619F1BC4F002ED90F /* VoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3CB19F1BC4F002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3CC19F1BC4F002ED90F /* VoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTests.swift; sourceTree = "<group>"; };
+		8DBCF7301A34C19200EC1526 /* icon-130.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-130.png"; sourceTree = "<group>"; };
+		8DBCF7311A34C19200EC1526 /* icon-130@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-130@2x.png"; sourceTree = "<group>"; };
 		8DBD8D991A19A857008B0102 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
 		8DBD8D9A1A19A857008B0102 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
 		8DC512541A34075000FDFE28 /* launching_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launching_1.gif; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 		8D571BEC1A016E4500859378 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8DBCF7301A34C19200EC1526 /* icon-130.png */,
+				8DBCF7311A34C19200EC1526 /* icon-130@2x.png */,
 				8DC512541A34075000FDFE28 /* launching_1.gif */,
 				8D571BF11A016E6800859378 /* backArrow.png */,
 				8D571BF21A016E6800859378 /* backArrow@2x.png */,
@@ -959,6 +965,8 @@
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
 				8D4E48031A2EC01F003705D7 /* assistantView2.jpg in Resources */,
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
+				8DBCF7321A34C19200EC1526 /* icon-130.png in Resources */,
+				8DBCF7331A34C19200EC1526 /* icon-130@2x.png in Resources */,
 				8D571EFB1A0175FF00859378 /* MPCloseBtn.png in Resources */,
 				8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */,
 				8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */,

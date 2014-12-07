@@ -205,7 +205,7 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
     }
     
     class func initContentOffset() -> CGFloat {
-        return ArticleTableViewCell.cellHeight()*4
+        return ArticleTableViewCell.cellHeight()*6
     }
     
     
