@@ -45,7 +45,7 @@
 
 - (void) loadCollectionImages:(NSIndexPath *)indexPath
 {
-    self.rowNumber = indexPath.row;
+    self.rowNumber = (int)indexPath.row;
     
     self.imagesCollectionData = [[StreetImagesManager sharedInstance] fetchStreetImagesWithRowIndex:indexPath.row];
     

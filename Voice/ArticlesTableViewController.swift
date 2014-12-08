@@ -161,7 +161,8 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
                 cell = ArticleLoadMoreDataTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: articleLoadMoreDataIdentifier)
             }
             
-            cell?.textLabel.text = "Load More Data"
+            cell?.textLabel?.text = "Load More Data"
+            
             return cell!
         }
     }

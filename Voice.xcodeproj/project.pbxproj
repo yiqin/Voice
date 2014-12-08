@@ -88,6 +88,7 @@
 		8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571EE11A0175FF00859378 /* UIView+MPSnapshotImage.m */; };
 		8D571F241A0176D200859378 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D571F231A0176D200859378 /* libicucore.dylib */; };
 		8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D571F261A01789A00859378 /* VoiceMixpanel.m */; };
+		8D5F2DBA1A35F3F700748FED /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F2DB91A35F3F700748FED /* SVIndefiniteAnimatedView.m */; };
 		8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */; };
 		8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */; };
 		8D6C2BC81A2237DC00EB01FB /* ArticleDetailBodyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BC71A2237DC00EB01FB /* ArticleDetailBodyWebView.swift */; };
@@ -306,6 +307,8 @@
 		8D571F231A0176D200859378 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		8D571F251A01789A00859378 /* VoiceMixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceMixpanel.h; sourceTree = "<group>"; };
 		8D571F261A01789A00859378 /* VoiceMixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceMixpanel.m; sourceTree = "<group>"; };
+		8D5F2DB81A35F3F700748FED /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		8D5F2DB91A35F3F700748FED /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		8D6BD77A19FB4517006A3909 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		8D6BD77B19FB4517006A3909 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		8D6BD77C19FB4517006A3909 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 		8D6C2BC91A223FA000EB01FB /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				8D5F2DB81A35F3F700748FED /* SVIndefiniteAnimatedView.h */,
+				8D5F2DB91A35F3F700748FED /* SVIndefiniteAnimatedView.m */,
 				8D6C2BCA1A223FA000EB01FB /* SVProgressHUD-Prefix.pch */,
 				8D6C2BCB1A223FA000EB01FB /* SVProgressHUD.bundle */,
 				8D6C2BCC1A223FA000EB01FB /* SVProgressHUD.h */,
@@ -1101,6 +1106,7 @@
 				8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */,
 				8D571F161A0175FF00859378 /* MPUIEdgeInsetsToNSDictionaryValueTransformer.m in Sources */,
 				8D571F111A0175FF00859378 /* MPTweak.m in Sources */,
+				8D5F2DBA1A35F3F700748FED /* SVIndefiniteAnimatedView.m in Sources */,
 				8D571EE21A0175FF00859378 /* _MPTweakBindObserver.m in Sources */,
 				8D571F131A0175FF00859378 /* MPTweakStore.m in Sources */,
 				8D571F0B1A0175FF00859378 /* MPSurvey.m in Sources */,
