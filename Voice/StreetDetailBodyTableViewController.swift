@@ -24,7 +24,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
         self.tableView.separatorColor = UIColor.clearColor()
-        self.view.hidden = false;
+        // self.view.hidden = false;
         
         pullToRefreshEnabled = false;
         self.refreshControl = nil;   // Disable refresh......
@@ -59,19 +59,11 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     /// Update height here after the downlaod is finished.
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        
+        
         let object = objects[indexPath.row] as PFObject
         let cellHeight = object["imageHeight"] as NSNumber
-        
-        /*
-        if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
-            return 1
-        }
-        else {
-            let image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
-            let height = image?.size.height
-            return height!
-        }
-        */
         
         return CGFloat(cellHeight)
     }
@@ -93,7 +85,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             
             let thunmbnail = object["image"] as PFFile
             cell?.streetDetailImageView.file = thunmbnail
-            cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+            // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
             
             cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
                 
@@ -118,8 +110,17 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 self.imageDictionary.setObject(image, forKey: indexPath.row)
                 self.isFisrtLoadCheckSet.addObject(indexPath.row)
                 
-                // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-                tableView.reloadData()
+                // Note: this is wrong.......
+                // Spend two hours to fix a bug......
+                // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+                
+                // add dispatch_get_main_queur.......
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                   // self.tableView.reloadData()
+                    
+                    tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+                })
+                // tableView.reloadData()
             }
         }
         else {
