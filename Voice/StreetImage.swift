@@ -15,8 +15,11 @@ class StreetImage: NSVoiceObject {
     
     var image : PFImageView
     
+    var uiimage : UIImage
+    
     override init(parseObject:PFObject) {
         image = PFImageView()
+        uiimage = UIImage()
         
         imagePFFile = parseObject["image"] as PFFile
         image.file = imagePFFile
@@ -25,9 +28,10 @@ class StreetImage: NSVoiceObject {
         
         super.init(parseObject:parseObject)
         
-        image.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+        image.loadInBackground { (image_:UIImage!, error: NSError!) -> Void in
             println("Load voice image succesfully.")
             self.isFirstLoad =  false
+            self.uiimage = image_
         }
     }
 }

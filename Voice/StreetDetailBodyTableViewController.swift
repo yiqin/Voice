@@ -60,12 +60,19 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     /// Update height here after the downlaod is finished.
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
+        println("ROW: \(indexPath.row)  SECTION: \(indexPath.section)    \(objects.count)")
         
-        
-        let object = objects[indexPath.row] as PFObject
-        let cellHeight = object["imageHeight"] as NSNumber
-        
-        return CGFloat(cellHeight)
+        if(indexPath.row == 0){
+            let image = streetImage.uiimage
+            let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+            return image.size.height*ratio
+        }
+        else {
+            let object = objects[indexPath.row] as PFObject
+            let cellHeight = object["imageHeight"] as NSNumber
+            
+            return CGFloat(cellHeight)
+        }
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
@@ -81,52 +88,64 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         
         println(indexPath.row)
         
-        if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
-            
-            let thunmbnail = object["image"] as PFFile
-            cell?.streetDetailImageView.file = thunmbnail
-            // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
-            
-            cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                
-                
-                println("Load Street Detail Image ssauccesfully.")
-                
-                // println("Image Width: \(image.size.width)")
-                // println("Image Height: \(image.size.height)")
-                
-                let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
-                
-                // ==================================================
-                // Strong and weak reference example.........................
-                // ==================================================
-                
-                var object_ = self.objects[indexPath.row] as PFObject
-                
-                object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
-                
-                // println(image.size.height*ratio)
-                
-                self.imageDictionary.setObject(image, forKey: indexPath.row)
-                self.isFisrtLoadCheckSet.addObject(indexPath.row)
-                
-                // Note: this is wrong.......
-                // Spend two hours to fix a bug......
-                // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-                
-                // add dispatch_get_main_queur.......
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                   // self.tableView.reloadData()
-                    
-                    tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-                })
-                // tableView.reloadData()
-            }
+        
+        
+        if(indexPath.row == 0){
+            cell?.streetDetailImageView.image = streetImage.uiimage
         }
         else {
-            println("load locally.")
-            cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
+            if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
+                
+                let thunmbnail = object["image"] as PFFile
+                cell?.streetDetailImageView.file = thunmbnail
+                // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+                
+                
+                cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                    
+                    
+                    println("Load Street Detail Image ssauccesfully.")
+                    
+                    // println("Image Width: \(image.size.width)")
+                    // println("Image Height: \(image.size.height)")
+                    
+                    let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+                    
+                    // ==================================================
+                    // Strong and weak reference example.........................
+                    // ==================================================
+                    
+                    var object_ = self.objects[indexPath.row] as PFObject
+                    
+                    object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
+                    
+                    // println(image.size.height*ratio)
+                    
+                    self.imageDictionary.setObject(image, forKey: indexPath.row)
+                    self.isFisrtLoadCheckSet.addObject(indexPath.row)
+                    
+                    // Note: this is wrong.......
+                    // Spend two hours to fix a bug......
+                    // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+                    
+                    // add dispatch_get_main_queur.......
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        // self.tableView.reloadData()
+                        
+                        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+                    })
+                    // tableView.reloadData()
+                }
+            }
+            else {
+                println("load locally.")
+                cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
+            }
         }
+        
+        
+        
+
         
         
         return cell
