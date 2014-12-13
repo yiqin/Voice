@@ -31,7 +31,10 @@ Parse.Cloud.define("sendVerificationCode", function(request, response) {
     user.set("phoneNumber", request.params.phoneNumber);
     user.save();
     
-    var twilio = require('twilio')('AC840912e124927b5100895bc5b9a67f64', 'f83f5ef557fe90f1b1b4c6cc4d569d5c');
+    // Test
+	var twilio = require('twilio')('AC2496f56a7f2cb2785dd9e736ae990e23', '5922590783110b6493f8bc9f86bf3d20');
+	// Product
+    // var twilio = require('twilio')('AC840912e124927b5100895bc5b9a67f64', 'f83f5ef557fe90f1b1b4c6cc4d569d5c');
     twilio.sendSms({
         From: "+13177080548",
         To: request.params.phoneNumber,

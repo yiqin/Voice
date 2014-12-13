@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ConfigDataManager.sharedInstance
         
         VoiceUserDefaultsDataManager.sharedInstance
+        CloudCodeManager.sharedInstance
     }
     
     func parseSetup(){

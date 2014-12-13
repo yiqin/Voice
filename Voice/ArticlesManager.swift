@@ -34,6 +34,7 @@ class ArticlesManager: NSObject {
         })
     }
     
+    /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
         var query  = PFQuery(className: "Article")
         
@@ -59,6 +60,7 @@ class ArticlesManager: NSObject {
                 
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
+                completionClosure(success: false)
             }
         }
     }

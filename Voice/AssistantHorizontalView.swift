@@ -153,6 +153,15 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
     func buttonAction(sender:UIButton!) {
         println("Button tapped")
         // SweetAlert().showAlert("Good job!", subTitle: "You clicked the button!", style: AlertStyle.Success)
+        
+        // Test Hello
+        CloudCodeManager.sendTestHello()
+        
+        CloudCodeManager.sendVerificationCode(1234567, completionClosure: { (success) -> () in
+            if (success){
+                
+            }
+        })
     }
     
     class func height() -> CGFloat {

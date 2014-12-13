@@ -101,7 +101,7 @@ class Article: NSVoiceObject {
         directlyLoadWholeArticleWithNotification(true)
     }
     
-    // Not sure whether this method work or not.
+    
     func testHTML(){
         // Assign a value here.
         var articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, 320, 560))

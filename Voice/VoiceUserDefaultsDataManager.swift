@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ User Defaults Data Manager
+*/
 class VoiceUserDefaultsDataManager: NSObject {
     
     // var firstTimeLoadWithoutAnyUserDefaults = false;
@@ -19,6 +22,7 @@ class VoiceUserDefaultsDataManager: NSObject {
         return Static.instance
     }
     
+    /// check wether it's the first time to launch the app in this device.
     func checkFirstTimeLoad() -> Bool{
         var returnValue: Bool? = NSUserDefaults.standardUserDefaults().objectForKey("VoiceFirstTimeLoad") as? Bool
         if returnValue == nil //Check for first run of app
@@ -27,18 +31,17 @@ class VoiceUserDefaultsDataManager: NSObject {
             NSUserDefaults.standardUserDefaults().setObject(true, forKey: "VoiceFirstTimeLoad")
         }
         
-        
         return returnValue!
-        
-        
     }
     
+    /// save GIF locally
     func setLaunchingGIF(launchingGIF : PFFile){
         launchingGIF.getDataInBackgroundWithBlock { (data:NSData!, error:NSError!) -> Void in
             NSUserDefaults.standardUserDefaults().setObject(data, forKey: "VoiceLaunchingGIF")
         }
     }
     
+    /// get GIF from local store
     func getLaunchingGIF() -> NSData {
         var data = NSUserDefaults.standardUserDefaults().objectForKey("VoiceLaunchingGIF") as NSData
         

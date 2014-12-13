@@ -122,6 +122,7 @@
 		8DBCF7321A34C19200EC1526 /* icon-130.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCF7301A34C19200EC1526 /* icon-130.png */; };
 		8DBCF7331A34C19200EC1526 /* icon-130@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCF7311A34C19200EC1526 /* icon-130@2x.png */; };
 		8DBD8D9B1A19A857008B0102 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD8D9A1A19A857008B0102 /* YQButton.m */; };
+		8DBE30D51A3CC2700027D5D4 /* CloudCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE30D41A3CC2700027D5D4 /* CloudCodeManager.swift */; };
 		8DC512551A34075000FDFE28 /* launching_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DC512541A34075000FDFE28 /* launching_1.gif */; };
 		8DC512571A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC512561A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift */; };
 		8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC695571A1C07E6002D06B8 /* Crashlytics.framework */; };
@@ -361,6 +362,7 @@
 		8DBCF7311A34C19200EC1526 /* icon-130@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-130@2x.png"; sourceTree = "<group>"; };
 		8DBD8D991A19A857008B0102 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
 		8DBD8D9A1A19A857008B0102 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
+		8DBE30D41A3CC2700027D5D4 /* CloudCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudCodeManager.swift; sourceTree = "<group>"; };
 		8DC512541A34075000FDFE28 /* launching_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launching_1.gif; sourceTree = "<group>"; };
 		8DC512561A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserDefaultsDataManager.swift; sourceTree = "<group>"; };
 		8DC695571A1C07E6002D06B8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				8D6C2BD51A22CD1500EB01FB /* ConfigDataManager.swift */,
 				8DA779E81A297FEB006393CF /* VoiceLocationManager.swift */,
 				8DC512561A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift */,
+				8DBE30D41A3CC2700027D5D4 /* CloudCodeManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
 				8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
+				8DBE30D51A3CC2700027D5D4 /* CloudCodeManager.swift in Sources */,
 				8DE49CC919FC0F8400461150 /* Ad.swift in Sources */,
 				8DFFD0AA1A0D4D6C00497E2B /* VMImageView.swift in Sources */,
 				8DFFD0AC1A0D55CC00497E2B /* AssistantHorizontalView.swift in Sources */,
