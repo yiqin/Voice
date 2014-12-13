@@ -38,7 +38,7 @@
  */
 - (void) loadCell:(NSIndexPath *)indexPath
 {
-    NSLog(@"ImagesRowTableViewCell: %d", indexPath.row);
+    NSLog(@"ImagesRowTableViewCell: %ld", (long)indexPath.row);
     
     // Load images row scroll view here.
     [self.imagesRowScrollView loadCollectionImages:indexPath];
