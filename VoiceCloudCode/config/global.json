@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Voice": {
+            "applicationId": "67k8jnSI757kUzLNletpqjxMHdBWTbELiyJoMy52", 
+            "masterKey": "dLkDktqJHHjkLn1fW74tFITcAzNtg8PlMoKy9yYZ"
+        }, 
+        "_default": {
+            "link": "Voice"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.2"
+    }
+}
