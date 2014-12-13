@@ -122,7 +122,6 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
                     
             }
         }
-
     }
     
     func updateFrame() {
@@ -156,12 +155,7 @@ class AssistantHorizontalView: UIView, UIGestureRecognizerDelegate {
         
         // Test Hello
         CloudCodeManager.sendTestHello()
-        
-        CloudCodeManager.sendVerificationCode(1234567, completionClosure: { (success) -> () in
-            if (success){
-                
-            }
-        })
+        // CloudCodeManager.sendVerificationCode(1234567)
     }
     
     class func height() -> CGFloat {
