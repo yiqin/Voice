@@ -29,12 +29,6 @@ class ImagesRowsTableViewController: UITableViewController, ImageViewCellDelegat
         
         self.refreshControl?.addTarget(self, action: "getLatestImages", forControlEvents: .ValueChanged)
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func getLatestImages() {

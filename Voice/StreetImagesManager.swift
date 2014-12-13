@@ -74,7 +74,7 @@ class StreetImagesManager: NSObject {
     }
     
     /**
-     Fecth voice images.
+     Fecth voice images on the home page.
     
      :param: rowIndex row index in the table view on DownViewn
      :return: NSArray that contains voiceImages
