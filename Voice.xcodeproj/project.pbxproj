@@ -148,7 +148,6 @@
 		8DDEDC2819F88E0500550516 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEDC2719F88E0500550516 /* Article.swift */; };
 		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
 		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
-		8DF4F65F1A1EE8140025BAF9 /* UnusedCode.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */; };
 		8DF4F6631A1EEB190025BAF9 /* StreetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */; };
 		8DF4F6651A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */; };
 		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
@@ -391,7 +390,6 @@
 		8DDEDC2719F88E0500550516 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		8DE49CCA19FC10BA00461150 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
-		8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UnusedCode.txt; sourceTree = "<group>"; };
 		8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailViewController.swift; sourceTree = "<group>"; };
 		8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailBodyTableViewController.swift; sourceTree = "<group>"; };
 		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -732,7 +730,6 @@
 		8DB6F3A519F1BC4E002ED90F = {
 			isa = PBXGroup;
 			children = (
-				8DF4F65E1A1EE8140025BAF9 /* UnusedCode.txt */,
 				8D571BEC1A016E4500859378 /* Images */,
 				8D571A841A016AE100859378 /* YQLibraries */,
 				8DB363C61A009CC700B87619 /* ThirdPartyLibraries */,
@@ -1067,7 +1064,6 @@
 				8D6C2BC81A2237DC00EB01FB /* ArticleDetailBodyWebView.swift in Sources */,
 				8D1B529A19FA8852006B9850 /* ArticleTableViewCell.m in Sources */,
 				8D571F101A0175FF00859378 /* MPSwizzler.m in Sources */,
-				8DF4F65F1A1EE8140025BAF9 /* UnusedCode.txt in Sources */,
 				8DFC024C19FF189C0098C1BA /* ArticleTextBlockTableViewCell.m in Sources */,
 				8D571EEF1A0175FF00859378 /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */,
