@@ -55,7 +55,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         if (self.pullToRefreshEnabled) {
             query.cachePolicy = kPFCachePolicyCacheOnly;
         }
-*/
+        */
         
         /*
         if(self.objects.count == 0){
@@ -99,13 +99,10 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
                 
                 
-                
-                
-                
                 println("Load Street Detail Image ssauccesfully.")
                 
-                println("Image Width: \(image.size.width)")
-                println("Image Height: \(image.size.height)")
+                // println("Image Width: \(image.size.width)")
+                // println("Image Height: \(image.size.height)")
                 
                 let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
                 
@@ -124,15 +121,13 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 
                 self.isFisrtLoadCheckSet.addObject(indexPath.row)
                
-                
-                
-                
                // self.loadNextCell(indexPath)
             }
         }
         else {
             // let thunmbnail = object["image"] as PFFile
             // cell?.streetDetailImageView.file = thunmbnail
+            println("load locally.")
             cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
         }
         
