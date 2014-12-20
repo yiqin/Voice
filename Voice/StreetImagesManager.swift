@@ -62,7 +62,7 @@ class StreetImagesManager: NSObject {
                 // self.fetchStreetImagesWithRowIndex(1)    // check 2nd row -> 1
                 
                 // Then we start to load config paramters.
-                ConfigDataManager.sharedInstance.startToRetrieveConfig()
+                ConfigDataManager.startToRetrieveConfig()
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }

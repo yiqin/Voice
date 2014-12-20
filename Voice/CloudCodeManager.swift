@@ -13,14 +13,6 @@ import UIKit
 */
 class CloudCodeManager: NSObject {
     
-    class var sharedInstance : CloudCodeManager {
-        struct Static {
-            static let instance = CloudCodeManager()
-        }
-        return Static.instance
-    }
-    
-    
     class func sendTestHello() {
         let parameters = [:]
         PFCloud.callFunctionInBackground("hello", withParameters: parameters) { (result:AnyObject!, error:NSError!) -> Void in
