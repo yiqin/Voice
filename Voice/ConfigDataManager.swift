@@ -13,7 +13,16 @@ import UIKit
 */
 class ConfigDataManager: NSObject {
     
-    class func startToRetrieveConfig(){
+    var config = PFConfig.currentConfig()
+    
+    class var sharedInstance : ConfigDataManager {
+        struct Static {
+            static let instance = ConfigDataManager()
+        }
+        return Static.instance
+    }
+    
+    func startToRetrieveConfig(){
         NSLog("Getting the latest config...");
         PFConfig.getConfigInBackgroundWithBlock {
             (var config: PFConfig!, error: NSError!) -> Void in
@@ -24,7 +33,6 @@ class ConfigDataManager: NSObject {
                 // config = PFConfig.currentConfig()
             }
             
-            /// launching gif is saved locally. It can ba updated every time the app launches. The latest one will display.
             var launchingGIF = config["launchingGIF"] as? PFFile
             if launchingGIF == nil {
                 println("Falling back to default message.")
@@ -34,7 +42,11 @@ class ConfigDataManager: NSObject {
                 println("Success....")
                 VoiceUserDefaultsDataManager.sharedInstance.setLaunchingGIF(launchingGIF!)
                 
+                
             }
         }
     }
+    
+    
+    
 }
