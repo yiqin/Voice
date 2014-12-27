@@ -42,7 +42,6 @@ class ConfigDataManager: NSObject {
                 println("Success....")
                 VoiceUserDefaultsDataManager.sharedInstance.setLaunchingGIF(launchingGIF!)
                 
-                
             }
         }
     }
