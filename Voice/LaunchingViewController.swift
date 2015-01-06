@@ -19,16 +19,32 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
+        view.backgroundColor = UIColor(red: 35.0/255.0, green: 24.0/255.0, blue: 21.0/255.0, alpha: 1.0)
         gifImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
+        
+        let tempScreenWidth = UIScreen.mainScreen().bounds.width
+        let tempScreenHeight = UIScreen.mainScreen().bounds.height
+        let ratio = tempScreenHeight/tempScreenWidth
+        
+        if (tempScreenHeight/tempScreenWidth >= 960.0/640.0) {
+            let tempHeight = tempScreenWidth*960/640
+            gifImageView.frame = CGRectMake(0, (view.frame.height-tempHeight)*0.5, view.frame.width, tempHeight)
+        }
+        
         gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         view.addSubview(gifImageView)
         
+        // Always get launching_1.gif
+        /*
         if(VoiceUserDefaultsDataManager.sharedInstance.checkFirstTimeLoad()){
             gifImageView.setAnimatableImage(data: VoiceUserDefaultsDataManager.sharedInstance.getLaunchingGIF())
         }
         else {
             gifImageView.setAnimatableImage(named: "launching_1.gif")
         }
+        */
+        
+        gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(1.70, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
