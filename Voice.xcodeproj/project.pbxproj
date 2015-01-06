@@ -150,6 +150,7 @@
 		8DE49CC919FC0F8400461150 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CC819FC0F8400461150 /* Ad.swift */; };
 		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
 		8DEEDAA71A5C5A890092B34E /* NewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */; };
+		8DEEDAA91A5C5DB60092B34E /* OneMagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEDAA81A5C5DB60092B34E /* OneMagazineViewController.swift */; };
 		8DF4F6631A1EEB190025BAF9 /* StreetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */; };
 		8DF4F6651A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */; };
 		8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */; };
@@ -394,6 +395,7 @@
 		8DE49CC819FC0F8400461150 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		8DE49CCA19FC10BA00461150 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 		8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainViewController.swift; sourceTree = "<group>"; };
+		8DEEDAA81A5C5DB60092B34E /* OneMagazineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMagazineViewController.swift; sourceTree = "<group>"; };
 		8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailViewController.swift; sourceTree = "<group>"; };
 		8DF4F6641A1EEBB10025BAF9 /* StreetDetailBodyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailBodyTableViewController.swift; sourceTree = "<group>"; };
 		8DFC024219FE931E0098C1BA /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -761,6 +763,7 @@
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
 				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
+				8DEEDAA81A5C5DB60092B34E /* OneMagazineViewController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 				8DFFD0AB1A0D55CC00497E2B /* AssistantHorizontalView.swift */,
 				8DD6B4CF19F77CC100B30EA9 /* AssistantView.swift */,
@@ -1035,6 +1038,7 @@
 				8D571EFA1A0175FF00859378 /* MPClassDescription.m in Sources */,
 				8DEEDAA71A5C5A890092B34E /* NewMainViewController.swift in Sources */,
 				8D571F181A0175FF00859378 /* MPUIImageToNSDictionaryValueTransformer.m in Sources */,
+				8DEEDAA91A5C5DB60092B34E /* OneMagazineViewController.swift in Sources */,
 				8D571F191A0175FF00859378 /* MPVariant.m in Sources */,
 				8D571EFE1A0175FF00859378 /* MPNotification.m in Sources */,
 				8D6C2BCF1A223FA000EB01FB /* SVProgressHUD.m in Sources */,
