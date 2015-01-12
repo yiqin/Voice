@@ -10,6 +10,7 @@ import UIKit
 
 class Article: NSVoiceObject {
     
+    /// This value is confusing. I need to check this value later.
     var isFirstLoad:Bool
     
     var title: String
@@ -43,6 +44,9 @@ class Article: NSVoiceObject {
         
         directlyLoadWholeArticleWithNotification(false)
     };
+    
+    
+    
     
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
         var query  = PFQuery(className: "ArticleBlock")

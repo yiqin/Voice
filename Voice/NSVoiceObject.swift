@@ -29,4 +29,12 @@ class NSVoiceObject: NSObject {
         self.parseObject = parseObject
         super.init()
     }
+    
+    override init() {
+        objectId = ""
+        createdAt = NSDate()
+        updatedAt = NSDate()
+        parseObject = PFObject()
+        super.init()
+    }
 }
