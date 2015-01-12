@@ -6,10 +6,13 @@
 //  Copyright (c) 2015 yiqin. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class SectionsManager: NSObject {
     
+    var sections : NSMutableArray = []
+    var currentPageIndex = 0;
+    let itemsPerPage = 10;
     
     class var sharedInstance : ArticlesManager {
         struct Static {
@@ -18,8 +21,58 @@ class SectionsManager: NSObject {
         return Static.instance
     }
     
+    /**
+    quick way to start to load article data from Parse.com
+    */
+    func startLoadingDataFromParse(pageIndex:Int) {
+        startLoadingDataFromParse(pageIndex, completionClosure: { (success) -> () in
+            
+        })
+    }
+    
+    /// with Closure............
+    func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
+        var query  = PFQuery(className: "Section")
+        
+        query.orderByDescending("number")
+        query.limit = itemsPerPage
+        query.skip = pageIndex*itemsPerPage
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                println("Load sections from Parse.com.")
+                var recieved = NSMutableArray()
+                
+                for object in objects {
+                    let newSection = Section(parseObject: object as PFObject)
+                    recieved.addObject(newSection)
+                }
+                
+                if (pageIndex == 0){
+                    self.sections.removeAllObjects()
+                }
+                self.sections.addObjectsFromArray(recieved)
+                completionClosure(success: true)
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+                completionClosure(success: false)
+            }
+        }
+    }
+    
+    func loadMoreDataFromParse(completionClosure: (success :Bool) ->()){
+        currentPageIndex++;
+        startLoadingDataFromParse(currentPageIndex, completionClosure: { (success) -> () in
+            if (success){
+                completionClosure(success: true)
+            }
+            else {
+                completionClosure(success: false)
+            }
+        })
+    }
     
     
     
-
 }

@@ -71,6 +71,9 @@ class ArticlesManager: NSObject {
             if (success){
                 completionClosure(success: true)
             }
+            else {
+                completionClosure(success: false)
+            }
         })
     }
     

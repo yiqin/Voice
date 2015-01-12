@@ -6,14 +6,16 @@
 //  Copyright (c) 2015 yiqin. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class Section: NSVoiceObject {
     
+    var number : Int
+    
     override init(parseObject:PFObject) {
+        number = parseObject["number"] as Int
         
         super.init(parseObject:parseObject)
-        
     }
 
 }
