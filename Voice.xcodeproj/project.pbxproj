@@ -13,6 +13,8 @@
 		8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */; };
 		8D1B5B801A08622100B32925 /* ArticleDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */; };
 		8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24C4C01A151F080008AC10 /* SweetAlert.swift */; };
+		8D3CE9401A645C4900A8BE55 /* SectionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CE93F1A645C4900A8BE55 /* SectionsManager.swift */; };
+		8D3CE9421A645CE500A8BE55 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CE9411A645CE500A8BE55 /* Section.swift */; };
 		8D4AB35319F9B7DC00222967 /* StreetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35219F9B7DC00222967 /* StreetImage.swift */; };
 		8D4AB35519F9B95D00222967 /* StreetImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */; };
 		8D4E48021A2EC01F003705D7 /* assistantView1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E48001A2EC01F003705D7 /* assistantView1.jpg */; };
@@ -185,6 +187,8 @@
 		8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBlock.swift; sourceTree = "<group>"; };
 		8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailManager.swift; sourceTree = "<group>"; };
 		8D24C4C01A151F080008AC10 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		8D3CE93F1A645C4900A8BE55 /* SectionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsManager.swift; sourceTree = "<group>"; };
+		8D3CE9411A645CE500A8BE55 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		8D4AB35219F9B7DC00222967 /* StreetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImage.swift; sourceTree = "<group>"; };
 		8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetImagesManager.swift; sourceTree = "<group>"; };
 		8D4E48001A2EC01F003705D7 /* assistantView1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = assistantView1.jpg; sourceTree = "<group>"; };
@@ -675,6 +679,7 @@
 				8DFC024419FF08800098C1BA /* UserManager.swift */,
 				8DD6B4CD19F7590A00B30EA9 /* DeviceManager.swift */,
 				8D01A7D319F8ACB3001C2D78 /* ArticlesManager.swift */,
+				8D3CE93F1A645C4900A8BE55 /* SectionsManager.swift */,
 				8D4AB35419F9B95D00222967 /* StreetImagesManager.swift */,
 				8DE49CCA19FC10BA00461150 /* AdsManager.swift */,
 				8D1B5B7F1A08622100B32925 /* ArticleDetailManager.swift */,
@@ -695,6 +700,7 @@
 				8DE49CC819FC0F8400461150 /* Ad.swift */,
 				8DFC024619FF0E350098C1BA /* AdsLocation.swift */,
 				8DDEDC2719F88E0500550516 /* Article.swift */,
+				8D3CE9411A645CE500A8BE55 /* Section.swift */,
 				8D1B5B7D1A08559E00B32925 /* ArticleBlock.swift */,
 			);
 			name = DataClass;
@@ -1032,6 +1038,7 @@
 				8DFC024519FF08800098C1BA /* UserManager.swift in Sources */,
 				8D571EE81A0175FF00859378 /* MPABTestDesignerClearRequestMessage.m in Sources */,
 				8D571F271A01789A00859378 /* VoiceMixpanel.m in Sources */,
+				8D3CE9421A645CE500A8BE55 /* Section.swift in Sources */,
 				8D571F091A0175FF00859378 /* MPPropertyDescription.m in Sources */,
 				8D571EE71A0175FF00859378 /* MPABTestDesignerChangeResponseMessage.m in Sources */,
 				8D571EF71A0175FF00859378 /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
@@ -1087,6 +1094,7 @@
 				8D571EEF1A0175FF00859378 /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */,
 				8D571F141A0175FF00859378 /* MPTypeDescription.m in Sources */,
+				8D3CE9401A645C4900A8BE55 /* SectionsManager.swift in Sources */,
 				8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */,
 				8D571EF61A0175FF00859378 /* MPCGColorRefToNSStringValueTransformer.m in Sources */,
 				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,

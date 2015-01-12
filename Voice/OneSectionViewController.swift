@@ -18,7 +18,7 @@ class OneSectionViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(patternImage: UIImage(named: imageFile)!)
+        // view.backgroundColor = UIColor(patternImage: UIImage(named: imageFile)!)
         
         let label = UILabel(frame: CGRectMake(0, 0, view.frame.width, 200))
         label.textColor = UIColor.whiteColor()

@@ -71,5 +71,4 @@ class DeviceManager: NSObject {
     }
     */
 
-    
 }
