@@ -108,6 +108,7 @@
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
+		8D9416451A6464EC0040E536 /* VoiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9416441A6464EC0040E536 /* VoiceConstants.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */; };
@@ -344,6 +345,7 @@
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D881A831A10599B0027C8ED /* VoiceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceLabel.h; sourceTree = "<group>"; };
 		8D881A841A10599B0027C8ED /* VoiceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceLabel.m; sourceTree = "<group>"; };
+		8D9416441A6464EC0040E536 /* VoiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConstants.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
@@ -775,6 +777,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
+				8D9416441A6464EC0040E536 /* VoiceConstants.swift */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
 				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
@@ -1110,6 +1113,7 @@
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
 				8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				8DA779E91A297FEB006393CF /* VoiceLocationManager.swift in Sources */,
+				8D9416451A6464EC0040E536 /* VoiceConstants.swift in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
 				8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */,
 				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
