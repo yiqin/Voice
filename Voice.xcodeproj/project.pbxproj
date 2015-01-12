@@ -371,7 +371,7 @@
 		8DBD8D991A19A857008B0102 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
 		8DBD8D9A1A19A857008B0102 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
 		8DBE30D41A3CC2700027D5D4 /* CloudCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudCodeManager.swift; sourceTree = "<group>"; };
-		8DC512541A34075000FDFE28 /* launching_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launching_1.gif; sourceTree = "<group>"; };
+		8DC512541A34075000FDFE28 /* launching_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = launching_1.gif; path = ../Images/launching_1.gif; sourceTree = "<group>"; };
 		8DC512561A3413B700FDFE28 /* VoiceUserDefaultsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserDefaultsDataManager.swift; sourceTree = "<group>"; };
 		8DC695571A1C07E6002D06B8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8DC695581A1C07E6002D06B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -475,17 +475,17 @@
 			path = YQLibraries;
 			sourceTree = "<group>";
 		};
-		8D571BEC1A016E4500859378 /* Images */ = {
+		8D571BEC1A016E4500859378 /* Images(Move to assests later.) */ = {
 			isa = PBXGroup;
 			children = (
 				8DBCF7301A34C19200EC1526 /* icon-130.png */,
 				8DBCF7311A34C19200EC1526 /* icon-130@2x.png */,
-				8DC512541A34075000FDFE28 /* launching_1.gif */,
 				8D571BF11A016E6800859378 /* backArrow.png */,
 				8D571BF21A016E6800859378 /* backArrow@2x.png */,
 				8D4E48001A2EC01F003705D7 /* assistantView1.jpg */,
 				8D4E48011A2EC01F003705D7 /* assistantView2.jpg */,
 			);
+			name = "Images(Move to assests later.)";
 			path = Images;
 			sourceTree = "<group>";
 		};
@@ -650,6 +650,32 @@
 			path = SWTableViewCell;
 			sourceTree = "<group>";
 		};
+		8D9416461A6466EA0040E536 /* LaunchingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
+				8DC512541A34075000FDFE28 /* launching_1.gif */,
+			);
+			name = LaunchingViewController;
+			sourceTree = "<group>";
+		};
+		8D9416471A6467070040E536 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
+				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		8D9416481A6467190040E536 /* SectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8DEEDAA81A5C5DB60092B34E /* OneSectionViewController.swift */,
+			);
+			name = SectionViewController;
+			sourceTree = "<group>";
+		};
 		8DA779E01A297D1A006393CF /* INTULocationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,7 +780,7 @@
 		8DB6F3A519F1BC4E002ED90F = {
 			isa = PBXGroup;
 			children = (
-				8D571BEC1A016E4500859378 /* Images */,
+				8D571BEC1A016E4500859378 /* Images(Move to assests later.) */,
 				8D571A841A016AE100859378 /* YQLibraries */,
 				8DB363C61A009CC700B87619 /* ThirdPartyLibraries */,
 				8DD6B4AA19F74BCC00B30EA9 /* Frameworks */,
@@ -779,10 +805,9 @@
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8D9416441A6464EC0040E536 /* VoiceConstants.swift */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
-				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
-				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
-				8DEEDAA81A5C5DB60092B34E /* OneSectionViewController.swift */,
-				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
+				8D9416461A6466EA0040E536 /* LaunchingViewController */,
+				8D9416471A6467070040E536 /* MainViewController */,
+				8D9416481A6467190040E536 /* SectionViewController */,
 				8D3CE93E1A64577000A8BE55 /* AssistantView */,
 				8D571F281A0178A000859378 /* Analytics */,
 				8DFFD0A81A0D49C600497E2B /* VoiceUIKit */,
