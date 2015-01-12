@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Load sections manager. Use this section as the key to load related street images and articles.
+*/
 class SectionsManager: NSObject {
     
     var sections : NSMutableArray = []
