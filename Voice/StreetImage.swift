@@ -10,8 +10,8 @@ import UIKit
 
 class StreetImage: NSVoiceObject {
     
-    var isFirstLoad:Bool
-    var imagePFFile: PFFile
+    var isFirstLoad : Bool
+    var imagePFFile : PFFile
     
     var image : PFImageView
     
@@ -34,4 +34,15 @@ class StreetImage: NSVoiceObject {
             self.uiimage = image_
         }
     }
+    
+    override init() {
+        image = PFImageView()
+        imagePFFile = PFFile()
+        uiimage = UIImage()
+        isFirstLoad = true
+        
+        super.init()
+    }
+    
+    
 }
