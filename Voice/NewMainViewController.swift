@@ -27,7 +27,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         pageViewController!.dataSource = self
         
-        let startingViewController: OneMagazineViewController = viewControllerAtIndex(0)!
+        let startingViewController: OneSectionViewController = viewControllerAtIndex(0)!
         let viewControllers: NSArray = [startingViewController]
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         pageViewController!.view.frame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height);
@@ -38,16 +38,14 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
     {
-        var index = (viewController as OneMagazineViewController).pageIndex
+        var index = (viewController as OneSectionViewController).pageIndex
         
         if (index == 0) || (index == NSNotFound) {
             return nil
@@ -60,7 +58,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
     {
-        var index = (viewController as OneMagazineViewController).pageIndex
+        var index = (viewController as OneSectionViewController).pageIndex
         
         if index == NSNotFound {
             return nil
@@ -75,7 +73,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         return viewControllerAtIndex(index)
     }
     
-    func viewControllerAtIndex(index: Int) -> OneMagazineViewController?
+    func viewControllerAtIndex(index: Int) -> OneSectionViewController?
     {
         if self.pageTitles.count == 0 || index >= self.pageTitles.count
         {
@@ -83,7 +81,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         // Create a new view controller and pass suitable data.
-        let pageContentViewController = OneMagazineViewController()
+        let pageContentViewController = OneSectionViewController()
         pageContentViewController.imageFile = pageImages[index]
         pageContentViewController.titleText = pageTitles[index]
         pageContentViewController.pageIndex = index

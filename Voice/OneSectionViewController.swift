@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OneMagazineViewController: UIViewController {
+class OneSectionViewController: UIViewController {
     
     var pageIndex : Int = 0
     var titleText : String = ""
