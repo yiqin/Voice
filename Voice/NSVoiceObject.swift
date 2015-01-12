@@ -34,7 +34,7 @@ class NSVoiceObject: NSObject {
         objectId = ""
         createdAt = NSDate()
         updatedAt = NSDate()
-        parseObject = PFObject()
+        parseObject = PFObject(className: "hello") // Spent half hours to fix this bug.
         super.init()
     }
 }

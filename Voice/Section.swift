@@ -19,9 +19,12 @@ class Section: NSVoiceObject {
     
     
     override init(parseObject:PFObject) {
-        number = parseObject["number"] as Int
+        println("successullly")
+        let tempNumber = parseObject["number"] as NSNumber
+        number = 1
         coverImage = StreetImage()
         
+        println("successullly")
         super.init(parseObject:parseObject)
         
         startToLoadCoverImage()
