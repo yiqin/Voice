@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func mixpanelSetup(){
-        Mixpanel.sharedInstanceWithToken("9ac1a39b8aa88386183e57ebaffec1b8")
+        Mixpanel.sharedInstanceWithToken("ae8904929f971547a76168a3ed8ed27a")
         VoiceMixpanelAnalytics.start()
     }
     
