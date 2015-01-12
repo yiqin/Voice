@@ -15,11 +15,11 @@ class SectionsManager: NSObject {
     
     var sections : NSMutableArray = []
     var currentPageIndex = 0;
-    let itemsPerPage = 10;
+    let itemsPerPage = kNumberOfSectionPerQuery;
     
-    class var sharedInstance : ArticlesManager {
+    class var sharedInstance : SectionsManager {
         struct Static {
-            static let instance = ArticlesManager()
+            static let instance = SectionsManager()
         }
         return Static.instance
     }

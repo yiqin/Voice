@@ -14,3 +14,4 @@ let kScreenSize   = kScreenBounds.size
 let kScreenWidth  = kScreenSize.width
 let kScreenHeight = kScreenSize.height
 
+let kNumberOfSectionPerQuery = 5;

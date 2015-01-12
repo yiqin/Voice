@@ -12,10 +12,18 @@ class Section: NSVoiceObject {
     
     var number : Int
     
+    /// to check whether the images and the articles are laoding from Parse
+    var isLoading : Bool = false
+    
+    
+    
+    
     override init(parseObject:PFObject) {
         number = parseObject["number"] as Int
         
         super.init(parseObject:parseObject)
     }
+    
+    
 
 }

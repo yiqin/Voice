@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()
         */
         
+        SectionsManager.sharedInstance.startLoadingDataFromParse(0)
+        
         VoiceLocationManager.sharedInstance
         VoiceLocationManager.sharedInstance.getCurrentLocation()
         
