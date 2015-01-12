@@ -39,11 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Previous method.
         // DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
         
+        // Version one method. No use now.
+        /*
         ArticlesManager.sharedInstance
         ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
         
         StreetImagesManager.sharedInstance
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()
+        */
         
         VoiceLocationManager.sharedInstance
         VoiceLocationManager.sharedInstance.getCurrentLocation()
@@ -75,16 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func mixpanelSetup(){
         Mixpanel.sharedInstanceWithToken("9ac1a39b8aa88386183e57ebaffec1b8")
-        
-        let deviceId = UIDevice.currentDevice().identifierForVendor.UUIDString
-        let deviceName = UIDevice.currentDevice().name
-        
-        var mixpanel = Mixpanel.sharedInstance()
-        mixpanel.identify(deviceId)
-        
-        let dictionary = ["deviceId": deviceId, "deviceName": deviceName]
-        mixpanel.people.set(dictionary)
-        mixpanel.track("App Launches")
+        VoiceMixpanelAnalytics.start()
     }
     
     func applicationWillResignActive(application: UIApplication) {
