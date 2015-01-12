@@ -89,16 +89,4 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         
         return pageContentViewController
     }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return self.pageTitles.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return 0
-    }
-
-
 }
