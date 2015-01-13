@@ -13,6 +13,7 @@ import UIKit
 */
 class SectionsManager: NSObject {
     
+    /// Update this variable
     var sections : NSMutableArray = []
     var currentPageIndex = 0;
     let itemsPerPage = kNumberOfSectionPerQuery;
