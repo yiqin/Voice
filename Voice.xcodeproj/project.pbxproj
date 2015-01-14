@@ -109,6 +109,8 @@
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
 		8D9416451A6464EC0040E536 /* VoiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9416441A6464EC0040E536 /* VoiceConstants.swift */; };
 		8D94164A1A64689E0040E536 /* VoiceMixpanelAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9416491A64689E0040E536 /* VoiceMixpanelAnalytics.swift */; };
+		8D970D301A66DD3100C3EF74 /* SessionArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D970D2F1A66DD3100C3EF74 /* SessionArticleTableViewCell.swift */; };
+		8D970D321A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D970D311A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift */; };
 		8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777CE19F841EE006ABF30 /* UpView.swift */; };
 		8D9777D119F841FB006ABF30 /* DownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9777D019F841FB006ABF30 /* DownView.swift */; };
 		8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */; };
@@ -346,6 +348,8 @@
 		8D881A841A10599B0027C8ED /* VoiceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceLabel.m; sourceTree = "<group>"; };
 		8D9416441A6464EC0040E536 /* VoiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConstants.swift; sourceTree = "<group>"; };
 		8D9416491A64689E0040E536 /* VoiceMixpanelAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceMixpanelAnalytics.swift; sourceTree = "<group>"; };
+		8D970D2F1A66DD3100C3EF74 /* SessionArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionArticleTableViewCell.swift; sourceTree = "<group>"; };
+		8D970D311A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStreetImageTableViewCell.swift; sourceTree = "<group>"; };
 		8D9777CE19F841EE006ABF30 /* UpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpView.swift; sourceTree = "<group>"; };
 		8D9777D019F841FB006ABF30 /* DownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownView.swift; sourceTree = "<group>"; };
 		8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
@@ -673,6 +677,8 @@
 			children = (
 				8DEEDAA81A5C5DB60092B34E /* OneSessionViewController.swift */,
 				8DDFEA781A66374200421711 /* OneSessionTableViewController.swift */,
+				8D970D2F1A66DD3100C3EF74 /* SessionArticleTableViewCell.swift */,
+				8D970D311A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift */,
 			);
 			name = SectionViewController;
 			sourceTree = "<group>";
@@ -1095,6 +1101,7 @@
 				8D6C2BE71A22E98800EB01FB /* SWTableViewCell.m in Sources */,
 				8D571F211A0175FF00859378 /* UIImage+MPImageEffects.m in Sources */,
 				8D571EEA1A0175FF00859378 /* MPABTestDesignerConnection.m in Sources */,
+				8D970D321A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift in Sources */,
 				8D571F061A0175FF00859378 /* MPObjectSerializerConfig.m in Sources */,
 				8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */,
 				8D571F041A0175FF00859378 /* MPObjectSelector.m in Sources */,
@@ -1124,6 +1131,7 @@
 				8D24C4C11A151F080008AC10 /* SweetAlert.swift in Sources */,
 				8D571F141A0175FF00859378 /* MPTypeDescription.m in Sources */,
 				8D3CE9401A645C4900A8BE55 /* SessionsManager.swift in Sources */,
+				8D970D301A66DD3100C3EF74 /* SessionArticleTableViewCell.swift in Sources */,
 				8DFC024719FF0E350098C1BA /* AdsLocation.swift in Sources */,
 				8D571EF61A0175FF00859378 /* MPCGColorRefToNSStringValueTransformer.m in Sources */,
 				8DFC024919FF14320098C1BA /* ArticleDetailBodyTableViewController.swift in Sources */,

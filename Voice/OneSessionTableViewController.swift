@@ -41,10 +41,49 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
             return 300
         }
         else {
-            return 100
+            return ArticleTableViewCell.cellHeight()
         }
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let sessionStreetImageBlockIdentifier = "SessionStreetImageIdentifier"
+        let sessionArticleIdentifier = "SessionArticleIdentifier"
+        
+        if (indexPath.row == 0){
+            var cell = tableView.dequeueReusableCellWithIdentifier(sessionStreetImageBlockIdentifier) as? SessionStreetImageTableViewCell
+            
+            if cell != nil {
+                
+            }
+            else {
+                cell = SessionStreetImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: sessionStreetImageBlockIdentifier)
+                cell?.selectionStyle = UITableViewCellSelectionStyle.None
+                // cell?.coverImageView.image = article.coverImage.image
+                
+            }
+            return cell!
+        }
+        else {
+            var cell = tableView.dequeueReusableCellWithIdentifier(sessionArticleIdentifier) as? SessionArticleTableViewCell
+            
+            if cell != nil {
+                // println("Cell exist")
+            }
+            else {
+                // println("Create new Cell")
+                cell = SessionArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: sessionArticleIdentifier)
+                cell?.selectionStyle = UITableViewCellSelectionStyle.None
+            }
+            
+            return cell!
+        }
+    }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Select \(indexPath.row)")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
 
 }
