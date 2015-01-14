@@ -59,22 +59,25 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
             else {
                 cell = SessionStreetImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: sessionStreetImageBlockIdentifier)
                 cell?.selectionStyle = UITableViewCellSelectionStyle.None
-                // cell?.coverImageView.image = article.coverImage.image
-                
             }
+            
+            cell?.updateCell(session.streetImage)
+            
             return cell!
         }
         else {
             var cell = tableView.dequeueReusableCellWithIdentifier(sessionArticleIdentifier) as? SessionArticleTableViewCell
             
             if cell != nil {
-                // println("Cell exist")
+                
             }
             else {
-                // println("Create new Cell")
                 cell = SessionArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: sessionArticleIdentifier)
                 cell?.selectionStyle = UITableViewCellSelectionStyle.None
             }
+            
+            let article = session.articles[indexPath.row-1] as Article
+            cell?.updateCell(article)
             
             return cell!
         }

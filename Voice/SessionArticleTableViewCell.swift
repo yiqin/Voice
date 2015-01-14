@@ -10,10 +10,17 @@ import UIKit
 
 class SessionArticleTableViewCell: UITableViewCell {
     
+    var coverImageView : UIImageView
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        coverImageView = UIImageView()
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        coverImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))
+        coverImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        addSubview(coverImageView)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -23,6 +30,10 @@ class SessionArticleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    func updateCell(article : Article){
+        coverImageView.image = article.briefImage.image
     }
     
     class func cellHeight()->CGFloat {

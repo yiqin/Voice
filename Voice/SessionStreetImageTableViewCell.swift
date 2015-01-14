@@ -10,10 +10,17 @@ import UIKit
 
 class SessionStreetImageTableViewCell: UITableViewCell {
     
+    var streetImageView : UIImageView
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        streetImageView = UIImageView()
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        streetImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))
+        streetImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        addSubview(streetImageView)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -22,7 +29,10 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    }
+    
+    func updateCell(streetImage : StreetImage){
+        streetImageView.image = streetImage.image.image
     }
     
     class func cellHeight()->CGFloat {

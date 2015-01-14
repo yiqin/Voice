@@ -16,7 +16,7 @@ class Session: NSVoiceObject {
     /// to check whether the images and the articles are laoding from Parse
     var isLoading : Bool = false
     
-    var coverImage : StreetImage
+    var streetImage : StreetImage
     
     var articles : NSMutableArray = []
     
@@ -27,7 +27,7 @@ class Session: NSVoiceObject {
         number = 1
         
         count = 1
-        coverImage = StreetImage()
+        streetImage = StreetImage()
         
         super.init(parseObject:parseObject)
         
@@ -44,7 +44,7 @@ class Session: NSVoiceObject {
                 println("successullly get StreetImage")
                 if objects.count >= 1 {
                     let object = objects[0] as PFObject
-                    self.coverImage = StreetImage(parseObject: object)
+                    self.streetImage = StreetImage(parseObject: object)
                 }
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
