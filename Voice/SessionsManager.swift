@@ -37,7 +37,7 @@ class SessionsManager: NSObject {
     /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
         var query  = PFQuery(className: "Session")
-        
+        query.whereKey("isPublished", equalTo: true)
         query.orderByDescending("number")
         query.limit = itemsPerPage
         query.skip = pageIndex*itemsPerPage
