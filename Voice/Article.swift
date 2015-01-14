@@ -45,9 +45,7 @@ class Article: NSVoiceObject {
         directlyLoadWholeArticleWithNotification(false)
     };
     
-    
-    
-    
+    /// load html file of the article
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
         var query  = PFQuery(className: "ArticleBlock")
         query.orderByAscending("indexNumber")

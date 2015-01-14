@@ -65,6 +65,7 @@ class SessionsManager: NSObject {
         }
     }
     
+    /// for propagation
     func loadMoreDataFromParse(completionClosure: (success :Bool) ->()){
         currentPageIndex++;
         startLoadingDataFromParse(currentPageIndex, completionClosure: { (success) -> () in

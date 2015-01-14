@@ -17,6 +17,7 @@ class Session: NSVoiceObject {
     
     var coverImage : StreetImage
     
+    var articles : NSMutableArray = []
     
     override init(parseObject:PFObject) {
         let tempNumber = parseObject["number"] as NSNumber
@@ -26,12 +27,13 @@ class Session: NSVoiceObject {
         super.init(parseObject:parseObject)
         
         startToLoadCoverImage()
+        startToLoadArticles()
     }
     
     func startToLoadCoverImage(){
-       var query  = PFQuery(className: "StreetImage")
+        var query  = PFQuery(className: "StreetImage")
         query.whereKey("belongTo", equalTo: self.parseObject)
-        
+
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("successullly get StreetImage")
@@ -44,6 +46,23 @@ class Session: NSVoiceObject {
             }
         }
 
+    }
+    
+    func startToLoadArticles(){
+        var query = PFQuery(className: "Article")
+        query.whereKey("belongTo", equalTo: self.parseObject)
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                println("successullly get Articles")
+                for object in objects {
+                    let article = Article(parseObject: object as PFObject)
+                    self.articles.addObject(article)
+                }
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
     }
 
 }
