@@ -11,16 +11,16 @@ import UIKit
 /**
  Load sections manager. Use this section as the key to load related street images and articles.
 */
-class SectionsManager: NSObject {
+class SessionsManager: NSObject {
     
     /// Update this variable
-    var sections : NSMutableArray = []
+    var sessions : NSMutableArray = []
     var currentPageIndex = 0;
     let itemsPerPage = kNumberOfSectionPerQuery;
     
-    class var sharedInstance : SectionsManager {
+    class var sharedInstance : SessionsManager {
         struct Static {
-            static let instance = SectionsManager()
+            static let instance = SessionsManager()
         }
         return Static.instance
     }
@@ -36,7 +36,7 @@ class SectionsManager: NSObject {
     
     /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
-        var query  = PFQuery(className: "Section")
+        var query  = PFQuery(className: "Session")
         
         query.orderByDescending("number")
         query.limit = itemsPerPage
@@ -44,18 +44,18 @@ class SectionsManager: NSObject {
         
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
-                println("Load sections from Parse.com.")
+                println("Load sessions - #\(objects.count) from Parse.com.")
                 var recieved = NSMutableArray()
                 
                 for object in objects {
-                    let newSection = Section(parseObject: object as PFObject)
+                    let newSection = Session(parseObject: object as PFObject)
                     recieved.addObject(newSection)
                 }
                 
                 if (pageIndex == 0){
-                    self.sections.removeAllObjects()
+                    self.sessions.removeAllObjects()
                 }
-                self.sections.addObjectsFromArray(recieved)
+                self.sessions.addObjectsFromArray(recieved)
                 completionClosure(success: true)
                 
             } else {

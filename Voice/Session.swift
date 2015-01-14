@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Section: NSVoiceObject {
+class Session: NSVoiceObject {
     
     var number : Int
     
@@ -19,12 +19,10 @@ class Section: NSVoiceObject {
     
     
     override init(parseObject:PFObject) {
-        println("successullly")
         let tempNumber = parseObject["number"] as NSNumber
         number = 1
         coverImage = StreetImage()
         
-        println("successullly")
         super.init(parseObject:parseObject)
         
         startToLoadCoverImage()
@@ -36,7 +34,7 @@ class Section: NSVoiceObject {
         
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
-                println("successullly")
+                println("successullly get StreetImage")
                 if objects.count >= 1 {
                     let object = objects[0] as PFObject
                     self.coverImage = StreetImage(parseObject: object)
