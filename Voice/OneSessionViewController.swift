@@ -14,6 +14,21 @@ class OneSessionViewController: UIViewController {
     var titleText : String = ""
     var imageFile : String = ""
     
+    var oneSessionTVC : OneSessionTableViewController
+    
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, session selectedSession: Session? ) {
+        
+        oneSessionTVC = OneSessionTableViewController(session: selectedSession!)
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        view.addSubview(oneSessionTVC.view)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     
     override func viewDidLoad()
     {
@@ -26,8 +41,18 @@ class OneSessionViewController: UIViewController {
         label.textAlignment = .Center
         view.addSubview(label)
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        println("view will appear \(pageIndex)")
         
     }
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning()
     {

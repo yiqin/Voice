@@ -65,7 +65,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         
         index++
         
-        if (index == self.pageTitles.count) {
+        if (index == SessionsManager.sharedInstance.sessions.count) {
             return nil
         }
         
@@ -74,17 +74,23 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     func viewControllerAtIndex(index: Int) -> OneSessionViewController?
     {
-        if self.pageTitles.count == 0 || index >= self.pageTitles.count
+        if SessionsManager.sharedInstance.sessions.count == 0 || index >= SessionsManager.sharedInstance.sessions.count
         {
             return nil
         }
         
         // Create a new view controller and pass suitable data.
-        let pageContentViewController = OneSessionViewController()
-        pageContentViewController.imageFile = pageImages[index]
-        pageContentViewController.titleText = pageTitles[index]
+        // Every time we create a new OneSessionViewController. This is wrong. ....
+        let session = SessionsManager.sharedInstance.sessions[index] as Session
+        let pageContentViewController = OneSessionViewController(nibName: nil, bundle: nil, session: session)
+        
+        // pageContentViewController.imageFile = pageImages[index]
+        // pageContentViewController.titleText = pageTitles[index]
+        
         pageContentViewController.pageIndex = index
         currentIndex = index
+        
+        println(index)
         
         return pageContentViewController
     }

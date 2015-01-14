@@ -47,7 +47,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.50, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2.50, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
     }
     
     func moveToMainViewController() {
