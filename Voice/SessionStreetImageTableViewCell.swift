@@ -10,10 +10,22 @@ import UIKit
 
 class SessionStreetImageTableViewCell: UITableViewCell {
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
+    class func cellHeight()->CGFloat {
+        return 500
+    }
 }

@@ -677,8 +677,8 @@
 			children = (
 				8DEEDAA81A5C5DB60092B34E /* OneSessionViewController.swift */,
 				8DDFEA781A66374200421711 /* OneSessionTableViewController.swift */,
-				8D970D2F1A66DD3100C3EF74 /* SessionArticleTableViewCell.swift */,
 				8D970D311A66DD6700C3EF74 /* SessionStreetImageTableViewCell.swift */,
+				8D970D2F1A66DD3100C3EF74 /* SessionArticleTableViewCell.swift */,
 			);
 			name = SectionViewController;
 			sourceTree = "<group>";

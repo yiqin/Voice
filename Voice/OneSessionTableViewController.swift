@@ -38,10 +38,10 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 300
+            return SessionStreetImageTableViewCell.cellHeight()
         }
         else {
-            return ArticleTableViewCell.cellHeight()
+            return SessionArticleTableViewCell.cellHeight()
         }
     }
     
