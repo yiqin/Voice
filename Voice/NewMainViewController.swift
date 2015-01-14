@@ -26,7 +26,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         pageViewController!.dataSource = self
         
-        let startingViewController: OneSectionViewController = viewControllerAtIndex(0)!
+        let startingViewController: OneSessionViewController = viewControllerAtIndex(0)!
         let viewControllers: NSArray = [startingViewController]
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         pageViewController!.view.frame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height);
@@ -44,7 +44,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
     {
-        var index = (viewController as OneSectionViewController).pageIndex
+        var index = (viewController as OneSessionViewController).pageIndex
         
         if (index == 0) || (index == NSNotFound) {
             return nil
@@ -57,7 +57,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
     {
-        var index = (viewController as OneSectionViewController).pageIndex
+        var index = (viewController as OneSessionViewController).pageIndex
         
         if index == NSNotFound {
             return nil
@@ -72,7 +72,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         return viewControllerAtIndex(index)
     }
     
-    func viewControllerAtIndex(index: Int) -> OneSectionViewController?
+    func viewControllerAtIndex(index: Int) -> OneSessionViewController?
     {
         if self.pageTitles.count == 0 || index >= self.pageTitles.count
         {
@@ -80,7 +80,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         // Create a new view controller and pass suitable data.
-        let pageContentViewController = OneSectionViewController()
+        let pageContentViewController = OneSessionViewController()
         pageContentViewController.imageFile = pageImages[index]
         pageContentViewController.titleText = pageTitles[index]
         pageContentViewController.pageIndex = index

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class OneSectionViewController: UIViewController {
+class OneSessionViewController: UIViewController {
     
     var pageIndex : Int = 0
     var titleText : String = ""
     var imageFile : String = ""
+    
     
     override func viewDidLoad()
     {

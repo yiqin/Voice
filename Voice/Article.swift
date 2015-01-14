@@ -42,7 +42,8 @@ class Article: NSVoiceObject {
             self.isFirstLoad = false
         }
         
-        directlyLoadWholeArticleWithNotification(false)
+        // We don't load the whole article before we click it.
+        // directlyLoadWholeArticleWithNotification(false)
     };
     
     /// load html file of the article
