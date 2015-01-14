@@ -43,8 +43,8 @@ class Article: NSVoiceObject {
         }
         
         // We don't load the whole article before we click it.
-        // directlyLoadWholeArticleWithNotification(false)
-    };
+        directlyLoadWholeArticleWithNotification(false)
+    }
     
     /// load html file of the article
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
