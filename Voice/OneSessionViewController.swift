@@ -18,7 +18,7 @@ class OneSessionViewController: UIViewController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, session selectedSession: Session? ) {
         
-        oneSessionTVC = OneSessionTableViewController(session: selectedSession!)
+        oneSessionTVC = OneSessionTableViewController(selectedSession: selectedSession!)
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         

@@ -12,6 +12,7 @@ class Session: NSVoiceObject {
     
     var number : Int
     
+    var count : Int
     /// to check whether the images and the articles are laoding from Parse
     var isLoading : Bool = false
     
@@ -21,7 +22,11 @@ class Session: NSVoiceObject {
     
     override init(parseObject:PFObject) {
         let tempNumber = parseObject["number"] as NSNumber
+        
+        // Check this value later.
         number = 1
+        
+        count = 1
         coverImage = StreetImage()
         
         super.init(parseObject:parseObject)
@@ -55,6 +60,7 @@ class Session: NSVoiceObject {
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("successullly get Articles")
+                self.count = self.count+objects.count
                 for object in objects {
                     let article = Article(parseObject: object as PFObject)
                     self.articles.addObject(article)
