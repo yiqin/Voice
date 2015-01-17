@@ -14,17 +14,19 @@ protocol ArticlesTableViewControllerDelegate {
 
 class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegate {
     
-    var messageLabel = UILabel()
+    var messageLabel : UILabel
     var delegate:ArticlesTableViewControllerDelegate?
     
     /// Record the content offset of the article table view controller. Update when the user scroll the article table view.
     var lastContentOffset : CGFloat
     /// Bottom line of the article table view controller
-    var lastBottomLine : CGFloat
+    var lastBottomLine : CGFloat = 0
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         lastContentOffset = 0
         lastBottomLine = 0
+        
+        messageLabel = UILabel()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
