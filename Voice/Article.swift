@@ -10,7 +10,6 @@ import UIKit
 
 class Article: NSVoiceObject {
     
-    /// This value is confusing. I need to check this value later.
     var isFirstLoad:Bool
     
     var title: String
@@ -42,11 +41,9 @@ class Article: NSVoiceObject {
             self.isFirstLoad = false
         }
         
-        // We don't load the whole article before we click it.
         directlyLoadWholeArticleWithNotification(false)
-    }
+    };
     
-    /// load html file of the article
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
         var query  = PFQuery(className: "ArticleBlock")
         query.orderByAscending("indexNumber")

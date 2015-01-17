@@ -18,5 +18,5 @@ class AdsLocation: NSVoiceObject {
         stateName = parseObject["stateName"] as String
         
         super.init(parseObject:parseObject)
-    }
+    };
 }
