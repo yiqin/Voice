@@ -25,7 +25,6 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         lastContentOffset = 0
         lastBottomLine = 0
-        
         messageLabel = UILabel()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -36,6 +35,8 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
     override init(style: UITableViewStyle) {
         lastContentOffset = 0
         lastBottomLine = 0
+        messageLabel = UILabel()
+        
         super.init(style: style)
     }
 
