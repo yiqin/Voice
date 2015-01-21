@@ -86,6 +86,12 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if (indexPath.row == 0){
+            
+        }
+        else {
+            
+        }
     }
 
 
