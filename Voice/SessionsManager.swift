@@ -1,32 +1,32 @@
 //
-//  ArticlesManager.swift
+//  SectionsManager.swift
 //  Voice
 //
-//  Created by yiqin on 10/22/14.
-//  Copyright (c) 2014 yiqin. All rights reserved.
+//  Created by Yi Qin on 1/12/15.
+//  Copyright (c) 2015 yiqin. All rights reserved.
 //
 
 import UIKit
 
 /**
- Manages the list of articles in the main view.
- Each item has Article class, rather than ArticleDetail class.
+ Load sections manager. Use this section as the key to load related street images and articles.
 */
-class ArticlesManager: NSObject {
+class SessionsManager: NSObject {
     
-    var articles : NSMutableArray = []
+    /// Update this variable
+    var sessions : NSMutableArray = []
     var currentPageIndex = 0;
-    let itemsPerPage = 10;
+    let itemsPerPage = kNumberOfSectionPerQuery;
     
-    class var sharedInstance : ArticlesManager {
+    class var sharedInstance : SessionsManager {
         struct Static {
-            static let instance = ArticlesManager()
+            static let instance = SessionsManager()
         }
         return Static.instance
     }
     
     /**
-     quick way to start to load article data from Parse.com
+    quick way to start to load article data from Parse.com
     */
     func startLoadingDataFromParse(pageIndex:Int) {
         startLoadingDataFromParse(pageIndex, completionClosure: { (success) -> () in
@@ -36,26 +36,26 @@ class ArticlesManager: NSObject {
     
     /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
-        var query  = PFQuery(className: "Article")
-        
-        query.orderByDescending("createdAt")
+        var query  = PFQuery(className: "Session")
+        query.whereKey("isPublished", equalTo: true)
+        query.orderByDescending("number")
         query.limit = itemsPerPage
         query.skip = pageIndex*itemsPerPage
         
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
-                println("Load articles from Parse.com.")
-                var recievedArticles = NSMutableArray()
+                println("Load sessions - #\(objects.count) from Parse.com.")
+                var recieved = NSMutableArray()
                 
                 for object in objects {
-                    let newArtical = Article(parseObject: object as PFObject)
-                    recievedArticles.addObject(newArtical)
+                    let newSection = Session(parseObject: object as PFObject)
+                    recieved.addObject(newSection)
                 }
                 
                 if (pageIndex == 0){
-                    self.articles.removeAllObjects()
+                    self.sessions.removeAllObjects()
                 }
-                self.articles.addObjectsFromArray(recievedArticles)
+                self.sessions.addObjectsFromArray(recieved)
                 completionClosure(success: true)
                 
             } else {
@@ -65,6 +65,7 @@ class ArticlesManager: NSObject {
         }
     }
     
+    /// for propagation
     func loadMoreDataFromParse(completionClosure: (success :Bool) ->()){
         currentPageIndex++;
         startLoadingDataFromParse(currentPageIndex, completionClosure: { (success) -> () in
@@ -77,12 +78,6 @@ class ArticlesManager: NSObject {
         })
     }
     
-    func addArticle(newArticle:Article) {
-        articles.addObject(newArticle)
-    }
     
-    func removeArticle(index:Int) {
-        articles.removeObjectAtIndex(index)
-    }
     
 }

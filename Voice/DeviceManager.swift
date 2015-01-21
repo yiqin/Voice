@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Manages the size information, the location information
+ Manages the size information, the location information. We can use VoiceConstants instead now.
 */
 class DeviceManager: NSObject {
     
@@ -71,5 +71,4 @@ class DeviceManager: NSObject {
     }
     */
 
-    
 }
