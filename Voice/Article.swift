@@ -10,14 +10,15 @@ import UIKit
 
 class Article: NSVoiceObject {
     
-    /// This value is confusing. I need to check this value later.
-    var isbriefImageLoad:Bool
-    
     var title: String
     // var briefDescription: String
-    var briefImage: PFImageView
     
+    var urlAddress : NSURL
+    
+    var briefImage: PFImageView
     var briefImagePFFile: PFFile
+    var isbriefImageLoad:Bool
+    
     
     
     var articleBlocks : NSMutableArray = []
@@ -31,7 +32,7 @@ class Article: NSVoiceObject {
         // briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
         let tempURLString = parseObject["url"] as String
-        
+        urlAddress = NSURL(string: tempURLString)!
         
         briefImagePFFile = parseObject["briefImage"] as PFFile
         
