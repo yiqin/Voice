@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DeviceManager.sharedInstance
         AdsManager.sharedInstance
         
-        // Previous method.
-        // DeviceManager.sharedInstance.startLoadingRelatedAdsFromParse()
+
+        DeviceManager.sharedInstance.setDeviceSize()
         
         // Version one method. No use now.
         /*

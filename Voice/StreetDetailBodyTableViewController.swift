@@ -36,8 +36,6 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.blueColor()
-        
         // Do any additional setup after loading the view.
     }
 
@@ -102,16 +100,17 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 cell?.streetDetailImageView.file = thunmbnail
                 // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
                 
+                println("Load Street Detail Image ssauccesfully.")
                 
                 cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                    
-                    
-                    println("Load Street Detail Image ssauccesfully.")
                     
                     println("Image Width: \(image.size.width)")
                     println("Image Height: \(image.size.height)")
                     
                     let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+                    
+                    println("ratio ..... \(DeviceManager.sharedInstance.screenWidth)")
+                    
                     
                     // ==================================================
                     // Strong and weak reference example.........................
@@ -121,7 +120,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                     
                     object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
                     
-                    // println(image.size.height*ratio)
+                    println(image.size.height*ratio)
                     
                     self.imageDictionary.setObject(image, forKey: indexPath.row)
                     self.isFisrtLoadCheckSet.addObject(indexPath.row)
@@ -132,11 +131,9 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                     
                     // add dispatch_get_main_queur.......
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        // self.tableView.reloadData()
                         
                         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
                     })
-                    // tableView.reloadData()
                 }
             }
             else {
