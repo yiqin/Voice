@@ -11,7 +11,7 @@ import UIKit
 class Article: NSVoiceObject {
     
     /// This value is confusing. I need to check this value later.
-    var isFirstLoad:Bool
+    var isbriefImageLoad:Bool
     
     var title: String
     // var briefDescription: String
@@ -19,14 +19,18 @@ class Article: NSVoiceObject {
     
     var briefImagePFFile: PFFile
     
+    
     var articleBlocks : NSMutableArray = []
     var isArticleBlocksReady = false
     
+    
     override init(parseObject:PFObject) {
-        isFirstLoad = true
+        isbriefImageLoad = true
         
         title = parseObject["title"] as String
         // briefDescription = parseObject["briefDescription"] as String    // How to check this value
+        
+        let tempURLString = parseObject["url"] as String
         
         
         briefImagePFFile = parseObject["briefImage"] as PFFile
@@ -39,13 +43,14 @@ class Article: NSVoiceObject {
         
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load article image succesfully.")
-            self.isFirstLoad = false
+            self.isbriefImageLoad = false
         }
         
         // We don't load the whole article before we click it.
-        directlyLoadWholeArticleWithNotification(false)
+        // directlyLoadWholeArticleWithNotification(false)
     }
     
+    //############### Never Call ###############//
     /// load html file of the article
     func directlyLoadWholeArticleWithNotification(sendNotification: Bool){
         var query  = PFQuery(className: "ArticleBlock")

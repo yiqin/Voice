@@ -140,7 +140,7 @@ class ArticlesTableViewController: UITableViewController, SWTableViewCellDelegat
             
             var article = articles.objectAtIndex(indexPath.row) as Article
             
-            if(article.isFirstLoad){
+            if(article.isbriefImageLoad){
                 let thunmbnail = article.briefImagePFFile
                 cell?.briefImage.file = thunmbnail
                 cell?.briefImage.image = UIImage(named: "defaultImage.png")
