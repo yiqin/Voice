@@ -10,20 +10,20 @@ import UIKit
 
 class StreetDetailViewController: UIViewController {
     
-    // var streetDetailTVC : StreetDetailBodyTableViewController
+    var streetDetailTVC : StreetDetailBodyTableViewController
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedStreetImage: StreetImage? ) {
         
-        // streetDetailTVC = StreetDetailBodyTableViewController()
+        streetDetailTVC = StreetDetailBodyTableViewController(selectedStreetImage: selectedStreetImage!)
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor.whiteColor()
         
-        /*
+        
         streetDetailTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         // streetDetailTVC.pullToRefreshEnabled = false;
         view.addSubview(streetDetailTVC.view)
-        */
+        
         
         var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
         self.view.addGestureRecognizer(swipeRight)

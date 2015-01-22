@@ -36,7 +36,8 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.blueColor()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -55,6 +56,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func objectsDidLoad(error: NSError!) {
         super.objectsDidLoad(error) // Don't forget the super method.
+        
     }
     
     /// Update height here after the downlaod is finished.
@@ -106,8 +108,8 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                     
                     println("Load Street Detail Image ssauccesfully.")
                     
-                    // println("Image Width: \(image.size.width)")
-                    // println("Image Height: \(image.size.height)")
+                    println("Image Width: \(image.size.width)")
+                    println("Image Height: \(image.size.height)")
                     
                     let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
                     
@@ -142,11 +144,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
             }
         }
-        
-        
-        
 
-        
         
         return cell
     }
