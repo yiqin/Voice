@@ -65,7 +65,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         }
         else {
             let object = objects[indexPath.row] as PFObject
-            let cellHeight = object["imageHeight"] as NSNumber
+            let cellHeight = object["imageHeight"] as NSNumber // this will be updated later........ #important.
             
             return CGFloat(cellHeight)
         }
@@ -101,7 +101,6 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                     let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
                     
                     println("ratio ..... \(DeviceManager.sharedInstance.screenWidth)")
-                    
                     
                     // ==================================================
                     // Strong and weak reference example.........................
