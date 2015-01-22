@@ -20,7 +20,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         
         coverImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))
         coverImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        coverImageView.contentMode = UIViewContentMode.Center
+        coverImageView.contentMode = UIViewContentMode.ScaleToFill
         addSubview(coverImageView)
     }
 

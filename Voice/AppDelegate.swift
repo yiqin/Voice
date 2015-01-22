@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        setting()
+        
         parseSetup()
         
         singleMethodSetup()     // after parseSetup
@@ -30,12 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func setting(){
+        SVProgressHUD.setBackgroundColor(UIColor.clearColor())
+    }
+    
     func singleMethodSetup() {
         
         UserManager.sharedInstance
         DeviceManager.sharedInstance
         AdsManager.sharedInstance
-        
 
         DeviceManager.sharedInstance.setDeviceSize()
         
