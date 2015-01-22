@@ -102,6 +102,8 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
         
         var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
         
+        
+        
     }
     
     func moveToSelectArticle(selectedArticle:Article) {
