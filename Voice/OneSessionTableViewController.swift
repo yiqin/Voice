@@ -44,7 +44,9 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return SessionStreetImageTableViewCell.cellHeight()
+            let image = session.streetImage.uiimage
+            let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+            return image.size.height*ratio
         }
         else {
             return SessionArticleTableViewCell.cellHeight()

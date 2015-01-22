@@ -54,14 +54,10 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func objectsDidLoad(error: NSError!) {
         super.objectsDidLoad(error) // Don't forget the super method.
-        
     }
     
     /// Update height here after the downlaod is finished.
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        println("ROW: \(indexPath.row)  SECTION: \(indexPath.section)    \(objects.count)")
-        
         if(indexPath.row == 0){
             let image = streetImage.uiimage
             let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
@@ -84,11 +80,6 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             cell = StreetDetailBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetDetailImageTableIdentifier)
         }
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
-        
-        
-        println(indexPath.row)
-        
-        
         
         if(indexPath.row == 0){
             cell?.streetDetailImageView.image = streetImage.uiimage
@@ -141,10 +132,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
             }
         }
-
         
         return cell
     }
-
-    
 }

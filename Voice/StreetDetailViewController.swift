@@ -55,8 +55,10 @@ class StreetDetailViewController: UIViewController {
 
     func swipeRight(recognizer:UISwipeGestureRecognizer){
         println("Swipe right.")
-        self.navigationController?.popViewControllerAnimated(true)
-        
+        // self.navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
     }
     
     /*
