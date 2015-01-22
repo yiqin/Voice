@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol OneSessionTableViewControllerDelegate {
+    func moveToSelectArticle(selectedArticle:Article)
+    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage)
+}
+
 class OneSessionTableViewController: UITableViewController, UITableViewDelegate {
     
     var session : Session
+    var delegate: OneSessionTableViewControllerDelegate?
     
     init(selectedSession: Session) {
         session = selectedSession
@@ -86,32 +92,13 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        println(indexPath.row)
-        
+
         if (indexPath.row == 0){
-            moveToSelectStreetImageFromImageRows(session.streetImage)
+            delegate?.moveToSelectStreetImageFromImageRows(session.streetImage)
         }
         else {
             let article = session.articles[indexPath.row-1] as Article
-            moveToSelectArticle(article)
+            delegate?.moveToSelectArticle(article)
         }
     }
-
-    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
-        
-        var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
-        
-        
-        
-    }
-    
-    func moveToSelectArticle(selectedArticle:Article) {
-        var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
-        
-        
-    }
-    
-
-
 }

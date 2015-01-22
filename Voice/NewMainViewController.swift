@@ -94,4 +94,9 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         
         return pageContentViewController
     }
+    
+    
+    
+    
 }
+

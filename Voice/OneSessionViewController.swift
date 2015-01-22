@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OneSessionViewController: UIViewController {
+class OneSessionViewController: UIViewController, OneSessionTableViewControllerDelegate {
     
     var pageIndex : Int = 0
     var titleText : String = ""
@@ -22,6 +22,7 @@ class OneSessionViewController: UIViewController {
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+        oneSessionTVC.delegate = self
         view.addSubview(oneSessionTVC.view)
     }
     
@@ -29,7 +30,6 @@ class OneSessionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -45,21 +45,25 @@ class OneSessionViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         println("view will appear \(pageIndex)")
-        
     }
     
-    
-    
-    
-    
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
+        var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
+        navigationController?.presentViewController(streetImageDetailViewController, animated: true, completion: { () -> Void in
+            
+        })
+    }
     
-    
+    func moveToSelectArticle(selectedArticle:Article) {
+        var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
+        navigationController?.presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
+            
+        })
+    }
 
 }
