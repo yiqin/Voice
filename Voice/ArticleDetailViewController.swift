@@ -17,7 +17,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     var selectedArticle : Article
     
     /// backButton on the top
-    var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
+    // var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC : ArticleDetailBodyTableViewController
@@ -29,13 +29,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.selectedArticle = selectedArticle!
         self.articleDetailBodyTVC = ArticleDetailBodyTableViewController(selectedArticle: selectedArticle!)
         
-        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 45, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-45))
+        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
         
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.whiteColor()
         
         articleDetailBodyWebView.delegate = self
+        view.addSubview(articleDetailBodyWebView)
         
         loadWeb()
         
@@ -45,9 +46,10 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.articleDetailBodyTVC.adPosition = randomNumber;
         // view.addSubview(articleDetailBodyTVC.view)
         
-        
+        /*
         backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
+        */
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
         
@@ -72,10 +74,6 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
-        
-
     }
 
     
@@ -96,9 +94,11 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     }
     
     
-    func loadWeb(){
-        println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
+    func loadWeb() {
+        articleDetailBodyWebView.loadRequest(NSURLRequest(URL: selectedArticle.urlAddress))
         
+        /*
+        println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
         // Why selectedArticle has zero values...
         if (selectedArticle.isArticleBlocksReady){
             
@@ -132,6 +132,8 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             // this is not a perfect method.
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("loadWeb"), userInfo: nil, repeats: false)
         }
+        */
+        
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
@@ -141,7 +143,9 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
         
-        self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
+        // self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
+        
+        
         /*
         UIView.transitionWithView(view, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             
@@ -151,7 +155,6 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         */
     }
     
-    
     func swipeRight(recognizer:UISwipeGestureRecognizer){
         println("Swipe right.")
         popBackToMainViewController()
@@ -160,7 +163,11 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     func popBackToMainViewController(){
         SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        // self.navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
     }
     
     /*
