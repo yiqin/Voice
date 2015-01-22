@@ -86,13 +86,30 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Select \(indexPath.row)")
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        println(indexPath.row)
+        
         if (indexPath.row == 0){
-            
+            moveToSelectStreetImageFromImageRows(session.streetImage)
         }
         else {
-            
+            let article = session.articles[indexPath.row-1] as Article
+            moveToSelectArticle(article)
         }
     }
+
+    func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
+        
+        var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
+        
+    }
+    
+    func moveToSelectArticle(selectedArticle:Article) {
+        var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
+        
+        
+    }
+    
 
 
 }
