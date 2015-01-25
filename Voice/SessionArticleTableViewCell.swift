@@ -25,7 +25,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         coverImageView.contentMode = UIViewContentMode.ScaleToFill
         addSubview(coverImageView)
         
-        titleLabel.frame = CGRectMake(10, 10, 300, 30)
+        titleLabel.frame = CGRectMake(10, 20, 300, 30)
         // titleLabel.backgroundColor = UIColor.lightGrayColor()
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
