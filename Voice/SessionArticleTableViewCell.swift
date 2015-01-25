@@ -11,10 +11,12 @@ import UIKit
 class SessionArticleTableViewCell: UITableViewCell {
     
     var coverImageView : UIImageView
+    var titleLabel : UILabel
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         coverImageView = UIImageView()
+        titleLabel = UILabel()
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -22,6 +24,12 @@ class SessionArticleTableViewCell: UITableViewCell {
         coverImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         coverImageView.contentMode = UIViewContentMode.ScaleToFill
         addSubview(coverImageView)
+        
+        titleLabel.frame = CGRectMake(10, 10, 300, 30)
+        titleLabel.backgroundColor = UIColor.lightGrayColor()
+        titleLabel.textColor = UIColor.whiteColor()
+        titleLabel.font = UIFont(name: "STHeiti-Medium", size: 20)
+        addSubview(titleLabel)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -41,10 +49,11 @@ class SessionArticleTableViewCell: UITableViewCell {
         
         let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
         let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
-        
         let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
         
         coverImageView.image = blurTempImage
+        
+        titleLabel.text = article.title
     }
     
     class func cellHeight()->CGFloat {

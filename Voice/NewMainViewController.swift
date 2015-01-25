@@ -11,8 +11,6 @@ import UIKit
 class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController : UIPageViewController?
-    var pageTitles : Array<String> = ["God vs Man", "Cool Breeze", "Fire Sky"]
-    var pageImages : Array<String> = ["icon-130.png", "icon-130.png", "icon-130.png"]
     var currentIndex : Int = 0
     
     override func prefersStatusBarHidden() -> Bool {
