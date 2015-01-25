@@ -34,11 +34,21 @@ class SessionArticleTableViewCell: UITableViewCell {
     }
     
     func updateCell(article : Article){
-        coverImageView.image = article.briefImage.image
+        let tempImage = article.briefImage.image
+        let tempImageWidth = tempImage?.size.width
+        let tempImageHeight = tempImage?.size.height
+        let ratio = DeviceManager.sharedInstance.screenWidth/tempImageWidth!
+        
+        let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
+        let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
+        
+        let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
+        
+        coverImageView.image = blurTempImage
     }
     
     class func cellHeight()->CGFloat {
-        return 200
+        return 150
     }
 
 }

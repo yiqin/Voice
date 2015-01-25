@@ -23,6 +23,10 @@ class Session: NSVoiceObject {
     override init(parseObject:PFObject) {
         let tempNumber = parseObject["number"] as NSNumber
         
+        println()
+        println("session.......")
+        println()
+        
         // Check this value later.
         number = 1
         

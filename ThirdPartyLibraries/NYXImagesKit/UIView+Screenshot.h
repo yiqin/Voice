@@ -7,6 +7,7 @@
 //  www.cocoaintheshell.com
 //
 
+#import <UIKit/UIKit.h>
 
 @interface UIView (NYX_Screenshot)
 

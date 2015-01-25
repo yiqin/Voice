@@ -30,7 +30,6 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.grayColor()
         tableView.separatorColor = UIColor.clearColor()
     }
     

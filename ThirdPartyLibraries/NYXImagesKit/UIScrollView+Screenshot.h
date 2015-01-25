@@ -7,6 +7,7 @@
 //  www.cocoaintheshell.com
 //
 
+#import <UIKit/UIKit.h>
 
 @interface UIScrollView (NYX_Screenshot)
 

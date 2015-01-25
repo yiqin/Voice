@@ -25,3 +25,7 @@
 #import "Mixpanel.h"
 #import "SVProgressHUD.h"
 #import "INTULocationManager.h"
+
+// Image Effect
+#import "UIImage+Resizing.h"
+#import "UIImage+Blurring.h"
