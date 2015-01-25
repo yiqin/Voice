@@ -34,8 +34,4 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     func updateCell(streetImage : StreetImage){
         streetImageView.image = streetImage.image.image
     }
-    
-    class func cellHeight()->CGFloat {
-        return 500
-    }
 }
