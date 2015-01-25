@@ -38,7 +38,7 @@ class SessionArticleTableViewCell: UITableViewCell {
     }
     
     class func cellHeight()->CGFloat {
-        return 100
+        return 200
     }
 
 }

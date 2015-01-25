@@ -104,6 +104,20 @@
 		8D6C2BE71A22E98800EB01FB /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BDF1A22E98800EB01FB /* SWTableViewCell.m */; };
 		8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */; };
 		8D6C2BE91A22E98800EB01FB /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */; };
+		8D6CE5801A74A4E200D56808 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6CE57F1A74A4E200D56808 /* Accelerate.framework */; };
+		8D6CE5821A74A4E800D56808 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6CE5811A74A4E800D56808 /* AssetsLibrary.framework */; };
+		8D6CE5841A74A4F100D56808 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6CE5831A74A4F100D56808 /* ImageIO.framework */; };
+		8D6CE5861A74A50200D56808 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6CE5851A74A50200D56808 /* CoreImage.framework */; };
+		8D6CE59C1A74A7E400D56808 /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5891A74A7E400D56808 /* UIImage+Blurring.m */; };
+		8D6CE59D1A74A7E400D56808 /* UIImage+Enhancing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE58B1A74A7E400D56808 /* UIImage+Enhancing.m */; };
+		8D6CE59E1A74A7E400D56808 /* UIImage+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE58D1A74A7E400D56808 /* UIImage+Filtering.m */; };
+		8D6CE59F1A74A7E400D56808 /* UIImage+Masking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE58F1A74A7E400D56808 /* UIImage+Masking.m */; };
+		8D6CE5A01A74A7E400D56808 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5911A74A7E400D56808 /* UIImage+Reflection.m */; };
+		8D6CE5A11A74A7E400D56808 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5931A74A7E400D56808 /* UIImage+Resizing.m */; };
+		8D6CE5A21A74A7E400D56808 /* UIImage+Rotating.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5951A74A7E400D56808 /* UIImage+Rotating.m */; };
+		8D6CE5A31A74A7E400D56808 /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5971A74A7E400D56808 /* UIImage+Saving.m */; };
+		8D6CE5A41A74A7E400D56808 /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5991A74A7E400D56808 /* UIScrollView+Screenshot.m */; };
+		8D6CE5A51A74A7E400D56808 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE59B1A74A7E400D56808 /* UIView+Screenshot.m */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -341,6 +355,30 @@
 		8D6C2BE11A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		8D6C2BE21A22E98800EB01FB /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		8D6C2BE31A22E98800EB01FB /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		8D6CE57F1A74A4E200D56808 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8D6CE5811A74A4E800D56808 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8D6CE5831A74A4F100D56808 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		8D6CE5851A74A50200D56808 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		8D6CE5881A74A7E400D56808 /* UIImage+Blurring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blurring.h"; sourceTree = "<group>"; };
+		8D6CE5891A74A7E400D56808 /* UIImage+Blurring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blurring.m"; sourceTree = "<group>"; };
+		8D6CE58A1A74A7E400D56808 /* UIImage+Enhancing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Enhancing.h"; sourceTree = "<group>"; };
+		8D6CE58B1A74A7E400D56808 /* UIImage+Enhancing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Enhancing.m"; sourceTree = "<group>"; };
+		8D6CE58C1A74A7E400D56808 /* UIImage+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Filtering.h"; sourceTree = "<group>"; };
+		8D6CE58D1A74A7E400D56808 /* UIImage+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Filtering.m"; sourceTree = "<group>"; };
+		8D6CE58E1A74A7E400D56808 /* UIImage+Masking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Masking.h"; sourceTree = "<group>"; };
+		8D6CE58F1A74A7E400D56808 /* UIImage+Masking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Masking.m"; sourceTree = "<group>"; };
+		8D6CE5901A74A7E400D56808 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
+		8D6CE5911A74A7E400D56808 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
+		8D6CE5921A74A7E400D56808 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
+		8D6CE5931A74A7E400D56808 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
+		8D6CE5941A74A7E400D56808 /* UIImage+Rotating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotating.h"; sourceTree = "<group>"; };
+		8D6CE5951A74A7E400D56808 /* UIImage+Rotating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotating.m"; sourceTree = "<group>"; };
+		8D6CE5961A74A7E400D56808 /* UIImage+Saving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Saving.h"; sourceTree = "<group>"; };
+		8D6CE5971A74A7E400D56808 /* UIImage+Saving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Saving.m"; sourceTree = "<group>"; };
+		8D6CE5981A74A7E400D56808 /* UIScrollView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Screenshot.h"; sourceTree = "<group>"; };
+		8D6CE5991A74A7E400D56808 /* UIScrollView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Screenshot.m"; sourceTree = "<group>"; };
+		8D6CE59A1A74A7E400D56808 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		8D6CE59B1A74A7E400D56808 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -431,6 +469,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6CE5861A74A50200D56808 /* CoreImage.framework in Frameworks */,
+				8DD6B4BE19F74C1B00B30EA9 /* QuartzCore.framework in Frameworks */,
+				8DD6B4BC19F74C1500B30EA9 /* MobileCoreServices.framework in Frameworks */,
+				8D6CE5841A74A4F100D56808 /* ImageIO.framework in Frameworks */,
+				8D6CE5821A74A4E800D56808 /* AssetsLibrary.framework in Frameworks */,
+				8D6CE5801A74A4E200D56808 /* Accelerate.framework in Frameworks */,
 				8D571F241A0176D200859378 /* libicucore.dylib in Frameworks */,
 				8D571D8D1A0173BF00859378 /* Foundation.framework in Frameworks */,
 				8D571D8B1A0173B000859378 /* UIKit.framework in Frameworks */,
@@ -438,8 +482,6 @@
 				8DD6B4C219F74C2A00B30EA9 /* StoreKit.framework in Frameworks */,
 				8DC6955A1A1C07E6002D06B8 /* Fabric.framework in Frameworks */,
 				8DD6B4C019F74C2100B30EA9 /* Security.framework in Frameworks */,
-				8DD6B4BE19F74C1B00B30EA9 /* QuartzCore.framework in Frameworks */,
-				8DD6B4BC19F74C1500B30EA9 /* MobileCoreServices.framework in Frameworks */,
 				8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */,
 				8DD6B4BA19F74C0C00B30EA9 /* libz.dylib in Frameworks */,
 				8DD6B4B819F74BFE00B30EA9 /* CoreLocation.framework in Frameworks */,
@@ -654,6 +696,33 @@
 			path = SWTableViewCell;
 			sourceTree = "<group>";
 		};
+		8D6CE5871A74A7E400D56808 /* NYXImagesKit */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CE5881A74A7E400D56808 /* UIImage+Blurring.h */,
+				8D6CE5891A74A7E400D56808 /* UIImage+Blurring.m */,
+				8D6CE58A1A74A7E400D56808 /* UIImage+Enhancing.h */,
+				8D6CE58B1A74A7E400D56808 /* UIImage+Enhancing.m */,
+				8D6CE58C1A74A7E400D56808 /* UIImage+Filtering.h */,
+				8D6CE58D1A74A7E400D56808 /* UIImage+Filtering.m */,
+				8D6CE58E1A74A7E400D56808 /* UIImage+Masking.h */,
+				8D6CE58F1A74A7E400D56808 /* UIImage+Masking.m */,
+				8D6CE5901A74A7E400D56808 /* UIImage+Reflection.h */,
+				8D6CE5911A74A7E400D56808 /* UIImage+Reflection.m */,
+				8D6CE5921A74A7E400D56808 /* UIImage+Resizing.h */,
+				8D6CE5931A74A7E400D56808 /* UIImage+Resizing.m */,
+				8D6CE5941A74A7E400D56808 /* UIImage+Rotating.h */,
+				8D6CE5951A74A7E400D56808 /* UIImage+Rotating.m */,
+				8D6CE5961A74A7E400D56808 /* UIImage+Saving.h */,
+				8D6CE5971A74A7E400D56808 /* UIImage+Saving.m */,
+				8D6CE5981A74A7E400D56808 /* UIScrollView+Screenshot.h */,
+				8D6CE5991A74A7E400D56808 /* UIScrollView+Screenshot.m */,
+				8D6CE59A1A74A7E400D56808 /* UIView+Screenshot.h */,
+				8D6CE59B1A74A7E400D56808 /* UIView+Screenshot.m */,
+			);
+			path = NYXImagesKit;
+			sourceTree = "<group>";
+		};
 		8D9416461A6466EA0040E536 /* LaunchingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +845,7 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CE5871A74A7E400D56808 /* NYXImagesKit */,
 				8DA779E01A297D1A006393CF /* INTULocationManager */,
 				8D6C2BD71A22E98800EB01FB /* SWTableViewCell */,
 				8D6C2BC91A223FA000EB01FB /* SVProgressHUD */,
@@ -871,6 +941,10 @@
 		8DD6B4AA19F74BCC00B30EA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CE5851A74A50200D56808 /* CoreImage.framework */,
+				8D6CE5831A74A4F100D56808 /* ImageIO.framework */,
+				8D6CE5811A74A4E800D56808 /* AssetsLibrary.framework */,
+				8D6CE57F1A74A4E200D56808 /* Accelerate.framework */,
 				8DC695571A1C07E6002D06B8 /* Crashlytics.framework */,
 				8DC695581A1C07E6002D06B8 /* Fabric.framework */,
 				8D571F231A0176D200859378 /* libicucore.dylib */,
@@ -1075,6 +1149,8 @@
 				8D3CE9421A645CE500A8BE55 /* Session.swift in Sources */,
 				8D571F091A0175FF00859378 /* MPPropertyDescription.m in Sources */,
 				8D571EE71A0175FF00859378 /* MPABTestDesignerChangeResponseMessage.m in Sources */,
+				8D6CE59D1A74A7E400D56808 /* UIImage+Enhancing.m in Sources */,
+				8D6CE5A31A74A7E400D56808 /* UIImage+Saving.m in Sources */,
 				8D571EF71A0175FF00859378 /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
 				8D571F001A0175FF00859378 /* MPNotificationViewController.m in Sources */,
 				8D571F0F1A0175FF00859378 /* MPSurveyQuestionViewController.m in Sources */,
@@ -1106,6 +1182,7 @@
 				8DCDD3C719FB0932003C5746 /* ImagesRowsTableViewController.swift in Sources */,
 				8D571F041A0175FF00859378 /* MPObjectSelector.m in Sources */,
 				8D571EE51A0175FF00859378 /* MPAbstractABTestDesignerMessage.m in Sources */,
+				8D6CE5A01A74A7E400D56808 /* UIImage+Reflection.m in Sources */,
 				8D571F0A1A0175FF00859378 /* MPSequenceGenerator.m in Sources */,
 				8D571EE61A0175FF00859378 /* MPABTestDesignerChangeRequestMessage.m in Sources */,
 				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
@@ -1145,12 +1222,14 @@
 				8D1B5B7E1A08559E00B32925 /* ArticleBlock.swift in Sources */,
 				8D571F221A0175FF00859378 /* UIView+MPSnapshotImage.m in Sources */,
 				8D9777CF19F841EE006ABF30 /* UpView.swift in Sources */,
+				8D6CE5A41A74A7E400D56808 /* UIScrollView+Screenshot.m in Sources */,
 				8D6C2BE81A22E98800EB01FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				8DA779E91A297FEB006393CF /* VoiceLocationManager.swift in Sources */,
 				8D9416451A6464EC0040E536 /* VoiceConstants.swift in Sources */,
 				8D571EEB1A0175FF00859378 /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
 				8DDFEA791A66374200421711 /* OneSessionTableViewController.swift in Sources */,
 				8D6C2BD41A22BC5200EB01FB /* ArticleLoadMoreDataTableViewCell.m in Sources */,
+				8D6CE59C1A74A7E400D56808 /* UIImage+Blurring.m in Sources */,
 				8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */,
 				8DFC05151A0D1FDB00678269 /* YQImageSourceHelpers.swift in Sources */,
 				8DCDD3CD19FB227D003C5746 /* ImagesRowScrollView.m in Sources */,
@@ -1163,6 +1242,7 @@
 				8D571EF81A0175FF00859378 /* MPCGRectToNSDictionaryValueTransformer.m in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,
+				8D6CE5A11A74A7E400D56808 /* UIImage+Resizing.m in Sources */,
 				8D571F011A0175FF00859378 /* MPNSAttributedStringToNSDictionaryValueTransformer.m in Sources */,
 				8D571F081A0175FF00859378 /* MPPassThroughValueTransformer.m in Sources */,
 				8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */,
@@ -1174,6 +1254,7 @@
 				8D571F131A0175FF00859378 /* MPTweakStore.m in Sources */,
 				8D571F0B1A0175FF00859378 /* MPSurvey.m in Sources */,
 				8DDEDC2519F8768100550516 /* ArticlesTableViewController.swift in Sources */,
+				8D6CE59F1A74A7E400D56808 /* UIImage+Masking.m in Sources */,
 				8D6BD77D19FB4517006A3909 /* ImageCollectionViewCell.m in Sources */,
 				8D571EE91A0175FF00859378 /* MPABTestDesignerClearResponseMessage.m in Sources */,
 				8DFC024319FE931E0098C1BA /* ArticleDetailViewController.swift in Sources */,
@@ -1185,6 +1266,8 @@
 				8D571EED1A0175FF00859378 /* MPABTestDesignerDisconnectMessage.m in Sources */,
 				8D571F151A0175FF00859378 /* MPUIColorToNSStringValueTransformer.m in Sources */,
 				8D571EF41A0175FF00859378 /* MPCATransform3DToNSDictionaryValueTransformer.m in Sources */,
+				8D6CE5A21A74A7E400D56808 /* UIImage+Rotating.m in Sources */,
+				8D6CE5A51A74A7E400D56808 /* UIView+Screenshot.m in Sources */,
 				8D571F051A0175FF00859378 /* MPObjectSerializer.m in Sources */,
 				8D571F1B1A0175FF00859378 /* NSData+MPBase64.m in Sources */,
 				8D571EEC1A0175FF00859378 /* MPABTestDesignerDeviceInfoResponseMessage.m in Sources */,
@@ -1193,6 +1276,7 @@
 				8D571F121A0175FF00859378 /* MPTweakInline.m in Sources */,
 				8D571EF91A0175FF00859378 /* MPCGSizeToNSDictionaryValueTransformer.m in Sources */,
 				8D571EF31A0175FF00859378 /* MPBOOLToNSNumberValueTransformer.m in Sources */,
+				8D6CE59E1A74A7E400D56808 /* UIImage+Filtering.m in Sources */,
 				8D6C2BE61A22E98800EB01FB /* SWLongPressGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
