@@ -26,9 +26,9 @@ class SessionArticleTableViewCell: UITableViewCell {
         addSubview(coverImageView)
         
         titleLabel.frame = CGRectMake(10, 10, 300, 30)
-        titleLabel.backgroundColor = UIColor.lightGrayColor()
+        // titleLabel.backgroundColor = UIColor.lightGrayColor()
         titleLabel.textColor = UIColor.whiteColor()
-        titleLabel.font = UIFont(name: "STHeiti-Medium", size: 20)
+        titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
         addSubview(titleLabel)
     }
 
@@ -51,7 +51,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
         let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
         
-        coverImageView.image = blurTempImage
+        coverImageView.image = blurTempImage?.opacity(0.9)
         
         titleLabel.text = article.title
     }
