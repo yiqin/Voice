@@ -25,8 +25,8 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
         
-        
-        pageViewController!.view.frame = CGRectMake(0, 44, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-44)
+        let tempOffset:CGFloat = 20
+        pageViewController!.view.frame = CGRectMake(0, tempOffset, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-tempOffset)
         // pageViewController!.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleWidth
         
         addChildViewController(pageViewController!)

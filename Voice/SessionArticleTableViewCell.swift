@@ -49,6 +49,7 @@ class SessionArticleTableViewCell: UITableViewCell {
     }
     
     func updateCell(article : Article){
+        
         let tempImage = article.briefImage.image
         let tempImageWidth = tempImage?.size.width
         let tempImageHeight = tempImage?.size.height
@@ -58,17 +59,17 @@ class SessionArticleTableViewCell: UITableViewCell {
         let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
         let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
         
-        coverImageView.image = blurTempImage?.opacity(0.9)
-        
+        // coverImageView.image = blurTempImage?.opacity(0.9)
+        coverImageView.image = croppedTempImage
         
         titleLabel.text = article.title
         titleLabel.sizeToFit()
-        tempView.frame = CGRectMake(0, CGRectGetMinY(titleLabel.frame), (CGRectGetMaxX(titleLabel.frame)+40), CGRectGetHeight(titleLabel.frame)+16)
-        titleLabel.frame = CGRectMake(CGRectGetMinX(titleLabel.frame)+10, CGRectGetMinY(titleLabel.frame)+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
+        titleLabel.frame = CGRectMake(10+10, 20+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
+        tempView.frame = CGRectMake(0, 20, (CGRectGetMaxX(titleLabel.frame)+20), CGRectGetHeight(titleLabel.frame)+16)
     }
     
     class func cellHeight()->CGFloat {
-        return 150
+        return 125
     }
 
 }
