@@ -12,6 +12,10 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
 
     lazy var gifImageView:UIImageView = UIImageView()
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,9 +73,19 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     func moveToMainViewController() {
         gifImageView.stopAnimating()
         
+        
+        
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
         var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
-        self.navigationController?.pushViewController(mainViewController, animated: true)
+        var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
+        
+        
+        
+        self.presentViewController(tempNavigationController, animated: true) { () -> Void in
+            
+        }
+        
+        // self.navigationController?.pushViewController(mainViewController, animated: true)
     }
     
     func noConnection() {

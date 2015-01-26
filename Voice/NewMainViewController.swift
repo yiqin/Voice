@@ -13,14 +13,10 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     var pageViewController : UIPageViewController?
     var currentIndex : Int = 0
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+                
         pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         pageViewController!.dataSource = self
         

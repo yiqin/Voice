@@ -120,6 +120,7 @@
 		8D6CE5A51A74A7E400D56808 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE59B1A74A7E400D56808 /* UIView+Screenshot.m */; };
 		8D6CE5A91A74A91B00D56808 /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5A71A74A91B00D56808 /* NYXImagesHelper.m */; };
 		8D703B791A76553100DF6C73 /* CheckConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B781A76553100DF6C73 /* CheckConnectivity.swift */; };
+		8D703B7B1A769B2800DF6C73 /* SessionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -385,6 +386,7 @@
 		8D6CE5A71A74A91B00D56808 /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		8D6CE5A81A74A91B00D56808 /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
 		8D703B781A76553100DF6C73 /* CheckConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectivity.swift; sourceTree = "<group>"; };
+		8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionNavigationController.swift; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 			isa = PBXGroup;
 			children = (
 				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
+				8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 			);
 			name = MainViewController;
@@ -1253,6 +1256,7 @@
 				8D571F1A1A0175FF00859378 /* MPWebSocket.m in Sources */,
 				8D571EF81A0175FF00859378 /* MPCGRectToNSDictionaryValueTransformer.m in Sources */,
 				8DD6B4CE19F7590B00B30EA9 /* DeviceManager.swift in Sources */,
+				8D703B7B1A769B2800DF6C73 /* SessionNavigationController.swift in Sources */,
 				8DDEDC2819F88E0500550516 /* Article.swift in Sources */,
 				8D6CE5A11A74A7E400D56808 /* UIImage+Resizing.m in Sources */,
 				8D571F011A0175FF00859378 /* MPNSAttributedStringToNSDictionaryValueTransformer.m in Sources */,
