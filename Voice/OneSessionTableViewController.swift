@@ -68,7 +68,7 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
                 cell?.selectionStyle = UITableViewCellSelectionStyle.None
             }
             
-            cell?.updateCell(session.streetImage)
+            cell?.updateCell(session.streetImage, session: session)
             
             return cell!
         }

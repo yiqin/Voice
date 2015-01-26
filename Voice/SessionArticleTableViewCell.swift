@@ -63,7 +63,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         
         titleLabel.text = article.title
         titleLabel.sizeToFit()
-        tempView.frame = CGRectMake(CGRectGetMinX(titleLabel.frame), CGRectGetMinY(titleLabel.frame), (CGRectGetWidth(titleLabel.frame)+20), CGRectGetHeight(titleLabel.frame)+16)
+        tempView.frame = CGRectMake(0, CGRectGetMinY(titleLabel.frame), (CGRectGetMaxX(titleLabel.frame)+40), CGRectGetHeight(titleLabel.frame)+16)
         titleLabel.frame = CGRectMake(CGRectGetMinX(titleLabel.frame)+10, CGRectGetMinY(titleLabel.frame)+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
     }
     

@@ -10,7 +10,10 @@ import UIKit
 
 class Session: NSVoiceObject {
     
+    var title : String
+    
     var number : Int
+
     
     var count : Int
     /// to check whether the images and the articles are laoding from Parse
@@ -26,6 +29,8 @@ class Session: NSVoiceObject {
         println()
         println("session.......")
         println()
+        
+        title = parseObject["title"] as String
         
         // Check this value later.
         number = 1
