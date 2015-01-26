@@ -49,15 +49,21 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
         
-        SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
-            if(success){
-                
-            }
-            else {
-                // No need. It's in AppDelegate
-                // var timer = NSTimer.scheduledTimerWithTimeInterval(0.50, target: self, selector: Selector("noConnection"), userInfo: nil, repeats: false)
-            }
-        })
+        // Only two places are need to check the Internet.
+        if(!CheckConnectivity.isConnectedToNetwork()){
+            
+        }
+        else {
+            SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
+                if(success){
+                    
+                }
+                else {
+                    // No need. It's in AppDelegate
+                    // var timer = NSTimer.scheduledTimerWithTimeInterval(0.50, target: self, selector: Selector("noConnection"), userInfo: nil, repeats: false)
+                }
+            })
+        }
     }
     
     func moveToMainViewController() {

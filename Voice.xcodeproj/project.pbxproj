@@ -119,6 +119,7 @@
 		8D6CE5A41A74A7E400D56808 /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5991A74A7E400D56808 /* UIScrollView+Screenshot.m */; };
 		8D6CE5A51A74A7E400D56808 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE59B1A74A7E400D56808 /* UIView+Screenshot.m */; };
 		8D6CE5A91A74A91B00D56808 /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CE5A71A74A91B00D56808 /* NYXImagesHelper.m */; };
+		8D703B791A76553100DF6C73 /* CheckConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B781A76553100DF6C73 /* CheckConnectivity.swift */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -383,6 +384,7 @@
 		8D6CE5A61A74A91B00D56808 /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
 		8D6CE5A71A74A91B00D56808 /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		8D6CE5A81A74A91B00D56808 /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		8D703B781A76553100DF6C73 /* CheckConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectivity.swift; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -887,6 +889,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
+				8D703B781A76553100DF6C73 /* CheckConnectivity.swift */,
 				8D9416441A6464EC0040E536 /* VoiceConstants.swift */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9416461A6466EA0040E536 /* LaunchingViewController */,
@@ -1197,6 +1200,7 @@
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
 				8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */,
 				8D571EEE1A0175FF00859378 /* MPABTestDesignerSnapshotRequestMessage.m in Sources */,
+				8D703B791A76553100DF6C73 /* CheckConnectivity.swift in Sources */,
 				8DA779E61A297D1A006393CF /* INTULocationManager.m in Sources */,
 				8D571F1C1A0175FF00859378 /* NSInvocation+MPHelpers.m in Sources */,
 				8DF4F6631A1EEB190025BAF9 /* StreetDetailViewController.swift in Sources */,
