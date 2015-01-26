@@ -746,8 +746,8 @@
 		8D9416471A6467070040E536 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
 				8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */,
+				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 			);
 			name = MainViewController;

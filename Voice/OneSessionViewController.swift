@@ -22,8 +22,11 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+        // oneSessionTVC.view.frame = CGRectMake(0, 44, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-44)
+        // oneSessionTVC.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleWidth
+        
         oneSessionTVC.delegate = self
-        view.addSubview(oneSessionTVC.view)
+        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -41,6 +44,12 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         label.textAlignment = .Center
         view.addSubview(label)
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        oneSessionTVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame))
+        view.addSubview(oneSessionTVC.view)
     }
     
     override func viewWillAppear(animated: Bool) {

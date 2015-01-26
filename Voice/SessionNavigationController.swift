@@ -20,8 +20,7 @@ class SessionNavigationController: UINavigationController {
         
         navigationBar.barTintColor = UIColor.whiteColor()
         navigationBar.tintColor = UIColor.whiteColor()
-        navigationBar.translucent = true
-        navigationBar.barStyle = UIBarStyle.Default
+        
     }
 
     required init(coder aDecoder: NSCoder) {

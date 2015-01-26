@@ -16,6 +16,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         return true
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,7 +82,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         
         
-        self.presentViewController(tempNavigationController, animated: true) { () -> Void in
+        presentViewController(tempNavigationController, animated: true) { () -> Void in
             
         }
         
