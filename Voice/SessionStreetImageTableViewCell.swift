@@ -14,11 +14,17 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     var titleView : UIView
     var titleLabel: UILabel
     
+    var photoByLabel : UILabel
+    var whoLabel : UILabel
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         streetImageView = PFImageView()
         titleView = UIView()
         titleLabel = UILabel()
+        
+        photoByLabel = UILabel()
+        whoLabel = UILabel()
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -35,6 +41,19 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         titleLabel.textAlignment = NSTextAlignment.Center
         titleLabel.numberOfLines = 2
         titleView.addSubview(titleLabel)
+        
+        
+        whoLabel.frame = CGRectMake(16, 55, 100, 16)
+        whoLabel.textAlignment = NSTextAlignment.Left
+        whoLabel.font = UIFont.systemFontOfSize(11.5)
+        whoLabel.textColor = UIColor.grayColor()
+        streetImageView.addSubview(whoLabel)
+        
+        photoByLabel.frame = CGRectMake(16, 55+16, 100, 16)
+        photoByLabel.textAlignment = NSTextAlignment.Left
+        photoByLabel.font = UIFont.systemFontOfSize(11.5)
+        photoByLabel.textColor = UIColor.grayColor()
+        streetImageView.addSubview(photoByLabel)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -47,6 +66,9 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     
     func updateCell(streetImage : StreetImage, session : Session){
         titleLabel.text = session.title
+        photoByLabel.text = session.photoBy
+        whoLabel.text = session.who
+        
         streetImageView.file = session.streetImage.imagePFFile
         if(session.isLoading){
             SVProgressHUD.show()
