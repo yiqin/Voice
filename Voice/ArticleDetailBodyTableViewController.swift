@@ -14,6 +14,11 @@ class ArticleDetailBodyTableViewController: UITableViewController {
     var adPosition = -1 // Default value
     var article: Article
     
+    override init() {
+        article = Article()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     init(selectedArticle: Article) {
         article = selectedArticle
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.

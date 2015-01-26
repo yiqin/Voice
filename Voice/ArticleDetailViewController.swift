@@ -24,19 +24,27 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     
     var articleDetailBodyWebView : ArticleDetailBodyWebView
     
+    override init() {
+        self.selectedArticle = Article()
+        articleDetailBodyTVC = ArticleDetailBodyTableViewController()
+        articleDetailBodyWebView = ArticleDetailBodyWebView()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
         
         self.selectedArticle = selectedArticle!
         self.articleDetailBodyTVC = ArticleDetailBodyTableViewController(selectedArticle: selectedArticle!)
         
-        articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
-        
+        // articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
+        articleDetailBodyWebView = ArticleDetailBodyWebView()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        view.backgroundColor = UIColor.whiteColor()
         
-        articleDetailBodyWebView.delegate = self
-        view.addSubview(articleDetailBodyWebView)
+        view.backgroundColor = UIColor.clearColor()
+        view.opaque = false
+        
+        
         
         loadWeb()
         
@@ -51,25 +59,25 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         view.addSubview(backButton)
         */
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
         
-        
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
-        self.view.addGestureRecognizer(swipeRight)
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
         
-        SVProgressHUD.show()
-        
-        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -93,8 +101,11 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.articleDetailBodyTVC.tableView.reloadData()
     }
     
-    
     func loadWeb() {
+        articleDetailBodyWebView.delegate = self
+        view.addSubview(articleDetailBodyWebView)
+        articleDetailBodyWebView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
+        
         articleDetailBodyWebView.loadRequest(NSURLRequest(URL: selectedArticle.urlAddress))
         
         /*
@@ -136,12 +147,18 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         
     }
     
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.show()
+    }
+    
     func webViewDidFinishLoad(webView: UIWebView) {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
         
         SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("PresentArticleDetailViewController", object: nil, userInfo: nil)
         
         // self.view.insertSubview(self.articleDetailBodyWebView, belowSubview: self.backButton)
         

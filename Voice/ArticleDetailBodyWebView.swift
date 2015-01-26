@@ -10,6 +10,11 @@ import UIKit
 
 class ArticleDetailBodyWebView: UIWebView {
     
+    override init() {
+        super.init()
+        backgroundColor = UIColor.whiteColor()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.whiteColor()

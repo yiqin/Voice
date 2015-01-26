@@ -24,6 +24,14 @@ class Article: NSVoiceObject {
     var articleBlocks : NSMutableArray = []
     var isArticleBlocksReady = false
     
+    override init() {
+        title = ""
+        urlAddress = NSURL()
+        briefImage = PFImageView()
+        briefImagePFFile = PFFile()
+        isbriefImageLoad = true
+        super.init()
+    }
     
     override init(parseObject:PFObject) {
         isbriefImageLoad = true

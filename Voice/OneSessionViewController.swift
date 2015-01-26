@@ -15,10 +15,12 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     var imageFile : String = ""
     
     var oneSessionTVC : OneSessionTableViewController
+    var articleDetailViewController : ArticleDetailViewController
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, session selectedSession: Session? ) {
         
         oneSessionTVC = OneSessionTableViewController(selectedSession: selectedSession!)
+        articleDetailViewController = ArticleDetailViewController()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
@@ -44,6 +46,7 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         label.textAlignment = .Center
         view.addSubview(label)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "PresentArticleDetailViewController", name: "PresentArticleDetailViewController", object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -64,17 +67,24 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
         var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
         
-        
-        navigationController?.presentViewController(streetImageDetailViewController, animated: true, completion: { () -> Void in
+        presentViewController(streetImageDetailViewController, animated: true, completion: { () -> Void in
             
         })
     }
     
     func moveToSelectArticle(selectedArticle:Article) {
-        var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
-        navigationController?.presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
+        // var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
+        articleDetailViewController.selectedArticle = selectedArticle
+        articleDetailViewController.loadWeb()
+        
+        
+    }
+    
+    func PresentArticleDetailViewController(){
+        presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
             
         })
     }
+    
 
 }
