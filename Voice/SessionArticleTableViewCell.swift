@@ -12,11 +12,13 @@ class SessionArticleTableViewCell: UITableViewCell {
     
     var coverImageView : UIImageView
     var titleLabel : UILabel
+    var tempView : UIView
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         coverImageView = UIImageView()
         titleLabel = UILabel()
+        tempView = UIView()
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -25,10 +27,15 @@ class SessionArticleTableViewCell: UITableViewCell {
         coverImageView.contentMode = UIViewContentMode.ScaleToFill
         addSubview(coverImageView)
         
+        tempView = UIView(frame: CGRectMake(10, 20, 300, 30))
+        tempView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
+        addSubview(tempView)
+        
         titleLabel.frame = CGRectMake(10, 20, 300, 30)
-        // titleLabel.backgroundColor = UIColor.lightGrayColor()
+        // titleLabel.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
+        
         addSubview(titleLabel)
     }
 
@@ -53,7 +60,11 @@ class SessionArticleTableViewCell: UITableViewCell {
         
         coverImageView.image = blurTempImage?.opacity(0.9)
         
+        
         titleLabel.text = article.title
+        titleLabel.sizeToFit()
+        tempView.frame = CGRectMake(CGRectGetMinX(titleLabel.frame), CGRectGetMinY(titleLabel.frame), (CGRectGetWidth(titleLabel.frame)+20), CGRectGetHeight(titleLabel.frame)+16)
+        titleLabel.frame = CGRectMake(CGRectGetMinX(titleLabel.frame)+10, CGRectGetMinY(titleLabel.frame)+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
     }
     
     class func cellHeight()->CGFloat {

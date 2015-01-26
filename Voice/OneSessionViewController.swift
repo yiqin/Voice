@@ -54,6 +54,8 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     
     func moveToSelectStreetImageFromImageRows(selectedStreetImage:StreetImage){
         var streetImageDetailViewController = StreetDetailViewController(nibName: nil, bundle: nil, article: selectedStreetImage)
+        
+        
         navigationController?.presentViewController(streetImageDetailViewController, animated: true, completion: { () -> Void in
             
         })

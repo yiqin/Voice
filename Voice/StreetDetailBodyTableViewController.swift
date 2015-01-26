@@ -54,19 +54,41 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     
     override func objectsDidLoad(error: NSError!) {
         super.objectsDidLoad(error) // Don't forget the super method.
+        
+        
+        //**********************************************//
+        //  A Bug here.........
+        //**********************************************//
+        for var i = 0; i < objects.count; i++ {
+            let object = objects[i] as PFObject
+            let thunmbnail = object["image"] as PFFile
+            var tempImageView = PFImageView()
+            tempImageView.file = thunmbnail
+            // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+            tempImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                
+                println("here \(i)")
+                
+                self.imageDictionary.setObject(image, forKey: i)
+                self.isFisrtLoadCheckSet.addObject(i)
+            }
+        }
     }
     
     /// Update height here after the downlaod is finished.
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if(indexPath.row == 0){
+        if(indexPath.row == -1){
             let image = streetImage.uiimage
             let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
             return image.size.height*ratio
         }
         else {
             let object = objects[indexPath.row] as PFObject
-            let cellHeight = object["imageHeight"] as NSNumber // this will be updated later........ #important.
+            // let cellHeight = object["imageHeight"] as NSNumber // this will be updated later........ #important.
             
+            let ratio = object["ratio"] as NSNumber
+            
+            let cellHeight = DeviceManager.sharedInstance.screenWidth/CGFloat(ratio.floatValue)
             return CGFloat(cellHeight)
         }
     }
@@ -81,7 +103,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         }
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         
-        if(indexPath.row == 0){
+        if(indexPath.row == -1){
             cell?.streetDetailImageView.image = streetImage.uiimage
         }
         else {
@@ -94,36 +116,8 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
                 println("Load Street Detail Image ssauccesfully.")
                 
                 cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                    
-                    println("Image Width: \(image.size.width)")
-                    println("Image Height: \(image.size.height)")
-                    
-                    let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
-                    
-                    println("ratio ..... \(DeviceManager.sharedInstance.screenWidth)")
-                    
-                    // ==================================================
-                    // Strong and weak reference example.........................
-                    // ==================================================
-                    
-                    var object_ = self.objects[indexPath.row] as PFObject
-                    
-                    object_.setObject(NSNumber(float: Float(image.size.height*ratio)), forKey: "imageHeight")
-                    
-                    println(image.size.height*ratio)
-                    
                     self.imageDictionary.setObject(image, forKey: indexPath.row)
                     self.isFisrtLoadCheckSet.addObject(indexPath.row)
-                    
-                    // Note: this is wrong.......
-                    // Spend two hours to fix a bug......
-                    // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-                    
-                    // add dispatch_get_main_queur.......
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        
-                        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-                    })
                 }
             }
             else {

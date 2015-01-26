@@ -47,3 +47,31 @@ Parse.Cloud.define("sendVerificationCode", function(request, response) {
         }
     });
 });
+
+
+var Image = require("parse-image");
+ 
+Parse.Cloud.beforeSave("StreetDetailImage", function(request, response) {
+  var streetDetailImage = request.object;
+ 
+  Parse.Cloud.httpRequest({
+    url: streetDetailImage.get("image").url()
+ 
+  }).then(function(response) {
+    var image = new Image();
+    return image.setData(response.buffer);
+ 
+  }).then(function(image) {
+    
+    var ratio = image.width()/image.height();
+    streetDetailImage.set("ratio", ratio);
+
+  }).then(function(result) {
+    response.success();
+  }, function(error) {
+    response.error(error);
+  });
+});
+
+
+
