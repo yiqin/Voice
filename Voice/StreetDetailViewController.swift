@@ -84,7 +84,7 @@ class StreetDetailViewController: UIViewController {
         })
     }
     
-    func tapScreen(recognizer:UISwipeGestureRecognizer){
+    func tapScreen(recognizer:UITapGestureRecognizer){
         println("Tap... .")
         
         // showBackSubView = true

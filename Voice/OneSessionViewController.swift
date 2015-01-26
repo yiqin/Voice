@@ -80,7 +80,7 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     
     func PresentArticleDetailViewController(){
         presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
-            
+            self.articleDetailViewController.addGuestureRecognizers()
         })
     }
     

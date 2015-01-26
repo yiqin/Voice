@@ -12,22 +12,26 @@ import UIKit
  Display the detail of an article. 
  The detail consist of several blcoks, including the over page, text paragraghes and images
 */
-class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
+class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestureRecognizerDelegate {
     
     var selectedArticle : Article
-    
-    /// backButton on the top
-    // var backButton = YQButtonWithImage(frame: CGRectMake(0, 0, 45, 45), image: "backArrow.png", selectedImage: "backArrow.png")
     
     /// The tabla view controller display the detail of the article.
     var articleDetailBodyTVC : ArticleDetailBodyTableViewController
     
     var articleDetailBodyWebView : ArticleDetailBodyWebView
     
+    var showBackSubView : Bool = false
+    var backSubView : UIView
+    let backOffset : CGFloat = 44
+
+    
     override init() {
         self.selectedArticle = Article()
         articleDetailBodyTVC = ArticleDetailBodyTableViewController()
         articleDetailBodyWebView = ArticleDetailBodyWebView()
+        backSubView = UIView(frame: CGRectMake(0, -backOffset, DeviceManager.sharedInstance.screenWidth, backOffset))
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,10 +43,12 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // articleDetailBodyWebView = ArticleDetailBodyWebView(frame: CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight))
         articleDetailBodyWebView = ArticleDetailBodyWebView()
         
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        view.backgroundColor = UIColor.clearColor()
-        view.opaque = false
+        backSubView = UIView(frame: CGRectMake(0, -backOffset, DeviceManager.sharedInstance.screenWidth, backOffset))
+
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        view.backgroundColor = UIColor.whiteColor()
         
         
         
@@ -54,12 +60,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         self.articleDetailBodyTVC.adPosition = randomNumber;
         // view.addSubview(articleDetailBodyTVC.view)
         
-        /*
-        backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
-        view.addSubview(backButton)
-        */
+        
+        // backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        backSubView.backgroundColor = UIColor.redColor()
         
         
+        var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 36, 36), image: "back", selectedImage: "back")
+        backSubView.addSubview(tempBackButton)
+        tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -75,23 +83,34 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view.
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
-        
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
-        self.view.addGestureRecognizer(swipeRight)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
-
-    
-    func backButtonPressed(sender: UIButton!){
-        popBackToMainViewController()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addGuestureRecognizers(){
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+        view.addGestureRecognizer(swipeRight)
+        println(".....................")
+        
+        view.userInteractionEnabled = true;
+        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapScreen:")
+        tapGestureRecognizer.delegate = self
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        println("this delegate")
+        
+        return true
     }
     
     /**
@@ -103,11 +122,13 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
     
     func loadWeb() {
         articleDetailBodyWebView.delegate = self
-        view.addSubview(articleDetailBodyWebView)
+        // view.addSubview(articleDetailBodyWebView)
         articleDetailBodyWebView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         
         articleDetailBodyWebView.loadRequest(NSURLRequest(URL: selectedArticle.urlAddress))
         
+        view.backgroundColor = UIColor.redColor()
+        view.addSubview(backSubView)
         /*
         println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
         // Why selectedArticle has zero values...
@@ -147,6 +168,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         
     }
     
+    
     func webViewDidStartLoad(webView: UIWebView) {
         SVProgressHUD.show()
     }
@@ -155,7 +177,6 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
         
-        SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
         
         NSNotificationCenter.defaultCenter().postNotificationName("PresentArticleDetailViewController", object: nil, userInfo: nil)
@@ -170,6 +191,48 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate {
             
         }
         */
+    }
+    
+    func backButtonPressed(sender: UIButton!){
+        // self.navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+    }
+    
+    func tapScreen(recognizer:UITapGestureRecognizer){
+        println("Tap... .")
+        checkBackSubView()
+    }
+    
+    func checkBackSubView(){
+        if (showBackSubView){
+            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+                self.backSubView.frame = CGRectMake(0, -self.backOffset, DeviceManager.sharedInstance.screenWidth, self.backOffset)
+                println("we are going to close it.")
+                
+                }, completion: { (finish) -> Void in
+                    self.showBackSubView = false
+            })
+            
+        }
+        else {
+            // let currentWindow = UIApplication.sharedApplication().keyWindow
+            println(self.backSubView.frame.origin.x)
+            println(self.backSubView.frame.origin.y)
+
+            println(self.backSubView.frame.width)
+            println(self.backSubView.frame.height)
+            // view.addSubview()
+            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+                self.backSubView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, self.backOffset)
+                
+                println("Do u see the view?")
+                
+                }, completion: { (finish) -> Void in
+                    self.showBackSubView = true
+            })
+        }
     }
     
     func swipeRight(recognizer:UISwipeGestureRecognizer){
