@@ -16,23 +16,16 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        title = "V O I C E"
+
+        let range = NSMakeRange(3, 2)
+        var tempText = NSMutableAttributedString(string: "V O I C E")
+        tempText.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
+        tempText.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(20), range: NSMakeRange(0, 9))
+        var tempLabel = TTTAttributedLabel(frame: CGRectMake(DeviceManager.sharedInstance.screenWidth*0.3, 0, DeviceManager.sharedInstance.screenWidth*0.4, 30))
+        tempLabel.attributedText = tempText
+        tempLabel.textAlignment = NSTextAlignment.Center
         
-        /*
-        NSMutableAttributedString *text =
-            [[NSMutableAttributedString alloc]
-                initWithAttributedString: label.attributedText];
-        
-        [text addAttribute:NSForegroundColorAttributeName
-            value:[UIColor redColor]
-            range:NSMakeRange(10, 1)];
-        [label setAttributedText: text];
-        */
-        let tempString = "V O I C E"
-        // var tempText = NSMutableAttributedString(string: tempString)
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
-        navigationController?.navigationBar.titleTextAttributes = titleDict
+        navigationItem.titleView = tempLabel
         
         
         view.backgroundColor = UIColor.whiteColor()
