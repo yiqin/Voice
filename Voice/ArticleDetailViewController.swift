@@ -31,8 +31,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         articleDetailBodyTVC = ArticleDetailBodyTableViewController()
         articleDetailBodyWebView = ArticleDetailBodyWebView()
         backSubView = UIView(frame: CGRectMake(0, -backOffset, DeviceManager.sharedInstance.screenWidth, backOffset))
-
+        
         super.init(nibName: nil, bundle: nil)
+        
+        
+        backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 36, 36), image: "back", selectedImage: "back")
+        backSubView.addSubview(tempBackButton)
+        tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
@@ -61,11 +67,8 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         // view.addSubview(articleDetailBodyTVC.view)
         
         
-        // backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
-        backSubView.backgroundColor = UIColor.redColor()
-        
-        
-        var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 36, 36), image: "back", selectedImage: "back")
+        backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 44, 44), image: "back", selectedImage: "back")
         backSubView.addSubview(tempBackButton)
         tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     }
@@ -122,13 +125,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
     
     func loadWeb() {
         articleDetailBodyWebView.delegate = self
-        // view.addSubview(articleDetailBodyWebView)
+        view.addSubview(articleDetailBodyWebView)
         articleDetailBodyWebView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
         
         articleDetailBodyWebView.loadRequest(NSURLRequest(URL: selectedArticle.urlAddress))
         
         view.backgroundColor = UIColor.redColor()
         view.addSubview(backSubView)
+        backSubView.hidden = true
         /*
         println(ArticleDetailManager.sharedInstance.checkWhetherDataAreReady())
         // Why selectedArticle has zero values...
@@ -224,6 +228,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
             println(self.backSubView.frame.width)
             println(self.backSubView.frame.height)
             // view.addSubview()
+            backSubView.hidden = false
             UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
                 self.backSubView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, self.backOffset)
                 
