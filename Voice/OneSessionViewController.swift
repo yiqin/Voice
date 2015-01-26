@@ -76,8 +76,6 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         // var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
         articleDetailViewController.selectedArticle = selectedArticle
         articleDetailViewController.loadWeb()
-        
-        
     }
     
     func PresentArticleDetailViewController(){
