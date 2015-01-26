@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Fabric
 import Crashlytics
+import SystemConfiguration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,16 +21,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        setting()
-        
         parseSetup()
         
-        singleMethodSetup()     // after parseSetup
-        mixpanelSetup()
-        
-        Fabric.with([Crashlytics()])
+        if(!isConnectedToNetwork()){
+            let alertView = UIAlertView(title: "Oops", message: "The Internet connection appears to be offline. Please check your internet.", delegate: self, cancelButtonTitle: "Go Back")
+            alertView.show()
+        }
+        else {
+            setting()
+            
+            singleMethodSetup()     // after parseSetup
+            mixpanelSetup()
+            
+            Fabric.with([Crashlytics()])
+        }
         
         return true
+    }
+    
+    // Check wifi....
+    func isConnectedToNetwork() -> Bool {
+        
+        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+        }
+        
+        var flags: SCNetworkReachabilityFlags = 0
+        if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+            return false
+        }
+        
+        let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        
+        return (isReachable && !needsConnection) ? true : false
     }
     
     func setting(){
@@ -52,8 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StreetImagesManager.sharedInstance
         StreetImagesManager.sharedInstance.startLoadingDataFromParse()
         */
-        
-        SessionsManager.sharedInstance.startLoadingDataFromParse(0)
         
         VoiceLocationManager.sharedInstance
         VoiceLocationManager.sharedInstance.getCurrentLocation()

@@ -10,13 +10,13 @@ import UIKit
 
 class SessionStreetImageTableViewCell: UITableViewCell {
     
-    var streetImageView : UIImageView
+    var streetImageView : PFImageView
     var titleView : UIView
     var titleLabel: UILabel
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
-        streetImageView = UIImageView()
+        streetImageView = PFImageView()
         titleView = UIView()
         titleLabel = UILabel()
         
@@ -46,7 +46,19 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     }
     
     func updateCell(streetImage : StreetImage, session : Session){
-        streetImageView.image = streetImage.image.image
         titleLabel.text = session.title
+        streetImageView.file = session.streetImage.imagePFFile
+        if(session.isLoading){
+            SVProgressHUD.show()
+            streetImageView.loadInBackground({ (image:UIImage!, error:NSError!) -> Void in
+                println("load ................")
+                self.reloadInputViews()
+                SVProgressHUD.dismiss()
+                // 
+            })
+        }
+        else {
+            streetImageView.image = streetImage.image.image
+        }
     }
 }

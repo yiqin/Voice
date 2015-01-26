@@ -16,8 +16,7 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         
-        // This is really wired.
-        self.streetDetailImageView = [[PFImageView alloc] initWithFrame:CGRectMake(0, -1, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)+1)];
+        self.streetDetailImageView = [[PFImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
         [self.streetDetailImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
         [self.streetDetailImageView setContentMode:UIViewContentModeScaleToFill];
         

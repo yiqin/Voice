@@ -17,7 +17,7 @@ class Session: NSVoiceObject {
     
     var count : Int
     /// to check whether the images and the articles are laoding from Parse
-    var isLoading : Bool = false
+    var isLoading : Bool = true
     
     var streetImage : StreetImage
     
@@ -54,6 +54,7 @@ class Session: NSVoiceObject {
                 if objects.count >= 1 {
                     let object = objects[0] as PFObject
                     self.streetImage = StreetImage(parseObject: object)
+                    self.isLoading = false
                 }
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)

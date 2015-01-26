@@ -22,6 +22,7 @@ class DeviceManager: NSObject {
     /// If cityName is all, then load ads randomly. If cityName is specified, then load the ads
     var cityName = "all"
 
+    var loadTime = 0
     
     class var sharedInstance : DeviceManager {
         struct Static {

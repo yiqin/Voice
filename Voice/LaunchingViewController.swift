@@ -14,6 +14,8 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadSessionStreetImageTableViewCell", name: "reloadSessionStreetImageTableViewCell", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,7 +49,15 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(4.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+        SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
+            if(success){
+                
+            }
+            else {
+                // No need. It's in AppDelegate
+                // var timer = NSTimer.scheduledTimerWithTimeInterval(0.50, target: self, selector: Selector("noConnection"), userInfo: nil, repeats: false)
+            }
+        })
     }
     
     func moveToMainViewController() {
@@ -56,6 +66,11 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
         var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
         self.navigationController?.pushViewController(mainViewController, animated: true)
+    }
+    
+    func noConnection() {
+        let alertView = UIAlertView(title: "Oops", message: "Please check your internet.", delegate: self, cancelButtonTitle: "Cancel")
+        alertView.show()
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,4 +88,10 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     }
     */
 
+    func reloadSessionStreetImageTableViewCell() {
+        if (DeviceManager.sharedInstance.loadTime==0){
+            var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+            DeviceManager.sharedInstance.loadTime++
+        }
+    }
 }

@@ -21,6 +21,8 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     init(selectedSession: Session) {
         session = selectedSession
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
+        
+        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -43,9 +45,15 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            let image = session.streetImage.uiimage
-            let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
-            return image.size.height*ratio
+            if(session.isLoading){
+                let ratio =  DeviceManager.sharedInstance.screenWidth/400
+                return 600*ratio
+            }
+            else {
+                let image = session.streetImage.uiimage
+                let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+                return image.size.height*ratio
+            }
         }
         else {
             return SessionArticleTableViewCell.cellHeight()
@@ -102,4 +110,7 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
             delegate?.moveToSelectArticle(article)
         }
     }
+    
+
+    
 }
