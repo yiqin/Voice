@@ -30,3 +30,10 @@
 #import "UIImage+Resizing.h"
 #import "UIImage+Blurring.h"
 #import "UIImage+Filtering.h"
+
+#import "TTTAttributedLabel.h"
+
+
+
+
+

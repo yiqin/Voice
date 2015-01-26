@@ -17,6 +17,24 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         title = "V O I C E"
+        
+        /*
+        NSMutableAttributedString *text =
+            [[NSMutableAttributedString alloc]
+                initWithAttributedString: label.attributedText];
+        
+        [text addAttribute:NSForegroundColorAttributeName
+            value:[UIColor redColor]
+            range:NSMakeRange(10, 1)];
+        [label setAttributedText: text];
+        */
+        let tempString = "V O I C E"
+        // var tempText = NSMutableAttributedString(string: tempString)
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationController?.navigationBar.titleTextAttributes = titleDict
+        
+        
         view.backgroundColor = UIColor.whiteColor()
         
         pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
