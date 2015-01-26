@@ -16,7 +16,9 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-                
+        title = "V O I C E"
+        view.backgroundColor = UIColor.whiteColor()
+        
         pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         pageViewController!.dataSource = self
         
