@@ -47,9 +47,15 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         view.addSubview(label)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        println("view will disappear.......")
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "PresentArticleDetailViewController", object: nil)
+    }
+    
     override func viewDidDisappear(animated: Bool) {
         println("view did disappear.......")
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "PresentArticleDetailViewController", object: nil)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -86,7 +92,10 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     }
     
     func PresentArticleDetailViewController(){
-        presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
+        let tempNavigationController = UINavigationController(rootViewController: articleDetailViewController)
+        tempNavigationController.setNavigationBarHidden(true, animated: true)
+        
+        presentViewController(tempNavigationController, animated: true, completion: { () -> Void in
             self.articleDetailViewController.addGuestureRecognizers()
             
         })
