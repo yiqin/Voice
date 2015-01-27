@@ -36,9 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             mixpanelSetup()
             
             Fabric.with([Crashlytics()])
+            
+            googleAnalytics()
         }
         
         return true
+    }
+    
+    func googleAnalytics(){
+        GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
     }
     
     func setting(){

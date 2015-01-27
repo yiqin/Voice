@@ -71,6 +71,10 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         println("view will appear \(pageIndex)")
+        
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenView, value: "One Session")
+        tracker.send(GAIDictionaryBuilder.createScreenView().build())
     }
     
     override func didReceiveMemoryWarning() {

@@ -92,6 +92,14 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         super.viewDidAppear(animated)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenView, value: "Article Detail")
+        tracker.send(GAIDictionaryBuilder.createScreenView().build())
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

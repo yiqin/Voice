@@ -122,6 +122,9 @@
 		8D703B791A76553100DF6C73 /* CheckConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B781A76553100DF6C73 /* CheckConnectivity.swift */; };
 		8D703B7B1A769B2800DF6C73 /* SessionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */; };
 		8D703B7F1A76C96D00DF6C73 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D703B7E1A76C96D00DF6C73 /* TTTAttributedLabel.m */; };
+		8D703B8C1A77254100DF6C73 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D703B8B1A77254100DF6C73 /* CoreData.framework */; };
+		8D703B8E1A7726CD00DF6C73 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D703B8D1A7726CD00DF6C73 /* libsqlite3.0.dylib */; };
+		8D703B901A7727DC00DF6C73 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D703B8F1A7727DC00DF6C73 /* libGoogleAnalyticsServices.a */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
@@ -400,6 +403,9 @@
 		8D703B881A7724F900DF6C73 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
 		8D703B891A7724F900DF6C73 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
 		8D703B8A1A7724F900DF6C73 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		8D703B8B1A77254100DF6C73 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8D703B8D1A7726CD00DF6C73 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		8D703B8F1A7727DC00DF6C73 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -490,6 +496,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D703B8E1A7726CD00DF6C73 /* libsqlite3.0.dylib in Frameworks */,
+				8DD6B4BA19F74C0C00B30EA9 /* libz.dylib in Frameworks */,
+				8D703B8C1A77254100DF6C73 /* CoreData.framework in Frameworks */,
 				8DD6B4C419F74C3200B30EA9 /* SystemConfiguration.framework in Frameworks */,
 				8D6CE5861A74A50200D56808 /* CoreImage.framework in Frameworks */,
 				8DD6B4BE19F74C1B00B30EA9 /* QuartzCore.framework in Frameworks */,
@@ -500,11 +509,11 @@
 				8D571F241A0176D200859378 /* libicucore.dylib in Frameworks */,
 				8D571D8D1A0173BF00859378 /* Foundation.framework in Frameworks */,
 				8D571D8B1A0173B000859378 /* UIKit.framework in Frameworks */,
+				8D703B901A7727DC00DF6C73 /* libGoogleAnalyticsServices.a in Frameworks */,
 				8DD6B4C219F74C2A00B30EA9 /* StoreKit.framework in Frameworks */,
 				8DC6955A1A1C07E6002D06B8 /* Fabric.framework in Frameworks */,
 				8DD6B4C019F74C2100B30EA9 /* Security.framework in Frameworks */,
 				8DC695591A1C07E6002D06B8 /* Crashlytics.framework in Frameworks */,
-				8DD6B4BA19F74C0C00B30EA9 /* libz.dylib in Frameworks */,
 				8DD6B4B819F74BFE00B30EA9 /* CoreLocation.framework in Frameworks */,
 				8DD6B4B619F74BF500B30EA9 /* CoreGraphics.framework in Frameworks */,
 				8DD6B4B419F74BEF00B30EA9 /* CFNetwork.framework in Frameworks */,
@@ -769,6 +778,7 @@
 				8D703B881A7724F900DF6C73 /* GAILogger.h */,
 				8D703B891A7724F900DF6C73 /* GAITrackedViewController.h */,
 				8D703B8A1A7724F900DF6C73 /* GAITracker.h */,
+				8D703B8F1A7727DC00DF6C73 /* libGoogleAnalyticsServices.a */,
 			);
 			path = GoogleAnalytics;
 			sourceTree = "<group>";
@@ -995,6 +1005,8 @@
 		8DD6B4AA19F74BCC00B30EA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D703B8D1A7726CD00DF6C73 /* libsqlite3.0.dylib */,
+				8D703B8B1A77254100DF6C73 /* CoreData.framework */,
 				8D6CE5851A74A50200D56808 /* CoreImage.framework */,
 				8D6CE5831A74A4F100D56808 /* ImageIO.framework */,
 				8D6CE5811A74A4E800D56808 /* AssetsLibrary.framework */,
@@ -1471,6 +1483,10 @@
 				INFOPLIST_FILE = Voice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyLibraries/GoogleAnalytics",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";
@@ -1495,6 +1511,10 @@
 				INFOPLIST_FILE = Voice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyLibraries/GoogleAnalytics",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d41729db-cc15-4929-800e-ad65ff770d3a";
 				SWIFT_OBJC_BRIDGING_HEADER = "Voice/Voice-Bridging-Header.h";
