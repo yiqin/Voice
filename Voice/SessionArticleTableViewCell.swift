@@ -49,19 +49,7 @@ class SessionArticleTableViewCell: UITableViewCell {
     }
     
     func updateCell(article : Article){
-        
-        let tempImage = article.briefImage.image
-        let tempImageWidth = tempImage?.size.width
-        let tempImageHeight = tempImage?.size.height
-        let ratio = DeviceManager.sharedInstance.screenWidth/tempImageWidth!
-        
-        let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
-        let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
-        let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
-        
-        // coverImageView.image = blurTempImage?.opacity(0.9)
-        coverImageView.image = croppedTempImage
-        
+        coverImageView.image = article.effectedImage
         titleLabel.text = article.title
         titleLabel.sizeToFit()
         titleLabel.frame = CGRectMake(10+10, 20+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))

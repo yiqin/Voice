@@ -19,7 +19,7 @@ class Article: NSVoiceObject {
     var briefImagePFFile: PFFile
     var isbriefImageLoad:Bool
     
-    
+    var effectedImage : UIImage
     
     var articleBlocks : NSMutableArray = []
     var isArticleBlocksReady = false
@@ -30,6 +30,7 @@ class Article: NSVoiceObject {
         briefImage = PFImageView()
         briefImagePFFile = PFFile()
         isbriefImageLoad = true
+        effectedImage = UIImage()
         super.init()
     }
     
@@ -48,10 +49,26 @@ class Article: NSVoiceObject {
         briefImage = PFImageView()
         briefImage.file = briefImagePFFile
         
+        effectedImage = UIImage()
+        
         super.init(parseObject:parseObject)
         
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
             println("Load article image succesfully.")
+            
+            let tempImage = image
+            let tempImageWidth = tempImage?.size.width
+            let tempImageHeight = tempImage?.size.height
+            let ratio = DeviceManager.sharedInstance.screenWidth/tempImageWidth!
+            
+            let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
+            let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
+            let blurTempImage = croppedTempImage?.gaussianBlurWithBias(0)
+            
+            let blurTempImage2 = blurTempImage?.opacity(0.9)
+            
+            self.effectedImage = blurTempImage2!
+            
             self.isbriefImageLoad = false
         }
         
