@@ -56,9 +56,12 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         // Only two places are need to check the Internet.
         if(!CheckConnectivity.isConnectedToNetwork()){
+            println("No internet")
             
         }
         else {
+            println("internewt")
+            
             SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
                 if(success){
                     

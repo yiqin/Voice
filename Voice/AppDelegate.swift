@@ -21,7 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        Mixpanel.sharedInstanceWithToken("ae8904929f971547a76168a3ed8ed27a")
+        let deviceName = UIDevice.currentDevice().name
+        let deviceId = UIDevice.currentDevice().identifierForVendor.UUIDString
         
+        var mixpanel = Mixpanel.sharedInstance()
+        mixpanel.identify(deviceId)
+        mixpanel.people.set("DeviceName", to: deviceName)
+        mixpanel.registerSuperProperties(["DeviceName":deviceName])
+        mixpanel.track("Enter App.")
+        
+        GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
         
         parseSetup()
         
@@ -33,18 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             setting()
             
             singleMethodSetup()     // after parseSetup
-            mixpanelSetup()
             
             Fabric.with([Crashlytics()])
             
-            googleAnalytics()
         }
         
         return true
-    }
-    
-    func googleAnalytics(){
-        GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
     }
     
     func setting(){
@@ -96,11 +100,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-    }
-    
-    func mixpanelSetup(){
-        Mixpanel.sharedInstanceWithToken("ae8904929f971547a76168a3ed8ed27a")
-        VoiceMixpanelAnalytics.start()
     }
     
     func applicationWillResignActive(application: UIApplication) {
