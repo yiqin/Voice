@@ -65,14 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DeviceManager.sharedInstance.setDeviceSize()
         
-        // Version one method. No use now.
-        /*
-        ArticlesManager.sharedInstance
-        ArticlesManager.sharedInstance.startLoadingDataFromParse(0)
-        
-        StreetImagesManager.sharedInstance
-        StreetImagesManager.sharedInstance.startLoadingDataFromParse()
-        */
+
         
         VoiceLocationManager.sharedInstance
         VoiceLocationManager.sharedInstance.getCurrentLocation()
