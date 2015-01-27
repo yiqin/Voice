@@ -390,6 +390,16 @@
 		8D703B7A1A769B2800DF6C73 /* SessionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionNavigationController.swift; sourceTree = "<group>"; };
 		8D703B7D1A76C96D00DF6C73 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		8D703B7E1A76C96D00DF6C73 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		8D703B811A7724F900DF6C73 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		8D703B821A7724F900DF6C73 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		8D703B831A7724F900DF6C73 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		8D703B841A7724F900DF6C73 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		8D703B851A7724F900DF6C73 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		8D703B861A7724F900DF6C73 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		8D703B871A7724F900DF6C73 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		8D703B881A7724F900DF6C73 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		8D703B891A7724F900DF6C73 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		8D703B8A1A7724F900DF6C73 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
@@ -746,6 +756,23 @@
 			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
+		8D703B801A7724F900DF6C73 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8D703B811A7724F900DF6C73 /* GAI.h */,
+				8D703B821A7724F900DF6C73 /* GAIDictionaryBuilder.h */,
+				8D703B831A7724F900DF6C73 /* GAIEcommerceFields.h */,
+				8D703B841A7724F900DF6C73 /* GAIEcommerceProduct.h */,
+				8D703B851A7724F900DF6C73 /* GAIEcommerceProductAction.h */,
+				8D703B861A7724F900DF6C73 /* GAIEcommercePromotion.h */,
+				8D703B871A7724F900DF6C73 /* GAIFields.h */,
+				8D703B881A7724F900DF6C73 /* GAILogger.h */,
+				8D703B891A7724F900DF6C73 /* GAITrackedViewController.h */,
+				8D703B8A1A7724F900DF6C73 /* GAITracker.h */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
 		8D9416461A6466EA0040E536 /* LaunchingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,6 +896,7 @@
 		8DB363C61A009CC700B87619 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8D703B801A7724F900DF6C73 /* GoogleAnalytics */,
 				8D703B7C1A76C96D00DF6C73 /* TTTAttributedLabel */,
 				8D6CE5871A74A7E400D56808 /* NYXImagesKit */,
 				8DA779E01A297D1A006393CF /* INTULocationManager */,
