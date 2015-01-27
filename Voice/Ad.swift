@@ -18,6 +18,11 @@ class Ad: NSVoiceObject {
     
     override init(parseObject:PFObject) {
         name = parseObject["name"] as String
+        
+        // What is this?
+        // A bug here.......
+        // ###########################
+        
         atLocationName = parseObject["atLocationName"] as String
         
         super.init(parseObject:parseObject)

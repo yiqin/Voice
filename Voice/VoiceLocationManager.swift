@@ -51,12 +51,14 @@ class VoiceLocationManager: NSObject {
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(locationManager, completionHandler: { (placemarks: [AnyObject]!, error:NSError!) -> Void in
             
-            let placemark = (placemarks as NSArray).objectAtIndex(0) as CLPlacemark
-            
-            self.cityName = placemark.locality as String
-            self.stateName = placemark.administrativeArea as String
-            
-            AdsManager.sharedInstance.startLoadingDataFromParse(placemark)
+            if ((error) == nil){
+                let placemark = (placemarks as NSArray).objectAtIndex(0) as CLPlacemark
+                
+                self.cityName = placemark.locality as String
+                self.stateName = placemark.administrativeArea as String
+                
+                AdsManager.sharedInstance.startLoadingDataFromParse(placemark)
+            }
         })
     }
     

@@ -69,6 +69,8 @@ class AdsManager: NSObject {
             if error == nil {
                 println("Load ads from Parse.com.")
                 var recievedAds = NSMutableArray()
+                println(objects.count)
+                
                 
                 for object in objects {
                     let newAd = Ad(parseObject: object as PFObject)
