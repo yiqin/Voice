@@ -45,7 +45,14 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
         label.text = titleText
         label.textAlignment = .Center
         view.addSubview(label)
-        
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        println("view did disappear.......")
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "PresentArticleDetailViewController", object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "PresentArticleDetailViewController", name: "PresentArticleDetailViewController", object: nil)
     }
     
@@ -75,12 +82,13 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     func moveToSelectArticle(selectedArticle:Article) {
         // var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
         articleDetailViewController.selectedArticle = selectedArticle
-        articleDetailViewController.loadWeb()
+        articleDetailViewController.loadWeb(selectedArticle)
     }
     
     func PresentArticleDetailViewController(){
         presentViewController(articleDetailViewController, animated: true, completion: { () -> Void in
             self.articleDetailViewController.addGuestureRecognizers()
+            
         })
     }
     

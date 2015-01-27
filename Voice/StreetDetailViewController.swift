@@ -56,6 +56,9 @@ class StreetDetailViewController: UIViewController {
         
         var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapScreen:")
         view.addGestureRecognizer(tapGestureRecognizer)
+        
+        var temp = UITapGestureRecognizer(target: self, action: "popBackToMainViewController")
+        backSubView.addGestureRecognizer(temp)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -71,6 +74,7 @@ class StreetDetailViewController: UIViewController {
     
     func backButtonPressed(sender: UIButton!){
         // self.navigationController?.popViewControllerAnimated(true)
+        backSubView.hidden = true
         dismissViewControllerAnimated(true, completion: { () -> Void in
             
         })
@@ -79,6 +83,14 @@ class StreetDetailViewController: UIViewController {
     func swipeRight(recognizer:UISwipeGestureRecognizer){
         println("Swipe right.")
         // self.navigationController?.popViewControllerAnimated(true)
+        backSubView.hidden = true
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+    }
+    
+    func popBackToMainViewController(){
+        backSubView.hidden = true
         dismissViewControllerAnimated(true, completion: { () -> Void in
             
         })
@@ -93,7 +105,7 @@ class StreetDetailViewController: UIViewController {
     
     func checkBackSubView(){
         if (showBackSubView){
-            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
                 self.backSubView.frame = CGRectMake(0, -self.backOffset, DeviceManager.sharedInstance.screenWidth, self.backOffset)
                 
                 }, completion: { (finish) -> Void in
@@ -103,7 +115,7 @@ class StreetDetailViewController: UIViewController {
         }
         else {
             view.addSubview(backSubView)
-            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
                 self.backSubView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, self.backOffset)
                 
                 }, completion: { (finish) -> Void in

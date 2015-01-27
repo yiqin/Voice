@@ -34,7 +34,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         titleLabel.frame = CGRectMake(10, 20, 300, 30)
         // titleLabel.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
         titleLabel.textColor = UIColor.whiteColor()
-        titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
+        titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 17)
         
         addSubview(titleLabel)
     }

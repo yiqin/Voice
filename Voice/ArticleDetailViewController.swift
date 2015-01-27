@@ -58,7 +58,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         
         
         
-        loadWeb()
+        loadWeb(selectedArticle)
         
         // Disable articleDetailBodyTVC now.
         articleDetailBodyTVC.view.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
@@ -107,6 +107,9 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         tapGestureRecognizer.delegate = self
         view.addGestureRecognizer(tapGestureRecognizer)
         
+        
+        var temp = UITapGestureRecognizer(target: self, action: "popBackToMainViewController")
+        backSubView.addGestureRecognizer(temp)
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -123,7 +126,9 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         self.articleDetailBodyTVC.tableView.reloadData()
     }
     
-    func loadWeb() {
+    func loadWeb(article: Article?) {
+        selectedArticle = article!
+        
         articleDetailBodyWebView.delegate = self
         view.addSubview(articleDetailBodyWebView)
         articleDetailBodyWebView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight)
@@ -199,6 +204,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
     
     func backButtonPressed(sender: UIButton!){
         // self.navigationController?.popViewControllerAnimated(true)
+        backSubView.hidden = true
         dismissViewControllerAnimated(true, completion: { () -> Void in
             
         })
@@ -211,7 +217,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
     
     func checkBackSubView(){
         if (showBackSubView){
-            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
                 self.backSubView.frame = CGRectMake(0, -self.backOffset, DeviceManager.sharedInstance.screenWidth, self.backOffset)
                 println("we are going to close it.")
                 
@@ -229,7 +235,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
             println(self.backSubView.frame.height)
             // view.addSubview()
             backSubView.hidden = false
-            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
                 self.backSubView.frame = CGRectMake(0, 0, DeviceManager.sharedInstance.screenWidth, self.backOffset)
                 
                 println("Do u see the view?")
@@ -249,6 +255,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         SVProgressHUD.popActivity()
         SVProgressHUD.dismiss()
         
+        backSubView.hidden = true
         // self.navigationController?.popViewControllerAnimated(true)
         dismissViewControllerAnimated(true, completion: { () -> Void in
             
