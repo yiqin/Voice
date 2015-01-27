@@ -49,7 +49,7 @@ class SessionArticleTableViewCell: UITableViewCell {
     }
     
     func updateCell(article : Article){
-        coverImageView.image = article.effectedImage
+        coverImageView.image = article.effectedImage                
         titleLabel.text = article.title
         titleLabel.sizeToFit()
         titleLabel.frame = CGRectMake(10+10, 20+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
