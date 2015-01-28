@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mixpanel.registerSuperProperties(["DeviceName":deviceName])
         mixpanel.track("Enter App.")
         
-        GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
+        GAI.sharedInstance().logger.logLevel = GAILogLevel.Verbose
+        let tracker = GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
         
         parseSetup()
         
