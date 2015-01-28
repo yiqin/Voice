@@ -87,6 +87,9 @@ class OneSessionViewController: UIViewController, OneSessionTableViewControllerD
     
     func moveToSelectArticle(selectedArticle:Article) {
         // var articleDetailViewController = ArticleDetailViewController(nibName:nil, bundle:nil, article: selectedArticle)
+        
+        articleDetailViewController = ArticleDetailViewController()
+        
         articleDetailViewController.selectedArticle = selectedArticle
         articleDetailViewController.loadWeb(selectedArticle)
     }

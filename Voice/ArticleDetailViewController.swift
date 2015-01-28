@@ -100,6 +100,12 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
         tracker.send(GAIDictionaryBuilder.createScreenView().build())
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -135,6 +141,7 @@ class ArticleDetailViewController: UIViewController, UIWebViewDelegate, UIGestur
     }
     
     func loadWeb(article: Article?) {
+        
         selectedArticle = article!
         
         articleDetailBodyWebView.delegate = self

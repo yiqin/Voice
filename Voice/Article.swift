@@ -67,8 +67,8 @@ class Article: NSVoiceObject {
             
             let blurTempImage2 = blurTempImage?.opacity(0.9)
             
-            self.effectedImage = blurTempImage2!
-            
+            // self.effectedImage = blurTempImage2!
+            self.effectedImage = croppedTempImage!
             self.isbriefImageLoad = false
         }
         
