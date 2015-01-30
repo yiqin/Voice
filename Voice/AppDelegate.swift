@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mixpanel.track("Enter App.")
         
         GAI.sharedInstance().logger.logLevel = GAILogLevel.Verbose
-        let tracker = GAI.sharedInstance().trackerWithTrackingId("UA-51208804-9")
+        let tracker = GAI.sharedInstance().trackerWithTrackingId("UA-51208804-10")
         
         parseSetup()
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
