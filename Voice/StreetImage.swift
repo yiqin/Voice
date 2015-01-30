@@ -10,6 +10,9 @@ import UIKit
 
 class StreetImage: NSVoiceObject {
     
+    var who : String
+    var photoBy : String
+    
     var isFirstLoad : Bool
     var imagePFFile : PFFile
     
@@ -18,6 +21,11 @@ class StreetImage: NSVoiceObject {
     var uiimage : UIImage
     
     override init(parseObject:PFObject) {
+        
+        who = parseObject["who"] as String
+        let tempString = parseObject["photoBy"] as String
+        photoBy = "Photo By \(tempString)"
+        
         image = PFImageView()
         uiimage = UIImage()
         
@@ -38,6 +46,9 @@ class StreetImage: NSVoiceObject {
     }
     
     override init() {
+        who = ""
+        photoBy = ""
+        
         image = PFImageView()
         imagePFFile = PFFile()
         uiimage = UIImage()

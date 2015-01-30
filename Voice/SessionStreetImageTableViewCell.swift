@@ -66,10 +66,11 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     
     func updateCell(streetImage : StreetImage, session : Session){
         titleLabel.text = session.title
-        photoByLabel.text = session.photoBy
-        whoLabel.text = session.who
         
         streetImageView.file = session.streetImage.imagePFFile
+        photoByLabel.text = session.streetImage.photoBy
+        whoLabel.text = session.streetImage.who
+        
         if(session.isLoading){
             SVProgressHUD.show()
             streetImageView.loadInBackground({ (image:UIImage!, error:NSError!) -> Void in

@@ -11,8 +11,6 @@ import UIKit
 class Session: NSVoiceObject {
     
     var title : String
-    var who : String
-    var photoBy : String
     
     var number : Int
 
@@ -33,9 +31,7 @@ class Session: NSVoiceObject {
         println()
         
         title = parseObject["title"] as String
-        who = parseObject["who"] as String
-        let tempString = parseObject["photoBy"] as String
-        photoBy = "Photo By \(tempString)"
+        
         
         // Check this value later.
         number = 1
