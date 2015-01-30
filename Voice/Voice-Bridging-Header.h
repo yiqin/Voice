@@ -37,4 +37,5 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 #import "GAILogger.h"
+#import "GAITrackedViewController.h"
 

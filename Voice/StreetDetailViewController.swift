@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StreetDetailViewController: UIViewController {
+class StreetDetailViewController: GAITrackedViewController {
     
     var streetDetailTVC : StreetDetailBodyTableViewController
     
@@ -62,15 +62,18 @@ class StreetDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        /*
         var tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenView, value: "Street Detail")
         tracker.send(GAIDictionaryBuilder.createScreenView().build())
+        */
         
         super.viewDidAppear(animated)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        screenName = "Street Detail"
     }
 
     override func didReceiveMemoryWarning() {

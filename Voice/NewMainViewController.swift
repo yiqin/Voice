@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
+class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataSource {
     
     var pageViewController : UIPageViewController?
     var currentIndex : Int = 0
@@ -51,12 +51,15 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        screenName = "Main View"
     }
     
     override func viewDidAppear(animated: Bool) {
+        /*
         var tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenView, value: "Main View")
         tracker.send(GAIDictionaryBuilder.createScreenView().build())
+        */
         
         super.viewDidAppear(animated)
     }
