@@ -46,6 +46,7 @@ class NewMainViewController: UIViewController, UIPageViewControllerDataSource {
         view.addSubview(pageViewController!.view)
         pageViewController!.didMoveToParentViewController(self)
         
+        
     }
     
     override func viewWillAppear(animated: Bool) {
