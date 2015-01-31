@@ -23,6 +23,7 @@ Parse.Cloud.define("verifyPhoneNumber", function(request, response) {
     }
 });
 
+
 Parse.Cloud.define("sendVerificationCode", function(request, response) {
     var verificationCode = Math.floor(Math.random()*9999);
     var user = Parse.User.current();
@@ -49,6 +50,7 @@ Parse.Cloud.define("sendVerificationCode", function(request, response) {
 });
 
 
+// Process image size....
 var Image = require("parse-image");
  
 Parse.Cloud.beforeSave("StreetDetailImage", function(request, response) {
@@ -73,6 +75,7 @@ Parse.Cloud.beforeSave("StreetDetailImage", function(request, response) {
     response.error(error);
   });
 });
+
 
 Parse.Cloud.beforeSave("StreetDetailImageBeta", function(request, response) {
   var streetDetailImage = request.object;
