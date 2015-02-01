@@ -81,9 +81,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func parseSetup(){
         Parse.setApplicationId("67k8jnSI757kUzLNletpqjxMHdBWTbELiyJoMy52", clientKey: "qbjCzME8VwBHQURxPZQCSmdFeMcY5FlBlzvMzxc4")
         
+        /*
+        // Create role here
+        var roleACL = PFACL()
+        roleACL.setPublicReadAccess(true)
+        roleACL.setPublicWriteAccess(true)
+        var role = PFRole(name: "Tester", acl: roleACL)
+        role.saveInBackgroundWithBlock { (successed : Bool!, error: NSError!) -> Void in
+            if((error) == nil){
+                
+            }
+            else {
+                println(error)
+            }
+        }
+        */
+
+        /*
+        // Test
+        println("User object id")
+        println(PFUser.currentUser().objectId)
+        var gameScore = PFObject(className:"Article")
+        gameScore["title"] = "Sean Plott"
+        gameScore.saveInBackgroundWithBlock { (successed : Bool!, error : NSError!) -> Void in
+            
+            if((error) != nil){
+                println(error)
+            }
+        }
+        */
+        
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
             println("Login before.")
+            UserManager.configureRole("General")
+            
         } else {
             println("New user.")
             PFAnonymousUtils.logInWithBlock {
@@ -92,6 +124,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     println("Anonymous login failed.")
                 } else {
                     println("Anonymous user logged in.")
+                    UserManager.configureRole("General")
+                    
                 }
             }
         }
