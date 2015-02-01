@@ -44,14 +44,15 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let tempScreenWidth = UIScreen.mainScreen().bounds.width
         if (indexPath.row == 0) {
             if(session.isLoading){
-                let ratio =  DeviceManager.sharedInstance.screenWidth/400
+                let ratio =  tempScreenWidth/400
                 return 600*ratio
             }
             else {
                 let image = session.streetImage.uiimage
-                let ratio = DeviceManager.sharedInstance.screenWidth/image.size.width
+                let ratio = tempScreenWidth/image.size.width
                 return image.size.height*ratio
             }
         }
