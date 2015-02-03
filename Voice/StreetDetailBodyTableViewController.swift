@@ -55,22 +55,16 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     override func objectsDidLoad(error: NSError!) {
         super.objectsDidLoad(error) // Don't forget the super method.
         
-        
-        //**********************************************//
-        //  A Bug here.........
-        //**********************************************//
         for var i = 0; i < objects.count; i++ {
             let object = objects[i] as PFObject
             let thunmbnail = object["image"] as PFFile
             var tempImageView = PFImageView()
             tempImageView.file = thunmbnail
-            // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+            var tempNumber:NSNumber = i     // This is the key for imageDictionary
+            
             tempImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                
-                println("here \(i)")
-                
-                self.imageDictionary.setObject(image, forKey: i)
-                self.isFisrtLoadCheckSet.addObject(i)
+                self.imageDictionary.setObject(image, forKey: tempNumber.integerValue)
+                self.isFisrtLoadCheckSet.addObject(tempNumber.integerValue)
             }
         }
     }
@@ -84,10 +78,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         }
         else {
             let object = objects[indexPath.row] as PFObject
-            // let cellHeight = object["imageHeight"] as NSNumber // this will be updated later........ #important.
-            
             let ratio = object["ratio"] as NSNumber
-            
             let cellHeight = DeviceManager.sharedInstance.screenWidth/CGFloat(ratio.floatValue)
             return CGFloat(cellHeight)
         }
@@ -108,14 +99,11 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         }
         else {
             if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
-                
                 let thunmbnail = object["image"] as PFFile
                 cell?.streetDetailImageView.file = thunmbnail
                 // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
-                
-                println("Load Street Detail Image ssauccesfully.")
-                
                 cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                    println("Load Street Detail Image ssauccesfully.")
                     self.imageDictionary.setObject(image, forKey: indexPath.row)
                     self.isFisrtLoadCheckSet.addObject(indexPath.row)
                 }
