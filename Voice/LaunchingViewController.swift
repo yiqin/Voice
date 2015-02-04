@@ -75,20 +75,15 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     }
     
     func moveToMainViewController() {
-        gifImageView.stopAnimating()
-        
-        
+        self.gifImageView.stopAnimating()
         
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
         var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
         var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
         
-        
-        
         presentViewController(tempNavigationController, animated: true) { () -> Void in
             
         }
-        
         // self.navigationController?.pushViewController(mainViewController, animated: true)
     }
     
