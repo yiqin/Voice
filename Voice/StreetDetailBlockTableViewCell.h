@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface StreetDetailBlockTableViewCell : PFTableViewCell
+@interface StreetDetailBlockTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) PFImageView *streetDetailImageView;
 

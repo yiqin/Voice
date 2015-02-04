@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableViewDelegate {
+class StreetDetailBodyTableViewController: UITableViewController, UITableViewDelegate {
     
     var streetImage: StreetImage
     
@@ -16,18 +16,22 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     var isFisrtLoadCheckSet: NSMutableSet
     /// Store images from parse.com and fetch images locally
     var imageDictionary: NSMutableDictionary
+    var imageHeightDictionary : NSMutableDictionary
+    
+    var objects : NSArray
+    var streetDetailImages : NSMutableArray
     
     init(selectedStreetImage: StreetImage) {
         streetImage = selectedStreetImage
         isFisrtLoadCheckSet = NSMutableSet()
         imageDictionary = NSMutableDictionary()
+        imageHeightDictionary = NSMutableDictionary()
+        objects = NSArray()
+        streetDetailImages = NSMutableArray()
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
-        self.tableView.separatorColor = UIColor.clearColor()
-        // self.view.hidden = false;
         
-        pullToRefreshEnabled = false;
-        self.refreshControl = nil;   // Disable refresh......
+        self.tableView.separatorColor = UIColor.clearColor()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -37,6 +41,7 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        startLoadDataFromParse()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,27 +49,28 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    override func queryForTable() -> PFQuery! {
+    func startLoadDataFromParse() {
         var query = PFQuery(className: "StreetDetailImage")
         query.whereKey("belongTo", equalTo: streetImage.parseObject)
         query.orderByAscending("indexNumber")
         
-        return query
-    }
-    
-    override func objectsDidLoad(error: NSError!) {
-        super.objectsDidLoad(error) // Don't forget the super method.
-        
-        for var i = 0; i < objects.count; i++ {
-            let object = objects[i] as PFObject
-            let thunmbnail = object["image"] as PFFile
-            var tempImageView = PFImageView()
-            tempImageView.file = thunmbnail
-            var tempNumber:NSNumber = i     // This is the key for imageDictionary
+        SVProgressHUD.show()
+        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError!) -> Void in
             
-            tempImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                self.imageDictionary.setObject(image, forKey: tempNumber.integerValue)
-                self.isFisrtLoadCheckSet.addObject(tempNumber.integerValue)
+            SVProgressHUD.dismiss()
+            
+            
+            self.objects = objects
+            
+            
+            
+            for var i = 0; i < objects.count; i++ {
+                let object = objects[i] as PFObject
+                self.streetDetailImages.addObject(StreetDetailImage(parseObject: object))
+                
+                if(i == objects.count-1){
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -77,43 +83,48 @@ class StreetDetailBodyTableViewController: PFQueryTableViewController, UITableVi
             return image.size.height*ratio
         }
         else {
-            let object = objects[indexPath.row] as PFObject
-            let ratio = object["ratio"] as NSNumber
-            let cellHeight = DeviceManager.sharedInstance.screenWidth/CGFloat(ratio.floatValue)
-            return CGFloat(cellHeight)
+            let streetDetailImage = streetDetailImages[indexPath.row] as StreetDetailImage
+            return streetDetailImage.imageCellHeight
         }
     }
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return objects.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let streetDetailImageTableIdentifier = "StreetDetailImageTableIdentifier"
+        
+        let object = objects[indexPath.row] as PFObject
+        let streetDetailImage = streetDetailImages[indexPath.row] as StreetDetailImage
         
         var cell = tableView.dequeueReusableCellWithIdentifier(streetDetailImageTableIdentifier) as? StreetDetailBlockTableViewCell
         
         if(cell == nil){
             cell = StreetDetailBlockTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: streetDetailImageTableIdentifier)
+            cell?.selectionStyle = UITableViewCellSelectionStyle.None
+            println("create table view cell.")
         }
-        cell?.selectionStyle = UITableViewCellSelectionStyle.None
         
         if(indexPath.row == -1){
             cell?.streetDetailImageView.image = streetImage.uiimage
         }
         else {
-            if ((isFisrtLoadCheckSet.member(indexPath.row)) == nil){
+            if (streetDetailImage.isImageLoading){
                 let thunmbnail = object["image"] as PFFile
                 cell?.streetDetailImageView.file = thunmbnail
                 // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+                
                 cell?.streetDetailImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                    println("Load Street Detail Image ssauccesfully.")
-                    self.imageDictionary.setObject(image, forKey: indexPath.row)
-                    self.isFisrtLoadCheckSet.addObject(indexPath.row)
+                    
                 }
             }
             else {
                 println("load locally.")
-                cell?.streetDetailImageView.image = (imageDictionary.objectForKey(indexPath.row) as? UIImage)
+                cell?.streetDetailImageView.image = streetDetailImage.image
             }
         }
         
-        return cell
+        return cell!
     }
 }
