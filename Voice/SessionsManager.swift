@@ -58,11 +58,25 @@ class SessionsManager: NSObject {
                 self.sessions.addObjectsFromArray(recieved)
                 completionClosure(success: true)
                 
+                if(pageIndex >= 10 || (objects.count == 0) ){
+                    
+                }
+                else {
+                    NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("continueLoading"), userInfo: nil, repeats: false)
+                }
+                
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
                 completionClosure(success: false)
             }
         }
+    }
+    
+    func continueLoading(){
+        loadMoreDataFromParse { (success) -> () in
+            
+        }
+        
     }
     
     /// for propagation
