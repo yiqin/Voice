@@ -4,7 +4,7 @@ import ImageIO
 class YQGifImage: UIImage {
   // MARK: - Constants
   let framesToPreload = 10
-  let maxTimeStep = 1.0
+  let maxTimeStep = 2.00
 
   // MARK: - Public Properties
   var delegate: UIImageView?

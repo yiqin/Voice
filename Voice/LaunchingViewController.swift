@@ -12,6 +12,8 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
 
     lazy var gifImageView:UIImageView = UIImageView()
     
+    var loadTime = 0
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -75,21 +77,18 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     }
     
     func moveToMainViewController() {
-        self.gifImageView.stopAnimating()
+        
         
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
         var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
         var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
         
+        self.gifImageView.stopAnimating()
+        
         presentViewController(tempNavigationController, animated: true) { () -> Void in
             
         }
         // self.navigationController?.pushViewController(mainViewController, animated: true)
-    }
-    
-    func noConnection() {
-        let alertView = UIAlertView(title: "Oops", message: "Please check your internet.", delegate: self, cancelButtonTitle: "Cancel")
-        alertView.show()
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,9 +107,9 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     */
 
     func reloadSessionStreetImageTableViewCell() {
-        if (DeviceManager.sharedInstance.loadTime==0){
+        if (loadTime==0){
             var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
-            DeviceManager.sharedInstance.loadTime++
+            loadTime++
         }
     }
 }
