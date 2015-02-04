@@ -83,10 +83,13 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
         var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
         
+        println("move To Main View Controller")
         self.gifImageView.stopAnimating()
         
         presentViewController(tempNavigationController, animated: true) { () -> Void in
             
+            println("Finish move To Main View Controller")
+            //
         }
         // self.navigationController?.pushViewController(mainViewController, animated: true)
     }

@@ -13,10 +13,10 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
     var pageViewController : UIPageViewController?
     var currentIndex : Int = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        pageViewController = UIPageViewController(nibName: nil, bundle: nil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
         let range = NSMakeRange(3, 2)
         var tempText = NSMutableAttributedString(string: "V O I C E")
         tempText.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
@@ -45,8 +45,15 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         addChildViewController(pageViewController!)
         view.addSubview(pageViewController!.view)
         pageViewController!.didMoveToParentViewController(self)
-        
-        
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(animated: Bool) {
