@@ -54,8 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setting(){
-        SVProgressHUD.setBackgroundColor(UIColor.clearColor())
-        SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+        // SVProgressHUD.setBackgroundColor(UIColor.clearColor())
+        // SVProgressHUD.setForegroundColor(UIColor.whiteColor())
         SVProgressHUD.setRingThickness(4.00)
     }
     
