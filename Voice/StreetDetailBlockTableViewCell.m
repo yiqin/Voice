@@ -7,6 +7,7 @@
 //
 
 #import "StreetDetailBlockTableViewCell.h"
+#import <ParseUI/PFImageView.h>
 
 @implementation StreetDetailBlockTableViewCell
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+#import "Parse.h"
+#import <ParseUI/PFImageView.h>
 #import "SWTableViewCell.h"
 #import "VoiceLabel.h"
 
