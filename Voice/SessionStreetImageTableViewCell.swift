@@ -40,6 +40,11 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         titleLabel.font = UIFont.systemFontOfSize(11.5)
         titleLabel.textAlignment = NSTextAlignment.Center
         titleLabel.numberOfLines = 2
+        
+        
+        titleLabel.shadowColor = UIColor.grayColor()
+        titleLabel.shadowOffset = CGSizeMake(3, 3)
+        
         titleView.addSubview(titleLabel)
         
         
