@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tracker = GAI.sharedInstance().trackerWithTrackingId("UA-51208804-10")
         
         parseSetup()
-        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, nil)
         
         if(!CheckConnectivity.isConnectedToNetwork()){
             let alertView = UIAlertView(title: "Oops", message: "The Internet connection appears to be offline. Please check your internet.", delegate: self, cancelButtonTitle: "Go Back")
