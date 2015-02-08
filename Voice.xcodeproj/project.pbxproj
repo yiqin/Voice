@@ -150,6 +150,7 @@
 		8D98378B1A87087500CD53EA /* YQParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9837791A87087500CD53EA /* YQParseQuery.m */; };
 		8D98378C1A87087500CD53EA /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98377B1A87087500CD53EA /* YQParseRequestOperationManager.m */; };
 		8D98378D1A87087500CD53EA /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98377D1A87087500CD53EA /* YQParseUser.m */; };
+		8D9837901A870BCA00CD53EA /* ParseMasterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98378F1A870BCA00CD53EA /* ParseMasterOperation.m */; };
 		8D9F7F281A0C5A0E0026AA07 /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */; };
 		8DA779E61A297D1A006393CF /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA779E21A297D1A006393CF /* INTULocationManager.m */; };
 		8DA779E71A297D1A006393CF /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA779E41A297D1A006393CF /* INTULocationRequest.m */; };
@@ -467,6 +468,8 @@
 		8D98377B1A87087500CD53EA /* YQParseRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseRequestOperationManager.m; sourceTree = "<group>"; };
 		8D98377C1A87087500CD53EA /* YQParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseUser.h; sourceTree = "<group>"; };
 		8D98377D1A87087500CD53EA /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
+		8D98378E1A870BCA00CD53EA /* ParseMasterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseMasterOperation.h; sourceTree = "<group>"; };
+		8D98378F1A870BCA00CD53EA /* ParseMasterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseMasterOperation.m; sourceTree = "<group>"; };
 		8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
 		8DA779E11A297D1A006393CF /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
 		8DA779E21A297D1A006393CF /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
@@ -1054,6 +1057,8 @@
 				8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */,
 				8D703B781A76553100DF6C73 /* CheckConnectivity.swift */,
 				8D9416441A6464EC0040E536 /* VoiceConstants.swift */,
+				8D98378E1A870BCA00CD53EA /* ParseMasterOperation.h */,
+				8D98378F1A870BCA00CD53EA /* ParseMasterOperation.m */,
 				8D6C2BD01A22412200EB01FB /* defaultImage.png */,
 				8D9416461A6466EA0040E536 /* LaunchingViewController */,
 				8D9416471A6467070040E536 /* MainViewController */,
@@ -1467,6 +1472,7 @@
 				8D9837871A87087500CD53EA /* YQParse.m in Sources */,
 				8D571F111A0175FF00859378 /* MPTweak.m in Sources */,
 				8D9837861A87087500CD53EA /* YQURLSessionManager.m in Sources */,
+				8D9837901A870BCA00CD53EA /* ParseMasterOperation.m in Sources */,
 				8D703B7F1A76C96D00DF6C73 /* TTTAttributedLabel.m in Sources */,
 				8D9837841A87087500CD53EA /* YQURLRequestSerialization.m in Sources */,
 				8D5F2DBA1A35F3F700748FED /* SVIndefiniteAnimatedView.m in Sources */,

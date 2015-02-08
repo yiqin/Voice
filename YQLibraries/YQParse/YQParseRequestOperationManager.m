@@ -28,8 +28,9 @@
         self.requestSerializer = [YQJSONRequestSerializer serializer];
         self.responseSerializer = [YQJSONResponseSerializer serializer];
         
-        [self.requestSerializer setValue:[YQParse getApplicationId] forHTTPHeaderField:@"X-Parse-Application-Id"];
-        [self.requestSerializer setValue:[YQParse getRestApiKey] forHTTPHeaderField:@"X-Parse-REST-API-Key"];
+        [self.requestSerializer setValue:@"67k8jnSI757kUzLNletpqjxMHdBWTbELiyJoMy52" forHTTPHeaderField:@"X-Parse-Application-Id"];
+        [self.requestSerializer setValue:@"BZi6qS4QKjblJvrlvOq8veoSgO3F5cJj7zLciYrs" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
+        [self.requestSerializer setValue:@"MoGyejL0btpLM7vrEKuen6a1x" forHTTPHeaderField:@"X-Parse-Session-Token"];
     }
     return self;
 }

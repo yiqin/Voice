@@ -6,6 +6,7 @@
 #import <Parse/PFACL.h>
 
 #import "YQButton.h"
+#import "YQParse.h"
 
 #import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"
@@ -39,3 +40,5 @@
 #import "GAILogger.h"
 #import "GAITrackedViewController.h"
 
+
+#import "ParseMasterOperation.h"
