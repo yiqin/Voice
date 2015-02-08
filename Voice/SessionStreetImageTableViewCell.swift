@@ -32,7 +32,7 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         streetImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         addSubview(streetImageView)
         
-        titleView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+        titleView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85)
         titleView.frame = CGRectMake(0, kScreenHeight*0.68, kScreenWidth, 50)
         addSubview(titleView)
         

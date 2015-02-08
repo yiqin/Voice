@@ -123,7 +123,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
             println("Login before.")
-            UserManager.configureRole("General")
             
         } else {
             println("New user.")
