@@ -44,7 +44,7 @@ class Session: NSVoiceObject {
         super.init(parseObject:parseObject)
         
         startToLoadCoverImage()
-        startToLoadArticles()
+        
     }
     
     func startToLoadCoverImage(){
@@ -54,11 +54,15 @@ class Session: NSVoiceObject {
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("successullly get StreetImage")
+                
                 if objects.count >= 1 {
                     let object = objects[0] as PFObject
                     self.streetImage = StreetImage(parseObject: object)
                     self.isLoading = false
                 }
+                
+                self.startToLoadArticles()
+                
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
@@ -78,6 +82,10 @@ class Session: NSVoiceObject {
                     let article = Article(parseObject: object as PFObject)
                     self.articles += [article]
                 }
+                
+                // Only call this notification one time...
+                NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }

@@ -41,7 +41,7 @@ class StreetImage: NSVoiceObject {
             self.isFirstLoad =  false
             self.uiimage = image_
             
-            NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+            
         }
     }
     

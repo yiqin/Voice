@@ -18,6 +18,8 @@ class SessionsManager: NSObject {
     var currentPageIndex = 0;
     let itemsPerPage = kNumberOfSectionPerQuery;
     
+    var hasNSNotificationCenter : Bool = true
+    
     class var sharedInstance : SessionsManager {
         struct Static {
             static let instance = SessionsManager()
@@ -32,10 +34,15 @@ class SessionsManager: NSObject {
         startLoadingDataFromParse(pageIndex, completionClosure: { (success) -> () in
             
         })
+       
     }
     
     /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
+        println("@#@####################################")
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "continueLoading", name: "reloadSessionStreetImageTableViewCell", object: nil)
+        
         var query  = PFQuery(className: "Session")
         query.whereKey("isPublished", equalTo: true)
         query.orderByDescending("number")
@@ -62,7 +69,8 @@ class SessionsManager: NSObject {
                     
                 }
                 else {
-                    NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("continueLoading"), userInfo: nil, repeats: false)
+                    // Update this method later.....
+                    // NSTimer.scheduledTimerWithTimeInterval(3.00, target: self, selector: Selector("continueLoading"), userInfo: nil, repeats: false)
                 }
                 
             } else {
@@ -72,11 +80,16 @@ class SessionsManager: NSObject {
         }
     }
     
+    
     func continueLoading(){
         loadMoreDataFromParse { (success) -> () in
             
         }
         
+        if hasNSNotificationCenter {
+            NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadSessionStreetImageTableViewCell", object: nil)
+            hasNSNotificationCenter = false
+        }
     }
     
     /// for propagation

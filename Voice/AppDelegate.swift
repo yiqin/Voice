@@ -42,6 +42,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alertView.show()
         }
         else {
+            SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
+                if(success){
+                    
+                }
+                else {
+
+                }
+            })
+            
             setting()
             
             singleMethodSetup()     // after parseSetup
@@ -69,8 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         
-        VoiceLocationManager.sharedInstance
-        VoiceLocationManager.sharedInstance.getCurrentLocation()
+        // VoiceLocationManager.sharedInstance
+        // VoiceLocationManager.sharedInstance.getCurrentLocation()
         
         ConfigDataManager.sharedInstance
         

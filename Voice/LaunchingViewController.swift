@@ -55,25 +55,6 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
-        
-        // Only two places are need to check the Internet.
-        if(!CheckConnectivity.isConnectedToNetwork()){
-            println("No internet")
-            
-        }
-        else {
-            println("internewt")
-            
-            SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
-                if(success){
-                    
-                }
-                else {
-                    // No need. It's in AppDelegate
-                    // var timer = NSTimer.scheduledTimerWithTimeInterval(0.50, target: self, selector: Selector("noConnection"), userInfo: nil, repeats: false)
-                }
-            })
-        }
     }
     
     func moveToMainViewController() {
@@ -111,8 +92,9 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
 
     func reloadSessionStreetImageTableViewCell() {
         if (loadTime==0){
-            var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
             loadTime++
         }
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadSessionStreetImageTableViewCell", object: nil)
     }
 }

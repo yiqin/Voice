@@ -21,8 +21,6 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     init(selectedSession: Session) {
         session = selectedSession
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
-        
-        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -46,7 +44,9 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let tempScreenWidth = UIScreen.mainScreen().bounds.width
         if (indexPath.row == 0) {
-            if(session.isLoading){
+            
+            // This may cause bugs ......
+            if(session.streetImage.isFirstLoad){
                 let ratio =  tempScreenWidth/400
                 return 600*ratio
             }
