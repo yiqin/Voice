@@ -46,12 +46,12 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
         if (indexPath.row == 0) {
             
             // This may cause bugs ......
-            if(session.streetImage.isFirstLoad){
+            if(session.isLoading){
                 let ratio =  tempScreenWidth/400
                 return 600*ratio
             }
             else {
-                let image = session.streetImage.uiimage
+                let image = session.image
                 let ratio = tempScreenWidth/image.size.width
                 return image.size.height*ratio
             }

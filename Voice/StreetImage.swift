@@ -36,13 +36,14 @@ class StreetImage: NSVoiceObject {
         
         super.init(parseObject:parseObject)
         
+        /*
         image.loadInBackground { (image_:UIImage!, error: NSError!) -> Void in
             println("Load voice image succesfully.")
             self.isFirstLoad =  false
             self.uiimage = image_
             
-            
         }
+        */
     }
     
     override init() {

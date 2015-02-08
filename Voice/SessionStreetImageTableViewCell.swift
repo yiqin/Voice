@@ -72,21 +72,37 @@ class SessionStreetImageTableViewCell: UITableViewCell {
     func updateCell(streetImage : StreetImage, session : Session){
         titleLabel.text = session.title
         
-        streetImageView.file = session.streetImage.imagePFFile
+        
         photoByLabel.text = session.streetImage.photoBy
         whoLabel.text = session.streetImage.who
         
         if(session.isLoading){
             SVProgressHUD.show()
+            /*
+            streetImageView.file = session.streetImage.imagePFFile
             streetImageView.loadInBackground({ (image:UIImage!, error:NSError!) -> Void in
                 println("load ................")
                 self.reloadInputViews()
                 SVProgressHUD.dismiss()
                 // 
             })
+            */
+            
+            var tempPFFile = session.parseObject["image"] as PFFile
+            var tempPFImageView = PFImageView()
+            streetImageView.file = tempPFFile
+            
+            streetImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
+                self.reloadInputViews()
+                SVProgressHUD.dismiss()
+            }
+
+            
+            
         }
         else {
-            streetImageView.image = streetImage.image.image
+            // streetImageView.image = streetImage.image.image
+            streetImageView.image = session.image
         }
     }
 }

@@ -40,28 +40,35 @@ class Session: NSVoiceObject {
         
         count = 1
         
-        streetImage = StreetImage(parseObject: parseObject["coverImage"] as PFObject)
-        self.isLoading = false
+        // streetImage = StreetImage(parseObject: parseObject["coverImage"] as PFObject)
+        streetImage = StreetImage()
         
         articles = []
         
         
         image = UIImage()
+        
         super.init(parseObject:parseObject)
         
+        startToLoadArticles()
         // startToLoadCoverImage()
         
+        var tempPFFile = parseObject["image"] as PFFile
+        var tempPFImageView = PFImageView()
+        tempPFImageView.file = tempPFFile
+        
+        tempPFImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
+            self.isLoading = false
+            self.image = image
+        }
         
         
         
-        self.startToLoadArticles()
     }
     
     
     
     
-    
-    // It seems we don't this anymore...
     func startToLoadCoverImage(){
         var query  = PFQuery(className: "StreetImage")
         query.whereKey("belongTo", equalTo: self.parseObject)
@@ -85,14 +92,23 @@ class Session: NSVoiceObject {
 
     }
     
+    
+    
     func startToLoadArticles(){
         var query = PFQuery(className: "Article")
         query.whereKey("belongTo", equalTo: self.parseObject)
         query.orderByAscending("createdAt")
+        
+        println("starting articlessssssssss")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("successullly get Articles")
+                
+                // Only call this notification one time...
                 NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                
+                
+                self.startToLoadCoverImage()
                 
                 self.count = self.count+objects.count
                 for object in objects {
@@ -100,7 +116,7 @@ class Session: NSVoiceObject {
                     self.articles += [article]
                 }
                 
-                // Only call this notification one time...
+                
                 
                 
             } else {

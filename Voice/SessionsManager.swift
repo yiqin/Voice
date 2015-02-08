@@ -49,7 +49,7 @@ class SessionsManager: NSObject {
         query.limit = itemsPerPage
         query.skip = pageIndex*itemsPerPage
         
-        query.includeKey("coverImage")
+        // query.includeKey("coverImage")
         
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
