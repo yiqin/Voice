@@ -43,7 +43,7 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         
         
         titleLabel.shadowColor = UIColor.grayColor()
-        titleLabel.shadowOffset = CGSizeMake(3, 3)
+        titleLabel.shadowOffset = CGSizeMake(0, 0)
         
         titleView.addSubview(titleLabel)
         

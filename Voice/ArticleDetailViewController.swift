@@ -100,6 +100,12 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         screenName = "Article Detail"
+        
+        
+        // This won't work..... for the secruity reason....
+        let articleParseObject = selectedArticle.parseObject
+        articleParseObject.incrementKey("pageViewCount")
+        articleParseObject.saveEventually(nil)
     }
     
     override func viewDidDisappear(animated: Bool) {

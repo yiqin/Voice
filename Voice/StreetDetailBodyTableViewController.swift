@@ -12,22 +12,14 @@ class StreetDetailBodyTableViewController: UITableViewController, UITableViewDel
     
     var streetImage: StreetImage
     
-    /// Check is it the first time to load the image from parse.com?
-    var isFisrtLoadCheckSet: NSMutableSet
-    /// Store images from parse.com and fetch images locally
-    var imageDictionary: NSMutableDictionary
-    var imageHeightDictionary : NSMutableDictionary
     
-    var objects : NSArray
-    var streetDetailImages : NSMutableArray
+    var objects:[PFObject]
+    var streetDetailImages:[StreetDetailImage]
     
     init(selectedStreetImage: StreetImage) {
         streetImage = selectedStreetImage
-        isFisrtLoadCheckSet = NSMutableSet()
-        imageDictionary = NSMutableDictionary()
-        imageHeightDictionary = NSMutableDictionary()
-        objects = NSArray()
-        streetDetailImages = NSMutableArray()
+        objects = []
+        streetDetailImages = []
         
         super.init(nibName: nil, bundle: nil)    // this has a higher priority.
         
@@ -56,19 +48,14 @@ class StreetDetailBodyTableViewController: UITableViewController, UITableViewDel
         
         SVProgressHUD.show()
         query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError!) -> Void in
-            
-            SVProgressHUD.dismiss()
-            
-            
-            self.objects = objects
-            
-            
-            
             for var i = 0; i < objects.count; i++ {
                 let object = objects[i] as PFObject
-                self.streetDetailImages.addObject(StreetDetailImage(parseObject: object))
+                
+                self.objects += [object]
+                self.streetDetailImages += [StreetDetailImage(parseObject: object)]
                 
                 if(i == objects.count-1){
+                    SVProgressHUD.dismiss()
                     self.tableView.reloadData()
                 }
             }

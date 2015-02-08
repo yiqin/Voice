@@ -21,7 +21,7 @@ class Session: NSVoiceObject {
     
     var streetImage : StreetImage
     
-    var articles : NSMutableArray = []
+    var articles:[Article]
     
     override init(parseObject:PFObject) {
         let tempNumber = parseObject["number"] as NSNumber
@@ -38,6 +38,8 @@ class Session: NSVoiceObject {
         
         count = 1
         streetImage = StreetImage()
+        
+        articles = []
         
         super.init(parseObject:parseObject)
         
@@ -74,7 +76,7 @@ class Session: NSVoiceObject {
                 self.count = self.count+objects.count
                 for object in objects {
                     let article = Article(parseObject: object as PFObject)
-                    self.articles.addObject(article)
+                    self.articles += [article]
                 }
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
