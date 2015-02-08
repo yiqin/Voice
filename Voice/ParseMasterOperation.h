@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class Article;
+
 @interface ParseMasterOperation : NSObject
 
-+ (void)incrementArticlePageView:(NSString *)articleParseObjectId currentUserObjectId:(NSString *)objectId;
++ (void)incrementArticlePageView:(Article *)article currentUserObjectId:(NSString *)objectId;
 
 @end

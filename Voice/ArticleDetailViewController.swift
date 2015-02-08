@@ -101,7 +101,7 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         super.viewWillAppear(animated)
         screenName = "Article Detail"
         
-        ParseMasterOperation.incrementArticlePageView(selectedArticle.objectId, currentUserObjectId:PFUser.currentUser().objectId)
+        ParseMasterOperation.incrementArticlePageView(selectedArticle, currentUserObjectId:PFUser.currentUser().objectId)
     }
     
     override func viewDidDisappear(animated: Bool) {

@@ -8,26 +8,46 @@
 
 #import "ParseMasterOperation.h"
 #import "YQParseRequestOperationManager.h"
+#import <Voice-Swift.h>
 
 @implementation ParseMasterOperation
 
-+ (void)incrementArticlePageView:(NSString *)articleParseObjectId currentUserObjectId:(NSString *)objectId {
-    YQParseRequestOperationManager *manage = [YQParseRequestOperationManager manager];
-    [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
++ (void)incrementArticlePageView:(Article *)article currentUserObjectId:(NSString *)currentUserObjectId {
     
-    NSString *path = [NSString stringWithFormat:@"https://api.parse.com/1/classes/Article/%@",articleParseObjectId];
+    NSArray *pageViewers = article.parseObject[@"pageViewers"];
     
-    NSDictionary *addUnique = @{@"__op":@"AddUnique",
-                                @"objects":@[objectId]};
-    NSDictionary *parameters = @{@"pageViewers":addUnique};
+    BOOL isViewBeforeOnParse = NO;
+    for (NSString *pageViewer in pageViewers) {
+        if ([pageViewer isEqualToString:currentUserObjectId]) {
+            isViewBeforeOnParse = YES;
+            break;
+        }
+    }
     
-    [manage PUT:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"successful");
+    if (!isViewBeforeOnParse && ![[PageViewsDataManager sharedInstance] checkPageView:currentUserObjectId]) {
+        YQParseRequestOperationManager *manage = [YQParseRequestOperationManager manager];
+        [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
-    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"wrong %@", error);
+        NSString *path = [NSString stringWithFormat:@"https://api.parse.com/1/classes/Article/%@",article.objectId];
+        /*
+        NSDictionary *addUnique = @{@"__op":@"AddUnique",
+                                    @"objects":@[currentUserObjectId]};
+        */
+        NSDictionary *increment = @{@"__op":@"Increment",
+                                    @"amount":@1};
         
-    }];
+        // NSDictionary *parameters = @{@"pageViewers":addUnique, @"pageViewCount":increment};
+        NSDictionary *parameters = @{@"pageViewCount":increment};
+        
+        [manage PUT:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"successful %@", responseObject);
+            [[PageViewsDataManager sharedInstance] addPageView:currentUserObjectId];
+            
+        } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"wrong %@", error);
+            
+        }];
+    }
 }
 
 @end
