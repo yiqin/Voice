@@ -77,7 +77,7 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         whoLabel.text = session.streetImage.who
         
         if(session.isLoading){
-            SVProgressHUD.show()
+            
             /*
             streetImageView.file = session.streetImage.imagePFFile
             streetImageView.loadInBackground({ (image:UIImage!, error:NSError!) -> Void in
@@ -88,16 +88,16 @@ class SessionStreetImageTableViewCell: UITableViewCell {
             })
             */
             
-            var tempPFFile = session.parseObject["image"] as PFFile
-            var tempPFImageView = PFImageView()
-            streetImageView.file = tempPFFile
-            
-            streetImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
-                self.reloadInputViews()
-                SVProgressHUD.dismiss()
+            if let tempPFFile = session.parseObject["image"] as? PFFile {
+                var tempPFImageView = PFImageView()
+                streetImageView.file = tempPFFile
+                
+                SVProgressHUD.show()
+                streetImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
+                    self.reloadInputViews()
+                    SVProgressHUD.dismiss()
+                }
             }
-
-            
             
         }
         else {

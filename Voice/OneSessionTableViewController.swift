@@ -45,15 +45,13 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
         let tempScreenWidth = UIScreen.mainScreen().bounds.width
         if (indexPath.row == 0) {
             
-            // This may cause bugs ......
-            if(session.isLoading){
-                let ratio =  tempScreenWidth/400
-                return 600*ratio
+            if (session.image != nil) {
+                let ratio = tempScreenWidth/session.image!.size.width
+                return session.image!.size.height*ratio
             }
             else {
-                let image = session.image
-                let ratio = tempScreenWidth/image.size.width
-                return image.size.height*ratio
+                let ratio =  tempScreenWidth/400
+                return 600*ratio
             }
         }
         else {

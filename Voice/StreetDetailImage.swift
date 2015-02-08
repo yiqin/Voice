@@ -11,14 +11,14 @@ import UIKit
 class StreetDetailImage: NSVoiceObject {
     
     var isImageLoading : Bool
-    var imagePFFile : PFFile
+    var imagePFFile : PFFile?
     var image : UIImage
     var imageCellHeight : CGFloat
     
     override init(parseObject:PFObject) {
         
         isImageLoading = true
-        imagePFFile = parseObject["image"] as PFFile
+        imagePFFile = parseObject["image"] as? PFFile
         image = UIImage()
         
         let ratio = parseObject["ratio"] as NSNumber

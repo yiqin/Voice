@@ -10,7 +10,7 @@ import UIKit
 
 class Session: NSVoiceObject {
     
-    var image:UIImage
+    var image:UIImage?
     
     var title : String
     
@@ -46,27 +46,22 @@ class Session: NSVoiceObject {
         articles = []
         
         
-        image = UIImage()
-        
         super.init(parseObject:parseObject)
         
         startToLoadArticles()
         // startToLoadCoverImage()
         
-        var tempPFFile = parseObject["image"] as PFFile
-        var tempPFImageView = PFImageView()
-        tempPFImageView.file = tempPFFile
-        
-        tempPFImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
-            self.isLoading = false
-            self.image = image
+        if let tempPFFile = parseObject["image"] as? PFFile {
+            var tempPFImageView = PFImageView()
+            tempPFImageView.file = tempPFFile
+            
+            tempPFImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
+                self.isLoading = false
+                self.image = image
+            }
         }
         
-        
-        
     }
-    
-    
     
     
     func startToLoadCoverImage(){
