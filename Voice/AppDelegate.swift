@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
                 if(success){
-                    NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                    
                 }
                 else {
 

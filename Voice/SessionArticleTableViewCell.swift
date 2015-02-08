@@ -58,30 +58,10 @@ class SessionArticleTableViewCell: UITableViewCell {
         titleLabel.frame = CGRectMake(10+10, 20+8, CGRectGetWidth(titleLabel.frame), CGRectGetHeight(titleLabel.frame))
         tempView.frame = CGRectMake(0, 20, (CGRectGetMaxX(titleLabel.frame)+20), CGRectGetHeight(titleLabel.frame)+16)
         
-        if article.isbriefImageLoading {
-            let thunmbnail = article.briefImagePFFile
-            let tempPFImageView = PFImageView()
-            tempPFImageView.file = thunmbnail
-            // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
-            
-            tempPFImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
-                let tempImage = image
-                let tempImageWidth = tempImage?.size.width
-                let tempImageHeight = tempImage?.size.height
-                let ratio = DeviceManager.sharedInstance.screenWidth/tempImageWidth!
-                
-                let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
-                let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.coverImageView.image = croppedTempImage
-                })
-                
-            }
-        }
-        else {
-            coverImageView.image = article.effectedImage
-        }
+        
+        
+        coverImageView.image = article.effectedImage
+        
     }
     
     class func cellHeight()->CGFloat {

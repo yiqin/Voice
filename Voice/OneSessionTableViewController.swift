@@ -97,6 +97,26 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
             let article = session.articles[indexPath.row-1] as Article
             cell?.updateCell(article)
             
+            if article.isbriefImageLoading {
+                let thunmbnail = article.briefImagePFFile
+                let tempPFImageView = PFImageView()
+                tempPFImageView.file = thunmbnail
+                // cell?.streetDetailImageView.image = UIImage(named: "defaultImage.png")
+                
+                tempPFImageView.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
+                    let tempImage = image
+                    let tempImageWidth = tempImage?.size.width
+                    let tempImageHeight = tempImage?.size.height
+                    let ratio = DeviceManager.sharedInstance.screenWidth/tempImageWidth!
+                    
+                    let scaledTempImage = tempImage?.scaleToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, tempImageHeight!*ratio))
+                    let croppedTempImage = scaledTempImage?.cropToSize(CGSizeMake(DeviceManager.sharedInstance.screenWidth, 150), usingMode: NYXCropModeCenter)
+                    
+                    cell?.coverImageView.image = croppedTempImage
+                    
+                }
+            }
+            
             return cell!
         }
     }
