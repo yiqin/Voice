@@ -38,8 +38,8 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
         
-        let tempOffset:CGFloat = 20
-        pageViewController!.view.frame = CGRectMake(0, tempOffset, DeviceManager.sharedInstance.screenWidth, DeviceManager.sharedInstance.screenHeight-tempOffset)
+        let tempOffset:CGFloat = 64
+        pageViewController!.view.frame = CGRectMake(0, tempOffset, kScreenWidth, kScreenHeight-tempOffset)
         // pageViewController!.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleWidth
         
         addChildViewController(pageViewController!)

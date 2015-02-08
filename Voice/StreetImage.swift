@@ -14,7 +14,7 @@ class StreetImage: NSVoiceObject {
     var photoBy : String
     
     var isFirstLoad : Bool
-    var imagePFFile : PFFile
+    var imagePFFile : PFFile?
     
     var image : PFImageView
     
@@ -29,7 +29,7 @@ class StreetImage: NSVoiceObject {
         image = PFImageView()
         uiimage = UIImage()
         
-        imagePFFile = parseObject["image"] as PFFile
+        imagePFFile = parseObject["image"] as? PFFile
         image.file = imagePFFile
         
         isFirstLoad = true
