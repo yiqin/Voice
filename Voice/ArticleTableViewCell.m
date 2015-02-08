@@ -53,7 +53,7 @@
     
     [self.title updateFrameWithText:article.title];
     
-    if (!article.isbriefImageLoad) {
+    if (!article.isbriefImageLoading) {
         self.briefImage.image = article.briefImage.image;
     }
 }

@@ -17,7 +17,7 @@ class Article: NSVoiceObject {
     
     var briefImage: PFImageView
     var briefImagePFFile: PFFile
-    var isbriefImageLoad:Bool
+    var isbriefImageLoading:Bool
     
     var effectedImage : UIImage
     
@@ -29,13 +29,13 @@ class Article: NSVoiceObject {
         urlAddress = NSURL()
         briefImage = PFImageView()
         briefImagePFFile = PFFile()
-        isbriefImageLoad = true
+        isbriefImageLoading = true
         effectedImage = UIImage()
         super.init()
     }
     
     override init(parseObject:PFObject) {
-        isbriefImageLoad = true
+        isbriefImageLoading = true
         
         title = parseObject["title"] as String
         // briefDescription = parseObject["briefDescription"] as String    // How to check this value
@@ -69,7 +69,7 @@ class Article: NSVoiceObject {
             
             // self.effectedImage = blurTempImage2!
             self.effectedImage = croppedTempImage!
-            self.isbriefImageLoad = false
+            self.isbriefImageLoading = false
         }
         
         // We don't load the whole article before we click it.

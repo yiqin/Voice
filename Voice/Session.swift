@@ -37,14 +37,16 @@ class Session: NSVoiceObject {
         number = 1
         
         count = 1
-        streetImage = StreetImage()
+        streetImage = StreetImage(parseObject: parseObject["coverImage"] as PFObject)
         
         articles = []
         
         super.init(parseObject:parseObject)
         
-        startToLoadCoverImage()
+        // startToLoadCoverImage()
         
+        
+        self.startToLoadArticles()
     }
     
     func startToLoadCoverImage(){
@@ -61,7 +63,7 @@ class Session: NSVoiceObject {
                     self.isLoading = false
                 }
                 
-                self.startToLoadArticles()
+                // self.startToLoadArticles()
                 
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
@@ -84,7 +86,7 @@ class Session: NSVoiceObject {
                 }
                 
                 // Only call this notification one time...
-                NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                
                 
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
