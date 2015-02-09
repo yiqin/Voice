@@ -48,13 +48,13 @@ class SessionStreetImageTableViewCell: UITableViewCell {
         titleView.addSubview(titleLabel)
         
         
-        whoLabel.frame = CGRectMake(16, 55, 100, 16)
+        whoLabel.frame = CGRectMake(16, 11, 100, 16)
         whoLabel.textAlignment = NSTextAlignment.Left
         whoLabel.font = UIFont.systemFontOfSize(11.5)
         whoLabel.textColor = UIColor.grayColor()
         streetImageView.addSubview(whoLabel)
         
-        photoByLabel.frame = CGRectMake(16, 55+16, 100, 16)
+        photoByLabel.frame = CGRectMake(16, 11+16, 100, 16)
         photoByLabel.textAlignment = NSTextAlignment.Left
         photoByLabel.font = UIFont.systemFontOfSize(11.5)
         photoByLabel.textColor = UIColor.grayColor()
