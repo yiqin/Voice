@@ -10,13 +10,13 @@ import UIKit
 
 class SessionArticleTableViewCell: UITableViewCell {
     
-    var coverImageView : UIImageView
+    var coverImageView : ASImageNode
     var titleLabel : UILabel
     var tempView : UIView
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
-        coverImageView = UIImageView()
+        coverImageView = ASImageNode()
         titleLabel = UILabel()
         tempView = UIView()
         
@@ -25,7 +25,7 @@ class SessionArticleTableViewCell: UITableViewCell {
         coverImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))
         coverImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         coverImageView.contentMode = UIViewContentMode.ScaleToFill
-        addSubview(coverImageView)
+        addSubview(coverImageView.view)
         
         tempView = UIView(frame: CGRectMake(10, 20, 300, 30))
         tempView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
