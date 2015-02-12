@@ -26,6 +26,10 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     let backOffset : CGFloat = 44
 
     
+    /// Put like button on backSubView
+    var likeButton : YQButtonWithImage = YQButtonWithImage(frame: CGRectMake(0, 0, 36, 36), image: "back", selectedImage: "back")
+    
+    
     override init() {
         self.selectedArticle = Article()
         articleDetailBodyTVC = ArticleDetailBodyTableViewController()
@@ -39,6 +43,10 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 36, 36), image: "back", selectedImage: "back")
         backSubView.addSubview(tempBackButton)
         tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        likeButton.frame = CGRectMake(kScreenWidth-40, 4, 36, 36)
+        backSubView.addSubview(likeButton)
+        likeButton.addTarget(self, action: "tapLikeButton:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
@@ -71,6 +79,10 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 44, 44), image: "back", selectedImage: "back")
         backSubView.addSubview(tempBackButton)
         tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        likeButton.frame = CGRectMake(kScreenWidth-40, 4, 36, 36)
+        backSubView.addSubview(likeButton)
+        likeButton.addTarget(self, action: "tapLikeButton:", forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -86,6 +98,7 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         // Do any additional setup after loading the view.
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -218,6 +231,12 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
             
         }
         */
+    }
+    
+    
+    func tapLikeButton(sender: UIButton!){
+        
+        
     }
     
     func backButtonPressed(sender: UIButton!){
