@@ -28,7 +28,7 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     
     /// Put like button on backSubView
     var likeButton : YQButtonWithImage = YQButtonWithImage(frame: CGRectMake(0, 0, 36, 36), image: "back", selectedImage: "back")
-    
+    var alreadyLike : Bool = false
     
     override init() {
         self.selectedArticle = Article()
