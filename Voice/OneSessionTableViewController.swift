@@ -83,9 +83,7 @@ class OneSessionTableViewController: UITableViewController, UITableViewDelegate 
             var cell = tableView.dequeueReusableCellWithIdentifier(sessionArticleIdentifier) as? SessionArticleTableViewCell
             
             if cell != nil {
-                
                 println("hi.... reuse table view cell")
-                
             }
             else {
                 cell = SessionArticleTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: sessionArticleIdentifier)

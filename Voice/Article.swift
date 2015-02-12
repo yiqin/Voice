@@ -40,7 +40,8 @@ class Article: NSVoiceObject {
         title = parseObject["title"] as String
         // briefDescription = parseObject["briefDescription"] as String    // How to check this value
         
-        let tempURLString = parseObject["url"] as String
+        // let tempURLString = parseObject["url"] as String
+        let tempURLString = "http://voice.parseapp.com/preview/article/"+parseObject.objectId
         urlAddress = NSURL(string: tempURLString)!
         
         briefImagePFFile = parseObject["briefImage"] as PFFile
