@@ -28,13 +28,15 @@ class SessionArticleTableViewCell: UITableViewCell {
         addSubview(coverImageView.view)
         
         tempView = UIView(frame: CGRectMake(10, 20, 300, 30))
-        tempView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
+        // tempView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
+        tempView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85)
+        
         addSubview(tempView)
         
         titleLabel.frame = CGRectMake(10, 20, 300, 30)
-        // titleLabel.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
-        titleLabel.textColor = UIColor.whiteColor()
-        titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 17)
+        // titleLabel.textColor = UIColor.whiteColor()
+        // titleLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 17)
+        titleLabel.font = UIFont.systemFontOfSize(15)
         
         titleLabel.shadowColor = UIColor.grayColor()
         titleLabel.shadowOffset = CGSizeMake(0.0, 0.0)
