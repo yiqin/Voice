@@ -31,7 +31,7 @@ class StreetDetailViewController: GAITrackedViewController {
         view.addSubview(streetDetailTVC.view)
         
         
-        backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        backSubView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.99)
         
         
         var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 36, 36), image: "back", selectedImage: "back")

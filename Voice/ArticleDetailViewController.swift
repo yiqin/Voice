@@ -67,7 +67,7 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         // view.addSubview(articleDetailBodyTVC.view)
         
         
-        backSubView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        backSubView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.99)
         var tempBackButton = YQButtonWithImage(frame: CGRectMake(6, 4, 44, 44), image: "back", selectedImage: "back")
         backSubView.addSubview(tempBackButton)
         tempBackButton.addTarget(self, action: "backButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
