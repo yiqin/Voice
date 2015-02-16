@@ -55,6 +55,10 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         gifImageView.setAnimatableImage(named: "launching_1.gif")
         gifImageView.startAnimating()
+        
+        println(view.frame.size.width)
+        println(view.frame.size.height)
+        
     }
     
     func moveToMainViewController() {

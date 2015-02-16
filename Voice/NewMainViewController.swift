@@ -17,6 +17,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         pageViewController = UIPageViewController(nibName: nil, bundle: nil)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+        /*
         let range = NSMakeRange(3, 2)
         var tempText = NSMutableAttributedString(string: "V O I C E")
         tempText.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
@@ -26,7 +27,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         tempLabel.textAlignment = NSTextAlignment.Center
         
         navigationItem.titleView = tempLabel
-        
+        */
         
         view.backgroundColor = UIColor.whiteColor()
         
