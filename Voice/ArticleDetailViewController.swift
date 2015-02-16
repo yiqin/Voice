@@ -47,6 +47,9 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         likeButton.frame = CGRectMake(kScreenWidth-40, 4, 36, 36)
         backSubView.addSubview(likeButton)
         likeButton.addTarget(self, action: "tapLikeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        alreadyLike = selectedArticle.alreadyLike
     }
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
@@ -235,6 +238,21 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     
     
     func tapLikeButton(sender: UIButton!){
+        println("tap like button")
+        
+        if alreadyLike {
+            println("unlike action")
+            
+            
+        }
+        else {
+            println("like action")
+            
+            ParseMasterOperation .createLikeArticle(selectedArticle, currentUserObjectId: PFUser.currentUser().objectId)
+            
+            
+        }
+        
         
         
     }

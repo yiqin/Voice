@@ -29,15 +29,13 @@
         [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
         NSString *path = [NSString stringWithFormat:@"https://api.parse.com/1/classes/Article/%@",article.objectId];
-        /*
+        
         NSDictionary *addUnique = @{@"__op":@"AddUnique",
                                     @"objects":@[currentUserObjectId]};
-        */
         NSDictionary *increment = @{@"__op":@"Increment",
                                     @"amount":@1};
         
-        // NSDictionary *parameters = @{@"pageViewers":addUnique, @"pageViewCount":increment};
-        NSDictionary *parameters = @{@"pageViewCount":increment};
+        NSDictionary *parameters = @{@"pageViewers":addUnique, @"pageViewCount":increment};
         
         [manage PUT:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"successful %@", responseObject);
@@ -49,5 +47,37 @@
         }];
     }
 }
+
+
++ (void)createLikeArticle:(Article *)article currentUserObjectId:(NSString *)objectId {
+    
+    YQParseRequestOperationManager *manage = [YQParseRequestOperationManager manager];
+    [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *path = [NSString stringWithFormat:@"https://api.parse.com/1/classes/LikeArticle/"];
+    
+    NSDictionary *articleParameters = @{@"__type":@"Pointer",
+                                     @"className":@"Article",
+                                      @"objectId":article.objectId};
+    NSDictionary *userParameters = @{@"__type":@"Pointer",
+                                  @"className":@"_User",
+                                   @"objectId":objectId};
+    NSDictionary *parameters = @{@"article":articleParameters, @"user":userParameters};
+    
+    [manage POST:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"successful %@", responseObject);
+        
+        
+    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"wrong %@", error);
+        
+    }];
+}
+
+
++ (void)deleteLikeArticle:(Article *)article currentUserObjectId:(NSString *)objectId {
+    
+}
+
 
 @end

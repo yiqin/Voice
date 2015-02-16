@@ -21,8 +21,14 @@ class Article: NSVoiceObject {
     
     var effectedImage : UIImage
     
+    // No use
     var articleBlocks : NSMutableArray = []
     var isArticleBlocksReady = false
+    
+    
+    var alreadyLike : Bool
+    var isLoadingAlreadyLike : Bool
+    
     
     override init() {
         title = ""
@@ -31,6 +37,10 @@ class Article: NSVoiceObject {
         briefImagePFFile = PFFile()
         isbriefImageLoading = true
         effectedImage = UIImage()
+        
+        alreadyLike = false
+        isLoadingAlreadyLike = true
+        
         super.init()
     }
     
@@ -52,6 +62,11 @@ class Article: NSVoiceObject {
         
         effectedImage = UIImage()
         
+        alreadyLike = false
+        isLoadingAlreadyLike = true
+        
+        
+        
         super.init(parseObject:parseObject)
         
         briefImage.loadInBackground { (image:UIImage!, error: NSError!) -> Void in
@@ -72,6 +87,32 @@ class Article: NSVoiceObject {
             self.effectedImage = croppedTempImage!
             self.isbriefImageLoading = false
         }
+        
+        
+        if let tempUser = PFUser.currentUser() {
+            var query = PFQuery(className: "LikeArticle")
+            query.whereKey("user", equalTo: PFUser.currentUser())
+            query.whereKey("article", equalTo: parseObject)
+            query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error:NSError!) -> Void in
+                if((error) == nil){
+                    self.isLoadingAlreadyLike = false
+                    if(objects.count > 0){
+                        self.alreadyLike = true
+                    }
+                    else {
+                        self.alreadyLike = false
+                    }
+                }
+                else {
+                    
+                }
+            }
+        } else {
+            self.isLoadingAlreadyLike = false
+            self.alreadyLike = false
+        }
+        
+        
         
         // We don't load the whole article before we click it.
         // directlyLoadWholeArticleWithNotification(false)

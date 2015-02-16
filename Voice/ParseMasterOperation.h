@@ -12,6 +12,12 @@
 
 @interface ParseMasterOperation : NSObject
 
+
 + (void)incrementArticlePageView:(Article *)article currentUserObjectId:(NSString *)objectId;
+
++ (void)createLikeArticle:(Article *)article currentUserObjectId:(NSString *)objectId;
++ (void)deleteLikeArticle:(Article *)article currentUserObjectId:(NSString *)objectId;
+
+
 
 @end
