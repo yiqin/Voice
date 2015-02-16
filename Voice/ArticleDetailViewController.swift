@@ -47,9 +47,6 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         likeButton.frame = CGRectMake(kScreenWidth-40, 4, 36, 36)
         backSubView.addSubview(likeButton)
         likeButton.addTarget(self, action: "tapLikeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        alreadyLike = selectedArticle.alreadyLike
     }
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, article selectedArticle: Article? ) {
@@ -86,6 +83,9 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         likeButton.frame = CGRectMake(kScreenWidth-40, 4, 36, 36)
         backSubView.addSubview(likeButton)
         likeButton.addTarget(self, action: "tapLikeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -219,6 +219,8 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     func webViewDidFinishLoad(webView: UIWebView) {
         // More animations come here.
         // view.addSubview(articleDetailBodyWebView)
+        
+        alreadyLike = self.selectedArticle.alreadyLike
         
         SVProgressHUD.dismiss()
         

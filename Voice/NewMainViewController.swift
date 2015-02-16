@@ -21,7 +21,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         var tempText = NSMutableAttributedString(string: "V O I C E")
         tempText.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
         tempText.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(20), range: NSMakeRange(0, 9))
-        var tempLabel = TTTAttributedLabel(frame: CGRectMake(DeviceManager.sharedInstance.screenWidth*0.3, 0, DeviceManager.sharedInstance.screenWidth*0.4, 30))
+        var tempLabel = TTTAttributedLabel(frame: CGRectMake(DeviceManager.sharedInstance.screenWidth*0.3, 0, DeviceManager.sharedInstance.screenWidth*0.4, 44))
         tempLabel.attributedText = tempText
         tempLabel.textAlignment = NSTextAlignment.Center
         

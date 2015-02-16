@@ -83,12 +83,21 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error && objects.count>0) {
             
-            [PFObject deleteAllInBackground:objects block:^(BOOL succeeded, NSError *error) {
-                if (succeeded) {
+            for (PFObject *object in objects) {
+                YQParseRequestOperationManager *manage = [YQParseRequestOperationManager manager];
+                [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                
+                NSString *path = [NSString stringWithFormat:@"https://api.parse.com/1/classes/LikeArticle/%@", object.objectId];
+                NSDictionary *parameters = @{};
+                
+                [manage DELETE:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
+                    NSLog(@"successful %@", responseObject);
                     
-                }
-            }];
-            
+                } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+                    NSLog(@"wrong %@", error);
+                    
+                }];
+            }
         }
         else {
         }
