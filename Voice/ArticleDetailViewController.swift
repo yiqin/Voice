@@ -239,22 +239,16 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
     
     func tapLikeButton(sender: UIButton!){
         println("tap like button")
-        
         if alreadyLike {
             println("unlike action")
-            
-            
+            ParseMasterOperation.deleteLikeArticle(selectedArticle, currentUserObjectId: PFUser.currentUser().objectId)
+            alreadyLike = false
         }
         else {
             println("like action")
-            
-            ParseMasterOperation .createLikeArticle(selectedArticle, currentUserObjectId: PFUser.currentUser().objectId)
-            
-            
+            ParseMasterOperation.createLikeArticle(selectedArticle, currentUserObjectId: PFUser.currentUser().objectId)
+            alreadyLike = true
         }
-        
-        
-        
     }
     
     func backButtonPressed(sender: UIButton!){

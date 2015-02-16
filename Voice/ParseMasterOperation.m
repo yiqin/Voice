@@ -77,6 +77,23 @@
 
 + (void)deleteLikeArticle:(Article *)article currentUserObjectId:(NSString *)objectId {
     
+    PFQuery *query = [PFQuery queryWithClassName:@"LikeArticle"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query whereKey:@"article" equalTo:article.parseObject];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error && objects.count>0) {
+            
+            [PFObject deleteAllInBackground:objects block:^(BOOL succeeded, NSError *error) {
+                if (succeeded) {
+                    
+                }
+            }];
+            
+        }
+        else {
+        }
+    }];
+    
 }
 
 
