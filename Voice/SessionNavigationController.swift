@@ -20,14 +20,11 @@ class SessionNavigationController: UINavigationController {
         
         navigationBar.barTintColor = UIColor.whiteColor()
         navigationBar.tintColor = UIColor.whiteColor()
+        navigationBarHidden = true
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return false
     }
 
 }

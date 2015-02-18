@@ -39,7 +39,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
         
-        let tempOffset:CGFloat = 64
+        let tempOffset:CGFloat = 20     // Why there is a temp offset here?
         pageViewController!.view.frame = CGRectMake(0, tempOffset, kScreenWidth, kScreenHeight-tempOffset)
         // pageViewController!.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleWidth
         
@@ -63,12 +63,6 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
     }
     
     override func viewDidAppear(animated: Bool) {
-        /*
-        var tracker = GAI.sharedInstance().defaultTracker
-        tracker.set(kGAIScreenView, value: "Main View")
-        tracker.send(GAIDictionaryBuilder.createScreenView().build())
-        */
-        
         super.viewDidAppear(animated)
     }
     
@@ -129,9 +123,5 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         
         return pageContentViewController
     }
-    
-    
-    
-    
 }
 

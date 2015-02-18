@@ -18,7 +18,6 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         return true
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +64,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         
         
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
-        var mainViewController = NewMainViewController(nibName:nil, bundle:nil)
+        var mainViewController = CardsViewController(nibName:nil, bundle:nil)
         var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
         
         println("move To Main View Controller")
