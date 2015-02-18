@@ -10,5 +10,6 @@
 
 @interface RGCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *sessionImageView;
 
 @end

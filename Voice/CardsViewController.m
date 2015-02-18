@@ -9,6 +9,7 @@
 
 #import "CardsViewController.h"
 #import "RGCollectionViewCell.h"
+#import "Voice-Swift.h"
 
 @interface CardsViewController ()<UICollectionViewDataSource>
 
@@ -24,7 +25,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,39 +43,29 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return  4;
+    return  [SessionsManager sharedInstance].sessions.count;
 }
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    RGCollectionViewCell *cell = (RGCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"reuse" forIndexPath:indexPath];
+    RGCollectionViewCell *cell = (RGCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CardReuse" forIndexPath:indexPath];
     [self configureCell:cell withIndexPath:indexPath];
     return cell;
 }
 
 - (void)configureCell:(RGCollectionViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
 {
-    UIView  *subview = [cell.contentView viewWithTag:TAG];
-    [subview removeFromSuperview];
+    // UIView  *subview = [cell.contentView viewWithTag:TAG];
+    // [subview removeFromSuperview];
     
-    switch (indexPath.section) {
-        case 0:
-            
-            break;
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-        case 3:
-            
-            break;
-        case 4:
-            break;
-        default:
-            break;
+    NSLog(@"%li", (long)indexPath.section);
+    
+    if ([SessionsManager sharedInstance].sessions.count > indexPath.section) {
+        Session *session = [[SessionsManager sharedInstance].sessions objectAtIndex:indexPath.section];
+        NSLog(@"%@", session.title);
+        
+        cell.sessionImageView.image = session.image;
     }
-    
 }
 
 

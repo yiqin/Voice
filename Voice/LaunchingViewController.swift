@@ -62,26 +62,18 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     
     func moveToMainViewController() {
         
-        let secondViewController: CardsViewController = storyboard?.instantiateViewControllerWithIdentifier("CardsViewController") as CardsViewController
+        let cardsViewController: CardsViewController = storyboard?.instantiateViewControllerWithIdentifier("CardsViewController") as CardsViewController
         
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
-        var mainViewController = CardsViewController(nibName:nil, bundle:nil)
-        var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
+        // var mainViewController = CardsViewController(nibName:nil, bundle:nil)
+        // var tempNavigationController = SessionNavigationController(rootViewController: mainViewController)
         
         println("move To Main View Controller")
         self.gifImageView.stopAnimating()
         
-        presentViewController(secondViewController, animated: true) { () -> Void in
-            
+        presentViewController(cardsViewController, animated: true) { () -> Void in
             println("Finish move To Main View Controller")
-            //
         }
-        // self.navigationController?.pushViewController(mainViewController, animated: true)
-        
-        
-
-
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,7 +83,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
 
     func reloadSessionStreetImageTableViewCell() {
         if (loadTime==0){
-            var timer = NSTimer.scheduledTimerWithTimeInterval(0.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
+            var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
             loadTime++
         }
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadSessionStreetImageTableViewCell", object: nil)
