@@ -190,6 +190,8 @@
 		8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE49CCA19FC10BA00461150 /* AdsManager.swift */; };
 		8DEA7F1E1A94FCB6009EA599 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA7F1D1A94FCB6009EA599 /* CardsViewController.m */; };
 		8DEA7F211A94FF4E009EA599 /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA7F201A94FF4E009EA599 /* RGCardViewLayout.m */; };
+		8DEA7F251A95003B009EA599 /* RGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA7F231A95003B009EA599 /* RGCollectionViewCell.m */; };
+		8DEA7F261A95003B009EA599 /* RGCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEA7F241A95003B009EA599 /* RGCollectionViewCell.xib */; };
 		8DEEDAA71A5C5A890092B34E /* NewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */; };
 		8DEEDAA91A5C5DB60092B34E /* OneSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEDAA81A5C5DB60092B34E /* OneSessionViewController.swift */; };
 		8DF4F6631A1EEB190025BAF9 /* StreetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */; };
@@ -521,6 +523,9 @@
 		8DEA7F1D1A94FCB6009EA599 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
 		8DEA7F1F1A94FF4E009EA599 /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
 		8DEA7F201A94FF4E009EA599 /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
+		8DEA7F221A95003B009EA599 /* RGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCollectionViewCell.h; sourceTree = "<group>"; };
+		8DEA7F231A95003B009EA599 /* RGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCollectionViewCell.m; sourceTree = "<group>"; };
+		8DEA7F241A95003B009EA599 /* RGCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainViewController.swift; sourceTree = "<group>"; };
 		8DEEDAA81A5C5DB60092B34E /* OneSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSessionViewController.swift; sourceTree = "<group>"; };
 		8DF4F6621A1EEB190025BAF9 /* StreetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetDetailViewController.swift; sourceTree = "<group>"; };
@@ -857,6 +862,9 @@
 				8DEA7F1D1A94FCB6009EA599 /* CardsViewController.m */,
 				8DEA7F1F1A94FF4E009EA599 /* RGCardViewLayout.h */,
 				8DEA7F201A94FF4E009EA599 /* RGCardViewLayout.m */,
+				8DEA7F221A95003B009EA599 /* RGCollectionViewCell.h */,
+				8DEA7F231A95003B009EA599 /* RGCollectionViewCell.m */,
+				8DEA7F241A95003B009EA599 /* RGCollectionViewCell.xib */,
 				8DEEDAA61A5C5A890092B34E /* NewMainViewController.swift */,
 				8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */,
 			);
@@ -1283,6 +1291,7 @@
 				8D571EFB1A0175FF00859378 /* MPCloseBtn.png in Resources */,
 				8D6BD77E19FB4517006A3909 /* ImageCollectionViewCell.xib in Resources */,
 				8D571F1E1A0175FF00859378 /* test_variant.json in Resources */,
+				8DEA7F261A95003B009EA599 /* RGCollectionViewCell.xib in Resources */,
 				8D571EFC1A0175FF00859378 /* MPCloseBtn@2x.png in Resources */,
 				8DB6F3BE19F1BC4F002ED90F /* Images.xcassets in Resources */,
 				8DC512551A34075000FDFE28 /* launching_1.gif in Resources */,
@@ -1401,6 +1410,7 @@
 				8DE49CCB19FC10BA00461150 /* AdsManager.swift in Sources */,
 				8D571EF21A0175FF00859378 /* MPApplicationStateSerializer.m in Sources */,
 				8D571F0D1A0175FF00859378 /* MPSurveyNavigationController.m in Sources */,
+				8DEA7F251A95003B009EA599 /* RGCollectionViewCell.m in Sources */,
 				8D1B5B7A1A0830BB00B32925 /* NSVoiceObject.swift in Sources */,
 				8D571EEE1A0175FF00859378 /* MPABTestDesignerSnapshotRequestMessage.m in Sources */,
 				8D703B791A76553100DF6C73 /* CheckConnectivity.swift in Sources */,
