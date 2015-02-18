@@ -5,10 +5,12 @@
 //  Created by Yi Qin on 2/18/15.
 //  Copyright (c) 2015 yiqin. All rights reserved.
 //
+#define TAG 99
 
 #import "CardsViewController.h"
+#import "RGCollectionViewCell.h"
 
-@interface CardsViewController ()
+@interface CardsViewController ()<UICollectionViewDataSource>
 
 @end
 
@@ -34,14 +36,51 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
 }
-*/
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return  4;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RGCollectionViewCell *cell = (RGCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"reuse" forIndexPath:indexPath];
+    [self configureCell:cell withIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(RGCollectionViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
+{
+    UIView  *subview = [cell.contentView viewWithTag:TAG];
+    [subview removeFromSuperview];
+    
+    switch (indexPath.section) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            break;
+        default:
+            break;
+    }
+    
+}
+
+
+
+
+
 
 @end

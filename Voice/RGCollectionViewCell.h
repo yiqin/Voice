@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RGCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
+
 
 @end

@@ -62,6 +62,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     
     func moveToMainViewController() {
         
+        let secondViewController: CardsViewController = storyboard?.instantiateViewControllerWithIdentifier("CardsViewController") as CardsViewController
         
         // var mainViewController = MainViewController(nibName:nil, bundle:nil)
         var mainViewController = CardsViewController(nibName:nil, bundle:nil)
@@ -70,12 +71,17 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         println("move To Main View Controller")
         self.gifImageView.stopAnimating()
         
-        presentViewController(tempNavigationController, animated: true) { () -> Void in
+        presentViewController(secondViewController, animated: true) { () -> Void in
             
             println("Finish move To Main View Controller")
             //
         }
         // self.navigationController?.pushViewController(mainViewController, animated: true)
+        
+        
+
+
+        
     }
     
     override func didReceiveMemoryWarning() {
