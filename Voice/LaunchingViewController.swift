@@ -34,10 +34,14 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         let tempScreenHeight = UIScreen.mainScreen().bounds.height
         let ratio = tempScreenHeight/tempScreenWidth
         
+        /*
         if (tempScreenHeight/tempScreenWidth >= 960.0/640.0) {
             let tempHeight = tempScreenWidth*960/640
             gifImageView.frame = CGRectMake(0, (view.frame.height-tempHeight)*0.5, view.frame.width, tempHeight)
         }
+        */
+        gifImageView.frame = CGRectMake(0, 0, tempScreenWidth, tempScreenHeight)
+        gifImageView.contentMode = UIViewContentMode.ScaleAspectFill
         
         gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
         view.addSubview(gifImageView)
@@ -52,7 +56,7 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         }
         */
         
-        gifImageView.setAnimatableImage(named: "launching_1.gif")
+        gifImageView.setAnimatableImage(named: "coming_soon.gif")
         gifImageView.startAnimating()
         
         println(view.frame.size.width)

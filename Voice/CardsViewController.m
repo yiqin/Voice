@@ -68,8 +68,29 @@
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([SessionsManager sharedInstance].sessions.count > indexPath.section) {
+        Session *session = [[SessionsManager sharedInstance].sessions objectAtIndex:indexPath.section];
+        NSLog(@"%@", session.title);
+        
+        NSArray *tempArray = session.articles;
+        Article *tempArticle = [tempArray objectAtIndex:0];
+        
+        NSLog(@"You clicked the collection view:  %li", (long)indexPath.section);
+        ArticleDetailViewController *temp = [[ArticleDetailViewController alloc] initWithNibName:nil bundle:nil article:tempArticle];
+        
+        UINavigationController *tempNavigationController = [[UINavigationController alloc] initWithRootViewController:temp];
+        
+        
+        [self presentViewController:tempNavigationController animated:YES completion:^{
+            
+        }];
+    }
+    
 
-
+    
+}
 
 
 

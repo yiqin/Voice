@@ -152,6 +152,7 @@
 		8DA779E61A297D1A006393CF /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA779E21A297D1A006393CF /* INTULocationManager.m */; };
 		8DA779E71A297D1A006393CF /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA779E41A297D1A006393CF /* INTULocationRequest.m */; };
 		8DA779E91A297FEB006393CF /* VoiceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA779E81A297FEB006393CF /* VoiceLocationManager.swift */; };
+		8DAD66141A980C8C00D0A93B /* coming_soon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DAD66131A980C8C00D0A93B /* coming_soon.gif */; };
 		8DB6F3B419F1BC4E002ED90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */; };
 		8DB6F3B719F1BC4E002ED90F /* Voice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B519F1BC4E002ED90F /* Voice.xcdatamodeld */; };
 		8DB6F3B919F1BC4E002ED90F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F3B819F1BC4E002ED90F /* MainViewController.swift */; };
@@ -474,6 +475,7 @@
 		8DA779E41A297D1A006393CF /* INTULocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationRequest.m; sourceTree = "<group>"; };
 		8DA779E51A297D1A006393CF /* INTULocationRequestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationRequestDefines.h; sourceTree = "<group>"; };
 		8DA779E81A297FEB006393CF /* VoiceLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceLocationManager.swift; sourceTree = "<group>"; };
+		8DAD66131A980C8C00D0A93B /* coming_soon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = coming_soon.gif; path = Images/coming_soon.gif; sourceTree = SOURCE_ROOT; };
 		8DB6F3AE19F1BC4E002ED90F /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB6F3B219F1BC4E002ED90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6F3B319F1BC4E002ED90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -847,6 +849,7 @@
 			isa = PBXGroup;
 			children = (
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
+				8DAD66131A980C8C00D0A93B /* coming_soon.gif */,
 				8DC512541A34075000FDFE28 /* launching_1.gif */,
 			);
 			name = LaunchingViewController;
@@ -1282,6 +1285,7 @@
 				8DB6F3BC19F1BC4E002ED90F /* Main.storyboard in Resources */,
 				8D571F1D1A0175FF00859378 /* snapshot_config.json in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
+				8DAD66141A980C8C00D0A93B /* coming_soon.gif in Resources */,
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
 				8DBCF7321A34C19200EC1526 /* icon-130.png in Resources */,
 				8DBCF7331A34C19200EC1526 /* icon-130@2x.png in Resources */,

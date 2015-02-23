@@ -14,4 +14,8 @@
     // Initialization code
 }
 
+- (void)setSelected:(BOOL)selected {
+    
+}
+
 @end

@@ -102,6 +102,14 @@ class ArticleDetailViewController: GAITrackedViewController, UIWebViewDelegate, 
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableViewController", name: "VoiceArticleReload", object: nil)
         
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Bordered, target: self, action: "back")
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    func back(){
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
     }
     
     override func viewDidAppear(animated: Bool) {

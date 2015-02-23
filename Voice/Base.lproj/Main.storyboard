@@ -99,6 +99,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="XUq-3i-4G9" id="szF-6r-om0"/>
+                                    <outlet property="delegate" destination="XUq-3i-4G9" id="FFe-ET-09N"/>
                                 </connections>
                             </collectionView>
                         </subviews>
