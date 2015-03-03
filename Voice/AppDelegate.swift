@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         Mixpanel.sharedInstanceWithToken("ae8904929f971547a76168a3ed8ed27a")
         let deviceName = UIDevice.currentDevice().name
         let deviceId = UIDevice.currentDevice().identifierForVendor.UUIDString

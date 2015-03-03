@@ -30,10 +30,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIImageView *tempImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    tempImageView.image = [UIImage imageNamed:@"background"];
+    tempImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    // [self.cardsCollectionView.backgroundView insertSubview:tempImageView atIndex:3];
+    
+    self.cardsCollectionView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    self.cardsCollectionView.opaque = NO;
+    // self.cardsCollectionView.backgroundColor = [UIColor blueColor];
+    // [self.cardsCollectionView addSubview:tempImageView];
     
     
-    
-    self.view.backgroundColor = [UIColor blackColor];
+    [self.view insertSubview:tempImageView atIndex:0];
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -49,8 +59,9 @@
     int i = 0;
     for (UIView *subview in subviews) {
         
-        NSLog(@"subview  ----   %@", subview);
-        if (i == 0) {
+        // NSLog(@"subview  ----   %@", subview);
+        // NSLog(@"%@", subview.class);
+        if (i == 1) {
             
         }
         
@@ -59,7 +70,6 @@
         
         
     }
-    
     
     
 }
@@ -80,7 +90,7 @@
     
     
     
-    // collectionView.backgroundColor = [UIColor clearColor];
+    
     
     return  [SessionsManager sharedInstance].sessions.count;
 }
@@ -91,6 +101,29 @@
     [self configureCell:cell withIndexPath:indexPath];
     
     
+    // collectionView.backgroundColor = [UIColor redColor];
+    
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), CGRectGetHeight(collectionView.frame))];
+    tempImageView.image = [UIImage imageNamed:@"background"];
+    
+     NSArray *subviews = [collectionView subviews];
+    int i = 0;
+    
+    for (UIView *subview in subviews) {
+        
+        NSLog(@"subview  ----   %@", subview);
+        NSLog(@"%@", subview.class);
+        if (i == 0) {
+            // [subview addSubview:tempImageView];
+            // collectionView.backgroundView = tempImageView;
+        }
+        
+        i++;
+        
+    }
+    
+    // [collectionView.backgroundView addSubview:tempImageView];
     
     
     return cell;
@@ -108,6 +141,10 @@
         NSLog(@"%@", session.title);
         
         cell.sessionImageView.image = session.image;
+        
+        
+        // it's not background Color......
+        cell.backgroundColor = [UIColor redColor];
     }
 }
 
