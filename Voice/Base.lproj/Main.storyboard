@@ -56,9 +56,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wib-e7-frt">
-                                <rect key="frame" x="-4" y="0.0" width="608" height="600"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wib-e7-frt">
+                                <rect key="frame" x="-4" y="0.0" width="609" height="600"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wCc-IB-gah" customClass="RGCardViewLayout">
                                     <size key="itemSize" width="363" height="608"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -107,7 +107,7 @@
                         <constraints>
                             <constraint firstItem="Wib-e7-frt" firstAttribute="top" secondItem="LMa-2O-mzK" secondAttribute="topMargin" id="BeX-8y-4pi"/>
                             <constraint firstItem="Wib-e7-frt" firstAttribute="leading" secondItem="LMa-2O-mzK" secondAttribute="leadingMargin" constant="-20" id="XhP-iB-jVw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wib-e7-frt" secondAttribute="trailing" constant="-20" id="cgU-si-bSM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wib-e7-frt" secondAttribute="trailing" constant="-21" id="cgU-si-bSM"/>
                             <constraint firstItem="lwg-MP-2a3" firstAttribute="top" secondItem="Wib-e7-frt" secondAttribute="bottom" id="lgn-ja-eWo"/>
                         </constraints>
                     </view>

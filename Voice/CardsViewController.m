@@ -30,7 +30,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
+    
     self.view.backgroundColor = [UIColor blackColor];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+    
+    // Get the subviews of the view
+    NSArray *subviews = [self.view subviews];
+    
+    // Return if there are no subviews
+    if ([subviews count] == 0) return;
+    int i = 0;
+    for (UIView *subview in subviews) {
+        
+        NSLog(@"subview  ----   %@", subview);
+        if (i == 0) {
+            
+        }
+        
+        i++;
+        
+        
+        
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +76,12 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
+    
+    
+    
+    
+    // collectionView.backgroundColor = [UIColor clearColor];
+    
     return  [SessionsManager sharedInstance].sessions.count;
 }
 
@@ -52,6 +89,10 @@
 {
     RGCollectionViewCell *cell = (RGCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CardReuse" forIndexPath:indexPath];
     [self configureCell:cell withIndexPath:indexPath];
+    
+    
+    
+    
     return cell;
 }
 
