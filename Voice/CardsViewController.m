@@ -30,11 +30,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.cardsCollectionView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    self.cardsCollectionView.opaque = NO;
+    
     UIImageView *tempImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     tempImageView.image = [UIImage imageNamed:@"background"];
     tempImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.cardsCollectionView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
-    self.cardsCollectionView.opaque = NO;
+
+    UIImageView *tempImageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, -24, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    tempImageView2.image = [UIImage imageNamed:@"background2"];
+    tempImageView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [tempImageView addSubview:tempImageView2];
+    
     [self.view insertSubview:tempImageView atIndex:0];
     self.view.backgroundColor = [UIColor yellowColor];
 }
