@@ -33,45 +33,14 @@
     UIImageView *tempImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     tempImageView.image = [UIImage imageNamed:@"background"];
     tempImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    // [self.cardsCollectionView.backgroundView insertSubview:tempImageView atIndex:3];
-    
     self.cardsCollectionView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     self.cardsCollectionView.opaque = NO;
-    // self.cardsCollectionView.backgroundColor = [UIColor blueColor];
-    // [self.cardsCollectionView addSubview:tempImageView];
-    
-    
     [self.view insertSubview:tempImageView atIndex:0];
     self.view.backgroundColor = [UIColor yellowColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    
-    
-    // Get the subviews of the view
-    NSArray *subviews = [self.view subviews];
-    
-    // Return if there are no subviews
-    if ([subviews count] == 0) return;
-    int i = 0;
-    for (UIView *subview in subviews) {
-        
-        // NSLog(@"subview  ----   %@", subview);
-        // NSLog(@"%@", subview.class);
-        if (i == 1) {
-            
-        }
-        
-        i++;
-        
-        
-        
-    }
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,11 +60,6 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     
-    
-    
-    
-    
-    
     return  [SessionsManager sharedInstance].sessions.count;
 }
 
@@ -103,32 +67,6 @@
 {
     RGCollectionViewCell *cell = (RGCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CardReuse" forIndexPath:indexPath];
     [self configureCell:cell withIndexPath:indexPath];
-    
-    
-    // collectionView.backgroundColor = [UIColor redColor];
-    
-    
-    UIImageView *tempImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), CGRectGetHeight(collectionView.frame))];
-    tempImageView.image = [UIImage imageNamed:@"background"];
-    
-     NSArray *subviews = [collectionView subviews];
-    int i = 0;
-    
-    for (UIView *subview in subviews) {
-        
-        NSLog(@"subview  ----   %@", subview);
-        NSLog(@"%@", subview.class);
-        if (i == 0) {
-            // [subview addSubview:tempImageView];
-            // collectionView.backgroundView = tempImageView;
-        }
-        
-        i++;
-        
-    }
-    
-    // [collectionView.backgroundView addSubview:tempImageView];
-    
     
     return cell;
 }
@@ -145,10 +83,6 @@
         NSLog(@"%@", session.title);
         
         cell.sessionImageView.image = session.image;
-        
-        
-        // it's not background Color......
-        cell.backgroundColor = [UIColor redColor];
     }
 }
 
@@ -172,10 +106,7 @@
         }];
     }
     
-
-    
 }
-
 
 
 @end
