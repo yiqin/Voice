@@ -122,6 +122,7 @@
 		8D703B8E1A7726CD00DF6C73 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D703B8D1A7726CD00DF6C73 /* libsqlite3.0.dylib */; };
 		8D703B901A7727DC00DF6C73 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D703B8F1A7727DC00DF6C73 /* libGoogleAnalyticsServices.a */; };
 		8D7CEEFF1A2199510037E183 /* StreetDetailBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */; };
+		8D7ECF541AA92A6B00258318 /* coming_soon_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7ECF531AA92A6B00258318 /* coming_soon_background.png */; };
 		8D8173DD1A0418C4006D8EA7 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8173DC1A0418C4006D8EA7 /* AdImage.swift */; };
 		8D881A851A10599B0027C8ED /* VoiceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D881A841A10599B0027C8ED /* VoiceLabel.m */; };
 		8D9416451A6464EC0040E536 /* VoiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9416441A6464EC0040E536 /* VoiceConstants.swift */; };
@@ -422,6 +423,7 @@
 		8D703B8F1A7727DC00DF6C73 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		8D7CEEFC1A2199510037E183 /* StreetDetailBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetDetailBlockTableViewCell.h; sourceTree = "<group>"; };
 		8D7CEEFD1A2199510037E183 /* StreetDetailBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetDetailBlockTableViewCell.m; sourceTree = "<group>"; };
+		8D7ECF531AA92A6B00258318 /* coming_soon_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coming_soon_background.png; path = Images/coming_soon_background.png; sourceTree = SOURCE_ROOT; };
 		8D8173DC1A0418C4006D8EA7 /* AdImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		8D881A831A10599B0027C8ED /* VoiceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceLabel.h; sourceTree = "<group>"; };
 		8D881A841A10599B0027C8ED /* VoiceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceLabel.m; sourceTree = "<group>"; };
@@ -850,6 +852,7 @@
 			children = (
 				8D9F7F271A0C5A0E0026AA07 /* LaunchingViewController.swift */,
 				8DAD66131A980C8C00D0A93B /* coming_soon.gif */,
+				8D7ECF531AA92A6B00258318 /* coming_soon_background.png */,
 				8DC512541A34075000FDFE28 /* launching_1.gif */,
 			);
 			name = LaunchingViewController;
@@ -1286,6 +1289,7 @@
 				8D571F1D1A0175FF00859378 /* snapshot_config.json in Resources */,
 				8DB6F3C119F1BC4F002ED90F /* LaunchScreen.xib in Resources */,
 				8DAD66141A980C8C00D0A93B /* coming_soon.gif in Resources */,
+				8D7ECF541AA92A6B00258318 /* coming_soon_background.png in Resources */,
 				8D6C2BD11A22412200EB01FB /* defaultImage.png in Resources */,
 				8DBCF7321A34C19200EC1526 /* icon-130.png in Resources */,
 				8DBCF7331A34C19200EC1526 /* icon-130@2x.png in Resources */,

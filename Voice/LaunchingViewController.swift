@@ -11,6 +11,7 @@ import UIKit
 class LaunchingViewController: UIViewController, UIWebViewDelegate {
 
     lazy var gifImageView:UIImageView = UIImageView()
+    lazy var pngImageView:UIImageView = UIImageView()
     
     var loadTime = 0
     
@@ -28,12 +29,13 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         super.viewDidAppear(true)
         
         view.backgroundColor = UIColor(red: 35.0/255.0, green: 24.0/255.0, blue: 21.0/255.0, alpha: 1.0)
-        gifImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
         
         let tempScreenWidth = UIScreen.mainScreen().bounds.width
         let tempScreenHeight = UIScreen.mainScreen().bounds.height
         let ratio = tempScreenHeight/tempScreenWidth
         
+        
+        gifImageView = UIImageView(frame: CGRectMake(0, 0, tempScreenWidth, tempScreenHeight))
         /*
         if (tempScreenHeight/tempScreenWidth >= 960.0/640.0) {
             let tempHeight = tempScreenWidth*960/640
@@ -42,9 +44,15 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         */
         gifImageView.frame = CGRectMake(0, 0, tempScreenWidth, tempScreenHeight)
         gifImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        
-        gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
+        gifImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        gifImageView.backgroundColor = UIColor.whiteColor()
         view.addSubview(gifImageView)
+        
+        pngImageView = UIImageView(frame: CGRectMake(0, 0, tempScreenWidth, tempScreenHeight))
+        pngImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        pngImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth |  UIViewAutoresizing.FlexibleHeight
+        pngImageView.image = UIImage(named: "coming_soon_background")
+        view.insertSubview(pngImageView, belowSubview: gifImageView)
         
         // Always get launching_1.gif
         /*

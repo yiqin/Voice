@@ -44,7 +44,7 @@
     [tempImageView addSubview:tempImageView2];
     
     [self.view insertSubview:tempImageView atIndex:0];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
