@@ -8,8 +8,6 @@
 #import "YQButton.h"
 #import "YQParse.h"
 
-#import "ImagesRowTableViewCell.h"
-#import "ImagesRowScrollView.h"
 #import "ArticleCoverTableViewCell.h"
 #import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
