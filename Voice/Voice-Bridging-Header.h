@@ -8,18 +8,11 @@
 #import "YQButton.h"
 #import "YQParse.h"
 
-#import "ArticleTableViewCell.h"
 #import "ImagesRowTableViewCell.h"
 #import "ImagesRowScrollView.h"
 #import "ArticleCoverTableViewCell.h"
 #import "ArticleTextBlockTableViewCell.h"
 #import "AdTableViewCell.h"
-#import "ArticleLoadMoreDataTableViewCell.h"
-
-#import "SWCellScrollView.h"
-#import "SWLongPressGestureRecognizer.h"
-#import "SWUtilityButtonTapGestureRecognizer.h"
-#import "NSMutableArray+SWUtilityButtons.h"
 
 #import "StreetDetailBlockTableViewCell.h"
 
