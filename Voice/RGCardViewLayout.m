@@ -25,15 +25,11 @@
 
 - (void)setupLayout
 {
-    // This is to changes the width...
     CGFloat inset  = self.collectionView.bounds.size.width * (6/64.0f);
     inset = floor(inset);
     
-    // This is to changes the height...
-    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width - (2 *inset), self.collectionView.bounds.size.height * 4/5);
-    
-    // This is to changes the position of the image.
-    self.sectionInset = UIEdgeInsetsMake(2*inset,inset, 0,inset);
+    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width - (2 *inset), self.collectionView.bounds.size.height * 3/4);
+    self.sectionInset = UIEdgeInsetsMake(0,inset, 0,inset);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 }
 
