@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        UINavigationBar.appearance().tintColor = UIColor(red: 51.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0)
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
         Mixpanel.sharedInstanceWithToken("ae8904929f971547a76168a3ed8ed27a")
@@ -66,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setting(){
         // SVProgressHUD.setBackgroundColor(UIColor.clearColor())
-        // SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+        SVProgressHUD.setForegroundColor(UIColor(red: 51.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0))
         SVProgressHUD.setRingThickness(4.00)
     }
     

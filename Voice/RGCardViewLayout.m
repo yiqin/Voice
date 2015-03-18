@@ -28,8 +28,8 @@
     CGFloat inset  = self.collectionView.bounds.size.width * (6/64.0f);
     inset = floor(inset);
     
-    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width - (2 *inset), self.collectionView.bounds.size.height * 3/4);
-    self.sectionInset = UIEdgeInsetsMake(0,inset, 0,inset);
+    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width - (2 *inset), self.collectionView.bounds.size.height * 4/5);
+    self.sectionInset = UIEdgeInsetsMake(inset*2,inset, 0,inset);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 }
 
@@ -166,10 +166,10 @@
 #pragma mark - Transform Related Calculation
 - (CATransform3D)transformFromView:(UIView *)view
 {
-    CGFloat angle = [self angleForView:view];
+    // CGFloat angle = [self angleForView:view];
     CGFloat height = [self heightOffsetForView:view];
     BOOL xAxis = [self xAxisForView:view];
-    return [self transformfromAngle:angle height:height xAxis:xAxis];
+    return [self transformfromAngle:0 height:height xAxis:xAxis];
 }
 
 - (CATransform3D)transformfromAngle:(CGFloat )angle height:(CGFloat) height xAxis:(BOOL)axis
