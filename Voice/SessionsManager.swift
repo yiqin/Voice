@@ -27,6 +27,10 @@ class SessionsManager: NSObject {
         return Static.instance
     }
     
+    func addObserver(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "continueLoading", name: "reloadSessionStreetImageTableViewCell", object: nil)
+    }
+    
     /**
     quick way to start to load article data from Parse.com
     */
@@ -40,8 +44,6 @@ class SessionsManager: NSObject {
     /// with Closure............
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
         println("@#@####################################")
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "continueLoading", name: "reloadSessionStreetImageTableViewCell", object: nil)
         
         var query  = PFQuery(className: "Session")
         query.whereKey("isPublished", equalTo: true)
@@ -67,27 +69,16 @@ class SessionsManager: NSObject {
                 self.sessions.addObjectsFromArray(recieved)
                 completionClosure(success: true)
                 
-                if(pageIndex >= 10 || (objects.count == 0) ){
-                    
+                if objects.count == self.itemsPerPage {
+                    self.loadMoreDataFromParse { (success) -> () in
+                        
+                    }
                 }
-                else {
-                    // Update this method later.....
-                    // NSTimer.scheduledTimerWithTimeInterval(3.00, target: self, selector: Selector("continueLoading"), userInfo: nil, repeats: false)
-                }
-                
-                
                 
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
                 completionClosure(success: false)
             }
-        }
-    }
-    
-    
-    func continueLoading(){
-        loadMoreDataFromParse { (success) -> () in
-            
         }
     }
     
