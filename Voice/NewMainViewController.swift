@@ -38,7 +38,6 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         let viewControllers: NSArray = [startingViewController]
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
-        
         let tempOffset:CGFloat = 20     // Why there is a temp offset here?
         pageViewController!.view.frame = CGRectMake(0, tempOffset, kScreenWidth, kScreenHeight-tempOffset)
         // pageViewController!.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleWidth
@@ -71,8 +70,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         // Dispose of any resources that can be recreated.
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
-    {
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         var index = (viewController as OneSessionViewController).pageIndex
         
         if (index == 0) || (index == NSNotFound) {
@@ -84,8 +82,7 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         return viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
-    {
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var index = (viewController as OneSessionViewController).pageIndex
         
         if index == NSNotFound {
@@ -101,10 +98,8 @@ class NewMainViewController: GAITrackedViewController, UIPageViewControllerDataS
         return viewControllerAtIndex(index)
     }
     
-    func viewControllerAtIndex(index: Int) -> OneSessionViewController?
-    {
-        if SessionsManager.sharedInstance.sessions.count == 0 || index >= SessionsManager.sharedInstance.sessions.count
-        {
+    func viewControllerAtIndex(index: Int) -> OneSessionViewController? {
+        if SessionsManager.sharedInstance.sessions.count == 0 || index >= SessionsManager.sharedInstance.sessions.count {
             return nil
         }
         

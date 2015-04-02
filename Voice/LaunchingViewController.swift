@@ -26,7 +26,6 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         let tempScreenHeight = UIScreen.mainScreen().bounds.height
         let ratio = tempScreenHeight/tempScreenWidth
         
-        
         gifImageView = UIImageView(frame: CGRectMake(0, 0, tempScreenWidth, tempScreenHeight))
         gifImageView.frame = CGRectMake(0, 0, tempScreenWidth, tempScreenHeight)
         gifImageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -41,20 +40,18 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
         pngImageView.backgroundColor = UIColor.clearColor()
         view.insertSubview(pngImageView, belowSubview: gifImageView)
         
-        // Always get launching_1.gif
-        /*
-        if(VoiceUserDefaultsDataManager.sharedInstance.checkFirstTimeLoad()){
-        gifImageView.setAnimatableImage(data: VoiceUserDefaultsDataManager.sharedInstance.getLaunchingGIF())
-        }
-        else {
-        gifImageView.setAnimatableImage(named: "launching_1.gif")
-        }
-        */
-        
         gifImageView.setAnimatableImage(named: "coming_soon.gif")
         gifImageView.startAnimating()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadSessionStreetImageTableViewCell", name: "reloadSessionStreetImageTableViewCell", object: nil)
+        
+        SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
+            if(success){
+                var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector:"moveToMainViewController", userInfo: nil, repeats: false)
+            }
+            else {
+                
+            }
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -81,13 +78,5 @@ class LaunchingViewController: UIViewController, UIWebViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func reloadSessionStreetImageTableViewCell() {
-        if (loadTime==0){
-            var timer = NSTimer.scheduledTimerWithTimeInterval(1.00, target: self, selector: Selector("moveToMainViewController"), userInfo: nil, repeats: false)
-            loadTime++
-        }
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadSessionStreetImageTableViewCell", object: nil)
     }
 }

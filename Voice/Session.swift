@@ -84,9 +84,7 @@ class Session: NSVoiceObject {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
         }
-
     }
-    
     
     
     func startToLoadArticles(){
@@ -100,7 +98,7 @@ class Session: NSVoiceObject {
                 println("successullly get Articles")
                 
                 // Only call this notification one time...
-                NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                // NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
                 
                 
                 self.startToLoadCoverImage()
@@ -110,10 +108,7 @@ class Session: NSVoiceObject {
                     let article = Article(parseObject: object as PFObject)
                     self.articles += [article]
                 }
-                
-                
-                
-                
+
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }

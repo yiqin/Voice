@@ -45,83 +45,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alertView.show()
         }
         else {
-            SessionsManager.sharedInstance.startLoadingDataFromParse(0, completionClosure: { (success) -> () in
-                if(success){
-                    
-                }
-                else {
 
-                }
-            })
             
             setting()
             
             singleMethodSetup()     // after parseSetup
             
             Fabric.with([Crashlytics()])
-            
         }
         
         return true
     }
     
     func setting(){
-        // SVProgressHUD.setBackgroundColor(UIColor.clearColor())
-        SVProgressHUD.setForegroundColor(UIColor(red: 51.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0))
+        SVProgressHUD.setBackgroundColor(UIColor(red: 51.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 0.6))
+        SVProgressHUD.setForegroundColor(UIColor.whiteColor())
         SVProgressHUD.setRingThickness(4.00)
     }
     
     func singleMethodSetup() {
-        
         UserManager.sharedInstance
         DeviceManager.sharedInstance
         AdsManager.sharedInstance
 
         DeviceManager.sharedInstance.setDeviceSize()
-        
-
-        
-        // VoiceLocationManager.sharedInstance
-        // VoiceLocationManager.sharedInstance.getCurrentLocation()
-        
         ConfigDataManager.sharedInstance
         
         VoiceUserDefaultsDataManager.sharedInstance
         CloudCodeManager.sharedInstance
+        
+        // VoiceLocationManager.sharedInstance
+        // VoiceLocationManager.sharedInstance.getCurrentLocation()
     }
     
     func parseSetup(){
         Parse.setApplicationId("67k8jnSI757kUzLNletpqjxMHdBWTbELiyJoMy52", clientKey: "qbjCzME8VwBHQURxPZQCSmdFeMcY5FlBlzvMzxc4")
-        
-        /*
-        // Create role here
-        var roleACL = PFACL()
-        roleACL.setPublicReadAccess(true)
-        roleACL.setPublicWriteAccess(true)
-        var role = PFRole(name: "Tester", acl: roleACL)
-        role.saveInBackgroundWithBlock { (successed : Bool!, error: NSError!) -> Void in
-            if((error) == nil){
-                
-            }
-            else {
-                println(error)
-            }
-        }
-        */
-
-        /*
-        // Test
-        println("User object id")
-        println(PFUser.currentUser().objectId)
-        var gameScore = PFObject(className:"Article")
-        gameScore["title"] = "Sean Plott"
-        gameScore.saveInBackgroundWithBlock { (successed : Bool!, error : NSError!) -> Void in
-            
-            if((error) != nil){
-                println(error)
-            }
-        }
-        */
         
         var currentUser = PFUser.currentUser()
         if currentUser != nil {

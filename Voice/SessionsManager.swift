@@ -75,6 +75,8 @@ class SessionsManager: NSObject {
                     // NSTimer.scheduledTimerWithTimeInterval(3.00, target: self, selector: Selector("continueLoading"), userInfo: nil, repeats: false)
                 }
                 
+                
+                
             } else {
                 NSLog("Error: %@ %@", error, error.userInfo!)
                 completionClosure(success: false)
@@ -86,11 +88,6 @@ class SessionsManager: NSObject {
     func continueLoading(){
         loadMoreDataFromParse { (success) -> () in
             
-        }
-        
-        if hasNSNotificationCenter {
-            NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadSessionStreetImageTableViewCell", object: nil)
-            hasNSNotificationCenter = false
         }
     }
     
